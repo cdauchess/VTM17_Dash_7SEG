@@ -1,0 +1,7 @@
+C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\VTM17c_Display_7seg.cyprj|889bdec2-1547-482d-abd0-049fddab1fe6
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|c9c9e1ca-1380-4ce9-9db3-849d8ddb477c
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|4b17e33e-3523-4af0-aef6-b1d5f80ff6a5
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|386b6af5-2caf-424d-ac3a-855c54868e81
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|71b94da7-8532-45e1-a724-d26978c23484
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|d29baf4f-ffdf-4de3-aa7b-1d15b7e35a73
+C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\CAN_Full_Example01.cydsn\CAN_Full_Example01.cyprj|a6aa2276-21ee-4ce4-95c2-f0434990d61f

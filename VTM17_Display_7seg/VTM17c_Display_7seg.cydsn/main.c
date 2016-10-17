@@ -16,44 +16,55 @@
 ********************************************************************************/
 
 #include <device.h>
+#include <stdio.h>
+
+#define PWM_PULSE_WIDTH_STEP        (10u)
+#define SWITCH_PRESSED              (0u)
+#define PWM_MESSAGE_ID              (0x1AAu)
+#define PWM_MESSAGE_IDE             (0u)    /* Standard message */
+#define PWM_MESSAGE_IRQ             (0u)    /* No transmit IRQ */
+#define PWM_MESSAGE_RTR             (0u)    /* No RTR */
+#define CAN_RX_MAILBOX_0_SHIFT      (1u)
+#define CAN_RX_MAILBOX_1_SHIFT      (2u)
+#define DATA_SIZE                   (6u)
+#define ONE_BYTE_OFFSET             (8u)
+
+
+
+/* Global variables used to store configuration and data for BASIC CAN mailbox */
+CAN_DATA_BYTES_MSG dataPWM;
+CAN_TX_MSG messagePWM;
+
+/* Global variable used to store PWM pulse width value */
+uint8 pulseWidthValue = 0u;
+uint16 RPM = 1000;
+uint16 TPS = 10;
+uint RXMessage[8];
+uint RXFlag = 0;
+uint RXDLC = 0;
+
+/* Global variable used to store receive message mailbox number */
+volatile uint8 receiveMailboxNumber = 0xFFu;
+
+//Global Variables 
+
 
 int main()
-{	
-    uint8 bright, cntMode;
+{
     
-    LED_Driver_Start();
-    LED_Driver_WriteString7Seg("- PSoC -",0u);
-    /* Display the large Hexadecimal "C" */
-    LED_Driver_Write7SegDigitHex(0x0Cu,5u);
+    CyGlobalIntEnable;
+    CAN_Init();
+    CAN_Start();
     
-    bright = 0xFF;
-    cntMode = 1u;
+    LED_Driver_LRBWS_Start();
     
 	for(;;)
     {   
-        CyDelay(4u);
-                
-        /* Change the brightness level */
-        LED_Driver_SetBrightness(bright,0u);
-        LED_Driver_SetBrightness(bright,7u);
-        
-        if(bright == 0x01u)
+        if(RXFlag)
         {
-            cntMode = 1u;
-        }
-        else if(bright == 0xFFu)
-        {
-            cntMode = 0u;
-        }
-        
-        if(cntMode)
-        {
-            bright++;
-        }
-        else
-        {
-            bright--;
-        }
+            //Parse Data
+        RXFlag =0;
+        }        
     }
 }
 

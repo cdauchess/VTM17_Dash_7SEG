@@ -1,0 +1,2057 @@
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.ISR_CAN,"ax",%progbits
+  19              		.align	2
+  20              		.global	ISR_CAN
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	ISR_CAN, %function
+  24              	ISR_CAN:
+  25              	.LFB64:
+  26              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version: 1.0
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *  This example project demonstrates how to configure the CAN Component in
+   8:.\main.c      **** *  the Full CAN mode.
+   9:.\main.c      **** *  The CAN component is configured to receive the following messages from the
+  10:.\main.c      **** *  remote node:
+  11:.\main.c      **** *   Message 1 - Status of Switch 1.
+  12:.\main.c      **** *   Message 2 - ADC data.
+  13:.\main.c      **** *
+  14:.\main.c      **** *  The component is also configured to transmit data to control the pulse width
+  15:.\main.c      **** *  of the PWM in the remote node. The transmitted data (pulse width value)
+  16:.\main.c      **** *  increments at a switch press.
+  17:.\main.c      **** *  Both transmitted and received data are displayed on a 2x16 LCD.
+  18:.\main.c      **** *
+  19:.\main.c      **** *  This is only one part of the CAN example project. Use this along with
+  20:.\main.c      **** *  CAN_Basic_Example for complete demonstration.
+  21:.\main.c      **** *
+  22:.\main.c      **** * Hardware Dependency:
+  23:.\main.c      **** *  CY8CKIT-001
+  24:.\main.c      **** *  CY8CKIT-017
+  25:.\main.c      **** *
+  26:.\main.c      **** ********************************************************************************
+  27:.\main.c      **** * Copyright 2015, Cypress Semiconductor Corporation. All rights reserved.
+  28:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  29:.\main.c      **** * by and subject to worldwide patent and copyright laws and treaties.
+  30:.\main.c      **** * Therefore, you may use this software only as provided in the license agreement
+  31:.\main.c      **** * accompanying the software package from which you obtained this software.
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 2
+
+
+  32:.\main.c      **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  33:.\main.c      **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  34:.\main.c      **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  35:.\main.c      **** *******************************************************************************/
+  36:.\main.c      **** #include <project.h>
+  37:.\main.c      **** #include <stdio.h>
+  38:.\main.c      **** 
+  39:.\main.c      **** #define PWM_PULSE_WIDTH_STEP        (10u)
+  40:.\main.c      **** #define SWITCH_PRESSED              (0u)
+  41:.\main.c      **** #define PWM_MESSAGE_ID              (0x1AAu)
+  42:.\main.c      **** #define PWM_MESSAGE_IDE             (0u)    /* Standard message */
+  43:.\main.c      **** #define PWM_MESSAGE_IRQ             (0u)    /* No transmit IRQ */
+  44:.\main.c      **** #define PWM_MESSAGE_RTR             (0u)    /* No RTR */
+  45:.\main.c      **** #define CAN_RX_MAILBOX_0_SHIFT      (1u)
+  46:.\main.c      **** #define CAN_RX_MAILBOX_1_SHIFT      (2u)
+  47:.\main.c      **** #define DATA_SIZE                   (6u)
+  48:.\main.c      **** #define ONE_BYTE_OFFSET             (8u)
+  49:.\main.c      **** 
+  50:.\main.c      **** /* Function prototypes */
+  51:.\main.c      **** CY_ISR_PROTO(ISR_CAN);
+  52:.\main.c      **** 
+  53:.\main.c      **** /* Global variables used to store configuration and data for BASIC CAN mailbox */
+  54:.\main.c      **** CAN_DATA_BYTES_MSG dataPWM;
+  55:.\main.c      **** CAN_TX_MSG messagePWM;
+  56:.\main.c      **** 
+  57:.\main.c      **** /* Global variable used to store PWM pulse width value */
+  58:.\main.c      **** uint8 pulseWidthValue = 0u;
+  59:.\main.c      **** 
+  60:.\main.c      **** /* Global variable used to store receive message mailbox number */
+  61:.\main.c      **** volatile uint8 receiveMailboxNumber = 0xFFu;
+  62:.\main.c      **** 
+  63:.\main.c      **** 
+  64:.\main.c      **** /*******************************************************************************
+  65:.\main.c      **** * Function Name: main
+  66:.\main.c      **** ********************************************************************************
+  67:.\main.c      **** *
+  68:.\main.c      **** * Summary:
+  69:.\main.c      **** *  main() performs the following functions:
+  70:.\main.c      **** *  1: Initializes a structure for the Basic CAN mailbox to send messages.
+  71:.\main.c      **** *  2: Starts the CAN and LCD components.
+  72:.\main.c      **** *  3: When received Message 1, sends the PWM pulse width and displays
+  73:.\main.c      **** *     received switch status and value of PWM pulse width on an LCD; 
+  74:.\main.c      **** *     When received Message 2, display received ADC data on an LCD.
+  75:.\main.c      **** *
+  76:.\main.c      **** * Parameters:
+  77:.\main.c      **** *  None.
+  78:.\main.c      **** *
+  79:.\main.c      **** * Return:
+  80:.\main.c      **** *  None.
+  81:.\main.c      **** *
+  82:.\main.c      **** *******************************************************************************/
+  83:.\main.c      **** int main()
+  84:.\main.c      **** {
+  85:.\main.c      ****     char8 txData[DATA_SIZE];
+  86:.\main.c      ****     uint16 adcData;
+  87:.\main.c      ****     
+  88:.\main.c      ****     /* BASIC CAN mailbox configuration */
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 3
+
+
+  89:.\main.c      ****     messagePWM.dlc = CAN_TX_DLC_MAX_VALUE;
+  90:.\main.c      ****     messagePWM.id  = PWM_MESSAGE_ID;
+  91:.\main.c      ****     messagePWM.ide = PWM_MESSAGE_IDE;
+  92:.\main.c      ****     messagePWM.irq = PWM_MESSAGE_IRQ;
+  93:.\main.c      ****     messagePWM.msg = &dataPWM;
+  94:.\main.c      ****     messagePWM.rtr = PWM_MESSAGE_RTR;
+  95:.\main.c      **** 
+  96:.\main.c      ****     LCD_Start();
+  97:.\main.c      ****     
+  98:.\main.c      ****     /* Display value of ADC output on LCD */
+  99:.\main.c      ****     LCD_Position(0u, 0u);
+ 100:.\main.c      ****     LCD_PrintString("ADC");
+ 101:.\main.c      **** 
+ 102:.\main.c      ****     /* Display state of switch on LCD */
+ 103:.\main.c      ****     LCD_Position(1u, 0u);
+ 104:.\main.c      ****     LCD_PrintString("SW");
+ 105:.\main.c      **** 
+ 106:.\main.c      ****     /* Display state of PWM pulse width on LCD */
+ 107:.\main.c      ****     LCD_Position(0u, 10u);
+ 108:.\main.c      ****     LCD_PrintString("PWM");
+ 109:.\main.c      **** 
+ 110:.\main.c      ****     CAN_Start();
+ 111:.\main.c      **** 
+ 112:.\main.c      ****     /* Set CAN interrupt handler to local routine */
+ 113:.\main.c      ****     CyIntSetVector(CAN_ISR_NUMBER, ISR_CAN);    
+ 114:.\main.c      **** 
+ 115:.\main.c      ****     CyGlobalIntEnable;
+ 116:.\main.c      **** 
+ 117:.\main.c      ****     for(;;)
+ 118:.\main.c      ****     {
+ 119:.\main.c      ****         if (receiveMailboxNumber == CAN_RX_MAILBOX_switchStatus)
+ 120:.\main.c      ****         {
+ 121:.\main.c      ****             LCD_Position(1u, 3u);
+ 122:.\main.c      ****             if (CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_switchStatus) == SWITCH_PRESSED)
+ 123:.\main.c      ****             {
+ 124:.\main.c      ****                 /* Display received switch status on LCD */
+ 125:.\main.c      ****                 LCD_PrintString("pressed ");
+ 126:.\main.c      **** 
+ 127:.\main.c      ****                 /* Increase the PWM pulse width */
+ 128:.\main.c      ****                 pulseWidthValue += PWM_PULSE_WIDTH_STEP;
+ 129:.\main.c      **** 
+ 130:.\main.c      ****                 /* Send message with the new PWM pulse width */
+ 131:.\main.c      ****                 dataPWM.byte[0u] = pulseWidthValue;
+ 132:.\main.c      ****                 CAN_SendMsg(&messagePWM);
+ 133:.\main.c      **** 
+ 134:.\main.c      ****                 /* Display value of PWM pulse width on LCD */
+ 135:.\main.c      ****                 LCD_Position(0u, 14u);
+ 136:.\main.c      ****                 LCD_PrintInt8(pulseWidthValue);
+ 137:.\main.c      ****             }
+ 138:.\main.c      ****             else
+ 139:.\main.c      ****             {
+ 140:.\main.c      ****                 /* Display received switch status on LCD */
+ 141:.\main.c      ****                 LCD_PrintString("released");
+ 142:.\main.c      ****             }
+ 143:.\main.c      ****             receiveMailboxNumber = 0xFFu;
+ 144:.\main.c      ****         }
+ 145:.\main.c      ****         
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 4
+
+
+ 146:.\main.c      ****         if (receiveMailboxNumber == CAN_RX_MAILBOX_ADCdata)
+ 147:.\main.c      ****         {
+ 148:.\main.c      ****             adcData = ((uint16) ((uint16) CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_ADCdata) << ONE_BYTE_OFF
+ 149:.\main.c      ****             CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_ADCdata);
+ 150:.\main.c      ****             
+ 151:.\main.c      ****             /* Display received ADC data on LCD */
+ 152:.\main.c      ****             sprintf(txData, "%u.%.3u", (adcData / 1000u), (adcData % 1000u));
+ 153:.\main.c      ****             txData[DATA_SIZE - 1u] = (char8) '\0';
+ 154:.\main.c      ****             
+ 155:.\main.c      ****             LCD_Position(0u, 4u);
+ 156:.\main.c      ****             LCD_PrintString(txData);
+ 157:.\main.c      ****             receiveMailboxNumber = 0xFFu;
+ 158:.\main.c      ****         }
+ 159:.\main.c      ****     }
+ 160:.\main.c      **** }
+ 161:.\main.c      **** 
+ 162:.\main.c      **** 
+ 163:.\main.c      **** /*******************************************************************************
+ 164:.\main.c      **** * Function Name: ISR_CAN
+ 165:.\main.c      **** ********************************************************************************
+ 166:.\main.c      **** *
+ 167:.\main.c      **** * Summary:
+ 168:.\main.c      **** *  This ISR is executed at a Receive Message event and set receiveMailboxNumber
+ 169:.\main.c      **** *  global variable with receive message mailbox number.
+ 170:.\main.c      **** *
+ 171:.\main.c      **** * Parameters:
+ 172:.\main.c      **** *  None.
+ 173:.\main.c      **** *
+ 174:.\main.c      **** * Return:
+ 175:.\main.c      **** *  None.
+ 176:.\main.c      **** *
+ 177:.\main.c      **** *******************************************************************************/
+ 178:.\main.c      **** CY_ISR(ISR_CAN)
+ 179:.\main.c      **** {
+  27              		.loc 1 179 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+ 180:.\main.c      ****     /* Clear Receive Message flag */
+ 181:.\main.c      ****     CAN_INT_SR_REG.byte[1u] = CAN_RX_MESSAGE_MASK;
+  32              		.loc 1 181 0
+  33 0000 1022     		movs	r2, #16
+  34 0002 0F4B     		ldr	r3, .L4
+  35 0004 5A70     		strb	r2, [r3, #1]
+ 182:.\main.c      **** 
+ 183:.\main.c      ****     /* Switch Status message received */
+ 184:.\main.c      ****     if ((CY_GET_REG16((reg16 *) &CAN_BUF_SR_REG.byte[0u]) & CAN_RX_MAILBOX_0_SHIFT) != 0u)
+  36              		.loc 1 184 0
+  37 0006 0833     		adds	r3, r3, #8
+  38 0008 1B88     		ldrh	r3, [r3]
+  39 000a 13F0010F 		tst	r3, #1
+  40 000e 07D0     		beq	.L2
+ 185:.\main.c      ****     {        
+ 186:.\main.c      ****         receiveMailboxNumber = CAN_RX_MAILBOX_switchStatus;
+  41              		.loc 1 186 0
+  42 0010 0022     		movs	r2, #0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 5
+
+
+  43 0012 0C4B     		ldr	r3, .L4+4
+  44 0014 1A70     		strb	r2, [r3]
+ 187:.\main.c      **** 
+ 188:.\main.c      ****         /* Acknowledges receipt of new message */
+ 189:.\main.c      ****         CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_switchStatus);
+  45              		.loc 1 189 0
+  46 0016 0C4A     		ldr	r2, .L4+8
+  47 0018 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  48 001a 43F00103 		orr	r3, r3, #1
+  49 001e 1370     		strb	r3, [r2]
+  50              	.L2:
+ 190:.\main.c      ****     }
+ 191:.\main.c      **** 
+ 192:.\main.c      ****     /* ADC data message received */
+ 193:.\main.c      ****     if ((CY_GET_REG16((reg16 *) &CAN_BUF_SR_REG.byte[0u]) & CAN_RX_MAILBOX_1_SHIFT) != 0u)
+  51              		.loc 1 193 0
+  52 0020 0A4B     		ldr	r3, .L4+12
+  53 0022 1B88     		ldrh	r3, [r3]
+  54 0024 03F00203 		and	r3, r3, #2
+  55 0028 9BB2     		uxth	r3, r3
+  56 002a 3BB1     		cbz	r3, .L1
+ 194:.\main.c      ****     {
+ 195:.\main.c      ****         receiveMailboxNumber = CAN_RX_MAILBOX_ADCdata;
+  57              		.loc 1 195 0
+  58 002c 0122     		movs	r2, #1
+  59 002e 054B     		ldr	r3, .L4+4
+  60 0030 1A70     		strb	r2, [r3]
+ 196:.\main.c      **** 
+ 197:.\main.c      ****         /* Acknowledges receipt of new message */
+ 198:.\main.c      ****         CAN_RX_ACK_MESSAGE(CAN_RX_MAILBOX_ADCdata);
+  61              		.loc 1 198 0
+  62 0032 074A     		ldr	r2, .L4+16
+  63 0034 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  64 0036 43F00103 		orr	r3, r3, #1
+  65 003a 1370     		strb	r3, [r2]
+  66              	.L1:
+  67 003c 7047     		bx	lr
+  68              	.L5:
+  69 003e 00BF     		.align	2
+  70              	.L4:
+  71 0040 00A00040 		.word	1073782784
+  72 0044 00000000 		.word	.LANCHOR0
+  73 0048 A0A00040 		.word	1073782944
+  74 004c 08A00040 		.word	1073782792
+  75 0050 C0A00040 		.word	1073782976
+  76              		.cfi_endproc
+  77              	.LFE64:
+  78              		.size	ISR_CAN, .-ISR_CAN
+  79              		.section	.text.main,"ax",%progbits
+  80              		.align	2
+  81              		.global	main
+  82              		.thumb
+  83              		.thumb_func
+  84              		.type	main, %function
+  85              	main:
+  86              	.LFB63:
+  84:.\main.c      ****     char8 txData[DATA_SIZE];
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 6
+
+
+  87              		.loc 1 84 0
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 8
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91 0000 10B5     		push	{r4, lr}
+  92              		.cfi_def_cfa_offset 8
+  93              		.cfi_offset 4, -8
+  94              		.cfi_offset 14, -4
+  95 0002 82B0     		sub	sp, sp, #8
+  96              		.cfi_def_cfa_offset 16
+  89:.\main.c      ****     messagePWM.id  = PWM_MESSAGE_ID;
+  97              		.loc 1 89 0
+  98 0004 3B4B     		ldr	r3, .L13
+  99 0006 0822     		movs	r2, #8
+ 100 0008 9A71     		strb	r2, [r3, #6]
+  90:.\main.c      ****     messagePWM.ide = PWM_MESSAGE_IDE;
+ 101              		.loc 1 90 0
+ 102 000a 4FF4D572 		mov	r2, #426
+ 103 000e 1A60     		str	r2, [r3]
+  91:.\main.c      ****     messagePWM.irq = PWM_MESSAGE_IRQ;
+ 104              		.loc 1 91 0
+ 105 0010 0024     		movs	r4, #0
+ 106 0012 5C71     		strb	r4, [r3, #5]
+  92:.\main.c      ****     messagePWM.msg = &dataPWM;
+ 107              		.loc 1 92 0
+ 108 0014 DC71     		strb	r4, [r3, #7]
+  93:.\main.c      ****     messagePWM.rtr = PWM_MESSAGE_RTR;
+ 109              		.loc 1 93 0
+ 110 0016 384A     		ldr	r2, .L13+4
+ 111 0018 9A60     		str	r2, [r3, #8]
+  94:.\main.c      **** 
+ 112              		.loc 1 94 0
+ 113 001a 1C71     		strb	r4, [r3, #4]
+  96:.\main.c      ****     
+ 114              		.loc 1 96 0
+ 115 001c FFF7FEFF 		bl	LCD_Start
+ 116              	.LVL0:
+  99:.\main.c      ****     LCD_PrintString("ADC");
+ 117              		.loc 1 99 0
+ 118 0020 2046     		mov	r0, r4
+ 119 0022 2146     		mov	r1, r4
+ 120 0024 FFF7FEFF 		bl	LCD_Position
+ 121              	.LVL1:
+ 100:.\main.c      **** 
+ 122              		.loc 1 100 0
+ 123 0028 3448     		ldr	r0, .L13+8
+ 124 002a FFF7FEFF 		bl	LCD_PrintString
+ 125              	.LVL2:
+ 103:.\main.c      ****     LCD_PrintString("SW");
+ 126              		.loc 1 103 0
+ 127 002e 0120     		movs	r0, #1
+ 128 0030 2146     		mov	r1, r4
+ 129 0032 FFF7FEFF 		bl	LCD_Position
+ 130              	.LVL3:
+ 104:.\main.c      **** 
+ 131              		.loc 1 104 0
+ 132 0036 3248     		ldr	r0, .L13+12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 7
+
+
+ 133 0038 FFF7FEFF 		bl	LCD_PrintString
+ 134              	.LVL4:
+ 107:.\main.c      ****     LCD_PrintString("PWM");
+ 135              		.loc 1 107 0
+ 136 003c 2046     		mov	r0, r4
+ 137 003e 0A21     		movs	r1, #10
+ 138 0040 FFF7FEFF 		bl	LCD_Position
+ 139              	.LVL5:
+ 108:.\main.c      **** 
+ 140              		.loc 1 108 0
+ 141 0044 2F48     		ldr	r0, .L13+16
+ 142 0046 FFF7FEFF 		bl	LCD_PrintString
+ 143              	.LVL6:
+ 110:.\main.c      **** 
+ 144              		.loc 1 110 0
+ 145 004a FFF7FEFF 		bl	CAN_Start
+ 146              	.LVL7:
+ 113:.\main.c      **** 
+ 147              		.loc 1 113 0
+ 148 004e 1020     		movs	r0, #16
+ 149 0050 2D49     		ldr	r1, .L13+20
+ 150 0052 FFF7FEFF 		bl	CyIntSetVector
+ 151              	.LVL8:
+ 115:.\main.c      **** 
+ 152              		.loc 1 115 0
+ 153              	@ 115 ".\main.c" 1
+ 154 0056 62B6     		CPSIE   i
+ 155              	@ 0 "" 2
+ 156              		.thumb
+ 157              	.L10:
+ 119:.\main.c      ****         {
+ 158              		.loc 1 119 0
+ 159 0058 2C4B     		ldr	r3, .L13+24
+ 160 005a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 161 005c 13F0FF0F 		tst	r3, #255
+ 162 0060 23D1     		bne	.L7
+ 121:.\main.c      ****             if (CAN_RX_DATA_BYTE1(CAN_RX_MAILBOX_switchStatus) == SWITCH_PRESSED)
+ 163              		.loc 1 121 0
+ 164 0062 0120     		movs	r0, #1
+ 165 0064 0321     		movs	r1, #3
+ 166 0066 FFF7FEFF 		bl	LCD_Position
+ 167              	.LVL9:
+ 122:.\main.c      ****             {
+ 168              		.loc 1 122 0
+ 169 006a 294B     		ldr	r3, .L13+28
+ 170 006c DB7A     		ldrb	r3, [r3, #11]	@ zero_extendqisi2
+ 171 006e 13F0FF0F 		tst	r3, #255
+ 172 0072 14D1     		bne	.L8
+ 125:.\main.c      **** 
+ 173              		.loc 1 125 0
+ 174 0074 2748     		ldr	r0, .L13+32
+ 175 0076 FFF7FEFF 		bl	LCD_PrintString
+ 176              	.LVL10:
+ 128:.\main.c      **** 
+ 177              		.loc 1 128 0
+ 178 007a 274C     		ldr	r4, .L13+36
+ 179 007c 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 8
+
+
+ 180 007e 0A33     		adds	r3, r3, #10
+ 181 0080 DBB2     		uxtb	r3, r3
+ 182 0082 2370     		strb	r3, [r4]
+ 131:.\main.c      ****                 CAN_SendMsg(&messagePWM);
+ 183              		.loc 1 131 0
+ 184 0084 1C4A     		ldr	r2, .L13+4
+ 185 0086 1370     		strb	r3, [r2]
+ 132:.\main.c      **** 
+ 186              		.loc 1 132 0
+ 187 0088 1A48     		ldr	r0, .L13
+ 188 008a FFF7FEFF 		bl	CAN_SendMsg
+ 189              	.LVL11:
+ 135:.\main.c      ****                 LCD_PrintInt8(pulseWidthValue);
+ 190              		.loc 1 135 0
+ 191 008e 0020     		movs	r0, #0
+ 192 0090 0E21     		movs	r1, #14
+ 193 0092 FFF7FEFF 		bl	LCD_Position
+ 194              	.LVL12:
+ 136:.\main.c      ****             }
+ 195              		.loc 1 136 0
+ 196 0096 2078     		ldrb	r0, [r4]	@ zero_extendqisi2
+ 197 0098 FFF7FEFF 		bl	LCD_PrintInt8
+ 198              	.LVL13:
+ 199 009c 02E0     		b	.L9
+ 200              	.L8:
+ 141:.\main.c      ****             }
+ 201              		.loc 1 141 0
+ 202 009e 1F48     		ldr	r0, .L13+40
+ 203 00a0 FFF7FEFF 		bl	LCD_PrintString
+ 204              	.LVL14:
+ 205              	.L9:
+ 143:.\main.c      ****         }
+ 206              		.loc 1 143 0
+ 207 00a4 FF22     		movs	r2, #255
+ 208 00a6 194B     		ldr	r3, .L13+24
+ 209 00a8 1A70     		strb	r2, [r3]
+ 210              	.L7:
+ 146:.\main.c      ****         {
+ 211              		.loc 1 146 0
+ 212 00aa 184B     		ldr	r3, .L13+24
+ 213 00ac 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 214 00ae DBB2     		uxtb	r3, r3
+ 215 00b0 012B     		cmp	r3, #1
+ 216 00b2 D1D1     		bne	.L10
+ 148:.\main.c      ****             CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_ADCdata);
+ 217              		.loc 1 148 0
+ 218 00b4 1A4A     		ldr	r2, .L13+44
+ 219 00b6 D17A     		ldrb	r1, [r2, #11]	@ zero_extendqisi2
+ 149:.\main.c      ****             
+ 220              		.loc 1 149 0
+ 221 00b8 937A     		ldrb	r3, [r2, #10]	@ zero_extendqisi2
+ 148:.\main.c      ****             CAN_RX_DATA_BYTE2(CAN_RX_MAILBOX_ADCdata);
+ 222              		.loc 1 148 0
+ 223 00ba 43EA0123 		orr	r3, r3, r1, lsl #8
+ 224              	.LVL15:
+ 152:.\main.c      ****             txData[DATA_SIZE - 1u] = (char8) '\0';
+ 225              		.loc 1 152 0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 9
+
+
+ 226 00be 194A     		ldr	r2, .L13+48
+ 227 00c0 A2FB0312 		umull	r1, r2, r2, r3
+ 228 00c4 9209     		lsrs	r2, r2, #6
+ 229 00c6 4FF47A71 		mov	r1, #1000
+ 230 00ca 01FB1233 		mls	r3, r1, r2, r3
+ 231              	.LVL16:
+ 232 00ce 6846     		mov	r0, sp
+ 233 00d0 1549     		ldr	r1, .L13+52
+ 234 00d2 9BB2     		uxth	r3, r3
+ 235 00d4 FFF7FEFF 		bl	sprintf
+ 236              	.LVL17:
+ 153:.\main.c      ****             
+ 237              		.loc 1 153 0
+ 238 00d8 0020     		movs	r0, #0
+ 239 00da 8DF80500 		strb	r0, [sp, #5]
+ 155:.\main.c      ****             LCD_PrintString(txData);
+ 240              		.loc 1 155 0
+ 241 00de 0421     		movs	r1, #4
+ 242 00e0 FFF7FEFF 		bl	LCD_Position
+ 243              	.LVL18:
+ 156:.\main.c      ****             receiveMailboxNumber = 0xFFu;
+ 244              		.loc 1 156 0
+ 245 00e4 6846     		mov	r0, sp
+ 246 00e6 FFF7FEFF 		bl	LCD_PrintString
+ 247              	.LVL19:
+ 157:.\main.c      ****         }
+ 248              		.loc 1 157 0
+ 249 00ea FF22     		movs	r2, #255
+ 250 00ec 074B     		ldr	r3, .L13+24
+ 251 00ee 1A70     		strb	r2, [r3]
+ 252 00f0 B2E7     		b	.L10
+ 253              	.L14:
+ 254 00f2 00BF     		.align	2
+ 255              	.L13:
+ 256 00f4 00000000 		.word	messagePWM
+ 257 00f8 00000000 		.word	dataPWM
+ 258 00fc 00000000 		.word	.LC0
+ 259 0100 04000000 		.word	.LC1
+ 260 0104 08000000 		.word	.LC2
+ 261 0108 00000000 		.word	ISR_CAN
+ 262 010c 00000000 		.word	.LANCHOR0
+ 263 0110 A0A00040 		.word	1073782944
+ 264 0114 0C000000 		.word	.LC3
+ 265 0118 00000000 		.word	.LANCHOR1
+ 266 011c 18000000 		.word	.LC4
+ 267 0120 C0A00040 		.word	1073782976
+ 268 0124 D34D6210 		.word	274877907
+ 269 0128 24000000 		.word	.LC5
+ 270              		.cfi_endproc
+ 271              	.LFE63:
+ 272              		.size	main, .-main
+ 273              		.global	receiveMailboxNumber
+ 274              		.global	pulseWidthValue
+ 275              		.comm	messagePWM,12,4
+ 276              		.comm	dataPWM,8,4
+ 277              		.data
+ 278              		.set	.LANCHOR0,. + 0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 10
+
+
+ 279              		.type	receiveMailboxNumber, %object
+ 280              		.size	receiveMailboxNumber, 1
+ 281              	receiveMailboxNumber:
+ 282 0000 FF       		.byte	-1
+ 283              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 284              		.align	2
+ 285              	.LC0:
+ 286 0000 41444300 		.ascii	"ADC\000"
+ 287              	.LC1:
+ 288 0004 535700   		.ascii	"SW\000"
+ 289 0007 00       		.space	1
+ 290              	.LC2:
+ 291 0008 50574D00 		.ascii	"PWM\000"
+ 292              	.LC3:
+ 293 000c 70726573 		.ascii	"pressed \000"
+ 293      73656420 
+ 293      00
+ 294 0015 000000   		.space	3
+ 295              	.LC4:
+ 296 0018 72656C65 		.ascii	"released\000"
+ 296      61736564 
+ 296      00
+ 297 0021 000000   		.space	3
+ 298              	.LC5:
+ 299 0024 25752E25 		.ascii	"%u.%.3u\000"
+ 299      2E337500 
+ 300              		.bss
+ 301              		.set	.LANCHOR1,. + 0
+ 302              		.type	pulseWidthValue, %object
+ 303              		.size	pulseWidthValue, 1
+ 304              	pulseWidthValue:
+ 305 0000 00       		.space	1
+ 306              		.text
+ 307              	.Letext0:
+ 308              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 309              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 310              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 311              		.file 5 "Generated_Source\\PSoC5/CAN.h"
+ 312              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 313              		.file 7 "Generated_Source\\PSoC5/LCD.h"
+ 314              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 315              		.file 9 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 316              		.section	.debug_info,"",%progbits
+ 317              	.Ldebug_info0:
+ 318 0000 49050000 		.4byte	0x549
+ 319 0004 0400     		.2byte	0x4
+ 320 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 321 000a 04       		.byte	0x4
+ 322 000b 01       		.uleb128 0x1
+ 323 000c A9010000 		.4byte	.LASF48
+ 324 0010 01       		.byte	0x1
+ 325 0011 7B000000 		.4byte	.LASF49
+ 326 0015 B9000000 		.4byte	.LASF50
+ 327 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 328 001d 00000000 		.4byte	0
+ 329 0021 00000000 		.4byte	.Ldebug_line0
+ 330 0025 02       		.uleb128 0x2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 11
+
+
+ 331 0026 01       		.byte	0x1
+ 332 0027 06       		.byte	0x6
+ 333 0028 02030000 		.4byte	.LASF0
+ 334 002c 02       		.uleb128 0x2
+ 335 002d 01       		.byte	0x1
+ 336 002e 08       		.byte	0x8
+ 337 002f A1000000 		.4byte	.LASF1
+ 338 0033 02       		.uleb128 0x2
+ 339 0034 02       		.byte	0x2
+ 340 0035 05       		.byte	0x5
+ 341 0036 81010000 		.4byte	.LASF2
+ 342 003a 02       		.uleb128 0x2
+ 343 003b 02       		.byte	0x2
+ 344 003c 07       		.byte	0x7
+ 345 003d 37010000 		.4byte	.LASF3
+ 346 0041 03       		.uleb128 0x3
+ 347 0042 36000000 		.4byte	.LASF9
+ 348 0046 02       		.byte	0x2
+ 349 0047 3F       		.byte	0x3f
+ 350 0048 4C000000 		.4byte	0x4c
+ 351 004c 02       		.uleb128 0x2
+ 352 004d 04       		.byte	0x4
+ 353 004e 05       		.byte	0x5
+ 354 004f 47000000 		.4byte	.LASF4
+ 355 0053 02       		.uleb128 0x2
+ 356 0054 04       		.byte	0x4
+ 357 0055 07       		.byte	0x7
+ 358 0056 25010000 		.4byte	.LASF5
+ 359 005a 02       		.uleb128 0x2
+ 360 005b 08       		.byte	0x8
+ 361 005c 05       		.byte	0x5
+ 362 005d B8020000 		.4byte	.LASF6
+ 363 0061 02       		.uleb128 0x2
+ 364 0062 08       		.byte	0x8
+ 365 0063 07       		.byte	0x7
+ 366 0064 4E020000 		.4byte	.LASF7
+ 367 0068 04       		.uleb128 0x4
+ 368 0069 04       		.byte	0x4
+ 369 006a 05       		.byte	0x5
+ 370 006b 696E7400 		.ascii	"int\000"
+ 371 006f 02       		.uleb128 0x2
+ 372 0070 04       		.byte	0x4
+ 373 0071 07       		.byte	0x7
+ 374 0072 5B000000 		.4byte	.LASF8
+ 375 0076 03       		.uleb128 0x3
+ 376 0077 A0020000 		.4byte	.LASF10
+ 377 007b 03       		.byte	0x3
+ 378 007c 2C       		.byte	0x2c
+ 379 007d 41000000 		.4byte	0x41
+ 380 0081 05       		.uleb128 0x5
+ 381 0082 E7020000 		.4byte	.LASF11
+ 382 0086 04       		.byte	0x4
+ 383 0087 9201     		.2byte	0x192
+ 384 0089 2C000000 		.4byte	0x2c
+ 385 008d 05       		.uleb128 0x5
+ 386 008e 9B010000 		.4byte	.LASF12
+ 387 0092 04       		.byte	0x4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 12
+
+
+ 388 0093 9301     		.2byte	0x193
+ 389 0095 3A000000 		.4byte	0x3a
+ 390 0099 05       		.uleb128 0x5
+ 391 009a A2010000 		.4byte	.LASF13
+ 392 009e 04       		.byte	0x4
+ 393 009f 9401     		.2byte	0x194
+ 394 00a1 53000000 		.4byte	0x53
+ 395 00a5 02       		.uleb128 0x2
+ 396 00a6 04       		.byte	0x4
+ 397 00a7 04       		.byte	0x4
+ 398 00a8 84000000 		.4byte	.LASF14
+ 399 00ac 02       		.uleb128 0x2
+ 400 00ad 08       		.byte	0x8
+ 401 00ae 04       		.byte	0x4
+ 402 00af 6A010000 		.4byte	.LASF15
+ 403 00b3 05       		.uleb128 0x5
+ 404 00b4 2A000000 		.4byte	.LASF16
+ 405 00b8 04       		.byte	0x4
+ 406 00b9 A301     		.2byte	0x1a3
+ 407 00bb BF000000 		.4byte	0xbf
+ 408 00bf 02       		.uleb128 0x2
+ 409 00c0 01       		.byte	0x1
+ 410 00c1 08       		.byte	0x8
+ 411 00c2 C6020000 		.4byte	.LASF17
+ 412 00c6 05       		.uleb128 0x5
+ 413 00c7 B4000000 		.4byte	.LASF18
+ 414 00cb 04       		.byte	0x4
+ 415 00cc 3C02     		.2byte	0x23c
+ 416 00ce D2000000 		.4byte	0xd2
+ 417 00d2 06       		.uleb128 0x6
+ 418 00d3 81000000 		.4byte	0x81
+ 419 00d7 05       		.uleb128 0x5
+ 420 00d8 00000000 		.4byte	.LASF19
+ 421 00dc 04       		.byte	0x4
+ 422 00dd 3D02     		.2byte	0x23d
+ 423 00df E3000000 		.4byte	0xe3
+ 424 00e3 06       		.uleb128 0x6
+ 425 00e4 8D000000 		.4byte	0x8d
+ 426 00e8 05       		.uleb128 0x5
+ 427 00e9 7A020000 		.4byte	.LASF20
+ 428 00ed 04       		.byte	0x4
+ 429 00ee 4E02     		.2byte	0x24e
+ 430 00f0 F4000000 		.4byte	0xf4
+ 431 00f4 07       		.uleb128 0x7
+ 432 00f5 04       		.byte	0x4
+ 433 00f6 FA000000 		.4byte	0xfa
+ 434 00fa 08       		.uleb128 0x8
+ 435 00fb 02       		.uleb128 0x2
+ 436 00fc 04       		.byte	0x4
+ 437 00fd 07       		.byte	0x7
+ 438 00fe A8020000 		.4byte	.LASF21
+ 439 0102 07       		.uleb128 0x7
+ 440 0103 04       		.byte	0x4
+ 441 0104 BF000000 		.4byte	0xbf
+ 442 0108 07       		.uleb128 0x7
+ 443 0109 04       		.byte	0x4
+ 444 010a 0E010000 		.4byte	0x10e
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 13
+
+
+ 445 010e 09       		.uleb128 0x9
+ 446 010f BF000000 		.4byte	0xbf
+ 447 0113 0A       		.uleb128 0xa
+ 448 0114 08       		.byte	0x8
+ 449 0115 05       		.byte	0x5
+ 450 0116 6F       		.byte	0x6f
+ 451 0117 28010000 		.4byte	0x128
+ 452 011b 0B       		.uleb128 0xb
+ 453 011c 68000000 		.4byte	.LASF23
+ 454 0120 05       		.byte	0x5
+ 455 0121 71       		.byte	0x71
+ 456 0122 28010000 		.4byte	0x128
+ 457 0126 00       		.byte	0
+ 458 0127 00       		.byte	0
+ 459 0128 0C       		.uleb128 0xc
+ 460 0129 81000000 		.4byte	0x81
+ 461 012d 38010000 		.4byte	0x138
+ 462 0131 0D       		.uleb128 0xd
+ 463 0132 FB000000 		.4byte	0xfb
+ 464 0136 07       		.byte	0x7
+ 465 0137 00       		.byte	0
+ 466 0138 03       		.uleb128 0x3
+ 467 0139 4A010000 		.4byte	.LASF22
+ 468 013d 05       		.byte	0x5
+ 469 013e 72       		.byte	0x72
+ 470 013f 13010000 		.4byte	0x113
+ 471 0143 0A       		.uleb128 0xa
+ 472 0144 08       		.byte	0x8
+ 473 0145 05       		.byte	0x5
+ 474 0146 75       		.byte	0x75
+ 475 0147 58010000 		.4byte	0x158
+ 476 014b 0B       		.uleb128 0xb
+ 477 014c 68000000 		.4byte	.LASF23
+ 478 0150 05       		.byte	0x5
+ 479 0151 77       		.byte	0x77
+ 480 0152 68010000 		.4byte	0x168
+ 481 0156 00       		.byte	0
+ 482 0157 00       		.byte	0
+ 483 0158 0C       		.uleb128 0xc
+ 484 0159 C6000000 		.4byte	0xc6
+ 485 015d 68010000 		.4byte	0x168
+ 486 0161 0D       		.uleb128 0xd
+ 487 0162 FB000000 		.4byte	0xfb
+ 488 0166 07       		.byte	0x7
+ 489 0167 00       		.byte	0
+ 490 0168 06       		.uleb128 0x6
+ 491 0169 58010000 		.4byte	0x158
+ 492 016d 03       		.uleb128 0x3
+ 493 016e 1B000000 		.4byte	.LASF24
+ 494 0172 05       		.byte	0x5
+ 495 0173 78       		.byte	0x78
+ 496 0174 43010000 		.4byte	0x143
+ 497 0178 0A       		.uleb128 0xa
+ 498 0179 04       		.byte	0x4
+ 499 017a 05       		.byte	0x5
+ 500 017b 7B       		.byte	0x7b
+ 501 017c 8D010000 		.4byte	0x18d
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 14
+
+
+ 502 0180 0B       		.uleb128 0xb
+ 503 0181 68000000 		.4byte	.LASF23
+ 504 0185 05       		.byte	0x5
+ 505 0186 7D       		.byte	0x7d
+ 506 0187 9D010000 		.4byte	0x19d
+ 507 018b 00       		.byte	0
+ 508 018c 00       		.byte	0
+ 509 018d 0C       		.uleb128 0xc
+ 510 018e C6000000 		.4byte	0xc6
+ 511 0192 9D010000 		.4byte	0x19d
+ 512 0196 0D       		.uleb128 0xd
+ 513 0197 FB000000 		.4byte	0xfb
+ 514 019b 03       		.byte	0x3
+ 515 019c 00       		.byte	0
+ 516 019d 06       		.uleb128 0x6
+ 517 019e 8D010000 		.4byte	0x18d
+ 518 01a2 03       		.uleb128 0x3
+ 519 01a3 50000000 		.4byte	.LASF25
+ 520 01a7 05       		.byte	0x5
+ 521 01a8 7E       		.byte	0x7e
+ 522 01a9 78010000 		.4byte	0x178
+ 523 01ad 0A       		.uleb128 0xa
+ 524 01ae 0C       		.byte	0xc
+ 525 01af 05       		.byte	0x5
+ 526 01b0 81       		.byte	0x81
+ 527 01b1 FD010000 		.4byte	0x1fd
+ 528 01b5 0E       		.uleb128 0xe
+ 529 01b6 696400   		.ascii	"id\000"
+ 530 01b9 05       		.byte	0x5
+ 531 01ba 83       		.byte	0x83
+ 532 01bb 99000000 		.4byte	0x99
+ 533 01bf 00       		.byte	0
+ 534 01c0 0E       		.uleb128 0xe
+ 535 01c1 72747200 		.ascii	"rtr\000"
+ 536 01c5 05       		.byte	0x5
+ 537 01c6 84       		.byte	0x84
+ 538 01c7 81000000 		.4byte	0x81
+ 539 01cb 04       		.byte	0x4
+ 540 01cc 0E       		.uleb128 0xe
+ 541 01cd 69646500 		.ascii	"ide\000"
+ 542 01d1 05       		.byte	0x5
+ 543 01d2 85       		.byte	0x85
+ 544 01d3 81000000 		.4byte	0x81
+ 545 01d7 05       		.byte	0x5
+ 546 01d8 0E       		.uleb128 0xe
+ 547 01d9 646C6300 		.ascii	"dlc\000"
+ 548 01dd 05       		.byte	0x5
+ 549 01de 86       		.byte	0x86
+ 550 01df 81000000 		.4byte	0x81
+ 551 01e3 06       		.byte	0x6
+ 552 01e4 0E       		.uleb128 0xe
+ 553 01e5 69727100 		.ascii	"irq\000"
+ 554 01e9 05       		.byte	0x5
+ 555 01ea 87       		.byte	0x87
+ 556 01eb 81000000 		.4byte	0x81
+ 557 01ef 07       		.byte	0x7
+ 558 01f0 0E       		.uleb128 0xe
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 15
+
+
+ 559 01f1 6D736700 		.ascii	"msg\000"
+ 560 01f5 05       		.byte	0x5
+ 561 01f6 8B       		.byte	0x8b
+ 562 01f7 FD010000 		.4byte	0x1fd
+ 563 01fb 08       		.byte	0x8
+ 564 01fc 00       		.byte	0
+ 565 01fd 07       		.uleb128 0x7
+ 566 01fe 04       		.byte	0x4
+ 567 01ff 38010000 		.4byte	0x138
+ 568 0203 03       		.uleb128 0x3
+ 569 0204 8A000000 		.4byte	.LASF26
+ 570 0208 05       		.byte	0x5
+ 571 0209 8C       		.byte	0x8c
+ 572 020a AD010000 		.4byte	0x1ad
+ 573 020e 0A       		.uleb128 0xa
+ 574 020f 20       		.byte	0x20
+ 575 0210 05       		.byte	0x5
+ 576 0211 A0       		.byte	0xa0
+ 577 0212 6B020000 		.4byte	0x26b
+ 578 0216 0B       		.uleb128 0xb
+ 579 0217 9A020000 		.4byte	.LASF27
+ 580 021b 05       		.byte	0x5
+ 581 021c A2       		.byte	0xa2
+ 582 021d A2010000 		.4byte	0x1a2
+ 583 0221 00       		.byte	0
+ 584 0222 0B       		.uleb128 0xb
+ 585 0223 AF000000 		.4byte	.LASF28
+ 586 0227 05       		.byte	0x5
+ 587 0228 A3       		.byte	0xa3
+ 588 0229 A2010000 		.4byte	0x1a2
+ 589 022d 04       		.byte	0x4
+ 590 022e 0B       		.uleb128 0xb
+ 591 022f 6D000000 		.4byte	.LASF29
+ 592 0233 05       		.byte	0x5
+ 593 0234 A4       		.byte	0xa4
+ 594 0235 6D010000 		.4byte	0x16d
+ 595 0239 08       		.byte	0x8
+ 596 023a 0B       		.uleb128 0xb
+ 597 023b 30000000 		.4byte	.LASF30
+ 598 023f 05       		.byte	0x5
+ 599 0240 A5       		.byte	0xa5
+ 600 0241 A2010000 		.4byte	0x1a2
+ 601 0245 10       		.byte	0x10
+ 602 0246 0B       		.uleb128 0xb
+ 603 0247 E1020000 		.4byte	.LASF31
+ 604 024b 05       		.byte	0x5
+ 605 024c A6       		.byte	0xa6
+ 606 024d A2010000 		.4byte	0x1a2
+ 607 0251 14       		.byte	0x14
+ 608 0252 0B       		.uleb128 0xb
+ 609 0253 B1020000 		.4byte	.LASF32
+ 610 0257 05       		.byte	0x5
+ 611 0258 A7       		.byte	0xa7
+ 612 0259 A2010000 		.4byte	0x1a2
+ 613 025d 18       		.byte	0x18
+ 614 025e 0B       		.uleb128 0xb
+ 615 025f 74000000 		.4byte	.LASF33
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 16
+
+
+ 616 0263 05       		.byte	0x5
+ 617 0264 A8       		.byte	0xa8
+ 618 0265 A2010000 		.4byte	0x1a2
+ 619 0269 1C       		.byte	0x1c
+ 620 026a 00       		.byte	0
+ 621 026b 03       		.uleb128 0x3
+ 622 026c 8C020000 		.4byte	.LASF34
+ 623 0270 05       		.byte	0x5
+ 624 0271 A9       		.byte	0xa9
+ 625 0272 0E020000 		.4byte	0x20e
+ 626 0276 0F       		.uleb128 0xf
+ 627 0277 65020000 		.4byte	.LASF51
+ 628 027b 01       		.byte	0x1
+ 629 027c B2       		.byte	0xb2
+ 630 027d 00000000 		.4byte	.LFB64
+ 631 0281 54000000 		.4byte	.LFE64-.LFB64
+ 632 0285 01       		.uleb128 0x1
+ 633 0286 9C       		.byte	0x9c
+ 634 0287 10       		.uleb128 0x10
+ 635 0288 87020000 		.4byte	.LASF52
+ 636 028c 01       		.byte	0x1
+ 637 028d 53       		.byte	0x53
+ 638 028e 68000000 		.4byte	0x68
+ 639 0292 00000000 		.4byte	.LFB63
+ 640 0296 2C010000 		.4byte	.LFE63-.LFB63
+ 641 029a 01       		.uleb128 0x1
+ 642 029b 9C       		.byte	0x9c
+ 643 029c 40040000 		.4byte	0x440
+ 644 02a0 11       		.uleb128 0x11
+ 645 02a1 40000000 		.4byte	.LASF35
+ 646 02a5 01       		.byte	0x1
+ 647 02a6 55       		.byte	0x55
+ 648 02a7 40040000 		.4byte	0x440
+ 649 02ab 02       		.uleb128 0x2
+ 650 02ac 91       		.byte	0x91
+ 651 02ad 70       		.sleb128 -16
+ 652 02ae 12       		.uleb128 0x12
+ 653 02af 46020000 		.4byte	.LASF36
+ 654 02b3 01       		.byte	0x1
+ 655 02b4 56       		.byte	0x56
+ 656 02b5 8D000000 		.4byte	0x8d
+ 657 02b9 00000000 		.4byte	.LLST0
+ 658 02bd 13       		.uleb128 0x13
+ 659 02be 20000000 		.4byte	.LVL0
+ 660 02c2 A5040000 		.4byte	0x4a5
+ 661 02c6 14       		.uleb128 0x14
+ 662 02c7 28000000 		.4byte	.LVL1
+ 663 02cb AC040000 		.4byte	0x4ac
+ 664 02cf E0020000 		.4byte	0x2e0
+ 665 02d3 15       		.uleb128 0x15
+ 666 02d4 01       		.uleb128 0x1
+ 667 02d5 51       		.byte	0x51
+ 668 02d6 02       		.uleb128 0x2
+ 669 02d7 74       		.byte	0x74
+ 670 02d8 00       		.sleb128 0
+ 671 02d9 15       		.uleb128 0x15
+ 672 02da 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 17
+
+
+ 673 02db 50       		.byte	0x50
+ 674 02dc 02       		.uleb128 0x2
+ 675 02dd 74       		.byte	0x74
+ 676 02de 00       		.sleb128 0
+ 677 02df 00       		.byte	0
+ 678 02e0 14       		.uleb128 0x14
+ 679 02e1 2E000000 		.4byte	.LVL2
+ 680 02e5 C2040000 		.4byte	0x4c2
+ 681 02e9 F7020000 		.4byte	0x2f7
+ 682 02ed 15       		.uleb128 0x15
+ 683 02ee 01       		.uleb128 0x1
+ 684 02ef 50       		.byte	0x50
+ 685 02f0 05       		.uleb128 0x5
+ 686 02f1 03       		.byte	0x3
+ 687 02f2 00000000 		.4byte	.LC0
+ 688 02f6 00       		.byte	0
+ 689 02f7 14       		.uleb128 0x14
+ 690 02f8 36000000 		.4byte	.LVL3
+ 691 02fc AC040000 		.4byte	0x4ac
+ 692 0300 10030000 		.4byte	0x310
+ 693 0304 15       		.uleb128 0x15
+ 694 0305 01       		.uleb128 0x1
+ 695 0306 51       		.byte	0x51
+ 696 0307 02       		.uleb128 0x2
+ 697 0308 74       		.byte	0x74
+ 698 0309 00       		.sleb128 0
+ 699 030a 15       		.uleb128 0x15
+ 700 030b 01       		.uleb128 0x1
+ 701 030c 50       		.byte	0x50
+ 702 030d 01       		.uleb128 0x1
+ 703 030e 31       		.byte	0x31
+ 704 030f 00       		.byte	0
+ 705 0310 14       		.uleb128 0x14
+ 706 0311 3C000000 		.4byte	.LVL4
+ 707 0315 C2040000 		.4byte	0x4c2
+ 708 0319 27030000 		.4byte	0x327
+ 709 031d 15       		.uleb128 0x15
+ 710 031e 01       		.uleb128 0x1
+ 711 031f 50       		.byte	0x50
+ 712 0320 05       		.uleb128 0x5
+ 713 0321 03       		.byte	0x3
+ 714 0322 04000000 		.4byte	.LC1
+ 715 0326 00       		.byte	0
+ 716 0327 14       		.uleb128 0x14
+ 717 0328 44000000 		.4byte	.LVL5
+ 718 032c AC040000 		.4byte	0x4ac
+ 719 0330 40030000 		.4byte	0x340
+ 720 0334 15       		.uleb128 0x15
+ 721 0335 01       		.uleb128 0x1
+ 722 0336 51       		.byte	0x51
+ 723 0337 01       		.uleb128 0x1
+ 724 0338 3A       		.byte	0x3a
+ 725 0339 15       		.uleb128 0x15
+ 726 033a 01       		.uleb128 0x1
+ 727 033b 50       		.byte	0x50
+ 728 033c 02       		.uleb128 0x2
+ 729 033d 74       		.byte	0x74
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 18
+
+
+ 730 033e 00       		.sleb128 0
+ 731 033f 00       		.byte	0
+ 732 0340 14       		.uleb128 0x14
+ 733 0341 4A000000 		.4byte	.LVL6
+ 734 0345 C2040000 		.4byte	0x4c2
+ 735 0349 57030000 		.4byte	0x357
+ 736 034d 15       		.uleb128 0x15
+ 737 034e 01       		.uleb128 0x1
+ 738 034f 50       		.byte	0x50
+ 739 0350 05       		.uleb128 0x5
+ 740 0351 03       		.byte	0x3
+ 741 0352 08000000 		.4byte	.LC2
+ 742 0356 00       		.byte	0
+ 743 0357 13       		.uleb128 0x13
+ 744 0358 4E000000 		.4byte	.LVL7
+ 745 035c DE040000 		.4byte	0x4de
+ 746 0360 14       		.uleb128 0x14
+ 747 0361 56000000 		.4byte	.LVL8
+ 748 0365 E9040000 		.4byte	0x4e9
+ 749 0369 7C030000 		.4byte	0x37c
+ 750 036d 15       		.uleb128 0x15
+ 751 036e 01       		.uleb128 0x1
+ 752 036f 51       		.byte	0x51
+ 753 0370 05       		.uleb128 0x5
+ 754 0371 03       		.byte	0x3
+ 755 0372 00000000 		.4byte	ISR_CAN
+ 756 0376 15       		.uleb128 0x15
+ 757 0377 01       		.uleb128 0x1
+ 758 0378 50       		.byte	0x50
+ 759 0379 01       		.uleb128 0x1
+ 760 037a 40       		.byte	0x40
+ 761 037b 00       		.byte	0
+ 762 037c 14       		.uleb128 0x14
+ 763 037d 6A000000 		.4byte	.LVL9
+ 764 0381 AC040000 		.4byte	0x4ac
+ 765 0385 94030000 		.4byte	0x394
+ 766 0389 15       		.uleb128 0x15
+ 767 038a 01       		.uleb128 0x1
+ 768 038b 51       		.byte	0x51
+ 769 038c 01       		.uleb128 0x1
+ 770 038d 33       		.byte	0x33
+ 771 038e 15       		.uleb128 0x15
+ 772 038f 01       		.uleb128 0x1
+ 773 0390 50       		.byte	0x50
+ 774 0391 01       		.uleb128 0x1
+ 775 0392 31       		.byte	0x31
+ 776 0393 00       		.byte	0
+ 777 0394 14       		.uleb128 0x14
+ 778 0395 7A000000 		.4byte	.LVL10
+ 779 0399 C2040000 		.4byte	0x4c2
+ 780 039d AB030000 		.4byte	0x3ab
+ 781 03a1 15       		.uleb128 0x15
+ 782 03a2 01       		.uleb128 0x1
+ 783 03a3 50       		.byte	0x50
+ 784 03a4 05       		.uleb128 0x5
+ 785 03a5 03       		.byte	0x3
+ 786 03a6 0C000000 		.4byte	.LC3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 19
+
+
+ 787 03aa 00       		.byte	0
+ 788 03ab 14       		.uleb128 0x14
+ 789 03ac 8E000000 		.4byte	.LVL11
+ 790 03b0 03050000 		.4byte	0x503
+ 791 03b4 C2030000 		.4byte	0x3c2
+ 792 03b8 15       		.uleb128 0x15
+ 793 03b9 01       		.uleb128 0x1
+ 794 03ba 50       		.byte	0x50
+ 795 03bb 05       		.uleb128 0x5
+ 796 03bc 03       		.byte	0x3
+ 797 03bd 00000000 		.4byte	messagePWM
+ 798 03c1 00       		.byte	0
+ 799 03c2 14       		.uleb128 0x14
+ 800 03c3 96000000 		.4byte	.LVL12
+ 801 03c7 AC040000 		.4byte	0x4ac
+ 802 03cb DA030000 		.4byte	0x3da
+ 803 03cf 15       		.uleb128 0x15
+ 804 03d0 01       		.uleb128 0x1
+ 805 03d1 51       		.byte	0x51
+ 806 03d2 01       		.uleb128 0x1
+ 807 03d3 3E       		.byte	0x3e
+ 808 03d4 15       		.uleb128 0x15
+ 809 03d5 01       		.uleb128 0x1
+ 810 03d6 50       		.byte	0x50
+ 811 03d7 01       		.uleb128 0x1
+ 812 03d8 30       		.byte	0x30
+ 813 03d9 00       		.byte	0
+ 814 03da 13       		.uleb128 0x13
+ 815 03db 9C000000 		.4byte	.LVL13
+ 816 03df 24050000 		.4byte	0x524
+ 817 03e3 14       		.uleb128 0x14
+ 818 03e4 A4000000 		.4byte	.LVL14
+ 819 03e8 C2040000 		.4byte	0x4c2
+ 820 03ec FA030000 		.4byte	0x3fa
+ 821 03f0 15       		.uleb128 0x15
+ 822 03f1 01       		.uleb128 0x1
+ 823 03f2 50       		.byte	0x50
+ 824 03f3 05       		.uleb128 0x5
+ 825 03f4 03       		.byte	0x3
+ 826 03f5 18000000 		.4byte	.LC4
+ 827 03f9 00       		.byte	0
+ 828 03fa 14       		.uleb128 0x14
+ 829 03fb D8000000 		.4byte	.LVL17
+ 830 03ff 35050000 		.4byte	0x535
+ 831 0403 17040000 		.4byte	0x417
+ 832 0407 15       		.uleb128 0x15
+ 833 0408 01       		.uleb128 0x1
+ 834 0409 51       		.byte	0x51
+ 835 040a 05       		.uleb128 0x5
+ 836 040b 03       		.byte	0x3
+ 837 040c 24000000 		.4byte	.LC5
+ 838 0410 15       		.uleb128 0x15
+ 839 0411 01       		.uleb128 0x1
+ 840 0412 50       		.byte	0x50
+ 841 0413 02       		.uleb128 0x2
+ 842 0414 7D       		.byte	0x7d
+ 843 0415 00       		.sleb128 0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 20
+
+
+ 844 0416 00       		.byte	0
+ 845 0417 14       		.uleb128 0x14
+ 846 0418 E4000000 		.4byte	.LVL18
+ 847 041c AC040000 		.4byte	0x4ac
+ 848 0420 2F040000 		.4byte	0x42f
+ 849 0424 15       		.uleb128 0x15
+ 850 0425 01       		.uleb128 0x1
+ 851 0426 51       		.byte	0x51
+ 852 0427 01       		.uleb128 0x1
+ 853 0428 34       		.byte	0x34
+ 854 0429 15       		.uleb128 0x15
+ 855 042a 01       		.uleb128 0x1
+ 856 042b 50       		.byte	0x50
+ 857 042c 01       		.uleb128 0x1
+ 858 042d 30       		.byte	0x30
+ 859 042e 00       		.byte	0
+ 860 042f 16       		.uleb128 0x16
+ 861 0430 EA000000 		.4byte	.LVL19
+ 862 0434 C2040000 		.4byte	0x4c2
+ 863 0438 15       		.uleb128 0x15
+ 864 0439 01       		.uleb128 0x1
+ 865 043a 50       		.byte	0x50
+ 866 043b 02       		.uleb128 0x2
+ 867 043c 7D       		.byte	0x7d
+ 868 043d 00       		.sleb128 0
+ 869 043e 00       		.byte	0
+ 870 043f 00       		.byte	0
+ 871 0440 0C       		.uleb128 0xc
+ 872 0441 B3000000 		.4byte	0xb3
+ 873 0445 50040000 		.4byte	0x450
+ 874 0449 0D       		.uleb128 0xd
+ 875 044a FB000000 		.4byte	0xfb
+ 876 044e 05       		.byte	0x5
+ 877 044f 00       		.byte	0
+ 878 0450 17       		.uleb128 0x17
+ 879 0451 5D010000 		.4byte	.LASF37
+ 880 0455 06       		.byte	0x6
+ 881 0456 9606     		.2byte	0x696
+ 882 0458 5C040000 		.4byte	0x45c
+ 883 045c 06       		.uleb128 0x6
+ 884 045d 76000000 		.4byte	0x76
+ 885 0461 18       		.uleb128 0x18
+ 886 0462 CB020000 		.4byte	.LASF38
+ 887 0466 01       		.byte	0x1
+ 888 0467 36       		.byte	0x36
+ 889 0468 38010000 		.4byte	0x138
+ 890 046c 05       		.uleb128 0x5
+ 891 046d 03       		.byte	0x3
+ 892 046e 00000000 		.4byte	dataPWM
+ 893 0472 18       		.uleb128 0x18
+ 894 0473 F7020000 		.4byte	.LASF39
+ 895 0477 01       		.byte	0x1
+ 896 0478 37       		.byte	0x37
+ 897 0479 03020000 		.4byte	0x203
+ 898 047d 05       		.uleb128 0x5
+ 899 047e 03       		.byte	0x3
+ 900 047f 00000000 		.4byte	messagePWM
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 21
+
+
+ 901 0483 18       		.uleb128 0x18
+ 902 0484 71010000 		.4byte	.LASF40
+ 903 0488 01       		.byte	0x1
+ 904 0489 3A       		.byte	0x3a
+ 905 048a 81000000 		.4byte	0x81
+ 906 048e 05       		.uleb128 0x5
+ 907 048f 03       		.byte	0x3
+ 908 0490 00000000 		.4byte	pulseWidthValue
+ 909 0494 18       		.uleb128 0x18
+ 910 0495 06000000 		.4byte	.LASF41
+ 911 0499 01       		.byte	0x1
+ 912 049a 3D       		.byte	0x3d
+ 913 049b D2000000 		.4byte	0xd2
+ 914 049f 05       		.uleb128 0x5
+ 915 04a0 03       		.byte	0x3
+ 916 04a1 00000000 		.4byte	receiveMailboxNumber
+ 917 04a5 19       		.uleb128 0x19
+ 918 04a6 ED020000 		.4byte	.LASF53
+ 919 04aa 07       		.byte	0x7
+ 920 04ab 38       		.byte	0x38
+ 921 04ac 1A       		.uleb128 0x1a
+ 922 04ad 6D020000 		.4byte	.LASF42
+ 923 04b1 07       		.byte	0x7
+ 924 04b2 3D       		.byte	0x3d
+ 925 04b3 C2040000 		.4byte	0x4c2
+ 926 04b7 1B       		.uleb128 0x1b
+ 927 04b8 81000000 		.4byte	0x81
+ 928 04bc 1B       		.uleb128 0x1b
+ 929 04bd 81000000 		.4byte	0x81
+ 930 04c1 00       		.byte	0
+ 931 04c2 1A       		.uleb128 0x1a
+ 932 04c3 8B010000 		.4byte	.LASF43
+ 933 04c7 07       		.byte	0x7
+ 934 04c8 3C       		.byte	0x3c
+ 935 04c9 D3040000 		.4byte	0x4d3
+ 936 04cd 1B       		.uleb128 0x1b
+ 937 04ce D3040000 		.4byte	0x4d3
+ 938 04d2 00       		.byte	0
+ 939 04d3 07       		.uleb128 0x7
+ 940 04d4 04       		.byte	0x4
+ 941 04d5 D9040000 		.4byte	0x4d9
+ 942 04d9 09       		.uleb128 0x9
+ 943 04da B3000000 		.4byte	0xb3
+ 944 04de 1C       		.uleb128 0x1c
+ 945 04df 16030000 		.4byte	.LASF54
+ 946 04e3 05       		.byte	0x5
+ 947 04e4 C5       		.byte	0xc5
+ 948 04e5 81000000 		.4byte	0x81
+ 949 04e9 1D       		.uleb128 0x1d
+ 950 04ea 37020000 		.4byte	.LASF44
+ 951 04ee 08       		.byte	0x8
+ 952 04ef 88       		.byte	0x88
+ 953 04f0 E8000000 		.4byte	0xe8
+ 954 04f4 03050000 		.4byte	0x503
+ 955 04f8 1B       		.uleb128 0x1b
+ 956 04f9 81000000 		.4byte	0x81
+ 957 04fd 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 22
+
+
+ 958 04fe E8000000 		.4byte	0xe8
+ 959 0502 00       		.byte	0
+ 960 0503 1E       		.uleb128 0x1e
+ 961 0504 95000000 		.4byte	.LASF45
+ 962 0508 05       		.byte	0x5
+ 963 0509 1801     		.2byte	0x118
+ 964 050b 81000000 		.4byte	0x81
+ 965 050f 19050000 		.4byte	0x519
+ 966 0513 1B       		.uleb128 0x1b
+ 967 0514 19050000 		.4byte	0x519
+ 968 0518 00       		.byte	0
+ 969 0519 07       		.uleb128 0x7
+ 970 051a 04       		.byte	0x4
+ 971 051b 1F050000 		.4byte	0x51f
+ 972 051f 09       		.uleb128 0x9
+ 973 0520 03020000 		.4byte	0x203
+ 974 0524 1A       		.uleb128 0x1a
+ 975 0525 D3020000 		.4byte	.LASF46
+ 976 0529 07       		.byte	0x7
+ 977 052a 5D       		.byte	0x5d
+ 978 052b 35050000 		.4byte	0x535
+ 979 052f 1B       		.uleb128 0x1b
+ 980 0530 81000000 		.4byte	0x81
+ 981 0534 00       		.byte	0
+ 982 0535 1F       		.uleb128 0x1f
+ 983 0536 0E030000 		.4byte	.LASF47
+ 984 053a 09       		.byte	0x9
+ 985 053b DE       		.byte	0xde
+ 986 053c 68000000 		.4byte	0x68
+ 987 0540 1B       		.uleb128 0x1b
+ 988 0541 02010000 		.4byte	0x102
+ 989 0545 1B       		.uleb128 0x1b
+ 990 0546 08010000 		.4byte	0x108
+ 991 054a 20       		.uleb128 0x20
+ 992 054b 00       		.byte	0
+ 993 054c 00       		.byte	0
+ 994              		.section	.debug_abbrev,"",%progbits
+ 995              	.Ldebug_abbrev0:
+ 996 0000 01       		.uleb128 0x1
+ 997 0001 11       		.uleb128 0x11
+ 998 0002 01       		.byte	0x1
+ 999 0003 25       		.uleb128 0x25
+ 1000 0004 0E       		.uleb128 0xe
+ 1001 0005 13       		.uleb128 0x13
+ 1002 0006 0B       		.uleb128 0xb
+ 1003 0007 03       		.uleb128 0x3
+ 1004 0008 0E       		.uleb128 0xe
+ 1005 0009 1B       		.uleb128 0x1b
+ 1006 000a 0E       		.uleb128 0xe
+ 1007 000b 55       		.uleb128 0x55
+ 1008 000c 17       		.uleb128 0x17
+ 1009 000d 11       		.uleb128 0x11
+ 1010 000e 01       		.uleb128 0x1
+ 1011 000f 10       		.uleb128 0x10
+ 1012 0010 17       		.uleb128 0x17
+ 1013 0011 00       		.byte	0
+ 1014 0012 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 23
+
+
+ 1015 0013 02       		.uleb128 0x2
+ 1016 0014 24       		.uleb128 0x24
+ 1017 0015 00       		.byte	0
+ 1018 0016 0B       		.uleb128 0xb
+ 1019 0017 0B       		.uleb128 0xb
+ 1020 0018 3E       		.uleb128 0x3e
+ 1021 0019 0B       		.uleb128 0xb
+ 1022 001a 03       		.uleb128 0x3
+ 1023 001b 0E       		.uleb128 0xe
+ 1024 001c 00       		.byte	0
+ 1025 001d 00       		.byte	0
+ 1026 001e 03       		.uleb128 0x3
+ 1027 001f 16       		.uleb128 0x16
+ 1028 0020 00       		.byte	0
+ 1029 0021 03       		.uleb128 0x3
+ 1030 0022 0E       		.uleb128 0xe
+ 1031 0023 3A       		.uleb128 0x3a
+ 1032 0024 0B       		.uleb128 0xb
+ 1033 0025 3B       		.uleb128 0x3b
+ 1034 0026 0B       		.uleb128 0xb
+ 1035 0027 49       		.uleb128 0x49
+ 1036 0028 13       		.uleb128 0x13
+ 1037 0029 00       		.byte	0
+ 1038 002a 00       		.byte	0
+ 1039 002b 04       		.uleb128 0x4
+ 1040 002c 24       		.uleb128 0x24
+ 1041 002d 00       		.byte	0
+ 1042 002e 0B       		.uleb128 0xb
+ 1043 002f 0B       		.uleb128 0xb
+ 1044 0030 3E       		.uleb128 0x3e
+ 1045 0031 0B       		.uleb128 0xb
+ 1046 0032 03       		.uleb128 0x3
+ 1047 0033 08       		.uleb128 0x8
+ 1048 0034 00       		.byte	0
+ 1049 0035 00       		.byte	0
+ 1050 0036 05       		.uleb128 0x5
+ 1051 0037 16       		.uleb128 0x16
+ 1052 0038 00       		.byte	0
+ 1053 0039 03       		.uleb128 0x3
+ 1054 003a 0E       		.uleb128 0xe
+ 1055 003b 3A       		.uleb128 0x3a
+ 1056 003c 0B       		.uleb128 0xb
+ 1057 003d 3B       		.uleb128 0x3b
+ 1058 003e 05       		.uleb128 0x5
+ 1059 003f 49       		.uleb128 0x49
+ 1060 0040 13       		.uleb128 0x13
+ 1061 0041 00       		.byte	0
+ 1062 0042 00       		.byte	0
+ 1063 0043 06       		.uleb128 0x6
+ 1064 0044 35       		.uleb128 0x35
+ 1065 0045 00       		.byte	0
+ 1066 0046 49       		.uleb128 0x49
+ 1067 0047 13       		.uleb128 0x13
+ 1068 0048 00       		.byte	0
+ 1069 0049 00       		.byte	0
+ 1070 004a 07       		.uleb128 0x7
+ 1071 004b 0F       		.uleb128 0xf
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 24
+
+
+ 1072 004c 00       		.byte	0
+ 1073 004d 0B       		.uleb128 0xb
+ 1074 004e 0B       		.uleb128 0xb
+ 1075 004f 49       		.uleb128 0x49
+ 1076 0050 13       		.uleb128 0x13
+ 1077 0051 00       		.byte	0
+ 1078 0052 00       		.byte	0
+ 1079 0053 08       		.uleb128 0x8
+ 1080 0054 15       		.uleb128 0x15
+ 1081 0055 00       		.byte	0
+ 1082 0056 27       		.uleb128 0x27
+ 1083 0057 19       		.uleb128 0x19
+ 1084 0058 00       		.byte	0
+ 1085 0059 00       		.byte	0
+ 1086 005a 09       		.uleb128 0x9
+ 1087 005b 26       		.uleb128 0x26
+ 1088 005c 00       		.byte	0
+ 1089 005d 49       		.uleb128 0x49
+ 1090 005e 13       		.uleb128 0x13
+ 1091 005f 00       		.byte	0
+ 1092 0060 00       		.byte	0
+ 1093 0061 0A       		.uleb128 0xa
+ 1094 0062 13       		.uleb128 0x13
+ 1095 0063 01       		.byte	0x1
+ 1096 0064 0B       		.uleb128 0xb
+ 1097 0065 0B       		.uleb128 0xb
+ 1098 0066 3A       		.uleb128 0x3a
+ 1099 0067 0B       		.uleb128 0xb
+ 1100 0068 3B       		.uleb128 0x3b
+ 1101 0069 0B       		.uleb128 0xb
+ 1102 006a 01       		.uleb128 0x1
+ 1103 006b 13       		.uleb128 0x13
+ 1104 006c 00       		.byte	0
+ 1105 006d 00       		.byte	0
+ 1106 006e 0B       		.uleb128 0xb
+ 1107 006f 0D       		.uleb128 0xd
+ 1108 0070 00       		.byte	0
+ 1109 0071 03       		.uleb128 0x3
+ 1110 0072 0E       		.uleb128 0xe
+ 1111 0073 3A       		.uleb128 0x3a
+ 1112 0074 0B       		.uleb128 0xb
+ 1113 0075 3B       		.uleb128 0x3b
+ 1114 0076 0B       		.uleb128 0xb
+ 1115 0077 49       		.uleb128 0x49
+ 1116 0078 13       		.uleb128 0x13
+ 1117 0079 38       		.uleb128 0x38
+ 1118 007a 0B       		.uleb128 0xb
+ 1119 007b 00       		.byte	0
+ 1120 007c 00       		.byte	0
+ 1121 007d 0C       		.uleb128 0xc
+ 1122 007e 01       		.uleb128 0x1
+ 1123 007f 01       		.byte	0x1
+ 1124 0080 49       		.uleb128 0x49
+ 1125 0081 13       		.uleb128 0x13
+ 1126 0082 01       		.uleb128 0x1
+ 1127 0083 13       		.uleb128 0x13
+ 1128 0084 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 25
+
+
+ 1129 0085 00       		.byte	0
+ 1130 0086 0D       		.uleb128 0xd
+ 1131 0087 21       		.uleb128 0x21
+ 1132 0088 00       		.byte	0
+ 1133 0089 49       		.uleb128 0x49
+ 1134 008a 13       		.uleb128 0x13
+ 1135 008b 2F       		.uleb128 0x2f
+ 1136 008c 0B       		.uleb128 0xb
+ 1137 008d 00       		.byte	0
+ 1138 008e 00       		.byte	0
+ 1139 008f 0E       		.uleb128 0xe
+ 1140 0090 0D       		.uleb128 0xd
+ 1141 0091 00       		.byte	0
+ 1142 0092 03       		.uleb128 0x3
+ 1143 0093 08       		.uleb128 0x8
+ 1144 0094 3A       		.uleb128 0x3a
+ 1145 0095 0B       		.uleb128 0xb
+ 1146 0096 3B       		.uleb128 0x3b
+ 1147 0097 0B       		.uleb128 0xb
+ 1148 0098 49       		.uleb128 0x49
+ 1149 0099 13       		.uleb128 0x13
+ 1150 009a 38       		.uleb128 0x38
+ 1151 009b 0B       		.uleb128 0xb
+ 1152 009c 00       		.byte	0
+ 1153 009d 00       		.byte	0
+ 1154 009e 0F       		.uleb128 0xf
+ 1155 009f 2E       		.uleb128 0x2e
+ 1156 00a0 00       		.byte	0
+ 1157 00a1 3F       		.uleb128 0x3f
+ 1158 00a2 19       		.uleb128 0x19
+ 1159 00a3 03       		.uleb128 0x3
+ 1160 00a4 0E       		.uleb128 0xe
+ 1161 00a5 3A       		.uleb128 0x3a
+ 1162 00a6 0B       		.uleb128 0xb
+ 1163 00a7 3B       		.uleb128 0x3b
+ 1164 00a8 0B       		.uleb128 0xb
+ 1165 00a9 27       		.uleb128 0x27
+ 1166 00aa 19       		.uleb128 0x19
+ 1167 00ab 11       		.uleb128 0x11
+ 1168 00ac 01       		.uleb128 0x1
+ 1169 00ad 12       		.uleb128 0x12
+ 1170 00ae 06       		.uleb128 0x6
+ 1171 00af 40       		.uleb128 0x40
+ 1172 00b0 18       		.uleb128 0x18
+ 1173 00b1 9742     		.uleb128 0x2117
+ 1174 00b3 19       		.uleb128 0x19
+ 1175 00b4 00       		.byte	0
+ 1176 00b5 00       		.byte	0
+ 1177 00b6 10       		.uleb128 0x10
+ 1178 00b7 2E       		.uleb128 0x2e
+ 1179 00b8 01       		.byte	0x1
+ 1180 00b9 3F       		.uleb128 0x3f
+ 1181 00ba 19       		.uleb128 0x19
+ 1182 00bb 03       		.uleb128 0x3
+ 1183 00bc 0E       		.uleb128 0xe
+ 1184 00bd 3A       		.uleb128 0x3a
+ 1185 00be 0B       		.uleb128 0xb
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 26
+
+
+ 1186 00bf 3B       		.uleb128 0x3b
+ 1187 00c0 0B       		.uleb128 0xb
+ 1188 00c1 49       		.uleb128 0x49
+ 1189 00c2 13       		.uleb128 0x13
+ 1190 00c3 11       		.uleb128 0x11
+ 1191 00c4 01       		.uleb128 0x1
+ 1192 00c5 12       		.uleb128 0x12
+ 1193 00c6 06       		.uleb128 0x6
+ 1194 00c7 40       		.uleb128 0x40
+ 1195 00c8 18       		.uleb128 0x18
+ 1196 00c9 9742     		.uleb128 0x2117
+ 1197 00cb 19       		.uleb128 0x19
+ 1198 00cc 01       		.uleb128 0x1
+ 1199 00cd 13       		.uleb128 0x13
+ 1200 00ce 00       		.byte	0
+ 1201 00cf 00       		.byte	0
+ 1202 00d0 11       		.uleb128 0x11
+ 1203 00d1 34       		.uleb128 0x34
+ 1204 00d2 00       		.byte	0
+ 1205 00d3 03       		.uleb128 0x3
+ 1206 00d4 0E       		.uleb128 0xe
+ 1207 00d5 3A       		.uleb128 0x3a
+ 1208 00d6 0B       		.uleb128 0xb
+ 1209 00d7 3B       		.uleb128 0x3b
+ 1210 00d8 0B       		.uleb128 0xb
+ 1211 00d9 49       		.uleb128 0x49
+ 1212 00da 13       		.uleb128 0x13
+ 1213 00db 02       		.uleb128 0x2
+ 1214 00dc 18       		.uleb128 0x18
+ 1215 00dd 00       		.byte	0
+ 1216 00de 00       		.byte	0
+ 1217 00df 12       		.uleb128 0x12
+ 1218 00e0 34       		.uleb128 0x34
+ 1219 00e1 00       		.byte	0
+ 1220 00e2 03       		.uleb128 0x3
+ 1221 00e3 0E       		.uleb128 0xe
+ 1222 00e4 3A       		.uleb128 0x3a
+ 1223 00e5 0B       		.uleb128 0xb
+ 1224 00e6 3B       		.uleb128 0x3b
+ 1225 00e7 0B       		.uleb128 0xb
+ 1226 00e8 49       		.uleb128 0x49
+ 1227 00e9 13       		.uleb128 0x13
+ 1228 00ea 02       		.uleb128 0x2
+ 1229 00eb 17       		.uleb128 0x17
+ 1230 00ec 00       		.byte	0
+ 1231 00ed 00       		.byte	0
+ 1232 00ee 13       		.uleb128 0x13
+ 1233 00ef 898201   		.uleb128 0x4109
+ 1234 00f2 00       		.byte	0
+ 1235 00f3 11       		.uleb128 0x11
+ 1236 00f4 01       		.uleb128 0x1
+ 1237 00f5 31       		.uleb128 0x31
+ 1238 00f6 13       		.uleb128 0x13
+ 1239 00f7 00       		.byte	0
+ 1240 00f8 00       		.byte	0
+ 1241 00f9 14       		.uleb128 0x14
+ 1242 00fa 898201   		.uleb128 0x4109
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 27
+
+
+ 1243 00fd 01       		.byte	0x1
+ 1244 00fe 11       		.uleb128 0x11
+ 1245 00ff 01       		.uleb128 0x1
+ 1246 0100 31       		.uleb128 0x31
+ 1247 0101 13       		.uleb128 0x13
+ 1248 0102 01       		.uleb128 0x1
+ 1249 0103 13       		.uleb128 0x13
+ 1250 0104 00       		.byte	0
+ 1251 0105 00       		.byte	0
+ 1252 0106 15       		.uleb128 0x15
+ 1253 0107 8A8201   		.uleb128 0x410a
+ 1254 010a 00       		.byte	0
+ 1255 010b 02       		.uleb128 0x2
+ 1256 010c 18       		.uleb128 0x18
+ 1257 010d 9142     		.uleb128 0x2111
+ 1258 010f 18       		.uleb128 0x18
+ 1259 0110 00       		.byte	0
+ 1260 0111 00       		.byte	0
+ 1261 0112 16       		.uleb128 0x16
+ 1262 0113 898201   		.uleb128 0x4109
+ 1263 0116 01       		.byte	0x1
+ 1264 0117 11       		.uleb128 0x11
+ 1265 0118 01       		.uleb128 0x1
+ 1266 0119 31       		.uleb128 0x31
+ 1267 011a 13       		.uleb128 0x13
+ 1268 011b 00       		.byte	0
+ 1269 011c 00       		.byte	0
+ 1270 011d 17       		.uleb128 0x17
+ 1271 011e 34       		.uleb128 0x34
+ 1272 011f 00       		.byte	0
+ 1273 0120 03       		.uleb128 0x3
+ 1274 0121 0E       		.uleb128 0xe
+ 1275 0122 3A       		.uleb128 0x3a
+ 1276 0123 0B       		.uleb128 0xb
+ 1277 0124 3B       		.uleb128 0x3b
+ 1278 0125 05       		.uleb128 0x5
+ 1279 0126 49       		.uleb128 0x49
+ 1280 0127 13       		.uleb128 0x13
+ 1281 0128 3F       		.uleb128 0x3f
+ 1282 0129 19       		.uleb128 0x19
+ 1283 012a 3C       		.uleb128 0x3c
+ 1284 012b 19       		.uleb128 0x19
+ 1285 012c 00       		.byte	0
+ 1286 012d 00       		.byte	0
+ 1287 012e 18       		.uleb128 0x18
+ 1288 012f 34       		.uleb128 0x34
+ 1289 0130 00       		.byte	0
+ 1290 0131 03       		.uleb128 0x3
+ 1291 0132 0E       		.uleb128 0xe
+ 1292 0133 3A       		.uleb128 0x3a
+ 1293 0134 0B       		.uleb128 0xb
+ 1294 0135 3B       		.uleb128 0x3b
+ 1295 0136 0B       		.uleb128 0xb
+ 1296 0137 49       		.uleb128 0x49
+ 1297 0138 13       		.uleb128 0x13
+ 1298 0139 3F       		.uleb128 0x3f
+ 1299 013a 19       		.uleb128 0x19
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 28
+
+
+ 1300 013b 02       		.uleb128 0x2
+ 1301 013c 18       		.uleb128 0x18
+ 1302 013d 00       		.byte	0
+ 1303 013e 00       		.byte	0
+ 1304 013f 19       		.uleb128 0x19
+ 1305 0140 2E       		.uleb128 0x2e
+ 1306 0141 00       		.byte	0
+ 1307 0142 3F       		.uleb128 0x3f
+ 1308 0143 19       		.uleb128 0x19
+ 1309 0144 03       		.uleb128 0x3
+ 1310 0145 0E       		.uleb128 0xe
+ 1311 0146 3A       		.uleb128 0x3a
+ 1312 0147 0B       		.uleb128 0xb
+ 1313 0148 3B       		.uleb128 0x3b
+ 1314 0149 0B       		.uleb128 0xb
+ 1315 014a 27       		.uleb128 0x27
+ 1316 014b 19       		.uleb128 0x19
+ 1317 014c 3C       		.uleb128 0x3c
+ 1318 014d 19       		.uleb128 0x19
+ 1319 014e 00       		.byte	0
+ 1320 014f 00       		.byte	0
+ 1321 0150 1A       		.uleb128 0x1a
+ 1322 0151 2E       		.uleb128 0x2e
+ 1323 0152 01       		.byte	0x1
+ 1324 0153 3F       		.uleb128 0x3f
+ 1325 0154 19       		.uleb128 0x19
+ 1326 0155 03       		.uleb128 0x3
+ 1327 0156 0E       		.uleb128 0xe
+ 1328 0157 3A       		.uleb128 0x3a
+ 1329 0158 0B       		.uleb128 0xb
+ 1330 0159 3B       		.uleb128 0x3b
+ 1331 015a 0B       		.uleb128 0xb
+ 1332 015b 27       		.uleb128 0x27
+ 1333 015c 19       		.uleb128 0x19
+ 1334 015d 3C       		.uleb128 0x3c
+ 1335 015e 19       		.uleb128 0x19
+ 1336 015f 01       		.uleb128 0x1
+ 1337 0160 13       		.uleb128 0x13
+ 1338 0161 00       		.byte	0
+ 1339 0162 00       		.byte	0
+ 1340 0163 1B       		.uleb128 0x1b
+ 1341 0164 05       		.uleb128 0x5
+ 1342 0165 00       		.byte	0
+ 1343 0166 49       		.uleb128 0x49
+ 1344 0167 13       		.uleb128 0x13
+ 1345 0168 00       		.byte	0
+ 1346 0169 00       		.byte	0
+ 1347 016a 1C       		.uleb128 0x1c
+ 1348 016b 2E       		.uleb128 0x2e
+ 1349 016c 00       		.byte	0
+ 1350 016d 3F       		.uleb128 0x3f
+ 1351 016e 19       		.uleb128 0x19
+ 1352 016f 03       		.uleb128 0x3
+ 1353 0170 0E       		.uleb128 0xe
+ 1354 0171 3A       		.uleb128 0x3a
+ 1355 0172 0B       		.uleb128 0xb
+ 1356 0173 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 29
+
+
+ 1357 0174 0B       		.uleb128 0xb
+ 1358 0175 27       		.uleb128 0x27
+ 1359 0176 19       		.uleb128 0x19
+ 1360 0177 49       		.uleb128 0x49
+ 1361 0178 13       		.uleb128 0x13
+ 1362 0179 3C       		.uleb128 0x3c
+ 1363 017a 19       		.uleb128 0x19
+ 1364 017b 00       		.byte	0
+ 1365 017c 00       		.byte	0
+ 1366 017d 1D       		.uleb128 0x1d
+ 1367 017e 2E       		.uleb128 0x2e
+ 1368 017f 01       		.byte	0x1
+ 1369 0180 3F       		.uleb128 0x3f
+ 1370 0181 19       		.uleb128 0x19
+ 1371 0182 03       		.uleb128 0x3
+ 1372 0183 0E       		.uleb128 0xe
+ 1373 0184 3A       		.uleb128 0x3a
+ 1374 0185 0B       		.uleb128 0xb
+ 1375 0186 3B       		.uleb128 0x3b
+ 1376 0187 0B       		.uleb128 0xb
+ 1377 0188 27       		.uleb128 0x27
+ 1378 0189 19       		.uleb128 0x19
+ 1379 018a 49       		.uleb128 0x49
+ 1380 018b 13       		.uleb128 0x13
+ 1381 018c 3C       		.uleb128 0x3c
+ 1382 018d 19       		.uleb128 0x19
+ 1383 018e 01       		.uleb128 0x1
+ 1384 018f 13       		.uleb128 0x13
+ 1385 0190 00       		.byte	0
+ 1386 0191 00       		.byte	0
+ 1387 0192 1E       		.uleb128 0x1e
+ 1388 0193 2E       		.uleb128 0x2e
+ 1389 0194 01       		.byte	0x1
+ 1390 0195 3F       		.uleb128 0x3f
+ 1391 0196 19       		.uleb128 0x19
+ 1392 0197 03       		.uleb128 0x3
+ 1393 0198 0E       		.uleb128 0xe
+ 1394 0199 3A       		.uleb128 0x3a
+ 1395 019a 0B       		.uleb128 0xb
+ 1396 019b 3B       		.uleb128 0x3b
+ 1397 019c 05       		.uleb128 0x5
+ 1398 019d 27       		.uleb128 0x27
+ 1399 019e 19       		.uleb128 0x19
+ 1400 019f 49       		.uleb128 0x49
+ 1401 01a0 13       		.uleb128 0x13
+ 1402 01a1 3C       		.uleb128 0x3c
+ 1403 01a2 19       		.uleb128 0x19
+ 1404 01a3 01       		.uleb128 0x1
+ 1405 01a4 13       		.uleb128 0x13
+ 1406 01a5 00       		.byte	0
+ 1407 01a6 00       		.byte	0
+ 1408 01a7 1F       		.uleb128 0x1f
+ 1409 01a8 2E       		.uleb128 0x2e
+ 1410 01a9 01       		.byte	0x1
+ 1411 01aa 3F       		.uleb128 0x3f
+ 1412 01ab 19       		.uleb128 0x19
+ 1413 01ac 03       		.uleb128 0x3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 30
+
+
+ 1414 01ad 0E       		.uleb128 0xe
+ 1415 01ae 3A       		.uleb128 0x3a
+ 1416 01af 0B       		.uleb128 0xb
+ 1417 01b0 3B       		.uleb128 0x3b
+ 1418 01b1 0B       		.uleb128 0xb
+ 1419 01b2 27       		.uleb128 0x27
+ 1420 01b3 19       		.uleb128 0x19
+ 1421 01b4 49       		.uleb128 0x49
+ 1422 01b5 13       		.uleb128 0x13
+ 1423 01b6 3C       		.uleb128 0x3c
+ 1424 01b7 19       		.uleb128 0x19
+ 1425 01b8 00       		.byte	0
+ 1426 01b9 00       		.byte	0
+ 1427 01ba 20       		.uleb128 0x20
+ 1428 01bb 18       		.uleb128 0x18
+ 1429 01bc 00       		.byte	0
+ 1430 01bd 00       		.byte	0
+ 1431 01be 00       		.byte	0
+ 1432 01bf 00       		.byte	0
+ 1433              		.section	.debug_loc,"",%progbits
+ 1434              	.Ldebug_loc0:
+ 1435              	.LLST0:
+ 1436 0000 BE000000 		.4byte	.LVL15
+ 1437 0004 CE000000 		.4byte	.LVL16
+ 1438 0008 0100     		.2byte	0x1
+ 1439 000a 53       		.byte	0x53
+ 1440 000b 00000000 		.4byte	0
+ 1441 000f 00000000 		.4byte	0
+ 1442              		.section	.debug_aranges,"",%progbits
+ 1443 0000 24000000 		.4byte	0x24
+ 1444 0004 0200     		.2byte	0x2
+ 1445 0006 00000000 		.4byte	.Ldebug_info0
+ 1446 000a 04       		.byte	0x4
+ 1447 000b 00       		.byte	0
+ 1448 000c 0000     		.2byte	0
+ 1449 000e 0000     		.2byte	0
+ 1450 0010 00000000 		.4byte	.LFB64
+ 1451 0014 54000000 		.4byte	.LFE64-.LFB64
+ 1452 0018 00000000 		.4byte	.LFB63
+ 1453 001c 2C010000 		.4byte	.LFE63-.LFB63
+ 1454 0020 00000000 		.4byte	0
+ 1455 0024 00000000 		.4byte	0
+ 1456              		.section	.debug_ranges,"",%progbits
+ 1457              	.Ldebug_ranges0:
+ 1458 0000 00000000 		.4byte	.LFB64
+ 1459 0004 54000000 		.4byte	.LFE64
+ 1460 0008 00000000 		.4byte	.LFB63
+ 1461 000c 2C010000 		.4byte	.LFE63
+ 1462 0010 00000000 		.4byte	0
+ 1463 0014 00000000 		.4byte	0
+ 1464              		.section	.debug_line,"",%progbits
+ 1465              	.Ldebug_line0:
+ 1466 0000 C1010000 		.section	.debug_str,"MS",%progbits,1
+ 1466      02007101 
+ 1466      00000201 
+ 1466      FB0E0D00 
+ 1466      01010101 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 31
+
+
+ 1467              	.LASF19:
+ 1468 0000 72656731 		.ascii	"reg16\000"
+ 1468      3600
+ 1469              	.LASF41:
+ 1470 0006 72656365 		.ascii	"receiveMailboxNumber\000"
+ 1470      6976654D 
+ 1470      61696C62 
+ 1470      6F784E75 
+ 1470      6D626572 
+ 1471              	.LASF24:
+ 1472 001b 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
+ 1472      44415441 
+ 1472      5F425954 
+ 1472      455300
+ 1473              	.LASF16:
+ 1474 002a 63686172 		.ascii	"char8\000"
+ 1474      3800
+ 1475              	.LASF30:
+ 1476 0030 7278616D 		.ascii	"rxamr\000"
+ 1476      7200
+ 1477              	.LASF9:
+ 1478 0036 5F5F696E 		.ascii	"__int32_t\000"
+ 1478      7433325F 
+ 1478      7400
+ 1479              	.LASF35:
+ 1480 0040 74784461 		.ascii	"txData\000"
+ 1480      746100
+ 1481              	.LASF4:
+ 1482 0047 6C6F6E67 		.ascii	"long int\000"
+ 1482      20696E74 
+ 1482      00
+ 1483              	.LASF25:
+ 1484 0050 43414E5F 		.ascii	"CAN_REG_32\000"
+ 1484      5245475F 
+ 1484      333200
+ 1485              	.LASF8:
+ 1486 005b 756E7369 		.ascii	"unsigned int\000"
+ 1486      676E6564 
+ 1486      20696E74 
+ 1486      00
+ 1487              	.LASF23:
+ 1488 0068 62797465 		.ascii	"byte\000"
+ 1488      00
+ 1489              	.LASF29:
+ 1490 006d 72786461 		.ascii	"rxdata\000"
+ 1490      746100
+ 1491              	.LASF33:
+ 1492 0074 72786163 		.ascii	"rxacrd\000"
+ 1492      726400
+ 1493              	.LASF49:
+ 1494 007b 2E5C6D61 		.ascii	".\\main.c\000"
+ 1494      696E2E63 
+ 1494      00
+ 1495              	.LASF14:
+ 1496 0084 666C6F61 		.ascii	"float\000"
+ 1496      7400
+ 1497              	.LASF26:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 32
+
+
+ 1498 008a 43414E5F 		.ascii	"CAN_TX_MSG\000"
+ 1498      54585F4D 
+ 1498      534700
+ 1499              	.LASF45:
+ 1500 0095 43414E5F 		.ascii	"CAN_SendMsg\000"
+ 1500      53656E64 
+ 1500      4D736700 
+ 1501              	.LASF1:
+ 1502 00a1 756E7369 		.ascii	"unsigned char\000"
+ 1502      676E6564 
+ 1502      20636861 
+ 1502      7200
+ 1503              	.LASF28:
+ 1504 00af 72786964 		.ascii	"rxid\000"
+ 1504      00
+ 1505              	.LASF18:
+ 1506 00b4 72656738 		.ascii	"reg8\000"
+ 1506      00
+ 1507              	.LASF50:
+ 1508 00b9 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\GitHub\\VTM17_Dash_7se"
+ 1508      73657273 
+ 1508      5C636861 
+ 1508      726C5C44 
+ 1508      6F63756D 
+ 1509 00e7 675C5654 		.ascii	"g\\VTM17_Dash_7SEG\\VTM17_Display_7seg\\CAN_Full_Ex"
+ 1509      4D31375F 
+ 1509      44617368 
+ 1509      5F375345 
+ 1509      475C5654 
+ 1510 0117 616D706C 		.ascii	"ample01.cydsn\000"
+ 1510      6530312E 
+ 1510      63796473 
+ 1510      6E00
+ 1511              	.LASF5:
+ 1512 0125 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1512      20756E73 
+ 1512      69676E65 
+ 1512      6420696E 
+ 1512      7400
+ 1513              	.LASF3:
+ 1514 0137 73686F72 		.ascii	"short unsigned int\000"
+ 1514      7420756E 
+ 1514      7369676E 
+ 1514      65642069 
+ 1514      6E7400
+ 1515              	.LASF22:
+ 1516 014a 43414E5F 		.ascii	"CAN_DATA_BYTES_MSG\000"
+ 1516      44415441 
+ 1516      5F425954 
+ 1516      45535F4D 
+ 1516      534700
+ 1517              	.LASF37:
+ 1518 015d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1518      52784275 
+ 1518      66666572 
+ 1518      00
+ 1519              	.LASF15:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 33
+
+
+ 1520 016a 646F7562 		.ascii	"double\000"
+ 1520      6C6500
+ 1521              	.LASF40:
+ 1522 0171 70756C73 		.ascii	"pulseWidthValue\000"
+ 1522      65576964 
+ 1522      74685661 
+ 1522      6C756500 
+ 1523              	.LASF2:
+ 1524 0181 73686F72 		.ascii	"short int\000"
+ 1524      7420696E 
+ 1524      7400
+ 1525              	.LASF43:
+ 1526 018b 4C43445F 		.ascii	"LCD_PrintString\000"
+ 1526      5072696E 
+ 1526      74537472 
+ 1526      696E6700 
+ 1527              	.LASF12:
+ 1528 019b 75696E74 		.ascii	"uint16\000"
+ 1528      313600
+ 1529              	.LASF13:
+ 1530 01a2 75696E74 		.ascii	"uint32\000"
+ 1530      333200
+ 1531              	.LASF48:
+ 1532 01a9 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1532      4320342E 
+ 1532      392E3320 
+ 1532      32303135 
+ 1532      30333033 
+ 1533 01dc 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1533      20726576 
+ 1533      6973696F 
+ 1533      6E203232 
+ 1533      31323230 
+ 1534 020f 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1534      66756E63 
+ 1534      74696F6E 
+ 1534      2D736563 
+ 1534      74696F6E 
+ 1535              	.LASF44:
+ 1536 0237 4379496E 		.ascii	"CyIntSetVector\000"
+ 1536      74536574 
+ 1536      56656374 
+ 1536      6F7200
+ 1537              	.LASF36:
+ 1538 0246 61646344 		.ascii	"adcData\000"
+ 1538      61746100 
+ 1539              	.LASF7:
+ 1540 024e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1540      206C6F6E 
+ 1540      6720756E 
+ 1540      7369676E 
+ 1540      65642069 
+ 1541              	.LASF51:
+ 1542 0265 4953525F 		.ascii	"ISR_CAN\000"
+ 1542      43414E00 
+ 1543              	.LASF42:
+ 1544 026d 4C43445F 		.ascii	"LCD_Position\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 34
+
+
+ 1544      506F7369 
+ 1544      74696F6E 
+ 1544      00
+ 1545              	.LASF20:
+ 1546 027a 63796973 		.ascii	"cyisraddress\000"
+ 1546      72616464 
+ 1546      72657373 
+ 1546      00
+ 1547              	.LASF52:
+ 1548 0287 6D61696E 		.ascii	"main\000"
+ 1548      00
+ 1549              	.LASF34:
+ 1550 028c 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 1550      52585F53 
+ 1550      54525543 
+ 1550      5400
+ 1551              	.LASF27:
+ 1552 029a 7278636D 		.ascii	"rxcmd\000"
+ 1552      6400
+ 1553              	.LASF10:
+ 1554 02a0 696E7433 		.ascii	"int32_t\000"
+ 1554      325F7400 
+ 1555              	.LASF21:
+ 1556 02a8 73697A65 		.ascii	"sizetype\000"
+ 1556      74797065 
+ 1556      00
+ 1557              	.LASF32:
+ 1558 02b1 7278616D 		.ascii	"rxamrd\000"
+ 1558      726400
+ 1559              	.LASF6:
+ 1560 02b8 6C6F6E67 		.ascii	"long long int\000"
+ 1560      206C6F6E 
+ 1560      6720696E 
+ 1560      7400
+ 1561              	.LASF17:
+ 1562 02c6 63686172 		.ascii	"char\000"
+ 1562      00
+ 1563              	.LASF38:
+ 1564 02cb 64617461 		.ascii	"dataPWM\000"
+ 1564      50574D00 
+ 1565              	.LASF46:
+ 1566 02d3 4C43445F 		.ascii	"LCD_PrintInt8\000"
+ 1566      5072696E 
+ 1566      74496E74 
+ 1566      3800
+ 1567              	.LASF31:
+ 1568 02e1 72786163 		.ascii	"rxacr\000"
+ 1568      7200
+ 1569              	.LASF11:
+ 1570 02e7 75696E74 		.ascii	"uint8\000"
+ 1570      3800
+ 1571              	.LASF53:
+ 1572 02ed 4C43445F 		.ascii	"LCD_Start\000"
+ 1572      53746172 
+ 1572      7400
+ 1573              	.LASF39:
+ 1574 02f7 6D657373 		.ascii	"messagePWM\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccSHyANa.s 			page 35
+
+
+ 1574      61676550 
+ 1574      574D00
+ 1575              	.LASF0:
+ 1576 0302 7369676E 		.ascii	"signed char\000"
+ 1576      65642063 
+ 1576      68617200 
+ 1577              	.LASF47:
+ 1578 030e 73707269 		.ascii	"sprintf\000"
+ 1578      6E746600 
+ 1579              	.LASF54:
+ 1580 0316 43414E5F 		.ascii	"CAN_Start\000"
+ 1580      53746172 
+ 1580      7400
+ 1581              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -1,0 +1,2305 @@
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"CAN_TX_RX_func.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.CAN_SendMsg,"ax",%progbits
+  19              		.align	2
+  20              		.global	CAN_SendMsg
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	CAN_SendMsg, %function
+  24              	CAN_SendMsg:
+  25              	.LFB0:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\CAN_TX_RX_func.c"
+   1:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * File Name: CAN_TX_RX_func.c
+   3:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Version 3.0
+   4:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+   5:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Description:
+   6:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  There are functions process "Full" Receive and Transmit mailboxes:
+   7:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *     - CAN_SendMsg0-7();
+   8:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *     - CAN_ReceiveMsg0-15();
+   9:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  Transmission of message, and receive routine for "Basic" mailboxes:
+  10:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *     - CAN_SendMsg();
+  11:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *     - CAN_TxCancel();
+  12:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *     - CAN_ReceiveMsg();
+  13:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+  14:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  Note:
+  15:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *   None
+  16:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+  17:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** ********************************************************************************
+  18:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  19:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * You may use this file only in accordance with the license, terms, conditions,
+  20:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  21:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * the software package with which this file was provided.
+  22:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *******************************************************************************/
+  23:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+  24:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #include "CAN.h"
+  25:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #include "cyapicallbacks.h"
+  26:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+  27:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** /* `#START TX_RX_FUNCTION` */
+  28:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+  29:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** /* `#END` */
+  30:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+  31:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** /*******************************************************************************
+  33:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_SendMsg
+  34:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** ********************************************************************************
+  35:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+  36:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Summary:
+  37:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  This function is Send Message from one of Basic mailboxes. The function loops
+  38:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  through the transmit message buffer designed as Basic CAN mailboxes for the
+  39:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  first free available and sends from it. The number of retries is limited.
+  40:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+  41:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Parameters:
+  42:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  message: The pointer to a structure that contains all required data to send
+  43:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *           messages.
+  44:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+  45:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Return:
+  46:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  Indication if message has been sent.
+  47:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *   Define                             Description
+  48:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *    CYRET_SUCCESS                      The function passed successfully
+  49:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *    CAN_FAIL              The function failed
+  50:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+  51:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *******************************************************************************/
+  52:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** uint8 CAN_SendMsg(const CAN_TX_MSG *message) 
+  53:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** {
+  27              		.loc 1 53 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              	.LVL0:
+  32 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  33              		.cfi_def_cfa_offset 20
+  34              		.cfi_offset 4, -20
+  35              		.cfi_offset 5, -16
+  36              		.cfi_offset 6, -12
+  37              		.cfi_offset 7, -8
+  38              		.cfi_offset 14, -4
+  39              	.LVL1:
+  54:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 i, j, shift;
+  55:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 retry = 0u;
+  56:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 result = CAN_FAIL;
+  40              		.loc 1 56 0
+  41 0002 0122     		movs	r2, #1
+  55:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 result = CAN_FAIL;
+  42              		.loc 1 55 0
+  43 0004 0027     		movs	r7, #0
+  57:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint32 regTemp;
+  58:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+  59:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     while (retry < CAN_RETRY_NUMBER)
+  44              		.loc 1 59 0
+  45 0006 5AE0     		b	.L2
+  46              	.LVL2:
+  47              	.L16:
+  60:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+  61:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         shift = 1u;    /* Start from first mailbox */
+  62:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
+  63:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         {
+  64:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             /* Find Basic TX mailboxes */
+  65:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_MAILBOX_TYPE & shift) == 0u)
+  66:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 3
+
+
+  67:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* Find free mailbox */
+  68:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #if (CY_PSOC3 || CY_PSOC5)
+  69:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     if ((CAN_BUF_SR_REG.byte[2] & shift) == 0u)
+  48              		.loc 1 69 0
+  49 0008 2F4B     		ldr	r3, .L22
+  50 000a 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
+  51 000c 3342     		tst	r3, r6
+  52 000e 49D1     		bne	.L3
+  53              	.LVL3:
+  70:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #else  /* CY_PSOC4 */
+  71:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     if ((CAN_BUF_SR_REG &
+  72:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         (uint32) ((uint32) shift << CAN_TWO_BYTE_OFFSET)) == 0u)
+  73:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CY_PSOC3 || CY_PSOC5 */
+  74:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     {
+  75:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         regTemp = 0u;
+  76:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+  77:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         /* Set message parameters */
+  78:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         if (message->rtr != CAN_STANDARD_MESSAGE)
+  54              		.loc 1 78 0
+  55 0010 0379     		ldrb	r3, [r0, #4]	@ zero_extendqisi2
+  56 0012 0BB1     		cbz	r3, .L4
+  79:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+  80:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             regTemp = CAN_TX_RTR_MASK;    /* RTR message Enable */
+  57              		.loc 1 80 0
+  58 0014 4FF40013 		mov	r3, #2097152
+  59              	.L4:
+  60              	.LVL4:
+  81:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
+  82:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+  83:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         if (message->ide == CAN_STANDARD_MESSAGE)
+  61              		.loc 1 83 0
+  62 0018 4279     		ldrb	r2, [r0, #5]	@ zero_extendqisi2
+  63              	.LVL5:
+  64 001a 32B9     		cbnz	r2, .L5
+  84:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+  85:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             CAN_SET_TX_ID_STANDARD_MSG(i, message->id);
+  65              		.loc 1 85 0
+  66 001c 2B4A     		ldr	r2, .L22+4
+  67 001e 02EB0412 		add	r2, r2, r4, lsl #4
+  68 0022 0168     		ldr	r1, [r0]
+  69 0024 4905     		lsls	r1, r1, #21
+  70 0026 5160     		str	r1, [r2, #4]
+  71 0028 07E0     		b	.L6
+  72              	.L5:
+  86:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
+  87:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         else
+  88:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+  89:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_IDE_MASK;
+  73              		.loc 1 89 0
+  74 002a 43F48013 		orr	r3, r3, #1048576
+  75              	.LVL6:
+  90:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             CAN_SET_TX_ID_EXTENDED_MSG(i, message->id);
+  76              		.loc 1 90 0
+  77 002e 274A     		ldr	r2, .L22+4
+  78 0030 02EB0412 		add	r2, r2, r4, lsl #4
+  79 0034 0168     		ldr	r1, [r0]
+  80 0036 C900     		lsls	r1, r1, #3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 4
+
+
+  81 0038 5160     		str	r1, [r2, #4]
+  82              	.L6:
+  91:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
+  92:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+  93:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         if (message->dlc < CAN_TX_DLC_MAX_VALUE)
+  83              		.loc 1 93 0
+  84 003a 90F806E0 		ldrb	lr, [r0, #6]	@ zero_extendqisi2
+  85 003e BEF1070F 		cmp	lr, #7
+  86 0042 02D8     		bhi	.L7
+  94:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+  95:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             regTemp |= ((uint32) message->dlc) << CAN_TWO_BYTE_OFFSET;
+  87              		.loc 1 95 0
+  88 0044 43EA0E4E 		orr	lr, r3, lr, lsl #16
+  89              	.LVL7:
+  90 0048 01E0     		b	.L8
+  91              	.LVL8:
+  92              	.L7:
+  96:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
+  97:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         else
+  98:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+  99:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_DLC_UPPER_VALUE;
+  93              		.loc 1 99 0
+  94 004a 43F4002E 		orr	lr, r3, #524288
+  95              	.LVL9:
+  96              	.L8:
+ 100:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
+ 101:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 102:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         if (message->irq != CAN_TRANSMIT_INT_DISABLE)
+  97              		.loc 1 102 0
+  98 004e C379     		ldrb	r3, [r0, #7]	@ zero_extendqisi2
+  99 0050 0BB1     		cbz	r3, .L9
+ 103:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+ 104:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             regTemp |= CAN_TX_INT_ENABLE_MASK;    /* Transmit Interrupt Enable */
+ 100              		.loc 1 104 0
+ 101 0052 4EF0040E 		orr	lr, lr, #4
+ 102              	.LVL10:
+ 103              	.L9:
+ 105:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
+ 106:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 107:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         for (j = 0u; (j < message->dlc) && (j < CAN_TX_DLC_MAX_VALUE); j++)
+ 104              		.loc 1 107 0
+ 105 0056 0023     		movs	r3, #0
+ 106 0058 0FE0     		b	.L10
+ 107              	.LVL11:
+ 108              	.L14:
+ 108:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+ 109:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             #if (CY_PSOC3 || CY_PSOC5)
+ 110:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j) = message->msg->byte[j];
+ 109              		.loc 1 110 0
+ 110 005a 1C4A     		ldr	r2, .L22+4
+ 111 005c 02EB0411 		add	r1, r2, r4, lsl #4
+ 112 0060 032B     		cmp	r3, #3
+ 113 0062 02D9     		bls	.L11
+ 114              		.loc 1 110 0 is_stmt 0 discriminator 1
+ 115 0064 C3F10B02 		rsb	r2, r3, #11
+ 116 0068 01E0     		b	.L12
+ 117              	.L11:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 5
+
+
+ 118              		.loc 1 110 0 discriminator 2
+ 119 006a C3F10302 		rsb	r2, r3, #3
+ 120              	.L12:
+ 121              		.loc 1 110 0 discriminator 4
+ 122 006e 8568     		ldr	r5, [r0, #8]
+ 123 0070 ED5C     		ldrb	r5, [r5, r3]	@ zero_extendqisi2
+ 124 0072 0A44     		add	r2, r2, r1
+ 125 0074 1572     		strb	r5, [r2, #8]
+ 107:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+ 126              		.loc 1 107 0 is_stmt 1 discriminator 4
+ 127 0076 0133     		adds	r3, r3, #1
+ 128              	.LVL12:
+ 129 0078 DBB2     		uxtb	r3, r3
+ 130              	.LVL13:
+ 131              	.L10:
+ 107:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+ 132              		.loc 1 107 0 is_stmt 0 discriminator 2
+ 133 007a 8279     		ldrb	r2, [r0, #6]	@ zero_extendqisi2
+ 134 007c 9A42     		cmp	r2, r3
+ 135 007e 01D9     		bls	.L13
+ 107:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         {
+ 136              		.loc 1 107 0 discriminator 3
+ 137 0080 072B     		cmp	r3, #7
+ 138 0082 EAD9     		bls	.L14
+ 139              	.L13:
+ 111:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             #else /* CY_PSOC4 */
+ 112:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                                 CAN_TX_DATA_BYTE(i, j, message->msg->byte[j]);
+ 113:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             #endif /* CY_PSOC3 || CY_PSOC5 */
+ 114:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         }
+ 115:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 116:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         /* Disable isr */
+ 117:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     CyIntDisable(CAN_ISR_NUMBER);
+ 140              		.loc 1 117 0 is_stmt 1
+ 141 0084 4FF48031 		mov	r1, #65536
+ 142 0088 114B     		ldr	r3, .L22+8
+ 143              	.LVL14:
+ 144 008a 1960     		str	r1, [r3]
+ 118:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 119:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         /* WPN[23] and WPN[3] set to 1 for write to CAN Control reg */
+ 120:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         CY_SET_REG32(CAN_TX_CMD_PTR(i), (regTemp | CAN_TX_WPN_SET));
+ 145              		.loc 1 120 0
+ 146 008c 2201     		lsls	r2, r4, #4
+ 147 008e 0F4D     		ldr	r5, .L22+4
+ 148 0090 4EF40003 		orr	r3, lr, #8388608
+ 149 0094 43F00803 		orr	r3, r3, #8
+ 150 0098 5351     		str	r3, [r2, r5]
+ 121:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 122:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         #if (CY_PSOC3 || CY_PSOC5)
+ 123:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             CY_SET_REG32(CAN_TX_CMD_PTR(i), CAN_SEND_MESSAGE);
+ 151              		.loc 1 123 0
+ 152 009a 0123     		movs	r3, #1
+ 153 009c 5351     		str	r3, [r2, r5]
+ 124:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         #else /* CY_PSOC4 */
+ 125:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             if (message->sst != CAN_STANDARD_MESSAGE)
+ 126:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             {
+ 127:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                                 /* Single Shot Transmission */
+ 128:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                                 CAN_TX_CMD_REG(i) |= CAN_SEND_MESSAGE |
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 6
+
+
+ 129:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                                 CAN_TX_ABORT_MASK;
+ 130:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             }
+ 131:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             else
+ 132:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             {
+ 133:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                                 CAN_TX_CMD_REG(i) |= CAN_SEND_MESSAGE;
+ 134:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                             }
+ 135:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 136:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 137:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         /* Enable isr */
+ 138:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     CyIntEnable(CAN_ISR_NUMBER);
+ 154              		.loc 1 138 0
+ 155 009e 0D4B     		ldr	r3, .L22+12
+ 156 00a0 1960     		str	r1, [r3]
+ 157              	.LVL15:
+ 139:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 140:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                         result = CYRET_SUCCESS;
+ 158              		.loc 1 140 0
+ 159 00a2 0022     		movs	r2, #0
+ 160              	.LVL16:
+ 161              	.L3:
+ 141:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     }
+ 142:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 143:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             shift <<= 1u;
+ 162              		.loc 1 143 0
+ 163 00a4 7600     		lsls	r6, r6, #1
+ 164              	.LVL17:
+ 165 00a6 F6B2     		uxtb	r6, r6
+ 166              	.LVL18:
+ 144:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if (result == CYRET_SUCCESS)
+ 167              		.loc 1 144 0
+ 168 00a8 32B1     		cbz	r2, .L15
+  62:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         {
+ 169              		.loc 1 62 0 discriminator 2
+ 170 00aa 0134     		adds	r4, r4, #1
+ 171              	.LVL19:
+ 172 00ac E4B2     		uxtb	r4, r4
+ 173              	.LVL20:
+ 174 00ae 01E0     		b	.L18
+ 175              	.LVL21:
+ 176              	.L20:
+ 177 00b0 0126     		movs	r6, #1
+ 178 00b2 0024     		movs	r4, #0
+ 179              	.L18:
+ 180              	.LVL22:
+  62:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         {
+ 181              		.loc 1 62 0 is_stmt 0 discriminator 1
+ 182 00b4 072C     		cmp	r4, #7
+ 183 00b6 A7D9     		bls	.L16
+ 184              	.L15:
+ 145:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 146:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 break;
+ 147:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 148:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         }
+ 149:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         if (result == CYRET_SUCCESS)
+ 185              		.loc 1 149 0 is_stmt 1
+ 186 00b8 1AB1     		cbz	r2, .L17
+ 150:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         {
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 7
+
+
+ 151:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             break;
+ 152:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         }
+ 153:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         else
+ 154:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         {
+ 155:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             retry++;
+ 187              		.loc 1 155 0
+ 188 00ba 0137     		adds	r7, r7, #1
+ 189              	.LVL23:
+ 190 00bc FFB2     		uxtb	r7, r7
+ 191              	.LVL24:
+ 192              	.L2:
+  59:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 193              		.loc 1 59 0
+ 194 00be 022F     		cmp	r7, #2
+ 195 00c0 F6D9     		bls	.L20
+ 196              	.L17:
+ 156:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         }
+ 157:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 158:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 159:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     return (result);
+ 160:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** }
+ 197              		.loc 1 160 0
+ 198 00c2 1046     		mov	r0, r2
+ 199              	.LVL25:
+ 200 00c4 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 201              	.LVL26:
+ 202              	.L23:
+ 203 00c6 00BF     		.align	2
+ 204              	.L22:
+ 205 00c8 08A00040 		.word	1073782792
+ 206 00cc 20A00040 		.word	1073782816
+ 207 00d0 80E100E0 		.word	-536813184
+ 208 00d4 00E100E0 		.word	-536813312
+ 209              		.cfi_endproc
+ 210              	.LFE0:
+ 211              		.size	CAN_SendMsg, .-CAN_SendMsg
+ 212              		.section	.text.CAN_TxCancel,"ax",%progbits
+ 213              		.align	2
+ 214              		.global	CAN_TxCancel
+ 215              		.thumb
+ 216              		.thumb_func
+ 217              		.type	CAN_TxCancel, %function
+ 218              	CAN_TxCancel:
+ 219              	.LFB1:
+ 161:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 162:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 163:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** /*******************************************************************************
+ 164:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_TxCancel
+ 165:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** ********************************************************************************
+ 166:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+ 167:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Summary:
+ 168:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  This function cancels transmission of a message that has been queued to be
+ 169:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  transmitted. Values between 0 and 7 are valid.
+ 170:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+ 171:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Parameters:
+ 172:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  bufferId: The mailbox number.
+ 173:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 8
+
+
+ 174:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Return:
+ 175:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  None.
+ 176:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+ 177:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *******************************************************************************/
+ 178:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** void CAN_TxCancel(uint8 bufferId) 
+ 179:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** {
+ 220              		.loc 1 179 0
+ 221              		.cfi_startproc
+ 222              		@ args = 0, pretend = 0, frame = 0
+ 223              		@ frame_needed = 0, uses_anonymous_args = 0
+ 224              		@ link register save eliminated.
+ 225              	.LVL27:
+ 180:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     if (bufferId < CAN_NUMBER_OF_TX_MAILBOXES)
+ 226              		.loc 1 180 0
+ 227 0000 0728     		cmp	r0, #7
+ 228 0002 07D8     		bhi	.L24
+ 181:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 182:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_TX_ABORT_MESSAGE(bufferId);
+ 229              		.loc 1 182 0
+ 230 0004 0001     		lsls	r0, r0, #4
+ 231              	.LVL28:
+ 232 0006 044A     		ldr	r2, .L26
+ 233 0008 835C     		ldrb	r3, [r0, r2]	@ zero_extendqisi2
+ 234 000a 03F0FC03 		and	r3, r3, #252
+ 235 000e 43F00203 		orr	r3, r3, #2
+ 236 0012 8354     		strb	r3, [r0, r2]
+ 237              	.L24:
+ 238 0014 7047     		bx	lr
+ 239              	.L27:
+ 240 0016 00BF     		.align	2
+ 241              	.L26:
+ 242 0018 20A00040 		.word	1073782816
+ 243              		.cfi_endproc
+ 244              	.LFE1:
+ 245              		.size	CAN_TxCancel, .-CAN_TxCancel
+ 246              		.section	.text.CAN_ReceiveMsg,"ax",%progbits
+ 247              		.align	2
+ 248              		.global	CAN_ReceiveMsg
+ 249              		.thumb
+ 250              		.thumb_func
+ 251              		.type	CAN_ReceiveMsg, %function
+ 252              	CAN_ReceiveMsg:
+ 253              	.LFB2:
+ 183:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 184:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** }
+ 185:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 186:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 187:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX0_FUNC_ENABLE)
+ 188:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 189:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg0
+ 190:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 191:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 192:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 193:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 0. The function checks
+ 194:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 0 doesn't already have un-transmitted messages waiting for
+ 195:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 196:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 9
+
+
+ 197:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 198:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 199:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 200:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 201:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 202:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 203:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
+ 204:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 205:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 206:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 207:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 208:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg0(void) 
+ 209:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 210:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 211:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 212:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 213:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[0u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 214:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 215:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(0u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 216:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 217:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 218:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 219:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 220:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
+ 221:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 222:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_0_TRASMITTED` */
+ 223:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 224:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
+ 225:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 226:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_0_CALLBACK
+ 227:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_0_Callback();
+ 228:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_0_CALLBACK */
+ 229:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 230:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(0u),
+ 231:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(0u)) | CAN_SEND_MESSAGE);
+ 232:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 233:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 234:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
+ 235:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 236:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX0_FUNC_ENABLE */
+ 237:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 238:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 239:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX1_FUNC_ENABLE)
+ 240:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 241:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg1
+ 242:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 243:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 244:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 245:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 1. The function checks
+ 246:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 1 doesn't already have un-transmitted messages waiting for
+ 247:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 248:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 249:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 250:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 251:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 252:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 253:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 10
+
+
+ 254:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 255:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
+ 256:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 257:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 258:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 259:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 260:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg1(void) 
+ 261:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 262:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 263:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 264:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 265:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[1u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 266:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 267:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(1u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 268:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 269:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 270:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 271:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 272:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
+ 273:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 274:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_1_TRASMITTED` */
+ 275:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 276:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
+ 277:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 278:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_1_CALLBACK
+ 279:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_1_Callback();
+ 280:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_1_CALLBACK */
+ 281:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 282:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(1u),
+ 283:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(1u)) | CAN_SEND_MESSAGE);
+ 284:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 285:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 286:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
+ 287:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 288:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX1_FUNC_ENABLE */
+ 289:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 290:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 291:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX2_FUNC_ENABLE)
+ 292:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 293:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg2
+ 294:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 295:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 296:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 297:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 2. The function checks
+ 298:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 2 doesn't already have un-transmitted messages waiting for
+ 299:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 300:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 301:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 302:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 303:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 304:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 305:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 306:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 307:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
+ 308:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 309:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 310:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 11
+
+
+ 311:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 312:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg2(void) 
+ 313:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 314:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 315:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 316:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 317:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[2u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 318:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 319:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(2u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 320:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 321:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 322:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 323:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 324:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
+ 325:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 326:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_2_TRASMITTED` */
+ 327:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 328:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
+ 329:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 330:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_2_CALLBACK
+ 331:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_2_Callback();
+ 332:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_2_CALLBACK */
+ 333:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 334:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(2u),
+ 335:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(2u)) | CAN_SEND_MESSAGE);
+ 336:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 337:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 338:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
+ 339:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 340:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX2_FUNC_ENABLE */
+ 341:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 342:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 343:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX3_FUNC_ENABLE)
+ 344:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 345:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg3
+ 346:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 347:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 348:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 349:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 3. The function checks
+ 350:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 3 doesn't already have un-transmitted messages waiting for
+ 351:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 352:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 353:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 354:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 355:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 356:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 357:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 358:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 359:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
+ 360:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 361:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 362:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 363:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 364:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg3(void) 
+ 365:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 366:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 367:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 12
+
+
+ 368:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 369:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[3u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 370:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 371:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(3u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 372:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 373:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 374:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 375:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 376:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
+ 377:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 378:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_3_TRASMITTED` */
+ 379:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 380:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
+ 381:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 382:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_3_CALLBACK
+ 383:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_3_Callback();
+ 384:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_3_CALLBACK */
+ 385:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 386:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(3u),
+ 387:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(3u)) | CAN_SEND_MESSAGE);
+ 388:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 389:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 390:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
+ 391:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 392:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX3_FUNC_ENABLE */
+ 393:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 394:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 395:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX4_FUNC_ENABLE)
+ 396:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 397:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg4
+ 398:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 399:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 400:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 401:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 4. The function checks
+ 402:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 4 doesn't already have un-transmitted messages waiting for
+ 403:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 404:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 405:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 406:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 407:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 408:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 409:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 410:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 411:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
+ 412:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 413:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 414:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 415:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 416:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg4(void) 
+ 417:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 418:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 419:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 420:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 421:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[4u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 422:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 423:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(4u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 424:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 13
+
+
+ 425:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 426:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 427:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 428:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
+ 429:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 430:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_4_TRASMITTED` */
+ 431:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 432:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
+ 433:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 434:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_4_CALLBACK
+ 435:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_4_Callback();
+ 436:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_4_CALLBACK */
+ 437:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 438:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(4u),
+ 439:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(4u)) | CAN_SEND_MESSAGE);
+ 440:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 441:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 442:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
+ 443:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 444:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX4_FUNC_ENABLE */
+ 445:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 446:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 447:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX5_FUNC_ENABLE)
+ 448:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 449:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg5
+ 450:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 451:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 452:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 453:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 5. The function checks
+ 454:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 5 doesn't already have un-transmitted messages waiting for
+ 455:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 456:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 457:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 458:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 459:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 460:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 461:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 462:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 463:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
+ 464:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 465:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 466:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 467:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 468:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg5(void) 
+ 469:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 470:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 471:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 472:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 473:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[5u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 474:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 475:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(5u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 476:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 477:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 478:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 479:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 480:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
+ 481:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 14
+
+
+ 482:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_5_TRASMITTED` */
+ 483:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 484:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
+ 485:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 486:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_5_CALLBACK
+ 487:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_5_Callback();
+ 488:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_5_CALLBACK */
+ 489:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 490:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(5u),
+ 491:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(5u)) | CAN_SEND_MESSAGE);
+ 492:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 493:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 494:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
+ 495:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 496:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX5_FUNC_ENABLE */
+ 497:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 498:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 499:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX6_FUNC_ENABLE)
+ 500:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 501:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg6
+ 502:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 503:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 504:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 505:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 6. The function checks
+ 506:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 6 doesn't already have un-transmitted messages waiting for
+ 507:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 508:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 509:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 510:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 511:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 512:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 513:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 514:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 515:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
+ 516:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 517:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 518:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 519:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 520:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg6(void) 
+ 521:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 522:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 523:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 524:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 525:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[6u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 526:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 527:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(6u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 528:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 529:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 530:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 531:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 532:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
+ 533:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 534:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_6_TRASMITTED` */
+ 535:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 536:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
+ 537:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 538:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_6_CALLBACK
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 15
+
+
+ 539:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_6_Callback();
+ 540:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_6_CALLBACK */
+ 541:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 542:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(6u),
+ 543:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(6u)) | CAN_SEND_MESSAGE);
+ 544:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 545:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 546:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
+ 547:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 548:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX6_FUNC_ENABLE */
+ 549:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 550:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 551:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_TX7_FUNC_ENABLE)
+ 552:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 553:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_SendMsg7)
+ 554:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 555:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 556:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 557:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Transmit Message 7. The function checks
+ 558:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  if mailbox 7 doesn't already have un-transmitted messages waiting for
+ 559:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  arbitration. If not initiate transmission of the message.
+ 560:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Generated only for the Transmit mailbox designed as Full.
+ 561:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 562:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 563:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 564:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 565:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 566:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Indication if Message has been sent.
+ 567:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *   Define                             Description
+ 568:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CYRET_SUCCESS                      The function passed successfully
+ 569:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *    CAN_FAIL              The function failed
+ 570:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 571:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 572:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     uint8 CAN_SendMsg7(void) 
+ 573:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 574:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         uint8 result = CYRET_SUCCESS;
+ 575:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 576:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #if (CY_PSOC3 || CY_PSOC5)
+ 577:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX[7u].txcmd.byte[0u] & CAN_TX_REQUEST_PENDING) != 0u)
+ 578:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #else  /* CY_PSOC4 */
+ 579:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             if ((CAN_TX_CMD_REG(7u) & CAN_TX_REQUEST_PENDING) != 0u)
+ 580:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CY_PSOC3 || CY_PSOC5 */
+ 581:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 582:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 result = CAN_FAIL;
+ 583:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 584:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             else
+ 585:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             {
+ 586:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#START MESSAGE_7_TRASMITTED` */
+ 587:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 588:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 /* `#END` */
+ 589:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 590:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #ifdef CAN_SEND_MSG_7_CALLBACK
+ 591:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                     CAN_SendMsg_7_Callback();
+ 592:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 #endif /* CAN_SEND_MSG_7_CALLBACK */
+ 593:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 594:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_SET_REG32(CAN_TX_CMD_PTR(7u),
+ 595:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CY_GET_REG32(CAN_TX_CMD_PTR(7u)) | CAN_SEND_MESSAGE);
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 16
+
+
+ 596:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             }
+ 597:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 598:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         return (result);
+ 599:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 600:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_TX7_FUNC_ENABLE */
+ 601:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 602:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 603:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** /*******************************************************************************
+ 604:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * FUNCTION NAME:   CAN_ReceiveMsg
+ 605:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** ********************************************************************************
+ 606:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+ 607:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Summary:
+ 608:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  This function is the entry point to Receive Message Interrupt for Basic
+ 609:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  mailboxes. Clears the Receive particular Message interrupt flag. Generated
+ 610:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  only if one of the Receive mailboxes is designed as Basic.
+ 611:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+ 612:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Parameters:
+ 613:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  rxMailbox: The mailbox number that trig Receive Message Interrupt.
+ 614:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+ 615:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Return:
+ 616:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  None.
+ 617:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+ 618:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** * Reentrant:
+ 619:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *  Depends on the Customer code.
+ 620:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *
+ 621:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** *******************************************************************************/
+ 622:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** void CAN_ReceiveMsg(uint8 rxMailbox) 
+ 623:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** {
+ 254              		.loc 1 623 0
+ 255              		.cfi_startproc
+ 256              		@ args = 0, pretend = 0, frame = 0
+ 257              		@ frame_needed = 0, uses_anonymous_args = 0
+ 258              		@ link register save eliminated.
+ 259              	.LVL29:
+ 624:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     #if (CY_PSOC3 || CY_PSOC5)
+ 625:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         if ((CAN_RX[rxMailbox].rxcmd.byte[0u] & CAN_RX_ACK_MSG) != 0u)
+ 260              		.loc 1 625 0
+ 261 0000 4001     		lsls	r0, r0, #5
+ 262              	.LVL30:
+ 263 0002 054B     		ldr	r3, .L30
+ 264 0004 C25C     		ldrb	r2, [r0, r3]	@ zero_extendqisi2
+ 265 0006 12F0010F 		tst	r2, #1
+ 266 000a 03D0     		beq	.L28
+ 626:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     #else  /* CY_PSOC4 */
+ 627:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         if ((CAN_RX_CMD_REG(rxMailbox) & CAN_RX_ACK_MSG) != 0u)
+ 628:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
+ 629:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         {
+ 630:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             /* `#START MESSAGE_BASIC_RECEIVED` */
+ 631:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 632:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             /* `#END` */
+ 633:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 634:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #ifdef CAN_RECEIVE_MSG_CALLBACK
+ 635:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CAN_ReceiveMsg_Callback();
+ 636:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #endif /* CAN_RECEIVE_MSG_CALLBACK */
+ 637:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 638:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #if (CY_PSOC3 || CY_PSOC5)
+ 639:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CAN_RX[rxMailbox].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 17
+
+
+ 267              		.loc 1 639 0
+ 268 000c C25C     		ldrb	r2, [r0, r3]	@ zero_extendqisi2
+ 269 000e 42F00102 		orr	r2, r2, #1
+ 270 0012 C254     		strb	r2, [r0, r3]
+ 271              	.L28:
+ 272 0014 7047     		bx	lr
+ 273              	.L31:
+ 274 0016 00BF     		.align	2
+ 275              	.L30:
+ 276 0018 A0A00040 		.word	1073782944
+ 277              		.cfi_endproc
+ 278              	.LFE2:
+ 279              		.size	CAN_ReceiveMsg, .-CAN_ReceiveMsg
+ 280              		.section	.text.CAN_ReceiveMsgswitchStatus,"ax",%progbits
+ 281              		.align	2
+ 282              		.global	CAN_ReceiveMsgswitchStatus
+ 283              		.thumb
+ 284              		.thumb_func
+ 285              		.type	CAN_ReceiveMsgswitchStatus, %function
+ 286              	CAN_ReceiveMsgswitchStatus:
+ 287              	.LFB3:
+ 640:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #else  /* CY_PSOC4 */
+ 641:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****                 CAN_RX_CMD_REG(rxMailbox) |= CAN_RX_ACK_MSG;
+ 642:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             #endif /* CY_PSOC3 || CY_PSOC5 */
+ 643:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         }
+ 644:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** }
+ 645:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 646:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 647:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX0_FUNC_ENABLE)
+ 648:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 649:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:   CAN_ReceiveMsgswitchStatus
+ 650:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 651:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 652:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 653:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 0 Interrupt. Clears the
+ 654:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 0 interrupt flag. Generated only for the Receive mailbox
+ 655:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
+ 656:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 657:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 658:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 659:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 660:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 661:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 662:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 663:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
+ 664:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 665:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 666:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 667:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgswitchStatus(void) 
+ 668:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 288              		.loc 1 668 0
+ 289              		.cfi_startproc
+ 290              		@ args = 0, pretend = 0, frame = 0
+ 291              		@ frame_needed = 0, uses_anonymous_args = 0
+ 292              		@ link register save eliminated.
+ 669:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_switchStatus_RECEIVED` */
+ 670:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 18
+
+
+ 671:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
+ 672:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 673:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_switchStatus_CALLBACK
+ 674:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_switchStatus_Callback();
+ 675:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_switchStatus_CALLBACK */
+ 676:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 677:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[0u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ 293              		.loc 1 677 0
+ 294 0000 024A     		ldr	r2, .L33
+ 295 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 296 0004 43F00103 		orr	r3, r3, #1
+ 297 0008 1370     		strb	r3, [r2]
+ 298 000a 7047     		bx	lr
+ 299              	.L34:
+ 300              		.align	2
+ 301              	.L33:
+ 302 000c A0A00040 		.word	1073782944
+ 303              		.cfi_endproc
+ 304              	.LFE3:
+ 305              		.size	CAN_ReceiveMsgswitchStatus, .-CAN_ReceiveMsgswitchStatus
+ 306              		.section	.text.CAN_ReceiveMsgADCdata,"ax",%progbits
+ 307              		.align	2
+ 308              		.global	CAN_ReceiveMsgADCdata
+ 309              		.thumb
+ 310              		.thumb_func
+ 311              		.type	CAN_ReceiveMsgADCdata, %function
+ 312              	CAN_ReceiveMsgADCdata:
+ 313              	.LFB4:
+ 678:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     }
+ 679:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #endif /* CAN_RX0_FUNC_ENABLE */
+ 680:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 681:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 682:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** #if (CAN_RX1_FUNC_ENABLE)
+ 683:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     /*******************************************************************************
+ 684:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * FUNCTION NAME:    CAN_ReceiveMsgADCdata
+ 685:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     ********************************************************************************
+ 686:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 687:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Summary:
+ 688:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  This function is the entry point to Receive Message 1 Interrupt. Clears the
+ 689:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Receive Message 1 interrupt flag. Generated only for the Receive mailbox
+ 690:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  designed as Full.
+ 691:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 692:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Parameters:
+ 693:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 694:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 695:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Return:
+ 696:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  None.
+ 697:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 698:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     * Reentrant:
+ 699:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *  Depends on the Customer code.
+ 700:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *
+ 701:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     *******************************************************************************/
+ 702:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     void CAN_ReceiveMsgADCdata(void) 
+ 703:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****     {
+ 314              		.loc 1 703 0
+ 315              		.cfi_startproc
+ 316              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 19
+
+
+ 317              		@ frame_needed = 0, uses_anonymous_args = 0
+ 318              		@ link register save eliminated.
+ 704:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#START MESSAGE_ADCdata_RECEIVED` */
+ 705:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 706:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         /* `#END` */
+ 707:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 708:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #ifdef CAN_RECEIVE_MSG_ADCdata_CALLBACK
+ 709:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****             CAN_ReceiveMsg_ADCdata_Callback();
+ 710:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         #endif /* CAN_RECEIVE_MSG_ADCdata_CALLBACK */
+ 711:.\Generated_Source\PSoC5/CAN_TX_RX_func.c **** 
+ 712:.\Generated_Source\PSoC5/CAN_TX_RX_func.c ****         CAN_RX[1u].rxcmd.byte[0u] |= CAN_RX_ACK_MSG;
+ 319              		.loc 1 712 0
+ 320 0000 024A     		ldr	r2, .L36
+ 321 0002 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 322 0004 43F00103 		orr	r3, r3, #1
+ 323 0008 1370     		strb	r3, [r2]
+ 324 000a 7047     		bx	lr
+ 325              	.L37:
+ 326              		.align	2
+ 327              	.L36:
+ 328 000c C0A00040 		.word	1073782976
+ 329              		.cfi_endproc
+ 330              	.LFE4:
+ 331              		.size	CAN_ReceiveMsgADCdata, .-CAN_ReceiveMsgADCdata
+ 332              		.text
+ 333              	.Letext0:
+ 334              		.file 2 ".\\Generated_Source\\PSoC5\\cytypes.h"
+ 335              		.file 3 ".\\Generated_Source\\PSoC5\\CAN.h"
+ 336              		.section	.debug_info,"",%progbits
+ 337              	.Ldebug_info0:
+ 338 0000 53030000 		.4byte	0x353
+ 339 0004 0400     		.2byte	0x4
+ 340 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 341 000a 04       		.byte	0x4
+ 342 000b 01       		.uleb128 0x1
+ 343 000c F0010000 		.4byte	.LASF45
+ 344 0010 01       		.byte	0x1
+ 345 0011 AF010000 		.4byte	.LASF46
+ 346 0015 B6000000 		.4byte	.LASF47
+ 347 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 348 001d 00000000 		.4byte	0
+ 349 0021 00000000 		.4byte	.Ldebug_line0
+ 350 0025 02       		.uleb128 0x2
+ 351 0026 01       		.byte	0x1
+ 352 0027 06       		.byte	0x6
+ 353 0028 DF020000 		.4byte	.LASF0
+ 354 002c 02       		.uleb128 0x2
+ 355 002d 01       		.byte	0x1
+ 356 002e 08       		.byte	0x8
+ 357 002f 97000000 		.4byte	.LASF1
+ 358 0033 02       		.uleb128 0x2
+ 359 0034 02       		.byte	0x2
+ 360 0035 05       		.byte	0x5
+ 361 0036 6F010000 		.4byte	.LASF2
+ 362 003a 02       		.uleb128 0x2
+ 363 003b 02       		.byte	0x2
+ 364 003c 07       		.byte	0x7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 20
+
+
+ 365 003d 49000000 		.4byte	.LASF3
+ 366 0041 02       		.uleb128 0x2
+ 367 0042 04       		.byte	0x4
+ 368 0043 05       		.byte	0x5
+ 369 0044 D6020000 		.4byte	.LASF4
+ 370 0048 02       		.uleb128 0x2
+ 371 0049 04       		.byte	0x4
+ 372 004a 07       		.byte	0x7
+ 373 004b 22010000 		.4byte	.LASF5
+ 374 004f 02       		.uleb128 0x2
+ 375 0050 08       		.byte	0x8
+ 376 0051 05       		.byte	0x5
+ 377 0052 AF020000 		.4byte	.LASF6
+ 378 0056 02       		.uleb128 0x2
+ 379 0057 08       		.byte	0x8
+ 380 0058 07       		.byte	0x7
+ 381 0059 D9010000 		.4byte	.LASF7
+ 382 005d 03       		.uleb128 0x3
+ 383 005e 04       		.byte	0x4
+ 384 005f 05       		.byte	0x5
+ 385 0060 696E7400 		.ascii	"int\000"
+ 386 0064 02       		.uleb128 0x2
+ 387 0065 04       		.byte	0x4
+ 388 0066 07       		.byte	0x7
+ 389 0067 A2010000 		.4byte	.LASF8
+ 390 006b 04       		.uleb128 0x4
+ 391 006c 34010000 		.4byte	.LASF9
+ 392 0070 02       		.byte	0x2
+ 393 0071 9201     		.2byte	0x192
+ 394 0073 2C000000 		.4byte	0x2c
+ 395 0077 04       		.uleb128 0x4
+ 396 0078 80010000 		.4byte	.LASF10
+ 397 007c 02       		.byte	0x2
+ 398 007d 9401     		.2byte	0x194
+ 399 007f 48000000 		.4byte	0x48
+ 400 0083 02       		.uleb128 0x2
+ 401 0084 04       		.byte	0x4
+ 402 0085 04       		.byte	0x4
+ 403 0086 7A000000 		.4byte	.LASF11
+ 404 008a 02       		.uleb128 0x2
+ 405 008b 08       		.byte	0x8
+ 406 008c 04       		.byte	0x4
+ 407 008d 60010000 		.4byte	.LASF12
+ 408 0091 02       		.uleb128 0x2
+ 409 0092 01       		.byte	0x1
+ 410 0093 08       		.byte	0x8
+ 411 0094 62000000 		.4byte	.LASF13
+ 412 0098 04       		.uleb128 0x4
+ 413 0099 B1000000 		.4byte	.LASF14
+ 414 009d 02       		.byte	0x2
+ 415 009e 3C02     		.2byte	0x23c
+ 416 00a0 A4000000 		.4byte	0xa4
+ 417 00a4 05       		.uleb128 0x5
+ 418 00a5 6B000000 		.4byte	0x6b
+ 419 00a9 04       		.uleb128 0x4
+ 420 00aa A5000000 		.4byte	.LASF15
+ 421 00ae 02       		.byte	0x2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 21
+
+
+ 422 00af 3E02     		.2byte	0x23e
+ 423 00b1 B5000000 		.4byte	0xb5
+ 424 00b5 05       		.uleb128 0x5
+ 425 00b6 77000000 		.4byte	0x77
+ 426 00ba 02       		.uleb128 0x2
+ 427 00bb 04       		.byte	0x4
+ 428 00bc 07       		.byte	0x7
+ 429 00bd 9F020000 		.4byte	.LASF16
+ 430 00c1 06       		.uleb128 0x6
+ 431 00c2 08       		.byte	0x8
+ 432 00c3 03       		.byte	0x3
+ 433 00c4 6F       		.byte	0x6f
+ 434 00c5 D6000000 		.4byte	0xd6
+ 435 00c9 07       		.uleb128 0x7
+ 436 00ca 67000000 		.4byte	.LASF18
+ 437 00ce 03       		.byte	0x3
+ 438 00cf 71       		.byte	0x71
+ 439 00d0 D6000000 		.4byte	0xd6
+ 440 00d4 00       		.byte	0
+ 441 00d5 00       		.byte	0
+ 442 00d6 08       		.uleb128 0x8
+ 443 00d7 6B000000 		.4byte	0x6b
+ 444 00db E6000000 		.4byte	0xe6
+ 445 00df 09       		.uleb128 0x9
+ 446 00e0 BA000000 		.4byte	0xba
+ 447 00e4 07       		.byte	0x7
+ 448 00e5 00       		.byte	0
+ 449 00e6 0A       		.uleb128 0xa
+ 450 00e7 3A010000 		.4byte	.LASF17
+ 451 00eb 03       		.byte	0x3
+ 452 00ec 72       		.byte	0x72
+ 453 00ed C1000000 		.4byte	0xc1
+ 454 00f1 06       		.uleb128 0x6
+ 455 00f2 08       		.byte	0x8
+ 456 00f3 03       		.byte	0x3
+ 457 00f4 75       		.byte	0x75
+ 458 00f5 06010000 		.4byte	0x106
+ 459 00f9 07       		.uleb128 0x7
+ 460 00fa 67000000 		.4byte	.LASF18
+ 461 00fe 03       		.byte	0x3
+ 462 00ff 77       		.byte	0x77
+ 463 0100 16010000 		.4byte	0x116
+ 464 0104 00       		.byte	0
+ 465 0105 00       		.byte	0
+ 466 0106 08       		.uleb128 0x8
+ 467 0107 98000000 		.4byte	0x98
+ 468 010b 16010000 		.4byte	0x116
+ 469 010f 09       		.uleb128 0x9
+ 470 0110 BA000000 		.4byte	0xba
+ 471 0114 07       		.byte	0x7
+ 472 0115 00       		.byte	0
+ 473 0116 05       		.uleb128 0x5
+ 474 0117 06010000 		.4byte	0x106
+ 475 011b 0A       		.uleb128 0xa
+ 476 011c 24000000 		.4byte	.LASF19
+ 477 0120 03       		.byte	0x3
+ 478 0121 78       		.byte	0x78
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 22
+
+
+ 479 0122 F1000000 		.4byte	0xf1
+ 480 0126 06       		.uleb128 0x6
+ 481 0127 04       		.byte	0x4
+ 482 0128 03       		.byte	0x3
+ 483 0129 7B       		.byte	0x7b
+ 484 012a 3B010000 		.4byte	0x13b
+ 485 012e 07       		.uleb128 0x7
+ 486 012f 67000000 		.4byte	.LASF18
+ 487 0133 03       		.byte	0x3
+ 488 0134 7D       		.byte	0x7d
+ 489 0135 4B010000 		.4byte	0x14b
+ 490 0139 00       		.byte	0
+ 491 013a 00       		.byte	0
+ 492 013b 08       		.uleb128 0x8
+ 493 013c 98000000 		.4byte	0x98
+ 494 0140 4B010000 		.4byte	0x14b
+ 495 0144 09       		.uleb128 0x9
+ 496 0145 BA000000 		.4byte	0xba
+ 497 0149 03       		.byte	0x3
+ 498 014a 00       		.byte	0
+ 499 014b 05       		.uleb128 0x5
+ 500 014c 3B010000 		.4byte	0x13b
+ 501 0150 0A       		.uleb128 0xa
+ 502 0151 3E000000 		.4byte	.LASF20
+ 503 0155 03       		.byte	0x3
+ 504 0156 7E       		.byte	0x7e
+ 505 0157 26010000 		.4byte	0x126
+ 506 015b 06       		.uleb128 0x6
+ 507 015c 0C       		.byte	0xc
+ 508 015d 03       		.byte	0x3
+ 509 015e 81       		.byte	0x81
+ 510 015f AB010000 		.4byte	0x1ab
+ 511 0163 0B       		.uleb128 0xb
+ 512 0164 696400   		.ascii	"id\000"
+ 513 0167 03       		.byte	0x3
+ 514 0168 83       		.byte	0x83
+ 515 0169 77000000 		.4byte	0x77
+ 516 016d 00       		.byte	0
+ 517 016e 0B       		.uleb128 0xb
+ 518 016f 72747200 		.ascii	"rtr\000"
+ 519 0173 03       		.byte	0x3
+ 520 0174 84       		.byte	0x84
+ 521 0175 6B000000 		.4byte	0x6b
+ 522 0179 04       		.byte	0x4
+ 523 017a 0B       		.uleb128 0xb
+ 524 017b 69646500 		.ascii	"ide\000"
+ 525 017f 03       		.byte	0x3
+ 526 0180 85       		.byte	0x85
+ 527 0181 6B000000 		.4byte	0x6b
+ 528 0185 05       		.byte	0x5
+ 529 0186 0B       		.uleb128 0xb
+ 530 0187 646C6300 		.ascii	"dlc\000"
+ 531 018b 03       		.byte	0x3
+ 532 018c 86       		.byte	0x86
+ 533 018d 6B000000 		.4byte	0x6b
+ 534 0191 06       		.byte	0x6
+ 535 0192 0B       		.uleb128 0xb
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 23
+
+
+ 536 0193 69727100 		.ascii	"irq\000"
+ 537 0197 03       		.byte	0x3
+ 538 0198 87       		.byte	0x87
+ 539 0199 6B000000 		.4byte	0x6b
+ 540 019d 07       		.byte	0x7
+ 541 019e 0B       		.uleb128 0xb
+ 542 019f 6D736700 		.ascii	"msg\000"
+ 543 01a3 03       		.byte	0x3
+ 544 01a4 8B       		.byte	0x8b
+ 545 01a5 AB010000 		.4byte	0x1ab
+ 546 01a9 08       		.byte	0x8
+ 547 01aa 00       		.byte	0
+ 548 01ab 0C       		.uleb128 0xc
+ 549 01ac 04       		.byte	0x4
+ 550 01ad E6000000 		.4byte	0xe6
+ 551 01b1 0A       		.uleb128 0xa
+ 552 01b2 80000000 		.4byte	.LASF21
+ 553 01b6 03       		.byte	0x3
+ 554 01b7 8C       		.byte	0x8c
+ 555 01b8 5B010000 		.4byte	0x15b
+ 556 01bc 06       		.uleb128 0x6
+ 557 01bd 20       		.byte	0x20
+ 558 01be 03       		.byte	0x3
+ 559 01bf A0       		.byte	0xa0
+ 560 01c0 19020000 		.4byte	0x219
+ 561 01c4 07       		.uleb128 0x7
+ 562 01c5 99020000 		.4byte	.LASF22
+ 563 01c9 03       		.byte	0x3
+ 564 01ca A2       		.byte	0xa2
+ 565 01cb 50010000 		.4byte	0x150
+ 566 01cf 00       		.byte	0
+ 567 01d0 07       		.uleb128 0x7
+ 568 01d1 4D010000 		.4byte	.LASF23
+ 569 01d5 03       		.byte	0x3
+ 570 01d6 A3       		.byte	0xa3
+ 571 01d7 50010000 		.4byte	0x150
+ 572 01db 04       		.byte	0x4
+ 573 01dc 07       		.uleb128 0x7
+ 574 01dd 6C000000 		.4byte	.LASF24
+ 575 01e1 03       		.byte	0x3
+ 576 01e2 A4       		.byte	0xa4
+ 577 01e3 1B010000 		.4byte	0x11b
+ 578 01e7 08       		.byte	0x8
+ 579 01e8 07       		.uleb128 0x7
+ 580 01e9 38000000 		.4byte	.LASF25
+ 581 01ed 03       		.byte	0x3
+ 582 01ee A5       		.byte	0xa5
+ 583 01ef 50010000 		.4byte	0x150
+ 584 01f3 10       		.byte	0x10
+ 585 01f4 07       		.uleb128 0x7
+ 586 01f5 D0020000 		.4byte	.LASF26
+ 587 01f9 03       		.byte	0x3
+ 588 01fa A6       		.byte	0xa6
+ 589 01fb 50010000 		.4byte	0x150
+ 590 01ff 14       		.byte	0x14
+ 591 0200 07       		.uleb128 0x7
+ 592 0201 A8020000 		.4byte	.LASF27
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 24
+
+
+ 593 0205 03       		.byte	0x3
+ 594 0206 A7       		.byte	0xa7
+ 595 0207 50010000 		.4byte	0x150
+ 596 020b 18       		.byte	0x18
+ 597 020c 07       		.uleb128 0x7
+ 598 020d 73000000 		.4byte	.LASF28
+ 599 0211 03       		.byte	0x3
+ 600 0212 A8       		.byte	0xa8
+ 601 0213 50010000 		.4byte	0x150
+ 602 0217 1C       		.byte	0x1c
+ 603 0218 00       		.byte	0
+ 604 0219 0A       		.uleb128 0xa
+ 605 021a 8B020000 		.4byte	.LASF29
+ 606 021e 03       		.byte	0x3
+ 607 021f A9       		.byte	0xa9
+ 608 0220 BC010000 		.4byte	0x1bc
+ 609 0224 06       		.uleb128 0x6
+ 610 0225 10       		.byte	0x10
+ 611 0226 03       		.byte	0x3
+ 612 0227 AC       		.byte	0xac
+ 613 0228 51020000 		.4byte	0x251
+ 614 022c 07       		.uleb128 0x7
+ 615 022d 5C000000 		.4byte	.LASF30
+ 616 0231 03       		.byte	0x3
+ 617 0232 AE       		.byte	0xae
+ 618 0233 50010000 		.4byte	0x150
+ 619 0237 00       		.byte	0
+ 620 0238 07       		.uleb128 0x7
+ 621 0239 33000000 		.4byte	.LASF31
+ 622 023d 03       		.byte	0x3
+ 623 023e AF       		.byte	0xaf
+ 624 023f 50010000 		.4byte	0x150
+ 625 0243 04       		.byte	0x4
+ 626 0244 07       		.uleb128 0x7
+ 627 0245 EB020000 		.4byte	.LASF32
+ 628 0249 03       		.byte	0x3
+ 629 024a B0       		.byte	0xb0
+ 630 024b 1B010000 		.4byte	0x11b
+ 631 024f 08       		.byte	0x8
+ 632 0250 00       		.byte	0
+ 633 0251 0A       		.uleb128 0xa
+ 634 0252 52010000 		.4byte	.LASF33
+ 635 0256 03       		.byte	0x3
+ 636 0257 B1       		.byte	0xb1
+ 637 0258 24020000 		.4byte	0x224
+ 638 025c 0D       		.uleb128 0xd
+ 639 025d 8B000000 		.4byte	.LASF48
+ 640 0261 01       		.byte	0x1
+ 641 0262 34       		.byte	0x34
+ 642 0263 6B000000 		.4byte	0x6b
+ 643 0267 00000000 		.4byte	.LFB0
+ 644 026b D8000000 		.4byte	.LFE0-.LFB0
+ 645 026f 01       		.uleb128 0x1
+ 646 0270 9C       		.byte	0x9c
+ 647 0271 DB020000 		.4byte	0x2db
+ 648 0275 0E       		.uleb128 0xe
+ 649 0276 00000000 		.4byte	.LASF38
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 25
+
+
+ 650 027a 01       		.byte	0x1
+ 651 027b 34       		.byte	0x34
+ 652 027c DB020000 		.4byte	0x2db
+ 653 0280 00000000 		.4byte	.LLST0
+ 654 0284 0F       		.uleb128 0xf
+ 655 0285 6900     		.ascii	"i\000"
+ 656 0287 01       		.byte	0x1
+ 657 0288 36       		.byte	0x36
+ 658 0289 6B000000 		.4byte	0x6b
+ 659 028d 21000000 		.4byte	.LLST1
+ 660 0291 0F       		.uleb128 0xf
+ 661 0292 6A00     		.ascii	"j\000"
+ 662 0294 01       		.byte	0x1
+ 663 0295 36       		.byte	0x36
+ 664 0296 6B000000 		.4byte	0x6b
+ 665 029a 4A000000 		.4byte	.LLST2
+ 666 029e 10       		.uleb128 0x10
+ 667 029f 1E000000 		.4byte	.LASF34
+ 668 02a3 01       		.byte	0x1
+ 669 02a4 36       		.byte	0x36
+ 670 02a5 6B000000 		.4byte	0x6b
+ 671 02a9 74000000 		.4byte	.LLST3
+ 672 02ad 10       		.uleb128 0x10
+ 673 02ae AB000000 		.4byte	.LASF35
+ 674 02b2 01       		.byte	0x1
+ 675 02b3 37       		.byte	0x37
+ 676 02b4 6B000000 		.4byte	0x6b
+ 677 02b8 9D000000 		.4byte	.LLST4
+ 678 02bc 10       		.uleb128 0x10
+ 679 02bd 79010000 		.4byte	.LASF36
+ 680 02c1 01       		.byte	0x1
+ 681 02c2 38       		.byte	0x38
+ 682 02c3 6B000000 		.4byte	0x6b
+ 683 02c7 C7000000 		.4byte	.LLST5
+ 684 02cb 10       		.uleb128 0x10
+ 685 02cc 67010000 		.4byte	.LASF37
+ 686 02d0 01       		.byte	0x1
+ 687 02d1 39       		.byte	0x39
+ 688 02d2 77000000 		.4byte	0x77
+ 689 02d6 FD000000 		.4byte	.LLST6
+ 690 02da 00       		.byte	0
+ 691 02db 0C       		.uleb128 0xc
+ 692 02dc 04       		.byte	0x4
+ 693 02dd E1020000 		.4byte	0x2e1
+ 694 02e1 11       		.uleb128 0x11
+ 695 02e2 B1010000 		.4byte	0x1b1
+ 696 02e6 12       		.uleb128 0x12
+ 697 02e7 7E020000 		.4byte	.LASF40
+ 698 02eb 01       		.byte	0x1
+ 699 02ec B2       		.byte	0xb2
+ 700 02ed 00000000 		.4byte	.LFB1
+ 701 02f1 1C000000 		.4byte	.LFE1-.LFB1
+ 702 02f5 01       		.uleb128 0x1
+ 703 02f6 9C       		.byte	0x9c
+ 704 02f7 0B030000 		.4byte	0x30b
+ 705 02fb 0E       		.uleb128 0xe
+ 706 02fc BD020000 		.4byte	.LASF39
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 26
+
+
+ 707 0300 01       		.byte	0x1
+ 708 0301 B2       		.byte	0xb2
+ 709 0302 6B000000 		.4byte	0x6b
+ 710 0306 3D010000 		.4byte	.LLST7
+ 711 030a 00       		.byte	0
+ 712 030b 13       		.uleb128 0x13
+ 713 030c F2020000 		.4byte	.LASF41
+ 714 0310 01       		.byte	0x1
+ 715 0311 6E02     		.2byte	0x26e
+ 716 0313 00000000 		.4byte	.LFB2
+ 717 0317 1C000000 		.4byte	.LFE2-.LFB2
+ 718 031b 01       		.uleb128 0x1
+ 719 031c 9C       		.byte	0x9c
+ 720 031d 32030000 		.4byte	0x332
+ 721 0321 14       		.uleb128 0x14
+ 722 0322 C6020000 		.4byte	.LASF42
+ 723 0326 01       		.byte	0x1
+ 724 0327 6E02     		.2byte	0x26e
+ 725 0329 6B000000 		.4byte	0x6b
+ 726 032d 5E010000 		.4byte	.LLST8
+ 727 0331 00       		.byte	0
+ 728 0332 15       		.uleb128 0x15
+ 729 0333 87010000 		.4byte	.LASF43
+ 730 0337 01       		.byte	0x1
+ 731 0338 9B02     		.2byte	0x29b
+ 732 033a 00000000 		.4byte	.LFB3
+ 733 033e 10000000 		.4byte	.LFE3-.LFB3
+ 734 0342 01       		.uleb128 0x1
+ 735 0343 9C       		.byte	0x9c
+ 736 0344 15       		.uleb128 0x15
+ 737 0345 08000000 		.4byte	.LASF44
+ 738 0349 01       		.byte	0x1
+ 739 034a BE02     		.2byte	0x2be
+ 740 034c 00000000 		.4byte	.LFB4
+ 741 0350 10000000 		.4byte	.LFE4-.LFB4
+ 742 0354 01       		.uleb128 0x1
+ 743 0355 9C       		.byte	0x9c
+ 744 0356 00       		.byte	0
+ 745              		.section	.debug_abbrev,"",%progbits
+ 746              	.Ldebug_abbrev0:
+ 747 0000 01       		.uleb128 0x1
+ 748 0001 11       		.uleb128 0x11
+ 749 0002 01       		.byte	0x1
+ 750 0003 25       		.uleb128 0x25
+ 751 0004 0E       		.uleb128 0xe
+ 752 0005 13       		.uleb128 0x13
+ 753 0006 0B       		.uleb128 0xb
+ 754 0007 03       		.uleb128 0x3
+ 755 0008 0E       		.uleb128 0xe
+ 756 0009 1B       		.uleb128 0x1b
+ 757 000a 0E       		.uleb128 0xe
+ 758 000b 55       		.uleb128 0x55
+ 759 000c 17       		.uleb128 0x17
+ 760 000d 11       		.uleb128 0x11
+ 761 000e 01       		.uleb128 0x1
+ 762 000f 10       		.uleb128 0x10
+ 763 0010 17       		.uleb128 0x17
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 27
+
+
+ 764 0011 00       		.byte	0
+ 765 0012 00       		.byte	0
+ 766 0013 02       		.uleb128 0x2
+ 767 0014 24       		.uleb128 0x24
+ 768 0015 00       		.byte	0
+ 769 0016 0B       		.uleb128 0xb
+ 770 0017 0B       		.uleb128 0xb
+ 771 0018 3E       		.uleb128 0x3e
+ 772 0019 0B       		.uleb128 0xb
+ 773 001a 03       		.uleb128 0x3
+ 774 001b 0E       		.uleb128 0xe
+ 775 001c 00       		.byte	0
+ 776 001d 00       		.byte	0
+ 777 001e 03       		.uleb128 0x3
+ 778 001f 24       		.uleb128 0x24
+ 779 0020 00       		.byte	0
+ 780 0021 0B       		.uleb128 0xb
+ 781 0022 0B       		.uleb128 0xb
+ 782 0023 3E       		.uleb128 0x3e
+ 783 0024 0B       		.uleb128 0xb
+ 784 0025 03       		.uleb128 0x3
+ 785 0026 08       		.uleb128 0x8
+ 786 0027 00       		.byte	0
+ 787 0028 00       		.byte	0
+ 788 0029 04       		.uleb128 0x4
+ 789 002a 16       		.uleb128 0x16
+ 790 002b 00       		.byte	0
+ 791 002c 03       		.uleb128 0x3
+ 792 002d 0E       		.uleb128 0xe
+ 793 002e 3A       		.uleb128 0x3a
+ 794 002f 0B       		.uleb128 0xb
+ 795 0030 3B       		.uleb128 0x3b
+ 796 0031 05       		.uleb128 0x5
+ 797 0032 49       		.uleb128 0x49
+ 798 0033 13       		.uleb128 0x13
+ 799 0034 00       		.byte	0
+ 800 0035 00       		.byte	0
+ 801 0036 05       		.uleb128 0x5
+ 802 0037 35       		.uleb128 0x35
+ 803 0038 00       		.byte	0
+ 804 0039 49       		.uleb128 0x49
+ 805 003a 13       		.uleb128 0x13
+ 806 003b 00       		.byte	0
+ 807 003c 00       		.byte	0
+ 808 003d 06       		.uleb128 0x6
+ 809 003e 13       		.uleb128 0x13
+ 810 003f 01       		.byte	0x1
+ 811 0040 0B       		.uleb128 0xb
+ 812 0041 0B       		.uleb128 0xb
+ 813 0042 3A       		.uleb128 0x3a
+ 814 0043 0B       		.uleb128 0xb
+ 815 0044 3B       		.uleb128 0x3b
+ 816 0045 0B       		.uleb128 0xb
+ 817 0046 01       		.uleb128 0x1
+ 818 0047 13       		.uleb128 0x13
+ 819 0048 00       		.byte	0
+ 820 0049 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 28
+
+
+ 821 004a 07       		.uleb128 0x7
+ 822 004b 0D       		.uleb128 0xd
+ 823 004c 00       		.byte	0
+ 824 004d 03       		.uleb128 0x3
+ 825 004e 0E       		.uleb128 0xe
+ 826 004f 3A       		.uleb128 0x3a
+ 827 0050 0B       		.uleb128 0xb
+ 828 0051 3B       		.uleb128 0x3b
+ 829 0052 0B       		.uleb128 0xb
+ 830 0053 49       		.uleb128 0x49
+ 831 0054 13       		.uleb128 0x13
+ 832 0055 38       		.uleb128 0x38
+ 833 0056 0B       		.uleb128 0xb
+ 834 0057 00       		.byte	0
+ 835 0058 00       		.byte	0
+ 836 0059 08       		.uleb128 0x8
+ 837 005a 01       		.uleb128 0x1
+ 838 005b 01       		.byte	0x1
+ 839 005c 49       		.uleb128 0x49
+ 840 005d 13       		.uleb128 0x13
+ 841 005e 01       		.uleb128 0x1
+ 842 005f 13       		.uleb128 0x13
+ 843 0060 00       		.byte	0
+ 844 0061 00       		.byte	0
+ 845 0062 09       		.uleb128 0x9
+ 846 0063 21       		.uleb128 0x21
+ 847 0064 00       		.byte	0
+ 848 0065 49       		.uleb128 0x49
+ 849 0066 13       		.uleb128 0x13
+ 850 0067 2F       		.uleb128 0x2f
+ 851 0068 0B       		.uleb128 0xb
+ 852 0069 00       		.byte	0
+ 853 006a 00       		.byte	0
+ 854 006b 0A       		.uleb128 0xa
+ 855 006c 16       		.uleb128 0x16
+ 856 006d 00       		.byte	0
+ 857 006e 03       		.uleb128 0x3
+ 858 006f 0E       		.uleb128 0xe
+ 859 0070 3A       		.uleb128 0x3a
+ 860 0071 0B       		.uleb128 0xb
+ 861 0072 3B       		.uleb128 0x3b
+ 862 0073 0B       		.uleb128 0xb
+ 863 0074 49       		.uleb128 0x49
+ 864 0075 13       		.uleb128 0x13
+ 865 0076 00       		.byte	0
+ 866 0077 00       		.byte	0
+ 867 0078 0B       		.uleb128 0xb
+ 868 0079 0D       		.uleb128 0xd
+ 869 007a 00       		.byte	0
+ 870 007b 03       		.uleb128 0x3
+ 871 007c 08       		.uleb128 0x8
+ 872 007d 3A       		.uleb128 0x3a
+ 873 007e 0B       		.uleb128 0xb
+ 874 007f 3B       		.uleb128 0x3b
+ 875 0080 0B       		.uleb128 0xb
+ 876 0081 49       		.uleb128 0x49
+ 877 0082 13       		.uleb128 0x13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 29
+
+
+ 878 0083 38       		.uleb128 0x38
+ 879 0084 0B       		.uleb128 0xb
+ 880 0085 00       		.byte	0
+ 881 0086 00       		.byte	0
+ 882 0087 0C       		.uleb128 0xc
+ 883 0088 0F       		.uleb128 0xf
+ 884 0089 00       		.byte	0
+ 885 008a 0B       		.uleb128 0xb
+ 886 008b 0B       		.uleb128 0xb
+ 887 008c 49       		.uleb128 0x49
+ 888 008d 13       		.uleb128 0x13
+ 889 008e 00       		.byte	0
+ 890 008f 00       		.byte	0
+ 891 0090 0D       		.uleb128 0xd
+ 892 0091 2E       		.uleb128 0x2e
+ 893 0092 01       		.byte	0x1
+ 894 0093 3F       		.uleb128 0x3f
+ 895 0094 19       		.uleb128 0x19
+ 896 0095 03       		.uleb128 0x3
+ 897 0096 0E       		.uleb128 0xe
+ 898 0097 3A       		.uleb128 0x3a
+ 899 0098 0B       		.uleb128 0xb
+ 900 0099 3B       		.uleb128 0x3b
+ 901 009a 0B       		.uleb128 0xb
+ 902 009b 27       		.uleb128 0x27
+ 903 009c 19       		.uleb128 0x19
+ 904 009d 49       		.uleb128 0x49
+ 905 009e 13       		.uleb128 0x13
+ 906 009f 11       		.uleb128 0x11
+ 907 00a0 01       		.uleb128 0x1
+ 908 00a1 12       		.uleb128 0x12
+ 909 00a2 06       		.uleb128 0x6
+ 910 00a3 40       		.uleb128 0x40
+ 911 00a4 18       		.uleb128 0x18
+ 912 00a5 9742     		.uleb128 0x2117
+ 913 00a7 19       		.uleb128 0x19
+ 914 00a8 01       		.uleb128 0x1
+ 915 00a9 13       		.uleb128 0x13
+ 916 00aa 00       		.byte	0
+ 917 00ab 00       		.byte	0
+ 918 00ac 0E       		.uleb128 0xe
+ 919 00ad 05       		.uleb128 0x5
+ 920 00ae 00       		.byte	0
+ 921 00af 03       		.uleb128 0x3
+ 922 00b0 0E       		.uleb128 0xe
+ 923 00b1 3A       		.uleb128 0x3a
+ 924 00b2 0B       		.uleb128 0xb
+ 925 00b3 3B       		.uleb128 0x3b
+ 926 00b4 0B       		.uleb128 0xb
+ 927 00b5 49       		.uleb128 0x49
+ 928 00b6 13       		.uleb128 0x13
+ 929 00b7 02       		.uleb128 0x2
+ 930 00b8 17       		.uleb128 0x17
+ 931 00b9 00       		.byte	0
+ 932 00ba 00       		.byte	0
+ 933 00bb 0F       		.uleb128 0xf
+ 934 00bc 34       		.uleb128 0x34
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 30
+
+
+ 935 00bd 00       		.byte	0
+ 936 00be 03       		.uleb128 0x3
+ 937 00bf 08       		.uleb128 0x8
+ 938 00c0 3A       		.uleb128 0x3a
+ 939 00c1 0B       		.uleb128 0xb
+ 940 00c2 3B       		.uleb128 0x3b
+ 941 00c3 0B       		.uleb128 0xb
+ 942 00c4 49       		.uleb128 0x49
+ 943 00c5 13       		.uleb128 0x13
+ 944 00c6 02       		.uleb128 0x2
+ 945 00c7 17       		.uleb128 0x17
+ 946 00c8 00       		.byte	0
+ 947 00c9 00       		.byte	0
+ 948 00ca 10       		.uleb128 0x10
+ 949 00cb 34       		.uleb128 0x34
+ 950 00cc 00       		.byte	0
+ 951 00cd 03       		.uleb128 0x3
+ 952 00ce 0E       		.uleb128 0xe
+ 953 00cf 3A       		.uleb128 0x3a
+ 954 00d0 0B       		.uleb128 0xb
+ 955 00d1 3B       		.uleb128 0x3b
+ 956 00d2 0B       		.uleb128 0xb
+ 957 00d3 49       		.uleb128 0x49
+ 958 00d4 13       		.uleb128 0x13
+ 959 00d5 02       		.uleb128 0x2
+ 960 00d6 17       		.uleb128 0x17
+ 961 00d7 00       		.byte	0
+ 962 00d8 00       		.byte	0
+ 963 00d9 11       		.uleb128 0x11
+ 964 00da 26       		.uleb128 0x26
+ 965 00db 00       		.byte	0
+ 966 00dc 49       		.uleb128 0x49
+ 967 00dd 13       		.uleb128 0x13
+ 968 00de 00       		.byte	0
+ 969 00df 00       		.byte	0
+ 970 00e0 12       		.uleb128 0x12
+ 971 00e1 2E       		.uleb128 0x2e
+ 972 00e2 01       		.byte	0x1
+ 973 00e3 3F       		.uleb128 0x3f
+ 974 00e4 19       		.uleb128 0x19
+ 975 00e5 03       		.uleb128 0x3
+ 976 00e6 0E       		.uleb128 0xe
+ 977 00e7 3A       		.uleb128 0x3a
+ 978 00e8 0B       		.uleb128 0xb
+ 979 00e9 3B       		.uleb128 0x3b
+ 980 00ea 0B       		.uleb128 0xb
+ 981 00eb 27       		.uleb128 0x27
+ 982 00ec 19       		.uleb128 0x19
+ 983 00ed 11       		.uleb128 0x11
+ 984 00ee 01       		.uleb128 0x1
+ 985 00ef 12       		.uleb128 0x12
+ 986 00f0 06       		.uleb128 0x6
+ 987 00f1 40       		.uleb128 0x40
+ 988 00f2 18       		.uleb128 0x18
+ 989 00f3 9742     		.uleb128 0x2117
+ 990 00f5 19       		.uleb128 0x19
+ 991 00f6 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 31
+
+
+ 992 00f7 13       		.uleb128 0x13
+ 993 00f8 00       		.byte	0
+ 994 00f9 00       		.byte	0
+ 995 00fa 13       		.uleb128 0x13
+ 996 00fb 2E       		.uleb128 0x2e
+ 997 00fc 01       		.byte	0x1
+ 998 00fd 3F       		.uleb128 0x3f
+ 999 00fe 19       		.uleb128 0x19
+ 1000 00ff 03       		.uleb128 0x3
+ 1001 0100 0E       		.uleb128 0xe
+ 1002 0101 3A       		.uleb128 0x3a
+ 1003 0102 0B       		.uleb128 0xb
+ 1004 0103 3B       		.uleb128 0x3b
+ 1005 0104 05       		.uleb128 0x5
+ 1006 0105 27       		.uleb128 0x27
+ 1007 0106 19       		.uleb128 0x19
+ 1008 0107 11       		.uleb128 0x11
+ 1009 0108 01       		.uleb128 0x1
+ 1010 0109 12       		.uleb128 0x12
+ 1011 010a 06       		.uleb128 0x6
+ 1012 010b 40       		.uleb128 0x40
+ 1013 010c 18       		.uleb128 0x18
+ 1014 010d 9742     		.uleb128 0x2117
+ 1015 010f 19       		.uleb128 0x19
+ 1016 0110 01       		.uleb128 0x1
+ 1017 0111 13       		.uleb128 0x13
+ 1018 0112 00       		.byte	0
+ 1019 0113 00       		.byte	0
+ 1020 0114 14       		.uleb128 0x14
+ 1021 0115 05       		.uleb128 0x5
+ 1022 0116 00       		.byte	0
+ 1023 0117 03       		.uleb128 0x3
+ 1024 0118 0E       		.uleb128 0xe
+ 1025 0119 3A       		.uleb128 0x3a
+ 1026 011a 0B       		.uleb128 0xb
+ 1027 011b 3B       		.uleb128 0x3b
+ 1028 011c 05       		.uleb128 0x5
+ 1029 011d 49       		.uleb128 0x49
+ 1030 011e 13       		.uleb128 0x13
+ 1031 011f 02       		.uleb128 0x2
+ 1032 0120 17       		.uleb128 0x17
+ 1033 0121 00       		.byte	0
+ 1034 0122 00       		.byte	0
+ 1035 0123 15       		.uleb128 0x15
+ 1036 0124 2E       		.uleb128 0x2e
+ 1037 0125 00       		.byte	0
+ 1038 0126 3F       		.uleb128 0x3f
+ 1039 0127 19       		.uleb128 0x19
+ 1040 0128 03       		.uleb128 0x3
+ 1041 0129 0E       		.uleb128 0xe
+ 1042 012a 3A       		.uleb128 0x3a
+ 1043 012b 0B       		.uleb128 0xb
+ 1044 012c 3B       		.uleb128 0x3b
+ 1045 012d 05       		.uleb128 0x5
+ 1046 012e 27       		.uleb128 0x27
+ 1047 012f 19       		.uleb128 0x19
+ 1048 0130 11       		.uleb128 0x11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 32
+
+
+ 1049 0131 01       		.uleb128 0x1
+ 1050 0132 12       		.uleb128 0x12
+ 1051 0133 06       		.uleb128 0x6
+ 1052 0134 40       		.uleb128 0x40
+ 1053 0135 18       		.uleb128 0x18
+ 1054 0136 9742     		.uleb128 0x2117
+ 1055 0138 19       		.uleb128 0x19
+ 1056 0139 00       		.byte	0
+ 1057 013a 00       		.byte	0
+ 1058 013b 00       		.byte	0
+ 1059              		.section	.debug_loc,"",%progbits
+ 1060              	.Ldebug_loc0:
+ 1061              	.LLST0:
+ 1062 0000 00000000 		.4byte	.LVL0
+ 1063 0004 C4000000 		.4byte	.LVL25
+ 1064 0008 0100     		.2byte	0x1
+ 1065 000a 50       		.byte	0x50
+ 1066 000b C4000000 		.4byte	.LVL25
+ 1067 000f D8000000 		.4byte	.LFE0
+ 1068 0013 0400     		.2byte	0x4
+ 1069 0015 F3       		.byte	0xf3
+ 1070 0016 01       		.uleb128 0x1
+ 1071 0017 50       		.byte	0x50
+ 1072 0018 9F       		.byte	0x9f
+ 1073 0019 00000000 		.4byte	0
+ 1074 001d 00000000 		.4byte	0
+ 1075              	.LLST1:
+ 1076 0021 08000000 		.4byte	.LVL2
+ 1077 0025 AC000000 		.4byte	.LVL19
+ 1078 0029 0100     		.2byte	0x1
+ 1079 002b 54       		.byte	0x54
+ 1080 002c AE000000 		.4byte	.LVL20
+ 1081 0030 B0000000 		.4byte	.LVL21
+ 1082 0034 0100     		.2byte	0x1
+ 1083 0036 54       		.byte	0x54
+ 1084 0037 B4000000 		.4byte	.LVL22
+ 1085 003b BE000000 		.4byte	.LVL24
+ 1086 003f 0100     		.2byte	0x1
+ 1087 0041 54       		.byte	0x54
+ 1088 0042 00000000 		.4byte	0
+ 1089 0046 00000000 		.4byte	0
+ 1090              	.LLST2:
+ 1091 004a 56000000 		.4byte	.LVL10
+ 1092 004e 5A000000 		.4byte	.LVL11
+ 1093 0052 0200     		.2byte	0x2
+ 1094 0054 30       		.byte	0x30
+ 1095 0055 9F       		.byte	0x9f
+ 1096 0056 5A000000 		.4byte	.LVL11
+ 1097 005a 78000000 		.4byte	.LVL12
+ 1098 005e 0100     		.2byte	0x1
+ 1099 0060 53       		.byte	0x53
+ 1100 0061 7A000000 		.4byte	.LVL13
+ 1101 0065 8A000000 		.4byte	.LVL14
+ 1102 0069 0100     		.2byte	0x1
+ 1103 006b 53       		.byte	0x53
+ 1104 006c 00000000 		.4byte	0
+ 1105 0070 00000000 		.4byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 33
+
+
+ 1106              	.LLST3:
+ 1107 0074 08000000 		.4byte	.LVL2
+ 1108 0078 A6000000 		.4byte	.LVL17
+ 1109 007c 0100     		.2byte	0x1
+ 1110 007e 56       		.byte	0x56
+ 1111 007f A8000000 		.4byte	.LVL18
+ 1112 0083 B0000000 		.4byte	.LVL21
+ 1113 0087 0100     		.2byte	0x1
+ 1114 0089 56       		.byte	0x56
+ 1115 008a B4000000 		.4byte	.LVL22
+ 1116 008e BE000000 		.4byte	.LVL24
+ 1117 0092 0100     		.2byte	0x1
+ 1118 0094 56       		.byte	0x56
+ 1119 0095 00000000 		.4byte	0
+ 1120 0099 00000000 		.4byte	0
+ 1121              	.LLST4:
+ 1122 009d 02000000 		.4byte	.LVL1
+ 1123 00a1 08000000 		.4byte	.LVL2
+ 1124 00a5 0200     		.2byte	0x2
+ 1125 00a7 30       		.byte	0x30
+ 1126 00a8 9F       		.byte	0x9f
+ 1127 00a9 08000000 		.4byte	.LVL2
+ 1128 00ad BC000000 		.4byte	.LVL23
+ 1129 00b1 0100     		.2byte	0x1
+ 1130 00b3 57       		.byte	0x57
+ 1131 00b4 BE000000 		.4byte	.LVL24
+ 1132 00b8 C6000000 		.4byte	.LVL26
+ 1133 00bc 0100     		.2byte	0x1
+ 1134 00be 57       		.byte	0x57
+ 1135 00bf 00000000 		.4byte	0
+ 1136 00c3 00000000 		.4byte	0
+ 1137              	.LLST5:
+ 1138 00c7 02000000 		.4byte	.LVL1
+ 1139 00cb 08000000 		.4byte	.LVL2
+ 1140 00cf 0200     		.2byte	0x2
+ 1141 00d1 31       		.byte	0x31
+ 1142 00d2 9F       		.byte	0x9f
+ 1143 00d3 08000000 		.4byte	.LVL2
+ 1144 00d7 1A000000 		.4byte	.LVL5
+ 1145 00db 0100     		.2byte	0x1
+ 1146 00dd 52       		.byte	0x52
+ 1147 00de A2000000 		.4byte	.LVL15
+ 1148 00e2 A4000000 		.4byte	.LVL16
+ 1149 00e6 0200     		.2byte	0x2
+ 1150 00e8 30       		.byte	0x30
+ 1151 00e9 9F       		.byte	0x9f
+ 1152 00ea A4000000 		.4byte	.LVL16
+ 1153 00ee D8000000 		.4byte	.LFE0
+ 1154 00f2 0100     		.2byte	0x1
+ 1155 00f4 52       		.byte	0x52
+ 1156 00f5 00000000 		.4byte	0
+ 1157 00f9 00000000 		.4byte	0
+ 1158              	.LLST6:
+ 1159 00fd 10000000 		.4byte	.LVL3
+ 1160 0101 18000000 		.4byte	.LVL4
+ 1161 0105 0200     		.2byte	0x2
+ 1162 0107 30       		.byte	0x30
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 34
+
+
+ 1163 0108 9F       		.byte	0x9f
+ 1164 0109 18000000 		.4byte	.LVL4
+ 1165 010d 48000000 		.4byte	.LVL7
+ 1166 0111 0100     		.2byte	0x1
+ 1167 0113 53       		.byte	0x53
+ 1168 0114 48000000 		.4byte	.LVL7
+ 1169 0118 4A000000 		.4byte	.LVL8
+ 1170 011c 0100     		.2byte	0x1
+ 1171 011e 5E       		.byte	0x5e
+ 1172 011f 4A000000 		.4byte	.LVL8
+ 1173 0123 4E000000 		.4byte	.LVL9
+ 1174 0127 0100     		.2byte	0x1
+ 1175 0129 53       		.byte	0x53
+ 1176 012a 4E000000 		.4byte	.LVL9
+ 1177 012e A4000000 		.4byte	.LVL16
+ 1178 0132 0100     		.2byte	0x1
+ 1179 0134 5E       		.byte	0x5e
+ 1180 0135 00000000 		.4byte	0
+ 1181 0139 00000000 		.4byte	0
+ 1182              	.LLST7:
+ 1183 013d 00000000 		.4byte	.LVL27
+ 1184 0141 06000000 		.4byte	.LVL28
+ 1185 0145 0100     		.2byte	0x1
+ 1186 0147 50       		.byte	0x50
+ 1187 0148 06000000 		.4byte	.LVL28
+ 1188 014c 1C000000 		.4byte	.LFE1
+ 1189 0150 0400     		.2byte	0x4
+ 1190 0152 F3       		.byte	0xf3
+ 1191 0153 01       		.uleb128 0x1
+ 1192 0154 50       		.byte	0x50
+ 1193 0155 9F       		.byte	0x9f
+ 1194 0156 00000000 		.4byte	0
+ 1195 015a 00000000 		.4byte	0
+ 1196              	.LLST8:
+ 1197 015e 00000000 		.4byte	.LVL29
+ 1198 0162 02000000 		.4byte	.LVL30
+ 1199 0166 0100     		.2byte	0x1
+ 1200 0168 50       		.byte	0x50
+ 1201 0169 02000000 		.4byte	.LVL30
+ 1202 016d 1C000000 		.4byte	.LFE2
+ 1203 0171 0400     		.2byte	0x4
+ 1204 0173 F3       		.byte	0xf3
+ 1205 0174 01       		.uleb128 0x1
+ 1206 0175 50       		.byte	0x50
+ 1207 0176 9F       		.byte	0x9f
+ 1208 0177 00000000 		.4byte	0
+ 1209 017b 00000000 		.4byte	0
+ 1210              		.section	.debug_aranges,"",%progbits
+ 1211 0000 3C000000 		.4byte	0x3c
+ 1212 0004 0200     		.2byte	0x2
+ 1213 0006 00000000 		.4byte	.Ldebug_info0
+ 1214 000a 04       		.byte	0x4
+ 1215 000b 00       		.byte	0
+ 1216 000c 0000     		.2byte	0
+ 1217 000e 0000     		.2byte	0
+ 1218 0010 00000000 		.4byte	.LFB0
+ 1219 0014 D8000000 		.4byte	.LFE0-.LFB0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 35
+
+
+ 1220 0018 00000000 		.4byte	.LFB1
+ 1221 001c 1C000000 		.4byte	.LFE1-.LFB1
+ 1222 0020 00000000 		.4byte	.LFB2
+ 1223 0024 1C000000 		.4byte	.LFE2-.LFB2
+ 1224 0028 00000000 		.4byte	.LFB3
+ 1225 002c 10000000 		.4byte	.LFE3-.LFB3
+ 1226 0030 00000000 		.4byte	.LFB4
+ 1227 0034 10000000 		.4byte	.LFE4-.LFB4
+ 1228 0038 00000000 		.4byte	0
+ 1229 003c 00000000 		.4byte	0
+ 1230              		.section	.debug_ranges,"",%progbits
+ 1231              	.Ldebug_ranges0:
+ 1232 0000 00000000 		.4byte	.LFB0
+ 1233 0004 D8000000 		.4byte	.LFE0
+ 1234 0008 00000000 		.4byte	.LFB1
+ 1235 000c 1C000000 		.4byte	.LFE1
+ 1236 0010 00000000 		.4byte	.LFB2
+ 1237 0014 1C000000 		.4byte	.LFE2
+ 1238 0018 00000000 		.4byte	.LFB3
+ 1239 001c 10000000 		.4byte	.LFE3
+ 1240 0020 00000000 		.4byte	.LFB4
+ 1241 0024 10000000 		.4byte	.LFE4
+ 1242 0028 00000000 		.4byte	0
+ 1243 002c 00000000 		.4byte	0
+ 1244              		.section	.debug_line,"",%progbits
+ 1245              	.Ldebug_line0:
+ 1246 0000 15010000 		.section	.debug_str,"MS",%progbits,1
+ 1246      02005600 
+ 1246      00000201 
+ 1246      FB0E0D00 
+ 1246      01010101 
+ 1247              	.LASF38:
+ 1248 0000 6D657373 		.ascii	"message\000"
+ 1248      61676500 
+ 1249              	.LASF44:
+ 1250 0008 43414E5F 		.ascii	"CAN_ReceiveMsgADCdata\000"
+ 1250      52656365 
+ 1250      6976654D 
+ 1250      73674144 
+ 1250      43646174 
+ 1251              	.LASF34:
+ 1252 001e 73686966 		.ascii	"shift\000"
+ 1252      7400
+ 1253              	.LASF19:
+ 1254 0024 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
+ 1254      44415441 
+ 1254      5F425954 
+ 1254      455300
+ 1255              	.LASF31:
+ 1256 0033 74786964 		.ascii	"txid\000"
+ 1256      00
+ 1257              	.LASF25:
+ 1258 0038 7278616D 		.ascii	"rxamr\000"
+ 1258      7200
+ 1259              	.LASF20:
+ 1260 003e 43414E5F 		.ascii	"CAN_REG_32\000"
+ 1260      5245475F 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 36
+
+
+ 1260      333200
+ 1261              	.LASF3:
+ 1262 0049 73686F72 		.ascii	"short unsigned int\000"
+ 1262      7420756E 
+ 1262      7369676E 
+ 1262      65642069 
+ 1262      6E7400
+ 1263              	.LASF30:
+ 1264 005c 7478636D 		.ascii	"txcmd\000"
+ 1264      6400
+ 1265              	.LASF13:
+ 1266 0062 63686172 		.ascii	"char\000"
+ 1266      00
+ 1267              	.LASF18:
+ 1268 0067 62797465 		.ascii	"byte\000"
+ 1268      00
+ 1269              	.LASF24:
+ 1270 006c 72786461 		.ascii	"rxdata\000"
+ 1270      746100
+ 1271              	.LASF28:
+ 1272 0073 72786163 		.ascii	"rxacrd\000"
+ 1272      726400
+ 1273              	.LASF11:
+ 1274 007a 666C6F61 		.ascii	"float\000"
+ 1274      7400
+ 1275              	.LASF21:
+ 1276 0080 43414E5F 		.ascii	"CAN_TX_MSG\000"
+ 1276      54585F4D 
+ 1276      534700
+ 1277              	.LASF48:
+ 1278 008b 43414E5F 		.ascii	"CAN_SendMsg\000"
+ 1278      53656E64 
+ 1278      4D736700 
+ 1279              	.LASF1:
+ 1280 0097 756E7369 		.ascii	"unsigned char\000"
+ 1280      676E6564 
+ 1280      20636861 
+ 1280      7200
+ 1281              	.LASF15:
+ 1282 00a5 72656733 		.ascii	"reg32\000"
+ 1282      3200
+ 1283              	.LASF35:
+ 1284 00ab 72657472 		.ascii	"retry\000"
+ 1284      7900
+ 1285              	.LASF14:
+ 1286 00b1 72656738 		.ascii	"reg8\000"
+ 1286      00
+ 1287              	.LASF47:
+ 1288 00b6 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\GitHub\\VTM17_Dash_7se"
+ 1288      73657273 
+ 1288      5C636861 
+ 1288      726C5C44 
+ 1288      6F63756D 
+ 1289 00e4 675C5654 		.ascii	"g\\VTM17_Dash_7SEG\\VTM17_Display_7seg\\CAN_Full_Ex"
+ 1289      4D31375F 
+ 1289      44617368 
+ 1289      5F375345 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 37
+
+
+ 1289      475C5654 
+ 1290 0114 616D706C 		.ascii	"ample01.cydsn\000"
+ 1290      6530312E 
+ 1290      63796473 
+ 1290      6E00
+ 1291              	.LASF5:
+ 1292 0122 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1292      20756E73 
+ 1292      69676E65 
+ 1292      6420696E 
+ 1292      7400
+ 1293              	.LASF9:
+ 1294 0134 75696E74 		.ascii	"uint8\000"
+ 1294      3800
+ 1295              	.LASF17:
+ 1296 013a 43414E5F 		.ascii	"CAN_DATA_BYTES_MSG\000"
+ 1296      44415441 
+ 1296      5F425954 
+ 1296      45535F4D 
+ 1296      534700
+ 1297              	.LASF23:
+ 1298 014d 72786964 		.ascii	"rxid\000"
+ 1298      00
+ 1299              	.LASF33:
+ 1300 0152 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
+ 1300      54585F53 
+ 1300      54525543 
+ 1300      5400
+ 1301              	.LASF12:
+ 1302 0160 646F7562 		.ascii	"double\000"
+ 1302      6C6500
+ 1303              	.LASF37:
+ 1304 0167 72656754 		.ascii	"regTemp\000"
+ 1304      656D7000 
+ 1305              	.LASF2:
+ 1306 016f 73686F72 		.ascii	"short int\000"
+ 1306      7420696E 
+ 1306      7400
+ 1307              	.LASF36:
+ 1308 0179 72657375 		.ascii	"result\000"
+ 1308      6C7400
+ 1309              	.LASF10:
+ 1310 0180 75696E74 		.ascii	"uint32\000"
+ 1310      333200
+ 1311              	.LASF43:
+ 1312 0187 43414E5F 		.ascii	"CAN_ReceiveMsgswitchStatus\000"
+ 1312      52656365 
+ 1312      6976654D 
+ 1312      73677377 
+ 1312      69746368 
+ 1313              	.LASF8:
+ 1314 01a2 756E7369 		.ascii	"unsigned int\000"
+ 1314      676E6564 
+ 1314      20696E74 
+ 1314      00
+ 1315              	.LASF46:
+ 1316 01af 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\CAN_TX_RX_func.c\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 38
+
+
+ 1316      6E657261 
+ 1316      7465645F 
+ 1316      536F7572 
+ 1316      63655C50 
+ 1317              	.LASF7:
+ 1318 01d9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1318      206C6F6E 
+ 1318      6720756E 
+ 1318      7369676E 
+ 1318      65642069 
+ 1319              	.LASF45:
+ 1320 01f0 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1320      4320342E 
+ 1320      392E3320 
+ 1320      32303135 
+ 1320      30333033 
+ 1321 0223 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1321      20726576 
+ 1321      6973696F 
+ 1321      6E203232 
+ 1321      31323230 
+ 1322 0256 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1322      66756E63 
+ 1322      74696F6E 
+ 1322      2D736563 
+ 1322      74696F6E 
+ 1323              	.LASF40:
+ 1324 027e 43414E5F 		.ascii	"CAN_TxCancel\000"
+ 1324      54784361 
+ 1324      6E63656C 
+ 1324      00
+ 1325              	.LASF29:
+ 1326 028b 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 1326      52585F53 
+ 1326      54525543 
+ 1326      5400
+ 1327              	.LASF22:
+ 1328 0299 7278636D 		.ascii	"rxcmd\000"
+ 1328      6400
+ 1329              	.LASF16:
+ 1330 029f 73697A65 		.ascii	"sizetype\000"
+ 1330      74797065 
+ 1330      00
+ 1331              	.LASF27:
+ 1332 02a8 7278616D 		.ascii	"rxamrd\000"
+ 1332      726400
+ 1333              	.LASF6:
+ 1334 02af 6C6F6E67 		.ascii	"long long int\000"
+ 1334      206C6F6E 
+ 1334      6720696E 
+ 1334      7400
+ 1335              	.LASF39:
+ 1336 02bd 62756666 		.ascii	"bufferId\000"
+ 1336      65724964 
+ 1336      00
+ 1337              	.LASF42:
+ 1338 02c6 72784D61 		.ascii	"rxMailbox\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccZQxKqf.s 			page 39
+
+
+ 1338      696C626F 
+ 1338      7800
+ 1339              	.LASF26:
+ 1340 02d0 72786163 		.ascii	"rxacr\000"
+ 1340      7200
+ 1341              	.LASF4:
+ 1342 02d6 6C6F6E67 		.ascii	"long int\000"
+ 1342      20696E74 
+ 1342      00
+ 1343              	.LASF0:
+ 1344 02df 7369676E 		.ascii	"signed char\000"
+ 1344      65642063 
+ 1344      68617200 
+ 1345              	.LASF32:
+ 1346 02eb 74786461 		.ascii	"txdata\000"
+ 1346      746100
+ 1347              	.LASF41:
+ 1348 02f2 43414E5F 		.ascii	"CAN_ReceiveMsg\000"
+ 1348      52656365 
+ 1348      6976654D 
+ 1348      736700
+ 1349              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

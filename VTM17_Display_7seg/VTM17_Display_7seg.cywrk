@@ -8,6 +8,7 @@
 <files />
 <projects>
 <v>.\VTM17c_Display_7seg.cydsn\VTM17c_Display_7seg.cyprj</v>
+<v>.\CAN_Full_Example01.cydsn\CAN_Full_Example01.cyprj</v>
 </projects>
 <workspace_id v="1e43e6f2-bd4b-4185-996a-032e083d96a7" />
 <WriteAppVersionLastSavedWith v="3.3.0.9604" />
