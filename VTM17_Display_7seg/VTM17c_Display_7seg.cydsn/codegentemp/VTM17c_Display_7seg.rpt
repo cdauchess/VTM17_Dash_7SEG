@@ -1,4 +1,4 @@
-Loading plugins phase: Elapsed time ==> 0s.216ms
+Loading plugins phase: Elapsed time ==> 0s.208ms
 Initializing data phase: Elapsed time ==> 0s.000ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\VTM17c_Display_7seg.cyprj -d CY8C5888LTI-LP097 -s C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
@@ -7,10 +7,10 @@ ADD: sdb.M0060: warning: Warning in component: CAN. The BUS_CLK clock accuracy s
  * C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\TopDesign\TopDesign.cysch (Instance:CAN)
 
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 1s.719ms
+Elaboration phase: Elapsed time ==> 1s.639ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.046ms
+HDL generation phase: Elapsed time ==> 0s.053ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -44,7 +44,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\charl
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon Oct 17 16:30:58 2016
+Tue Oct 18 22:08:42 2016
 
 
 ======================================================================
@@ -54,17 +54,17 @@ Options  :    -yv2 -q10 VTM17c_Display_7seg.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon Oct 17 16:30:58 2016
+Tue Oct 18 22:08:42 2016
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xor_v1_0\xor_v1_0.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v'
-Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'
 
 vpp:  No errors.
 
@@ -96,7 +96,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\charl
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon Oct 17 16:30:58 2016
+Tue Oct 18 22:08:42 2016
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -110,13 +110,13 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\VTM17c_Display_7seg.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\VTM17c_Display_7seg.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xor_v1_0\xor_v1_0.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
@@ -132,7 +132,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\charl
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon Oct 17 16:30:58 2016
+Tue Oct 18 22:08:42 2016
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -146,13 +146,13 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\c
 Linking 'C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\VTM17c_Display_7seg.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\VTM17c_Display_7seg.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cypress.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xor_v1_0\xor_v1_0.v'.
-Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
@@ -162,6 +162,116 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\l
 Detecting unused logic.
 ----------------------------------------------------------
     User names
+	\LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:gta_0\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_31\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_30\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_29\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_28\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_27\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_26\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_25\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_24\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_23\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_22\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_21\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_20\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_19\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_18\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_17\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_16\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_15\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_14\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_13\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_12\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_11\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_10\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_9\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_8\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_7\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_6\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_5\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_4\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_3\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_2\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_1\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:b_0\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_31\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_30\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_29\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_28\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_27\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_26\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_25\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_24\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_31\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_30\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_29\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_28\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_27\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_26\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_25\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_24\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_23\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_22\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_21\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_20\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_19\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_18\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_17\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_16\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_15\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_14\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_13\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_12\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_11\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_10\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_9\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_8\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_7\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_6\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_5\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_4\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_3\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_2\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_1\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:b_0\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_31\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_30\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_29\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_28\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_27\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_26\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_25\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_24\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_23\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_22\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_21\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_20\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_19\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_18\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_17\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_16\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_15\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_14\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_13\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_12\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_11\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_10\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_9\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_8\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_7\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_6\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_5\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_4\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_3\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_2\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_31\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_30\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_29\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_28\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_27\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_26\
+	\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_25\
 	\LED_Driver_Gear:Net_79\
 	\LED_Driver_Gear:Net_78\
 	\LED_Driver_Gear:segments_7\
@@ -333,6 +443,36 @@ Detecting unused logic.
 	\CAN:Net_30\
 
     Synthesized names
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_31\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_30\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_29\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_28\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_27\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_26\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_25\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_24\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_23\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_22\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_21\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_20\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_19\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_18\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_17\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_16\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_15\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_14\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_13\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_12\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_11\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_10\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_9\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_8\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_7\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_6\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_5\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_4\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_3\
+	\LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_2\
 	\LED_Driver_LRBWS:bLED_PWM:add_vi_vv_MODGEN_2_31\
 	\LED_Driver_LRBWS:bLED_PWM:add_vi_vv_MODGEN_2_30\
 	\LED_Driver_LRBWS:bLED_PWM:add_vi_vv_MODGEN_2_29\
@@ -364,13 +504,41 @@ Detecting unused logic.
 	\LED_Driver_LRBWS:bLED_PWM:add_vi_vv_MODGEN_2_3\
 	\LED_Driver_LRBWS:bLED_PWM:add_vi_vv_MODGEN_2_2\
 
-Deleted 169 User equations/components.
-Deleted 30 Synthesized equations/components.
+Deleted 279 User equations/components.
+Deleted 60 Synthesized equations/components.
 
 ------------------------------------------------------
 Alias Detection
 ------------------------------------------------------
 Aliasing one to tmpOE__RX_1_net_0
+Aliasing \LED_Driver_Gear:bLED_PWM:PwmDP:cs_addr_2\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_1:bb_1\ to tmpOE__RX_1_net_0
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_1:bb_0\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_23\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_22\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_21\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_20\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_19\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_18\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_17\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_16\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_15\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_14\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_13\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_12\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_11\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_10\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_9\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_8\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_7\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_6\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_5\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_4\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_3\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_2\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODIN2_1\ to \LED_Driver_Gear:bLED_PWM:MODIN1_1\
+Aliasing \LED_Driver_Gear:bLED_PWM:MODIN2_0\ to \LED_Driver_Gear:bLED_PWM:MODIN1_0\
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_0\ to tmpOE__RX_1_net_0
 Aliasing \LED_Driver_Gear:Seg_Driver_L:clk\ to zero
 Aliasing \LED_Driver_Gear:Seg_Driver_L:rst\ to zero
 Aliasing \LED_Driver_Gear:Com_Driver:clk\ to zero
@@ -450,229 +618,278 @@ Aliasing \LED_Driver_LRBWS:Seg_Driver_M:clk\ to zero
 Aliasing \LED_Driver_LRBWS:Seg_Driver_M:rst\ to zero
 Aliasing \LED_Driver_LRBWS:Seg_Driver_H:clk\ to zero
 Aliasing \LED_Driver_LRBWS:Seg_Driver_H:rst\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:cnt_state_1\\D\ to \LED_Driver_Gear:tc\\D\
 Aliasing \LED_Driver_LRBWS:bLED_PWM:cnt_state_1\\D\ to \LED_Driver_LRBWS:tc\\D\
 Removing Lhs of wire one[6] = tmpOE__RX_1_net_0[1]
 Removing Lhs of wire \LED_Driver_Gear:Net_855\[10] = \LED_Driver_Gear:Net_1501\[9]
-Removing Lhs of wire \LED_Driver_Gear:trigDMA\[11] = \LED_Driver_Gear:Net_1501\[9]
-Removing Lhs of wire \LED_Driver_Gear:Seg_Driver_L:clk\[14] = zero[2]
-Removing Lhs of wire \LED_Driver_Gear:Seg_Driver_L:rst\[15] = zero[2]
-Removing Rhs of wire \LED_Driver_Gear:segments_6\[18] = \LED_Driver_Gear:Seg_Driver_L:control_out_6\[19]
-Removing Rhs of wire \LED_Driver_Gear:segments_6\[18] = \LED_Driver_Gear:Seg_Driver_L:control_6\[34]
-Removing Rhs of wire \LED_Driver_Gear:segments_5\[20] = \LED_Driver_Gear:Seg_Driver_L:control_out_5\[21]
-Removing Rhs of wire \LED_Driver_Gear:segments_5\[20] = \LED_Driver_Gear:Seg_Driver_L:control_5\[35]
-Removing Rhs of wire \LED_Driver_Gear:segments_4\[22] = \LED_Driver_Gear:Seg_Driver_L:control_out_4\[23]
-Removing Rhs of wire \LED_Driver_Gear:segments_4\[22] = \LED_Driver_Gear:Seg_Driver_L:control_4\[36]
-Removing Rhs of wire \LED_Driver_Gear:segments_3\[24] = \LED_Driver_Gear:Seg_Driver_L:control_out_3\[25]
-Removing Rhs of wire \LED_Driver_Gear:segments_3\[24] = \LED_Driver_Gear:Seg_Driver_L:control_3\[37]
-Removing Rhs of wire \LED_Driver_Gear:segments_2\[26] = \LED_Driver_Gear:Seg_Driver_L:control_out_2\[27]
-Removing Rhs of wire \LED_Driver_Gear:segments_2\[26] = \LED_Driver_Gear:Seg_Driver_L:control_2\[38]
-Removing Rhs of wire \LED_Driver_Gear:segments_1\[28] = \LED_Driver_Gear:Seg_Driver_L:control_out_1\[29]
-Removing Rhs of wire \LED_Driver_Gear:segments_1\[28] = \LED_Driver_Gear:Seg_Driver_L:control_1\[39]
-Removing Rhs of wire \LED_Driver_Gear:segments_0\[30] = \LED_Driver_Gear:Seg_Driver_L:control_out_0\[31]
-Removing Rhs of wire \LED_Driver_Gear:segments_0\[30] = \LED_Driver_Gear:Seg_Driver_L:control_0\[40]
-Removing Lhs of wire \LED_Driver_Gear:Com_Driver:clk\[41] = zero[2]
-Removing Lhs of wire \LED_Driver_Gear:Com_Driver:rst\[42] = zero[2]
-Removing Rhs of wire \LED_Driver_Gear:common_0\[57] = \LED_Driver_Gear:Com_Driver:control_out_0\[58]
-Removing Rhs of wire \LED_Driver_Gear:common_0\[57] = \LED_Driver_Gear:Com_Driver:control_0\[67]
-Removing Lhs of wire \LED_Driver_Gear:Net_1418\[72] = \LED_Driver_Gear:Net_1405\[70]
-Removing Lhs of wire \LED_Driver_Gear:Net_1416\[74] = \LED_Driver_Gear:Net_1501\[9]
-Removing Rhs of wire Net_74_6[112] = \LED_Driver_Gear:segments_6\[18]
-Removing Rhs of wire Net_74_5[113] = \LED_Driver_Gear:segments_5\[20]
-Removing Rhs of wire Net_74_4[114] = \LED_Driver_Gear:segments_4\[22]
-Removing Rhs of wire Net_74_3[115] = \LED_Driver_Gear:segments_3\[24]
-Removing Rhs of wire Net_74_2[116] = \LED_Driver_Gear:segments_2\[26]
-Removing Rhs of wire Net_74_1[117] = \LED_Driver_Gear:segments_1\[28]
-Removing Rhs of wire Net_74_0[118] = \LED_Driver_Gear:segments_0\[30]
-Removing Rhs of wire Net_75[126] = \LED_Driver_Gear:common_0\[57]
-Removing Lhs of wire tmpOE__TX_1_net_0[128] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Com_1_net_0[135] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_1_net_6[141] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_1_net_5[142] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_1_net_4[143] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_1_net_3[144] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_1_net_2[145] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_1_net_1[146] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_1_net_0[147] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Tx_En_net_0[165] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_23[172] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_22[173] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_21[174] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_20[175] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_19[176] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_18[177] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_17[178] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_16[179] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_15[180] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_14[181] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_13[182] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_12[183] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_11[184] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_10[185] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_9[186] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_8[187] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_7[188] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_6[189] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_5[190] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_4[191] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_3[192] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_2[193] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_1[194] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Seg_net_0[195] = tmpOE__RX_1_net_0[1]
-Removing Rhs of wire Net_67_23[196] = \LED_Driver_LRBWS:segments_23\[658]
-Removing Rhs of wire Net_67_23[196] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_7\[659]
-Removing Rhs of wire Net_67_23[196] = \LED_Driver_LRBWS:Seg_Driver_H:control_7\[675]
-Removing Rhs of wire Net_67_22[197] = \LED_Driver_LRBWS:segments_22\[660]
-Removing Rhs of wire Net_67_22[197] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_6\[661]
-Removing Rhs of wire Net_67_22[197] = \LED_Driver_LRBWS:Seg_Driver_H:control_6\[676]
-Removing Rhs of wire Net_67_21[198] = \LED_Driver_LRBWS:segments_21\[662]
-Removing Rhs of wire Net_67_21[198] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_5\[663]
-Removing Rhs of wire Net_67_21[198] = \LED_Driver_LRBWS:Seg_Driver_H:control_5\[677]
-Removing Rhs of wire Net_67_20[199] = \LED_Driver_LRBWS:segments_20\[664]
-Removing Rhs of wire Net_67_20[199] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_4\[665]
-Removing Rhs of wire Net_67_20[199] = \LED_Driver_LRBWS:Seg_Driver_H:control_4\[678]
-Removing Rhs of wire Net_67_19[200] = \LED_Driver_LRBWS:segments_19\[666]
-Removing Rhs of wire Net_67_19[200] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_3\[667]
-Removing Rhs of wire Net_67_19[200] = \LED_Driver_LRBWS:Seg_Driver_H:control_3\[679]
-Removing Rhs of wire Net_67_18[201] = \LED_Driver_LRBWS:segments_18\[668]
-Removing Rhs of wire Net_67_18[201] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_2\[669]
-Removing Rhs of wire Net_67_18[201] = \LED_Driver_LRBWS:Seg_Driver_H:control_2\[680]
-Removing Rhs of wire Net_67_17[202] = \LED_Driver_LRBWS:segments_17\[670]
-Removing Rhs of wire Net_67_17[202] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_1\[671]
-Removing Rhs of wire Net_67_17[202] = \LED_Driver_LRBWS:Seg_Driver_H:control_1\[681]
-Removing Rhs of wire Net_67_16[203] = \LED_Driver_LRBWS:segments_16\[672]
-Removing Rhs of wire Net_67_16[203] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_0\[673]
-Removing Rhs of wire Net_67_16[203] = \LED_Driver_LRBWS:Seg_Driver_H:control_0\[682]
-Removing Rhs of wire Net_67_15[204] = \LED_Driver_LRBWS:segments_15\[631]
-Removing Rhs of wire Net_67_15[204] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_7\[632]
-Removing Rhs of wire Net_67_15[204] = \LED_Driver_LRBWS:Seg_Driver_M:control_7\[648]
-Removing Rhs of wire Net_67_14[205] = \LED_Driver_LRBWS:segments_14\[633]
-Removing Rhs of wire Net_67_14[205] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_6\[634]
-Removing Rhs of wire Net_67_14[205] = \LED_Driver_LRBWS:Seg_Driver_M:control_6\[649]
-Removing Rhs of wire Net_67_13[206] = \LED_Driver_LRBWS:segments_13\[635]
-Removing Rhs of wire Net_67_13[206] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_5\[636]
-Removing Rhs of wire Net_67_13[206] = \LED_Driver_LRBWS:Seg_Driver_M:control_5\[650]
-Removing Rhs of wire Net_67_12[207] = \LED_Driver_LRBWS:segments_12\[637]
-Removing Rhs of wire Net_67_12[207] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_4\[638]
-Removing Rhs of wire Net_67_12[207] = \LED_Driver_LRBWS:Seg_Driver_M:control_4\[651]
-Removing Rhs of wire Net_67_11[208] = \LED_Driver_LRBWS:segments_11\[639]
-Removing Rhs of wire Net_67_11[208] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_3\[640]
-Removing Rhs of wire Net_67_11[208] = \LED_Driver_LRBWS:Seg_Driver_M:control_3\[652]
-Removing Rhs of wire Net_67_10[209] = \LED_Driver_LRBWS:segments_10\[641]
-Removing Rhs of wire Net_67_10[209] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_2\[642]
-Removing Rhs of wire Net_67_10[209] = \LED_Driver_LRBWS:Seg_Driver_M:control_2\[653]
-Removing Rhs of wire Net_67_9[210] = \LED_Driver_LRBWS:segments_9\[643]
-Removing Rhs of wire Net_67_9[210] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_1\[644]
-Removing Rhs of wire Net_67_9[210] = \LED_Driver_LRBWS:Seg_Driver_M:control_1\[654]
-Removing Rhs of wire Net_67_8[211] = \LED_Driver_LRBWS:segments_8\[645]
-Removing Rhs of wire Net_67_8[211] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_0\[646]
-Removing Rhs of wire Net_67_8[211] = \LED_Driver_LRBWS:Seg_Driver_M:control_0\[655]
-Removing Rhs of wire Net_67_7[212] = \LED_Driver_LRBWS:segments_7\[574]
-Removing Rhs of wire Net_67_7[212] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_7\[575]
-Removing Rhs of wire Net_67_7[212] = \LED_Driver_LRBWS:Seg_Driver_L:control_7\[591]
-Removing Rhs of wire Net_67_6[213] = \LED_Driver_LRBWS:segments_6\[576]
-Removing Rhs of wire Net_67_6[213] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_6\[577]
-Removing Rhs of wire Net_67_6[213] = \LED_Driver_LRBWS:Seg_Driver_L:control_6\[592]
-Removing Rhs of wire Net_67_5[214] = \LED_Driver_LRBWS:segments_5\[578]
-Removing Rhs of wire Net_67_5[214] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_5\[579]
-Removing Rhs of wire Net_67_5[214] = \LED_Driver_LRBWS:Seg_Driver_L:control_5\[593]
-Removing Rhs of wire Net_67_4[215] = \LED_Driver_LRBWS:segments_4\[580]
-Removing Rhs of wire Net_67_4[215] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_4\[581]
-Removing Rhs of wire Net_67_4[215] = \LED_Driver_LRBWS:Seg_Driver_L:control_4\[594]
-Removing Rhs of wire Net_67_3[216] = \LED_Driver_LRBWS:segments_3\[582]
-Removing Rhs of wire Net_67_3[216] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_3\[583]
-Removing Rhs of wire Net_67_3[216] = \LED_Driver_LRBWS:Seg_Driver_L:control_3\[595]
-Removing Rhs of wire Net_67_2[217] = \LED_Driver_LRBWS:segments_2\[584]
-Removing Rhs of wire Net_67_2[217] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_2\[585]
-Removing Rhs of wire Net_67_2[217] = \LED_Driver_LRBWS:Seg_Driver_L:control_2\[596]
-Removing Rhs of wire Net_67_1[218] = \LED_Driver_LRBWS:segments_1\[586]
-Removing Rhs of wire Net_67_1[218] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_1\[587]
-Removing Rhs of wire Net_67_1[218] = \LED_Driver_LRBWS:Seg_Driver_L:control_1\[597]
-Removing Rhs of wire Net_67_0[219] = \LED_Driver_LRBWS:segments_0\[588]
-Removing Rhs of wire Net_67_0[219] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_0\[589]
-Removing Rhs of wire Net_67_0[219] = \LED_Driver_LRBWS:Seg_Driver_L:control_0\[598]
-Removing Lhs of wire tmpOE__Com_net_4[271] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Com_net_3[272] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Com_net_2[273] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Com_net_1[274] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire tmpOE__Com_net_0[275] = tmpOE__RX_1_net_0[1]
-Removing Rhs of wire Net_68_4[276] = \LED_Driver_LRBWS:common_4\[607]
-Removing Rhs of wire Net_68_4[276] = \LED_Driver_LRBWS:Com_Driver:control_out_4\[608]
-Removing Rhs of wire Net_68_4[276] = \LED_Driver_LRBWS:Com_Driver:control_4\[621]
-Removing Rhs of wire Net_68_3[277] = \LED_Driver_LRBWS:common_3\[609]
-Removing Rhs of wire Net_68_3[277] = \LED_Driver_LRBWS:Com_Driver:control_out_3\[610]
-Removing Rhs of wire Net_68_3[277] = \LED_Driver_LRBWS:Com_Driver:control_3\[622]
-Removing Rhs of wire Net_68_2[278] = \LED_Driver_LRBWS:common_2\[611]
-Removing Rhs of wire Net_68_2[278] = \LED_Driver_LRBWS:Com_Driver:control_out_2\[612]
-Removing Rhs of wire Net_68_2[278] = \LED_Driver_LRBWS:Com_Driver:control_2\[623]
-Removing Rhs of wire Net_68_1[279] = \LED_Driver_LRBWS:common_1\[613]
-Removing Rhs of wire Net_68_1[279] = \LED_Driver_LRBWS:Com_Driver:control_out_1\[614]
-Removing Rhs of wire Net_68_1[279] = \LED_Driver_LRBWS:Com_Driver:control_1\[624]
-Removing Rhs of wire Net_68_0[280] = \LED_Driver_LRBWS:common_0\[615]
-Removing Rhs of wire Net_68_0[280] = \LED_Driver_LRBWS:Com_Driver:control_out_0\[616]
-Removing Rhs of wire Net_68_0[280] = \LED_Driver_LRBWS:Com_Driver:control_0\[625]
-Removing Lhs of wire \LED_Driver_LRBWS:Net_855\[295] = \LED_Driver_LRBWS:Net_1501\[294]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:cnt_enable\[307] = \LED_Driver_LRBWS:bLED_PWM:ctrl_0\[306]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:cmp_vi_vv_MODGEN_1\[314] = \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:lta_0\[368]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:add_vi_vv_MODGEN_2_1\[315] = \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:s_1\[528]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:add_vi_vv_MODGEN_2_0\[317] = \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:s_0\[529]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:PwmDP:cs_addr_2\[321] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:aa_1\[352] = \LED_Driver_LRBWS:bLED_PWM:MODIN1_1\[353]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODIN1_1\[353] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[313]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:aa_0\[354] = \LED_Driver_LRBWS:bLED_PWM:MODIN1_0\[355]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODIN1_0\[355] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[316]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:bb_1\[356] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:bb_0\[357] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:newa_1\[358] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[313]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:newa_0\[359] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[316]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:newb_1\[360] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:newb_0\[361] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:dataa_1\[362] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[313]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:dataa_0\[363] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[316]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:datab_1\[364] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:datab_0\[365] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_23\[410] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_22\[411] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_21\[412] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_20\[413] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_19\[414] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_18\[415] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_17\[416] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_16\[417] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_15\[418] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_14\[419] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_13\[420] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_12\[421] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_11\[422] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_10\[423] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_9\[424] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_8\[425] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_7\[426] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_6\[427] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_5\[428] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_4\[429] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_3\[430] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_2\[431] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_1\[432] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[313]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODIN2_1\[433] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[313]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_0\[434] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[316]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODIN2_0\[435] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[316]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_0\[567] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_0\[568] = tmpOE__RX_1_net_0[1]
-Removing Lhs of wire \LED_Driver_LRBWS:trigDMA\[569] = \LED_Driver_LRBWS:Net_856\[308]
-Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_L:clk\[572] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_L:rst\[573] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:Com_Driver:clk\[599] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:Com_Driver:rst\[600] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_M:clk\[629] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_M:rst\[630] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_H:clk\[656] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_H:rst\[657] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:Net_1418\[684] = \LED_Driver_LRBWS:Net_856\[308]
-Removing Lhs of wire \LED_Driver_LRBWS:Net_1416\[688] = \LED_Driver_LRBWS:tc\[312]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:cnt_state_1\\D\[708] = \LED_Driver_LRBWS:tc\\D\[705]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:cnt_enable\[22] = \LED_Driver_Gear:bLED_PWM:ctrl_0\[21]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:cmp_vi_vv_MODGEN_1\[29] = \LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:lta_0\[83]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_1\[30] = \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_1\[243]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:add_vi_vv_MODGEN_2_0\[32] = \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_0\[244]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:PwmDP:cs_addr_2\[36] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:aa_1\[67] = \LED_Driver_Gear:bLED_PWM:MODIN1_1\[68]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODIN1_1\[68] = \LED_Driver_Gear:bLED_PWM:init_cnt_1\[28]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:aa_0\[69] = \LED_Driver_Gear:bLED_PWM:MODIN1_0\[70]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODIN1_0\[70] = \LED_Driver_Gear:bLED_PWM:init_cnt_0\[31]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:bb_1\[71] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:bb_0\[72] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:newa_1\[73] = \LED_Driver_Gear:bLED_PWM:init_cnt_1\[28]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:newa_0\[74] = \LED_Driver_Gear:bLED_PWM:init_cnt_0\[31]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:newb_1\[75] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:newb_0\[76] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:dataa_1\[77] = \LED_Driver_Gear:bLED_PWM:init_cnt_1\[28]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:dataa_0\[78] = \LED_Driver_Gear:bLED_PWM:init_cnt_0\[31]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:datab_1\[79] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:datab_0\[80] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_23\[125] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_22\[126] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_21\[127] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_20\[128] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_19\[129] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_18\[130] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_17\[131] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_16\[132] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_15\[133] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_14\[134] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_13\[135] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_12\[136] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_11\[137] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_10\[138] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_9\[139] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_8\[140] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_7\[141] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_6\[142] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_5\[143] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_4\[144] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_3\[145] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_2\[146] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_1\[147] = \LED_Driver_Gear:bLED_PWM:init_cnt_1\[28]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODIN2_1\[148] = \LED_Driver_Gear:bLED_PWM:init_cnt_1\[28]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:a_0\[149] = \LED_Driver_Gear:bLED_PWM:init_cnt_0\[31]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODIN2_0\[150] = \LED_Driver_Gear:bLED_PWM:init_cnt_0\[31]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_0\[282] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_0\[283] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_Gear:trigDMA\[284] = \LED_Driver_Gear:Net_856\[23]
+Removing Lhs of wire \LED_Driver_Gear:Seg_Driver_L:clk\[287] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:Seg_Driver_L:rst\[288] = zero[2]
+Removing Rhs of wire \LED_Driver_Gear:segments_6\[291] = \LED_Driver_Gear:Seg_Driver_L:control_out_6\[292]
+Removing Rhs of wire \LED_Driver_Gear:segments_6\[291] = \LED_Driver_Gear:Seg_Driver_L:control_6\[307]
+Removing Rhs of wire \LED_Driver_Gear:segments_5\[293] = \LED_Driver_Gear:Seg_Driver_L:control_out_5\[294]
+Removing Rhs of wire \LED_Driver_Gear:segments_5\[293] = \LED_Driver_Gear:Seg_Driver_L:control_5\[308]
+Removing Rhs of wire \LED_Driver_Gear:segments_4\[295] = \LED_Driver_Gear:Seg_Driver_L:control_out_4\[296]
+Removing Rhs of wire \LED_Driver_Gear:segments_4\[295] = \LED_Driver_Gear:Seg_Driver_L:control_4\[309]
+Removing Rhs of wire \LED_Driver_Gear:segments_3\[297] = \LED_Driver_Gear:Seg_Driver_L:control_out_3\[298]
+Removing Rhs of wire \LED_Driver_Gear:segments_3\[297] = \LED_Driver_Gear:Seg_Driver_L:control_3\[310]
+Removing Rhs of wire \LED_Driver_Gear:segments_2\[299] = \LED_Driver_Gear:Seg_Driver_L:control_out_2\[300]
+Removing Rhs of wire \LED_Driver_Gear:segments_2\[299] = \LED_Driver_Gear:Seg_Driver_L:control_2\[311]
+Removing Rhs of wire \LED_Driver_Gear:segments_1\[301] = \LED_Driver_Gear:Seg_Driver_L:control_out_1\[302]
+Removing Rhs of wire \LED_Driver_Gear:segments_1\[301] = \LED_Driver_Gear:Seg_Driver_L:control_1\[312]
+Removing Rhs of wire \LED_Driver_Gear:segments_0\[303] = \LED_Driver_Gear:Seg_Driver_L:control_out_0\[304]
+Removing Rhs of wire \LED_Driver_Gear:segments_0\[303] = \LED_Driver_Gear:Seg_Driver_L:control_0\[313]
+Removing Lhs of wire \LED_Driver_Gear:Com_Driver:clk\[314] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:Com_Driver:rst\[315] = zero[2]
+Removing Rhs of wire \LED_Driver_Gear:common_0\[330] = \LED_Driver_Gear:Com_Driver:control_out_0\[331]
+Removing Rhs of wire \LED_Driver_Gear:common_0\[330] = \LED_Driver_Gear:Com_Driver:control_0\[340]
+Removing Lhs of wire \LED_Driver_Gear:Net_1418\[345] = \LED_Driver_Gear:Net_856\[23]
+Removing Lhs of wire \LED_Driver_Gear:Net_1416\[349] = \LED_Driver_Gear:tc\[27]
+Removing Rhs of wire Net_74_6[387] = \LED_Driver_Gear:segments_6\[291]
+Removing Rhs of wire Net_74_5[388] = \LED_Driver_Gear:segments_5\[293]
+Removing Rhs of wire Net_74_4[389] = \LED_Driver_Gear:segments_4\[295]
+Removing Rhs of wire Net_74_3[390] = \LED_Driver_Gear:segments_3\[297]
+Removing Rhs of wire Net_74_2[391] = \LED_Driver_Gear:segments_2\[299]
+Removing Rhs of wire Net_74_1[392] = \LED_Driver_Gear:segments_1\[301]
+Removing Rhs of wire Net_74_0[393] = \LED_Driver_Gear:segments_0\[303]
+Removing Rhs of wire Net_75[401] = \LED_Driver_Gear:common_0\[330]
+Removing Lhs of wire tmpOE__TX_1_net_0[403] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Com_1_net_0[410] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_1_net_6[416] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_1_net_5[417] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_1_net_4[418] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_1_net_3[419] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_1_net_2[420] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_1_net_1[421] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_1_net_0[422] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Tx_En_net_0[440] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_23[447] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_22[448] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_21[449] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_20[450] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_19[451] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_18[452] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_17[453] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_16[454] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_15[455] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_14[456] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_13[457] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_12[458] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_11[459] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_10[460] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_9[461] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_8[462] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_7[463] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_6[464] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_5[465] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_4[466] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_3[467] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_2[468] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_1[469] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Seg_net_0[470] = tmpOE__RX_1_net_0[1]
+Removing Rhs of wire Net_67_23[471] = \LED_Driver_LRBWS:segments_23\[933]
+Removing Rhs of wire Net_67_23[471] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_7\[934]
+Removing Rhs of wire Net_67_23[471] = \LED_Driver_LRBWS:Seg_Driver_H:control_7\[950]
+Removing Rhs of wire Net_67_22[472] = \LED_Driver_LRBWS:segments_22\[935]
+Removing Rhs of wire Net_67_22[472] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_6\[936]
+Removing Rhs of wire Net_67_22[472] = \LED_Driver_LRBWS:Seg_Driver_H:control_6\[951]
+Removing Rhs of wire Net_67_21[473] = \LED_Driver_LRBWS:segments_21\[937]
+Removing Rhs of wire Net_67_21[473] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_5\[938]
+Removing Rhs of wire Net_67_21[473] = \LED_Driver_LRBWS:Seg_Driver_H:control_5\[952]
+Removing Rhs of wire Net_67_20[474] = \LED_Driver_LRBWS:segments_20\[939]
+Removing Rhs of wire Net_67_20[474] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_4\[940]
+Removing Rhs of wire Net_67_20[474] = \LED_Driver_LRBWS:Seg_Driver_H:control_4\[953]
+Removing Rhs of wire Net_67_19[475] = \LED_Driver_LRBWS:segments_19\[941]
+Removing Rhs of wire Net_67_19[475] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_3\[942]
+Removing Rhs of wire Net_67_19[475] = \LED_Driver_LRBWS:Seg_Driver_H:control_3\[954]
+Removing Rhs of wire Net_67_18[476] = \LED_Driver_LRBWS:segments_18\[943]
+Removing Rhs of wire Net_67_18[476] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_2\[944]
+Removing Rhs of wire Net_67_18[476] = \LED_Driver_LRBWS:Seg_Driver_H:control_2\[955]
+Removing Rhs of wire Net_67_17[477] = \LED_Driver_LRBWS:segments_17\[945]
+Removing Rhs of wire Net_67_17[477] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_1\[946]
+Removing Rhs of wire Net_67_17[477] = \LED_Driver_LRBWS:Seg_Driver_H:control_1\[956]
+Removing Rhs of wire Net_67_16[478] = \LED_Driver_LRBWS:segments_16\[947]
+Removing Rhs of wire Net_67_16[478] = \LED_Driver_LRBWS:Seg_Driver_H:control_out_0\[948]
+Removing Rhs of wire Net_67_16[478] = \LED_Driver_LRBWS:Seg_Driver_H:control_0\[957]
+Removing Rhs of wire Net_67_15[479] = \LED_Driver_LRBWS:segments_15\[906]
+Removing Rhs of wire Net_67_15[479] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_7\[907]
+Removing Rhs of wire Net_67_15[479] = \LED_Driver_LRBWS:Seg_Driver_M:control_7\[923]
+Removing Rhs of wire Net_67_14[480] = \LED_Driver_LRBWS:segments_14\[908]
+Removing Rhs of wire Net_67_14[480] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_6\[909]
+Removing Rhs of wire Net_67_14[480] = \LED_Driver_LRBWS:Seg_Driver_M:control_6\[924]
+Removing Rhs of wire Net_67_13[481] = \LED_Driver_LRBWS:segments_13\[910]
+Removing Rhs of wire Net_67_13[481] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_5\[911]
+Removing Rhs of wire Net_67_13[481] = \LED_Driver_LRBWS:Seg_Driver_M:control_5\[925]
+Removing Rhs of wire Net_67_12[482] = \LED_Driver_LRBWS:segments_12\[912]
+Removing Rhs of wire Net_67_12[482] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_4\[913]
+Removing Rhs of wire Net_67_12[482] = \LED_Driver_LRBWS:Seg_Driver_M:control_4\[926]
+Removing Rhs of wire Net_67_11[483] = \LED_Driver_LRBWS:segments_11\[914]
+Removing Rhs of wire Net_67_11[483] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_3\[915]
+Removing Rhs of wire Net_67_11[483] = \LED_Driver_LRBWS:Seg_Driver_M:control_3\[927]
+Removing Rhs of wire Net_67_10[484] = \LED_Driver_LRBWS:segments_10\[916]
+Removing Rhs of wire Net_67_10[484] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_2\[917]
+Removing Rhs of wire Net_67_10[484] = \LED_Driver_LRBWS:Seg_Driver_M:control_2\[928]
+Removing Rhs of wire Net_67_9[485] = \LED_Driver_LRBWS:segments_9\[918]
+Removing Rhs of wire Net_67_9[485] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_1\[919]
+Removing Rhs of wire Net_67_9[485] = \LED_Driver_LRBWS:Seg_Driver_M:control_1\[929]
+Removing Rhs of wire Net_67_8[486] = \LED_Driver_LRBWS:segments_8\[920]
+Removing Rhs of wire Net_67_8[486] = \LED_Driver_LRBWS:Seg_Driver_M:control_out_0\[921]
+Removing Rhs of wire Net_67_8[486] = \LED_Driver_LRBWS:Seg_Driver_M:control_0\[930]
+Removing Rhs of wire Net_67_7[487] = \LED_Driver_LRBWS:segments_7\[849]
+Removing Rhs of wire Net_67_7[487] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_7\[850]
+Removing Rhs of wire Net_67_7[487] = \LED_Driver_LRBWS:Seg_Driver_L:control_7\[866]
+Removing Rhs of wire Net_67_6[488] = \LED_Driver_LRBWS:segments_6\[851]
+Removing Rhs of wire Net_67_6[488] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_6\[852]
+Removing Rhs of wire Net_67_6[488] = \LED_Driver_LRBWS:Seg_Driver_L:control_6\[867]
+Removing Rhs of wire Net_67_5[489] = \LED_Driver_LRBWS:segments_5\[853]
+Removing Rhs of wire Net_67_5[489] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_5\[854]
+Removing Rhs of wire Net_67_5[489] = \LED_Driver_LRBWS:Seg_Driver_L:control_5\[868]
+Removing Rhs of wire Net_67_4[490] = \LED_Driver_LRBWS:segments_4\[855]
+Removing Rhs of wire Net_67_4[490] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_4\[856]
+Removing Rhs of wire Net_67_4[490] = \LED_Driver_LRBWS:Seg_Driver_L:control_4\[869]
+Removing Rhs of wire Net_67_3[491] = \LED_Driver_LRBWS:segments_3\[857]
+Removing Rhs of wire Net_67_3[491] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_3\[858]
+Removing Rhs of wire Net_67_3[491] = \LED_Driver_LRBWS:Seg_Driver_L:control_3\[870]
+Removing Rhs of wire Net_67_2[492] = \LED_Driver_LRBWS:segments_2\[859]
+Removing Rhs of wire Net_67_2[492] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_2\[860]
+Removing Rhs of wire Net_67_2[492] = \LED_Driver_LRBWS:Seg_Driver_L:control_2\[871]
+Removing Rhs of wire Net_67_1[493] = \LED_Driver_LRBWS:segments_1\[861]
+Removing Rhs of wire Net_67_1[493] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_1\[862]
+Removing Rhs of wire Net_67_1[493] = \LED_Driver_LRBWS:Seg_Driver_L:control_1\[872]
+Removing Rhs of wire Net_67_0[494] = \LED_Driver_LRBWS:segments_0\[863]
+Removing Rhs of wire Net_67_0[494] = \LED_Driver_LRBWS:Seg_Driver_L:control_out_0\[864]
+Removing Rhs of wire Net_67_0[494] = \LED_Driver_LRBWS:Seg_Driver_L:control_0\[873]
+Removing Lhs of wire tmpOE__Com_net_4[546] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Com_net_3[547] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Com_net_2[548] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Com_net_1[549] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire tmpOE__Com_net_0[550] = tmpOE__RX_1_net_0[1]
+Removing Rhs of wire Net_68_4[551] = \LED_Driver_LRBWS:common_4\[882]
+Removing Rhs of wire Net_68_4[551] = \LED_Driver_LRBWS:Com_Driver:control_out_4\[883]
+Removing Rhs of wire Net_68_4[551] = \LED_Driver_LRBWS:Com_Driver:control_4\[896]
+Removing Rhs of wire Net_68_3[552] = \LED_Driver_LRBWS:common_3\[884]
+Removing Rhs of wire Net_68_3[552] = \LED_Driver_LRBWS:Com_Driver:control_out_3\[885]
+Removing Rhs of wire Net_68_3[552] = \LED_Driver_LRBWS:Com_Driver:control_3\[897]
+Removing Rhs of wire Net_68_2[553] = \LED_Driver_LRBWS:common_2\[886]
+Removing Rhs of wire Net_68_2[553] = \LED_Driver_LRBWS:Com_Driver:control_out_2\[887]
+Removing Rhs of wire Net_68_2[553] = \LED_Driver_LRBWS:Com_Driver:control_2\[898]
+Removing Rhs of wire Net_68_1[554] = \LED_Driver_LRBWS:common_1\[888]
+Removing Rhs of wire Net_68_1[554] = \LED_Driver_LRBWS:Com_Driver:control_out_1\[889]
+Removing Rhs of wire Net_68_1[554] = \LED_Driver_LRBWS:Com_Driver:control_1\[899]
+Removing Rhs of wire Net_68_0[555] = \LED_Driver_LRBWS:common_0\[890]
+Removing Rhs of wire Net_68_0[555] = \LED_Driver_LRBWS:Com_Driver:control_out_0\[891]
+Removing Rhs of wire Net_68_0[555] = \LED_Driver_LRBWS:Com_Driver:control_0\[900]
+Removing Lhs of wire \LED_Driver_LRBWS:Net_855\[570] = \LED_Driver_LRBWS:Net_1501\[569]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:cnt_enable\[582] = \LED_Driver_LRBWS:bLED_PWM:ctrl_0\[581]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:cmp_vi_vv_MODGEN_1\[589] = \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:lta_0\[643]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:add_vi_vv_MODGEN_2_1\[590] = \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:s_1\[803]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:add_vi_vv_MODGEN_2_0\[592] = \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:s_0\[804]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:PwmDP:cs_addr_2\[596] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:aa_1\[627] = \LED_Driver_LRBWS:bLED_PWM:MODIN1_1\[628]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODIN1_1\[628] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[588]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:aa_0\[629] = \LED_Driver_LRBWS:bLED_PWM:MODIN1_0\[630]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODIN1_0\[630] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[591]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:bb_1\[631] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:bb_0\[632] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:newa_1\[633] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[588]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:newa_0\[634] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[591]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:newb_1\[635] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:newb_0\[636] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:dataa_1\[637] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[588]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:dataa_0\[638] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[591]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:datab_1\[639] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:datab_0\[640] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_23\[685] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_22\[686] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_21\[687] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_20\[688] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_19\[689] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_18\[690] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_17\[691] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_16\[692] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_15\[693] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_14\[694] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_13\[695] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_12\[696] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_11\[697] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_10\[698] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_9\[699] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_8\[700] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_7\[701] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_6\[702] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_5\[703] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_4\[704] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_3\[705] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_2\[706] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_1\[707] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[588]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODIN2_1\[708] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\[588]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:a_0\[709] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[591]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODIN2_0\[710] = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\[591]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_0\[842] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_0\[843] = tmpOE__RX_1_net_0[1]
+Removing Lhs of wire \LED_Driver_LRBWS:trigDMA\[844] = \LED_Driver_LRBWS:Net_856\[583]
+Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_L:clk\[847] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_L:rst\[848] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:Com_Driver:clk\[874] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:Com_Driver:rst\[875] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_M:clk\[904] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_M:rst\[905] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_H:clk\[931] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:Seg_Driver_H:rst\[932] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:Net_1418\[959] = \LED_Driver_LRBWS:Net_856\[583]
+Removing Lhs of wire \LED_Driver_LRBWS:Net_1416\[963] = \LED_Driver_LRBWS:tc\[587]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:cnt_state_1\\D\[983] = \LED_Driver_Gear:tc\\D\[980]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:cnt_state_1\\D\[990] = \LED_Driver_LRBWS:tc\\D\[987]
 
 ------------------------------------------------------
-Aliased 0 equations, 219 wires.
+Aliased 0 equations, 267 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -686,6 +903,30 @@ tmpOE__RX_1_net_0 <=  ('1') ;
 
 Note:  Expanding virtual equation for 'zero' (cost = 0):
 zero <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:lta_1\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:lta_1\ <= (not \LED_Driver_Gear:bLED_PWM:init_cnt_1\);
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:gta_1\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:gta_1\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:lta_0\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_1:g2:a0:lta_0\ <= (not \LED_Driver_Gear:bLED_PWM:init_cnt_1\);
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_1\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_1\ <= (\LED_Driver_Gear:bLED_PWM:init_cnt_0\);
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_0\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_0\ <= (not \LED_Driver_Gear:bLED_PWM:init_cnt_0\);
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_17\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_17\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_9\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_9\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_2\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_2\ <= ((\LED_Driver_Gear:bLED_PWM:init_cnt_1\ and \LED_Driver_Gear:bLED_PWM:init_cnt_0\));
 
 Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:lta_1\' (cost = 0):
 \LED_Driver_LRBWS:bLED_PWM:MODULE_1:g2:a0:lta_1\ <= (not \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\);
@@ -714,6 +955,19 @@ Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0
 
 Substituting virtuals - pass 2:
 
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_1\' (cost = 2):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:s_1\ <= ((not \LED_Driver_Gear:bLED_PWM:init_cnt_0\ and \LED_Driver_Gear:bLED_PWM:init_cnt_1\)
+	OR (not \LED_Driver_Gear:bLED_PWM:init_cnt_1\ and \LED_Driver_Gear:bLED_PWM:init_cnt_0\));
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_18\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_18\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_10\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_10\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_3\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_3\ <=  ('0') ;
+
 Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:s_1\' (cost = 2):
 \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:s_1\ <= ((not \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\ and \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\)
 	OR (not \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\ and \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\));
@@ -730,6 +984,15 @@ Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0
 
 Substituting virtuals - pass 3:
 
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_19\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_19\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_11\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_11\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_4\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_4\ <=  ('0') ;
+
 Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_19\' (cost = 0):
 \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_19\ <=  ('0') ;
 
@@ -741,6 +1004,15 @@ Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0
 
 
 Substituting virtuals - pass 4:
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_20\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_20\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_12\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_12\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_5\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_5\ <=  ('0') ;
 
 Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_20\' (cost = 0):
 \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_20\ <=  ('0') ;
@@ -754,6 +1026,15 @@ Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0
 
 Substituting virtuals - pass 5:
 
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_21\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_21\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_13\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_13\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_6\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_6\ <=  ('0') ;
+
 Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_21\' (cost = 0):
 \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_21\ <=  ('0') ;
 
@@ -766,6 +1047,15 @@ Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0
 
 Substituting virtuals - pass 6:
 
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_22\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_22\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_14\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_14\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_7\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_7\ <=  ('0') ;
+
 Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_22\' (cost = 0):
 \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_22\ <=  ('0') ;
 
@@ -777,6 +1067,12 @@ Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0
 
 
 Substituting virtuals - pass 7:
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_23\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_23\ <=  ('0') ;
+
+Note:  Expanding virtual equation for '\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_15\' (cost = 0):
+\LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_15\ <=  ('0') ;
 
 Note:  Expanding virtual equation for '\LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_23\' (cost = 0):
 \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_23\ <=  ('0') ;
@@ -791,7 +1087,7 @@ Substituting virtuals - pass 8:
 ----------------------------------------------------------
 Circuit simplification results:
 
-	Expanded 28 signals.
+	Expanded 54 signals.
 	Turned 0 signals into soft nodes.
 	Maximum default expansion cost was set at 3.
 ----------------------------------------------------------
@@ -799,15 +1095,21 @@ Circuit simplification results:
 ------------------------------------------------------
 Alias Detection
 ------------------------------------------------------
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_24\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_16\ to zero
+Aliasing \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
 Aliasing \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_24\ to zero
 Aliasing \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_16\ to zero
 Aliasing \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_24\[538] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_16\[548] = zero[2]
-Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_8\[558] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_24\[253] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_16\[263] = zero[2]
+Removing Lhs of wire \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_8\[273] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_24\[813] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_16\[823] = zero[2]
+Removing Lhs of wire \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:b_8\[833] = zero[2]
 
 ------------------------------------------------------
-Aliased 0 equations, 3 wires.
+Aliased 0 equations, 6 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -837,17 +1139,20 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\bin/warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\VTM17c_Display_7seg.cyprj -dcpsoc3 VTM17c_Display_7seg.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 0s.886ms
+Warp synthesis phase: Elapsed time ==> 0s.943ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V3.3.0.9604, Family: PSoC3, Started at: Monday, 17 October 2016 16:30:58
+cyp3fit: V3.3.0.9604, Family: PSoC3, Started at: Tuesday, 18 October 2016 22:08:43
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\VTM17c_Display_7seg.cyprj -d CY8C5888LTI-LP097 VTM17c_Display_7seg.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.031ms
+Design parsing phase: Elapsed time ==> 0s.016ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
+    Removed wire end \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_24\ kept zero
+    Removed wire end \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_16\ kept zero
+    Removed wire end \LED_Driver_Gear:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_8\ kept zero
     Removed wire end \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_24\ kept zero
     Removed wire end \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_16\ kept zero
     Removed wire end \LED_Driver_LRBWS:bLED_PWM:MODULE_2:g2:a0:g1:z1:s0:g1:u0:c_8\ kept zero
@@ -862,12 +1167,16 @@ Assigning clock CAN_Clock to clock BUS_CLK because it is a pass-through
 Removing unused cells resulting from optimization
 Done removing unused cells.
 <CYPRESSTAG name="UDB Clock/Enable Remapping Results">
+    UDB Clk/Enable \LED_Driver_Gear:bLED_PWM:ClkSync\: with output requested to be synchronous
+        ClockIn: LED_Driver_Gear_ClkInternal was determined to be a global clock that is synchronous to BUS_CLK
+        EnableIn: Constant 1 was determined to be synchronous to ClockIn
+        ClockOut: LED_Driver_Gear_ClkInternal, EnableOut: Constant 1
     UDB Clk/Enable \LED_Driver_LRBWS:bLED_PWM:ClkSync\: with output requested to be synchronous
         ClockIn: LED_Driver_LRBWS_ClkInternal was determined to be a global clock that is synchronous to BUS_CLK
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: LED_Driver_LRBWS_ClkInternal, EnableOut: Constant 1
 </CYPRESSTAG>
-ADD: pft.M0040: information: The following 37 pin(s) will be assigned a location by the fitter: Com(0), Com(1), Com(2), Com(3), Com(4), Com_1(0), Seg(0), Seg(1), Seg(2), Seg(3), Seg(4), Seg(5), Seg(6), Seg(7), Seg(8), Seg(9), Seg(10), Seg(11), Seg(12), Seg(13), Seg(14), Seg(15), Seg(16), Seg(17), Seg(18), Seg(19), Seg(20), Seg(21), Seg(22), Seg(23), Seg_1(0), Seg_1(1), Seg_1(2), Seg_1(3), Seg_1(4), Seg_1(5), Seg_1(6)
+ADD: pft.M0040: information: The following 29 pin(s) will be assigned a location by the fitter: Com(0), Com(1), Com(2), Com(3), Com(4), Seg(0), Seg(1), Seg(2), Seg(3), Seg(4), Seg(5), Seg(6), Seg(7), Seg(8), Seg(9), Seg(10), Seg(11), Seg(12), Seg(13), Seg(14), Seg(15), Seg(16), Seg(17), Seg(18), Seg(19), Seg(20), Seg(21), Seg(22), Seg(23)
 
 
 Removing unused cells resulting from optimization
@@ -888,6 +1197,20 @@ Removing duplicate macrocells
               \LED_Driver_LRBWS:bLED_PWM:load_compare\
         );
         Output = \LED_Driver_LRBWS:bLED_PWM:cnt_state_1\ (fanout=1)
+
+    Removing \LED_Driver_Gear:bLED_PWM:cnt_state_1\, Duplicate of \LED_Driver_Gear:tc\ 
+    MacroCell: Name=\LED_Driver_Gear:bLED_PWM:cnt_state_1\, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\
+        );
+        Output = \LED_Driver_Gear:bLED_PWM:cnt_state_1\ (fanout=1)
 
 End removing duplicate macrocells: used 1 pass
 </CYPRESSTAG>
@@ -1021,6 +1344,9 @@ Design Equations
             pa_out => Com_1(0)__PA ,
             input => Net_75 ,
             pad => Com_1(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = Seg_1(0)
         Attributes:
@@ -1058,6 +1384,9 @@ Design Equations
             pa_out => Seg_1(0)__PA ,
             input => Net_74_0 ,
             pad => Seg_1(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = Seg_1(1)
         Attributes:
@@ -1095,6 +1424,9 @@ Design Equations
             pa_out => Seg_1(1)__PA ,
             input => Net_74_1 ,
             pad => Seg_1(1)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = Seg_1(2)
         Attributes:
@@ -1132,6 +1464,9 @@ Design Equations
             pa_out => Seg_1(2)__PA ,
             input => Net_74_2 ,
             pad => Seg_1(2)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = Seg_1(3)
         Attributes:
@@ -1169,6 +1504,9 @@ Design Equations
             pa_out => Seg_1(3)__PA ,
             input => Net_74_3 ,
             pad => Seg_1(3)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = Seg_1(4)
         Attributes:
@@ -1206,6 +1544,9 @@ Design Equations
             pa_out => Seg_1(4)__PA ,
             input => Net_74_4 ,
             pad => Seg_1(4)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = Seg_1(5)
         Attributes:
@@ -1243,6 +1584,9 @@ Design Equations
             pa_out => Seg_1(5)__PA ,
             input => Net_74_5 ,
             pad => Seg_1(5)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = Seg_1(6)
         Attributes:
@@ -1280,6 +1624,9 @@ Design Equations
             pa_out => Seg_1(6)__PA ,
             input => Net_74_6 ,
             pad => Seg_1(6)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = Tx_En(0)
         Attributes:
@@ -2406,8 +2753,8 @@ Design Equations
             Clock Enable: True
         Main Equation            : 2 pterms
         (
-              !\LED_Driver_Gear:Net_1352\ * \LED_Driver_Gear:Net_1501_local\
-            + \LED_Driver_Gear:Net_1352\ * !\LED_Driver_Gear:Net_1501_local\
+              !\LED_Driver_Gear:tc\ * \LED_Driver_Gear:Net_1352\
+            + \LED_Driver_Gear:tc\ * !\LED_Driver_Gear:Net_1352\
         );
         Output = \LED_Driver_Gear:Net_1332\ (fanout=1)
 
@@ -2421,6 +2768,96 @@ Design Equations
             + \LED_Driver_LRBWS:tc\ * !\LED_Driver_LRBWS:Net_1352\
         );
         Output = \LED_Driver_LRBWS:Net_1332\ (fanout=1)
+
+    MacroCell: Name=\LED_Driver_Gear:Net_856\, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              !\LED_Driver_Gear:bLED_PWM:initialization\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\
+            + \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              !\LED_Driver_Gear:bLED_PWM:initialization\ * 
+              \LED_Driver_Gear:bLED_PWM:drive_pwm\
+        );
+        Output = \LED_Driver_Gear:Net_856\ (fanout=1)
+
+    MacroCell: Name=\LED_Driver_Gear:bLED_PWM:initialization\, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\LED_Driver_Gear:bLED_PWM:ctrl_0\
+            + \LED_Driver_Gear:bLED_PWM:initialization\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\ * 
+              !\LED_Driver_Gear:bLED_PWM:init_cnt_1\
+        );
+        Output = \LED_Driver_Gear:bLED_PWM:initialization\ (fanout=2)
+
+    MacroCell: Name=\LED_Driver_Gear:tc\, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\
+        );
+        Output = \LED_Driver_Gear:tc\ (fanout=3)
+
+    MacroCell: Name=\LED_Driver_Gear:bLED_PWM:init_cnt_1\, Mode=(D-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\ * 
+              \LED_Driver_Gear:bLED_PWM:init_cnt_0\
+            + \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:init_cnt_1\
+        );
+        Output = \LED_Driver_Gear:bLED_PWM:init_cnt_1\ (fanout=3)
+
+    MacroCell: Name=\LED_Driver_Gear:bLED_PWM:init_cnt_0\, Mode=(T-Register)
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:init_cnt_0\
+            + \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\ * 
+              !\LED_Driver_Gear:bLED_PWM:init_cnt_1\
+        );
+        Output = \LED_Driver_Gear:bLED_PWM:init_cnt_0\ (fanout=2)
+
+    MacroCell: Name=\LED_Driver_Gear:bLED_PWM:cnt_state_0\, Mode=(D-Register)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              !\LED_Driver_Gear:bLED_PWM:load_compare\
+        );
+        Output = \LED_Driver_Gear:bLED_PWM:cnt_state_0\ (fanout=1)
 
     MacroCell: Name=\LED_Driver_LRBWS:Net_856\, Mode=(D-Register)
         Total # of inputs        : 4
@@ -2518,6 +2955,40 @@ Design Equations
     Datapath listing
     ------------------------------------------------------------
 
+    datapathcell: Name =\LED_Driver_Gear:bLED_PWM:PwmDP:u0\
+        PORT MAP (
+            clock => \LED_Driver_Gear:Net_1501\ ,
+            cs_addr_1 => \LED_Driver_Gear:tc\ ,
+            cs_addr_0 => \LED_Driver_Gear:bLED_PWM:cnt_state_0\ ,
+            cl1_comb => \LED_Driver_Gear:bLED_PWM:drive_pwm\ ,
+            z1_comb => \LED_Driver_Gear:bLED_PWM:load_compare\ );
+        Properties:
+        {
+            a0_init = "00000000"
+            a1_init = "00000000"
+            ce0_sync = 1
+            ce1_sync = 1
+            cl0_sync = 1
+            cl1_sync = 1
+            cmsb_sync = 1
+            co_msb_sync = 1
+            cy_dpconfig = "1011110000010000010110000001000001011000100100000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111000100000000000000001111011100000000000000001000"
+            d0_init = "00000000"
+            d1_init = "00000000"
+            f0_blk_sync = 1
+            f0_bus_sync = 1
+            f1_blk_sync = 1
+            f1_bus_sync = 1
+            ff0_sync = 1
+            ff1_sync = 1
+            ov_msb_sync = 1
+            so_sync = 1
+            z0_sync = 1
+            z1_sync = 1
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
+
     datapathcell: Name =\LED_Driver_LRBWS:bLED_PWM:PwmDP:u0\
         PORT MAP (
             clock => \LED_Driver_LRBWS:Net_1501\ ,
@@ -2563,6 +3034,28 @@ Design Equations
     ------------------------------------------------------------
     Control register listing
     ------------------------------------------------------------
+
+    controlcell: Name =\LED_Driver_Gear:bLED_PWM:CtlReg\
+        PORT MAP (
+            clock => \LED_Driver_Gear:Net_1501\ ,
+            control_7 => \LED_Driver_Gear:bLED_PWM:ctrl_7\ ,
+            control_6 => \LED_Driver_Gear:bLED_PWM:ctrl_6\ ,
+            control_5 => \LED_Driver_Gear:bLED_PWM:ctrl_5\ ,
+            control_4 => \LED_Driver_Gear:bLED_PWM:ctrl_4\ ,
+            control_3 => \LED_Driver_Gear:bLED_PWM:ctrl_3\ ,
+            control_2 => \LED_Driver_Gear:bLED_PWM:ctrl_2\ ,
+            control_1 => \LED_Driver_Gear:bLED_PWM:ctrl_1\ ,
+            control_0 => \LED_Driver_Gear:bLED_PWM:ctrl_0\ );
+        Properties:
+        {
+            cy_ctrl_mode_0 = "00000001"
+            cy_ctrl_mode_1 = "00000000"
+            cy_ext_reset = 0
+            cy_force_order = 1
+            cy_init_value = "00000000"
+        }
+        Clock Polarity: Active High
+        Clock Enable: True
 
     controlcell: Name =\LED_Driver_Gear:Seg_Driver_L:Sync:ctrl_reg\
         PORT MAP (
@@ -2727,9 +3220,20 @@ Design Equations
 
     drqcell: Name =\LED_Driver_Gear:DMA_Seg\
         PORT MAP (
-            dmareq => \LED_Driver_Gear:Net_1405\ ,
+            dmareq => \LED_Driver_Gear:Net_856\ ,
             termin => zero ,
             termout => \LED_Driver_Gear:Net_1352\ );
+        Properties:
+        {
+            drq_type = "00"
+            num_tds = 0
+        }
+
+    drqcell: Name =\LED_Driver_Gear:DMA_BC\
+        PORT MAP (
+            dmareq => \LED_Driver_Gear:tc\ ,
+            termin => zero ,
+            termout => \LED_Driver_Gear:Net_123\ );
         Properties:
         {
             drq_type = "00"
@@ -2802,16 +3306,16 @@ Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    1 :    0 :    1 : 100.00 %
 I2C                           :    0 :    1 :    1 :  0.00 %
 USB                           :    0 :    1 :    1 :  0.00 %
-DMA Channels                  :    5 :   19 :   24 : 20.83 %
+DMA Channels                  :    6 :   18 :   24 : 25.00 %
 Timer                         :    0 :    4 :    4 :  0.00 %
 UDB                           :      :      :      :        
-  Macrocells                  :    8 :  184 :  192 :  4.17 %
-  Unique P-terms              :   14 :  370 :  384 :  3.65 %
-  Total P-terms               :   14 :      :      :        
-  Datapath Cells              :    1 :   23 :   24 :  4.17 %
+  Macrocells                  :   14 :  178 :  192 :  7.29 %
+  Unique P-terms              :   24 :  360 :  384 :  6.25 %
+  Total P-terms               :   24 :      :      :        
+  Datapath Cells              :    2 :   22 :   24 :  8.33 %
   Status Cells                :    0 :   24 :   24 :  0.00 %
-  Control Cells               :    7 :   17 :   24 : 29.17 %
-    Control Registers         :    7 :      :      :        
+  Control Cells               :    8 :   16 :   24 : 33.33 %
+    Control Registers         :    8 :      :      :        
 Opamp                         :    0 :    4 :    4 :  0.00 %
 Comparator                    :    0 :    4 :    4 :  0.00 %
 Delta-Sigma ADC               :    0 :    1 :    1 :  0.00 %
@@ -2821,15 +3325,23 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.084ms
-Tech mapping phase: Elapsed time ==> 0s.168ms
+Technology Mapping: Elapsed time ==> 0s.065ms
+Tech mapping phase: Elapsed time ==> 0s.195ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
+IO_0@[IOP=(2)][IoId=(0)] : Com_1(0) (fixed)
 IO_0@[IOP=(0)][IoId=(0)] : RX_1(0) (fixed)
+IO_1@[IOP=(2)][IoId=(1)] : Seg_1(0) (fixed)
+IO_2@[IOP=(2)][IoId=(2)] : Seg_1(1) (fixed)
+IO_3@[IOP=(2)][IoId=(3)] : Seg_1(2) (fixed)
+IO_4@[IOP=(2)][IoId=(4)] : Seg_1(3) (fixed)
+IO_5@[IOP=(2)][IoId=(5)] : Seg_1(4) (fixed)
+IO_6@[IOP=(2)][IoId=(6)] : Seg_1(5) (fixed)
+IO_7@[IOP=(2)][IoId=(7)] : Seg_1(6) (fixed)
 IO_1@[IOP=(0)][IoId=(1)] : TX_1(0) (fixed)
 IO_2@[IOP=(0)][IoId=(2)] : Tx_En(0) (fixed)
-Analog Placement phase: Elapsed time ==> 0s.015ms
+Analog Placement phase: Elapsed time ==> 0s.026ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -2847,11 +3359,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.466ms
+Analog Code Generation phase: Elapsed time ==> 0s.406ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 1.0 sec.
+I2076: Total run-time: 1.2 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2862,33 +3374,33 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :    7 :   41 :   48 :  14.58%
+                     PLDs :    8 :   40 :   48 :  16.67%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            3.43
-                   Pterms :            2.00
-               Macrocells :            1.14
+                   Inputs :            4.50
+                   Pterms :            3.00
+               Macrocells :            1.75
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.000ms
+PLD Packing: Elapsed time ==> 0s.001ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.084ms
+Partitioning: Elapsed time ==> 0s.174ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Simulated Annealing">
-Annealing: Elapsed time ==> 0s.000ms
+Annealing: Elapsed time ==> 0s.001ms
 <CYPRESSTAG name="Simulated Annealing Results">
 The seed used for moves was 114161200.
-Inital cost was 467, final cost is 467 (0.00% improvement).</CYPRESSTAG>
+Inital cost was 486, final cost is 486 (0.00% improvement).</CYPRESSTAG>
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -2898,7 +3410,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          8 :       1.88 :       1.00
+                 UDB :          8 :       2.88 :       1.75
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -2928,11 +3440,7 @@ controlcell: Name =\LED_Driver_LRBWS:Seg_Driver_L:Sync:ctrl_reg\
     Clock Enable: True
 
 UDB [UDB=(0,2)] is empty.
-UDB [UDB=(0,3)] is empty.
-UDB [UDB=(0,4)] is empty.
-UDB [UDB=(0,5)] is empty.
-UDB [UDB=(1,0)] is empty.
-UDB [UDB=(1,1)] contents:
+UDB [UDB=(0,3)] contents:
 controlcell: Name =\LED_Driver_Gear:Seg_Driver_L:Sync:ctrl_reg\
     PORT MAP (
         control_7 => \LED_Driver_Gear:Seg_Driver_L:control_7\ ,
@@ -2953,22 +3461,117 @@ controlcell: Name =\LED_Driver_Gear:Seg_Driver_L:Sync:ctrl_reg\
     }
     Clock Enable: True
 
+UDB [UDB=(0,4)] is empty.
+UDB [UDB=(0,5)] is empty.
+UDB [UDB=(1,0)] is empty.
+UDB [UDB=(1,1)] contents:
+controlcell: Name =\LED_Driver_LRBWS:Seg_Driver_H:Sync:ctrl_reg\
+    PORT MAP (
+        control_7 => Net_67_23 ,
+        control_6 => Net_67_22 ,
+        control_5 => Net_67_21 ,
+        control_4 => Net_67_20 ,
+        control_3 => Net_67_19 ,
+        control_2 => Net_67_18 ,
+        control_1 => Net_67_17 ,
+        control_0 => Net_67_16 );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "00000000"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Enable: True
+
 UDB [UDB=(1,2)] is empty.
-UDB [UDB=(1,3)] is empty.
+UDB [UDB=(1,3)] contents:
+controlcell: Name =\LED_Driver_Gear:Com_Driver:Sync:ctrl_reg\
+    PORT MAP (
+        control_7 => \LED_Driver_Gear:Com_Driver:control_7\ ,
+        control_6 => \LED_Driver_Gear:Com_Driver:control_6\ ,
+        control_5 => \LED_Driver_Gear:Com_Driver:control_5\ ,
+        control_4 => \LED_Driver_Gear:Com_Driver:control_4\ ,
+        control_3 => \LED_Driver_Gear:Com_Driver:control_3\ ,
+        control_2 => \LED_Driver_Gear:Com_Driver:control_2\ ,
+        control_1 => \LED_Driver_Gear:Com_Driver:control_1\ ,
+        control_0 => Net_75 );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "00000000"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Enable: True
+
 UDB [UDB=(1,4)] is empty.
 UDB [UDB=(1,5)] is empty.
 UDB [UDB=(2,0)] contents:
-controlcell: Name =\LED_Driver_LRBWS:bLED_PWM:CtlReg\
+LAB@[UDB=(2,0)][LB=0] #macrocells=1, #inputs=4, #pterms=2
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\LED_Driver_Gear:bLED_PWM:init_cnt_1\, Mode=(D-Register) @ [UDB=(2,0)][LB=0][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\ * 
+              \LED_Driver_Gear:bLED_PWM:init_cnt_0\
+            + \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:init_cnt_1\
+        );
+        Output = \LED_Driver_Gear:bLED_PWM:init_cnt_1\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(2,0)][LB=1] #macrocells=1, #inputs=4, #pterms=2
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\LED_Driver_Gear:bLED_PWM:init_cnt_0\, Mode=(T-Register) @ [UDB=(2,0)][LB=1][MC=3]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:init_cnt_0\
+            + \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\ * 
+              !\LED_Driver_Gear:bLED_PWM:init_cnt_1\
+        );
+        Output = \LED_Driver_Gear:bLED_PWM:init_cnt_0\ (fanout=2)
+        Properties               : 
+        {
+        }
+}
+
+controlcell: Name =\LED_Driver_Gear:bLED_PWM:CtlReg\
     PORT MAP (
-        clock => \LED_Driver_LRBWS:Net_1501\ ,
-        control_7 => \LED_Driver_LRBWS:bLED_PWM:ctrl_7\ ,
-        control_6 => \LED_Driver_LRBWS:bLED_PWM:ctrl_6\ ,
-        control_5 => \LED_Driver_LRBWS:bLED_PWM:ctrl_5\ ,
-        control_4 => \LED_Driver_LRBWS:bLED_PWM:ctrl_4\ ,
-        control_3 => \LED_Driver_LRBWS:bLED_PWM:ctrl_3\ ,
-        control_2 => \LED_Driver_LRBWS:bLED_PWM:ctrl_2\ ,
-        control_1 => \LED_Driver_LRBWS:bLED_PWM:ctrl_1\ ,
-        control_0 => \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ );
+        clock => \LED_Driver_Gear:Net_1501\ ,
+        control_7 => \LED_Driver_Gear:bLED_PWM:ctrl_7\ ,
+        control_6 => \LED_Driver_Gear:bLED_PWM:ctrl_6\ ,
+        control_5 => \LED_Driver_Gear:bLED_PWM:ctrl_5\ ,
+        control_4 => \LED_Driver_Gear:bLED_PWM:ctrl_4\ ,
+        control_3 => \LED_Driver_Gear:bLED_PWM:ctrl_3\ ,
+        control_2 => \LED_Driver_Gear:bLED_PWM:ctrl_2\ ,
+        control_1 => \LED_Driver_Gear:bLED_PWM:ctrl_1\ ,
+        control_0 => \LED_Driver_Gear:bLED_PWM:ctrl_0\ );
     Properties:
     {
         cy_ctrl_mode_0 = "00000001"
@@ -2980,28 +3583,12 @@ controlcell: Name =\LED_Driver_LRBWS:bLED_PWM:CtlReg\
     Clock Polarity: Active High
     Clock Enable: True
 
-UDB [UDB=(2,1)] contents:
-LAB@[UDB=(2,1)][LB=0] #macrocells=2, #inputs=4, #pterms=3
+UDB [UDB=(2,1)] is empty.
+UDB [UDB=(2,2)] contents:
+LAB@[UDB=(2,2)][LB=0] #macrocells=2, #inputs=6, #pterms=4
 {
     [McSlotId=0]: (empty)
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\LED_Driver_LRBWS:bLED_PWM:cnt_state_0\, Mode=(D-Register) @ [UDB=(2,1)][LB=0][MC=2]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (\LED_Driver_LRBWS:Net_1501\) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
-              !\LED_Driver_LRBWS:bLED_PWM:load_compare\
-        );
-        Output = \LED_Driver_LRBWS:bLED_PWM:cnt_state_0\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\LED_Driver_LRBWS:Net_1332\, Mode=(Combinatorial) @ [UDB=(2,1)][LB=0][MC=3]
+    [McSlotId=1]:     MacroCell: Name=\LED_Driver_LRBWS:Net_1332\, Mode=(Combinatorial) @ [UDB=(2,2)][LB=0][MC=1]
         Total # of inputs        : 2
         Total # of product terms : 2
             Clock Enable: True
@@ -3014,13 +3601,32 @@ LAB@[UDB=(2,1)][LB=0] #macrocells=2, #inputs=4, #pterms=3
         Properties               : 
         {
         }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\LED_Driver_LRBWS:bLED_PWM:init_cnt_0\, Mode=(T-Register) @ [UDB=(2,2)][LB=0][MC=3]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_LRBWS:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\
+            + \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_LRBWS:bLED_PWM:load_compare\ * 
+              !\LED_Driver_LRBWS:bLED_PWM:init_cnt_1\
+        );
+        Output = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\ (fanout=2)
+        Properties               : 
+        {
+        }
 }
 
-LAB@[UDB=(2,1)][LB=1] #macrocells=1, #inputs=2, #pterms=1
+LAB@[UDB=(2,2)][LB=1] #macrocells=2, #inputs=2, #pterms=2
 {
     [McSlotId=0]: (empty)
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\LED_Driver_LRBWS:tc\, Mode=(D-Register) @ [UDB=(2,1)][LB=1][MC=2]
+    [McSlotId=1]:     MacroCell: Name=\LED_Driver_LRBWS:tc\, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=1]
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
@@ -3032,6 +3638,22 @@ LAB@[UDB=(2,1)][LB=1] #macrocells=1, #inputs=2, #pterms=1
               \LED_Driver_LRBWS:bLED_PWM:load_compare\
         );
         Output = \LED_Driver_LRBWS:tc\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\LED_Driver_LRBWS:bLED_PWM:cnt_state_0\, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\LED_Driver_LRBWS:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
+              !\LED_Driver_LRBWS:bLED_PWM:load_compare\
+        );
+        Output = \LED_Driver_LRBWS:bLED_PWM:cnt_state_0\ (fanout=1)
         Properties               : 
         {
         }
@@ -3073,28 +3695,159 @@ datapathcell: Name =\LED_Driver_LRBWS:bLED_PWM:PwmDP:u0\
     Clock Polarity: Active High
     Clock Enable: True
 
-UDB [UDB=(2,2)] is empty.
-UDB [UDB=(2,3)] contents:
-LAB@[UDB=(2,3)][LB=1] #macrocells=1, #inputs=2, #pterms=2
+controlcell: Name =\LED_Driver_LRBWS:bLED_PWM:CtlReg\
+    PORT MAP (
+        clock => \LED_Driver_LRBWS:Net_1501\ ,
+        control_7 => \LED_Driver_LRBWS:bLED_PWM:ctrl_7\ ,
+        control_6 => \LED_Driver_LRBWS:bLED_PWM:ctrl_6\ ,
+        control_5 => \LED_Driver_LRBWS:bLED_PWM:ctrl_5\ ,
+        control_4 => \LED_Driver_LRBWS:bLED_PWM:ctrl_4\ ,
+        control_3 => \LED_Driver_LRBWS:bLED_PWM:ctrl_3\ ,
+        control_2 => \LED_Driver_LRBWS:bLED_PWM:ctrl_2\ ,
+        control_1 => \LED_Driver_LRBWS:bLED_PWM:ctrl_1\ ,
+        control_0 => \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "00000001"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,3)] is empty.
+UDB [UDB=(2,4)] is empty.
+UDB [UDB=(2,5)] is empty.
+UDB [UDB=(3,0)] contents:
+LAB@[UDB=(3,0)][LB=0] #macrocells=1, #inputs=4, #pterms=2
 {
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\LED_Driver_Gear:Net_1332\, Mode=(Combinatorial) @ [UDB=(2,3)][LB=1][MC=1]
+    [McSlotId=0]:     MacroCell: Name=\LED_Driver_Gear:Net_856\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              !\LED_Driver_Gear:bLED_PWM:initialization\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\
+            + \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              !\LED_Driver_Gear:bLED_PWM:initialization\ * 
+              \LED_Driver_Gear:bLED_PWM:drive_pwm\
+        );
+        Output = \LED_Driver_Gear:Net_856\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(3,0)][LB=1] #macrocells=4, #inputs=6, #pterms=6
+{
+    [McSlotId=0]:     MacroCell: Name=\LED_Driver_Gear:Net_1332\, Mode=(Combinatorial) @ [UDB=(3,0)][LB=1][MC=0]
         Total # of inputs        : 2
         Total # of product terms : 2
             Clock Enable: True
         Main Equation            : 2 pterms
         (
-              !\LED_Driver_Gear:Net_1352\ * \LED_Driver_Gear:Net_1501_local\
-            + \LED_Driver_Gear:Net_1352\ * !\LED_Driver_Gear:Net_1501_local\
+              !\LED_Driver_Gear:tc\ * \LED_Driver_Gear:Net_1352\
+            + \LED_Driver_Gear:tc\ * !\LED_Driver_Gear:Net_1352\
         );
         Output = \LED_Driver_Gear:Net_1332\ (fanout=1)
         Properties               : 
         {
         }
 
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
+    [McSlotId=1]:     MacroCell: Name=\LED_Driver_Gear:bLED_PWM:initialization\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\LED_Driver_Gear:bLED_PWM:ctrl_0\
+            + \LED_Driver_Gear:bLED_PWM:initialization\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\ * 
+              !\LED_Driver_Gear:bLED_PWM:init_cnt_1\
+        );
+        Output = \LED_Driver_Gear:bLED_PWM:initialization\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\LED_Driver_Gear:bLED_PWM:cnt_state_0\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              !\LED_Driver_Gear:bLED_PWM:load_compare\
+        );
+        Output = \LED_Driver_Gear:bLED_PWM:cnt_state_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\LED_Driver_Gear:tc\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (\LED_Driver_Gear:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \LED_Driver_Gear:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_Gear:bLED_PWM:load_compare\
+        );
+        Output = \LED_Driver_Gear:tc\ (fanout=3)
+        Properties               : 
+        {
+        }
 }
+
+datapathcell: Name =\LED_Driver_Gear:bLED_PWM:PwmDP:u0\
+    PORT MAP (
+        clock => \LED_Driver_Gear:Net_1501\ ,
+        cs_addr_1 => \LED_Driver_Gear:tc\ ,
+        cs_addr_0 => \LED_Driver_Gear:bLED_PWM:cnt_state_0\ ,
+        cl1_comb => \LED_Driver_Gear:bLED_PWM:drive_pwm\ ,
+        z1_comb => \LED_Driver_Gear:bLED_PWM:load_compare\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "1011110000010000010110000001000001011000100100000000000000000000000000000000000000000000000000000000000000000000000000000000000011111111000000001111111111111111000100000000000000001111011100000000000000001000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
 
 controlcell: Name =\LED_Driver_LRBWS:Seg_Driver_M:Sync:ctrl_reg\
     PORT MAP (
@@ -3116,112 +3869,11 @@ controlcell: Name =\LED_Driver_LRBWS:Seg_Driver_M:Sync:ctrl_reg\
     }
     Clock Enable: True
 
-UDB [UDB=(2,4)] is empty.
-UDB [UDB=(2,5)] is empty.
-UDB [UDB=(3,0)] contents:
-LAB@[UDB=(3,0)][LB=0] #macrocells=1, #inputs=4, #pterms=2
+UDB [UDB=(3,1)] is empty.
+UDB [UDB=(3,2)] contents:
+LAB@[UDB=(3,2)][LB=0] #macrocells=1, #inputs=4, #pterms=2
 {
-    [McSlotId=0]:     MacroCell: Name=\LED_Driver_LRBWS:bLED_PWM:init_cnt_1\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=0]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\LED_Driver_LRBWS:Net_1501\) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
-              \LED_Driver_LRBWS:bLED_PWM:load_compare\ * 
-              \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\
-            + \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
-              \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\
-        );
-        Output = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\ (fanout=3)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(3,0)][LB=1] #macrocells=1, #inputs=4, #pterms=2
-{
-    [McSlotId=0]:     MacroCell: Name=\LED_Driver_LRBWS:bLED_PWM:init_cnt_0\, Mode=(T-Register) @ [UDB=(3,0)][LB=1][MC=0]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\LED_Driver_LRBWS:Net_1501\) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
-              \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\
-            + \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
-              \LED_Driver_LRBWS:bLED_PWM:load_compare\ * 
-              !\LED_Driver_LRBWS:bLED_PWM:init_cnt_1\
-        );
-        Output = \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\ (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-controlcell: Name =\LED_Driver_LRBWS:Seg_Driver_H:Sync:ctrl_reg\
-    PORT MAP (
-        control_7 => Net_67_23 ,
-        control_6 => Net_67_22 ,
-        control_5 => Net_67_21 ,
-        control_4 => Net_67_20 ,
-        control_3 => Net_67_19 ,
-        control_2 => Net_67_18 ,
-        control_1 => Net_67_17 ,
-        control_0 => Net_67_16 );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "00000000"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Enable: True
-
-UDB [UDB=(3,1)] contents:
-LAB@[UDB=(3,1)][LB=0] #macrocells=1, #inputs=4, #pterms=2
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\LED_Driver_LRBWS:Net_856\, Mode=(D-Register) @ [UDB=(3,1)][LB=0][MC=2]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\LED_Driver_LRBWS:Net_1501\) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
-              !\LED_Driver_LRBWS:bLED_PWM:initialization\ * 
-              \LED_Driver_LRBWS:bLED_PWM:load_compare\
-            + \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
-              !\LED_Driver_LRBWS:bLED_PWM:initialization\ * 
-              \LED_Driver_LRBWS:bLED_PWM:drive_pwm\
-        );
-        Output = \LED_Driver_LRBWS:Net_856\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(3,1)][LB=1] #macrocells=1, #inputs=4, #pterms=2
-{
-    [McSlotId=0]:     MacroCell: Name=\LED_Driver_LRBWS:bLED_PWM:initialization\, Mode=(D-Register) @ [UDB=(3,1)][LB=1][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\LED_Driver_LRBWS:bLED_PWM:initialization\, Mode=(D-Register) @ [UDB=(3,2)][LB=0][MC=0]
         Total # of inputs        : 4
         Total # of product terms : 2
         List of special equations: 
@@ -3244,28 +3896,51 @@ LAB@[UDB=(3,1)][LB=1] #macrocells=1, #inputs=4, #pterms=2
     [McSlotId=3]: (empty)
 }
 
-controlcell: Name =\LED_Driver_Gear:Com_Driver:Sync:ctrl_reg\
-    PORT MAP (
-        control_7 => \LED_Driver_Gear:Com_Driver:control_7\ ,
-        control_6 => \LED_Driver_Gear:Com_Driver:control_6\ ,
-        control_5 => \LED_Driver_Gear:Com_Driver:control_5\ ,
-        control_4 => \LED_Driver_Gear:Com_Driver:control_4\ ,
-        control_3 => \LED_Driver_Gear:Com_Driver:control_3\ ,
-        control_2 => \LED_Driver_Gear:Com_Driver:control_2\ ,
-        control_1 => \LED_Driver_Gear:Com_Driver:control_1\ ,
-        control_0 => Net_75 );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "00000000"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Enable: True
+LAB@[UDB=(3,2)][LB=1] #macrocells=2, #inputs=6, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\LED_Driver_LRBWS:Net_856\, Mode=(D-Register) @ [UDB=(3,2)][LB=1][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_LRBWS:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
+              !\LED_Driver_LRBWS:bLED_PWM:initialization\ * 
+              \LED_Driver_LRBWS:bLED_PWM:load_compare\
+            + \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
+              !\LED_Driver_LRBWS:bLED_PWM:initialization\ * 
+              \LED_Driver_LRBWS:bLED_PWM:drive_pwm\
+        );
+        Output = \LED_Driver_LRBWS:Net_856\ (fanout=1)
+        Properties               : 
+        {
+        }
 
-UDB [UDB=(3,2)] is empty.
-UDB [UDB=(3,3)] contents:
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\LED_Driver_LRBWS:bLED_PWM:init_cnt_1\, Mode=(D-Register) @ [UDB=(3,2)][LB=1][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\LED_Driver_LRBWS:Net_1501\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_LRBWS:bLED_PWM:load_compare\ * 
+              \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\
+            + \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ * 
+              \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\
+        );
+        Output = \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
 controlcell: Name =\LED_Driver_LRBWS:Com_Driver:Sync:ctrl_reg\
     PORT MAP (
         control_7 => \LED_Driver_LRBWS:Com_Driver:control_7\ ,
@@ -3286,6 +3961,7 @@ controlcell: Name =\LED_Driver_LRBWS:Com_Driver:Sync:ctrl_reg\
     }
     Clock Enable: True
 
+UDB [UDB=(3,3)] is empty.
 UDB [UDB=(3,4)] is empty.
 UDB [UDB=(3,5)] is empty.
 Intr container @ [IntrContainer=(0)]: 
@@ -3299,6 +3975,17 @@ Intr container @ [IntrContainer=(0)]:
         }
 Drq container @ [DrqContainer=(0)]: 
   Dma@ [DrqContainer=(0)][DrqId=(0)] 
+    drqcell: Name =\LED_Driver_Gear:DMA_BC\
+        PORT MAP (
+            dmareq => \LED_Driver_Gear:tc\ ,
+            termin => zero ,
+            termout => \LED_Driver_Gear:Net_123\ );
+        Properties:
+        {
+            drq_type = "00"
+            num_tds = 0
+        }
+  Dma@ [DrqContainer=(0)][DrqId=(1)] 
     drqcell: Name =\LED_Driver_Gear:DMA_Com\
         PORT MAP (
             dmareq => \LED_Driver_Gear:Net_1332\ ,
@@ -3309,10 +3996,10 @@ Drq container @ [DrqContainer=(0)]:
             drq_type = "00"
             num_tds = 0
         }
-  Dma@ [DrqContainer=(0)][DrqId=(1)] 
+  Dma@ [DrqContainer=(0)][DrqId=(2)] 
     drqcell: Name =\LED_Driver_Gear:DMA_Seg\
         PORT MAP (
-            dmareq => \LED_Driver_Gear:Net_1405\ ,
+            dmareq => \LED_Driver_Gear:Net_856\ ,
             termin => zero ,
             termout => \LED_Driver_Gear:Net_1352\ );
         Properties:
@@ -3320,7 +4007,7 @@ Drq container @ [DrqContainer=(0)]:
             drq_type = "00"
             num_tds = 0
         }
-  Dma@ [DrqContainer=(0)][DrqId=(2)] 
+  Dma@ [DrqContainer=(0)][DrqId=(3)] 
     drqcell: Name =\LED_Driver_LRBWS:DMA_BC\
         PORT MAP (
             dmareq => \LED_Driver_LRBWS:tc\ ,
@@ -3331,7 +4018,7 @@ Drq container @ [DrqContainer=(0)]:
             drq_type = "00"
             num_tds = 0
         }
-  Dma@ [DrqContainer=(0)][DrqId=(3)] 
+  Dma@ [DrqContainer=(0)][DrqId=(4)] 
     drqcell: Name =\LED_Driver_LRBWS:DMA_Com\
         PORT MAP (
             dmareq => \LED_Driver_LRBWS:Net_1332\ ,
@@ -3342,7 +4029,7 @@ Drq container @ [DrqContainer=(0)]:
             drq_type = "00"
             num_tds = 0
         }
-  Dma@ [DrqContainer=(0)][DrqId=(4)] 
+  Dma@ [DrqContainer=(0)][DrqId=(5)] 
     drqcell: Name =\LED_Driver_LRBWS:DMA_Seg\
         PORT MAP (
             dmareq => \LED_Driver_LRBWS:Net_856\ ,
@@ -3519,7 +4206,7 @@ Pin : Name = Com(0)
     }
 
 [IoId=4]: 
-Pin : Name = Com(4)
+Pin : Name = Com(1)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3552,9 +4239,9 @@ Pin : Name = Com(4)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Com(4)__PA ,
-        input => Net_68_4 ,
-        pad => Com(4)_PAD );
+        pa_out => Com(1)__PA ,
+        input => Net_68_1 ,
+        pad => Com(1)_PAD );
     Properties:
     {
     }
@@ -3642,7 +4329,7 @@ Pin : Name = Com(3)
     }
 
 [IoId=7]: 
-Pin : Name = Com(1)
+Pin : Name = Com(4)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3675,16 +4362,16 @@ Pin : Name = Com(1)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Com(1)__PA ,
-        input => Net_68_1 ,
-        pad => Com(1)_PAD );
+        pa_out => Com(4)__PA ,
+        input => Net_68_4 ,
+        pad => Com(4)_PAD );
     Properties:
     {
     }
 
 Port 1 contains the following IO cells:
 [IoId=2]: 
-Pin : Name = Seg_1(4)
+Pin : Name = Seg(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3717,14 +4404,55 @@ Pin : Name = Seg_1(4)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Seg_1(4)__PA ,
-        input => Net_74_4 ,
-        pad => Seg_1(4)_PAD );
+        pa_out => Seg(0)__PA ,
+        input => Net_67_0 ,
+        pad => Seg(0)_PAD );
     Properties:
     {
     }
 
 [IoId=4]: 
+Pin : Name = Seg(1)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg(1)__PA ,
+        input => Net_67_1 ,
+        pad => Seg(1)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=5]: 
 Pin : Name = Seg(2)
     Attributes:
         In Group/Port: True
@@ -3765,49 +4493,8 @@ Pin : Name = Seg(2)
     {
     }
 
-[IoId=5]: 
-Pin : Name = Seg(7)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg(7)__PA ,
-        input => Net_67_7 ,
-        pad => Seg(7)_PAD );
-    Properties:
-    {
-    }
-
 [IoId=6]: 
-Pin : Name = Seg(3)
+Pin : Name = Seg(18)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3840,9 +4527,9 @@ Pin : Name = Seg(3)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Seg(3)__PA ,
-        input => Net_67_3 ,
-        pad => Seg(3)_PAD );
+        pa_out => Seg(18)__PA ,
+        input => Net_67_18 ,
+        pad => Seg(18)_PAD );
     Properties:
     {
     }
@@ -3890,7 +4577,7 @@ Pin : Name = Seg(4)
 
 Port 2 contains the following IO cells:
 [IoId=0]: 
-Pin : Name = Seg(9)
+Pin : Name = Com_1(0)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -3923,14 +4610,302 @@ Pin : Name = Seg(9)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Seg(9)__PA ,
-        input => Net_67_9 ,
-        pad => Seg(9)_PAD );
+        pa_out => Com_1(0)__PA ,
+        input => Net_75 ,
+        pad => Com_1(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = Seg_1(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg_1(0)__PA ,
+        input => Net_74_0 ,
+        pad => Seg_1(0)_PAD );
     Properties:
     {
     }
 
 [IoId=2]: 
+Pin : Name = Seg_1(1)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg_1(1)__PA ,
+        input => Net_74_1 ,
+        pad => Seg_1(1)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=3]: 
+Pin : Name = Seg_1(2)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg_1(2)__PA ,
+        input => Net_74_2 ,
+        pad => Seg_1(2)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=4]: 
+Pin : Name = Seg_1(3)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg_1(3)__PA ,
+        input => Net_74_3 ,
+        pad => Seg_1(3)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=5]: 
+Pin : Name = Seg_1(4)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg_1(4)__PA ,
+        input => Net_74_4 ,
+        pad => Seg_1(4)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=6]: 
+Pin : Name = Seg_1(5)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg_1(5)__PA ,
+        input => Net_74_5 ,
+        pad => Seg_1(5)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=7]: 
+Pin : Name = Seg_1(6)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg_1(6)__PA ,
+        input => Net_74_6 ,
+        pad => Seg_1(6)_PAD );
+    Properties:
+    {
+    }
+
+Port 3 contains the following IO cells:
+[IoId=0]: 
 Pin : Name = Seg(5)
     Attributes:
         In Group/Port: True
@@ -3967,6 +4942,47 @@ Pin : Name = Seg(5)
         pa_out => Seg(5)__PA ,
         input => Net_67_5 ,
         pad => Seg(5)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=2]: 
+Pin : Name = Seg(11)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg(11)__PA ,
+        input => Net_67_11 ,
+        pad => Seg(11)_PAD );
     Properties:
     {
     }
@@ -4095,130 +5111,6 @@ Pin : Name = Seg(10)
     }
 
 [IoId=6]: 
-Pin : Name = Seg(11)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg(11)__PA ,
-        input => Net_67_11 ,
-        pad => Seg(11)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=7]: 
-Pin : Name = Seg_1(2)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg_1(2)__PA ,
-        input => Net_74_2 ,
-        pad => Seg_1(2)_PAD );
-    Properties:
-    {
-    }
-
-Port 3 contains the following IO cells:
-[IoId=1]: 
-Pin : Name = Seg(20)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg(20)__PA ,
-        input => Net_67_20 ,
-        pad => Seg(20)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=2]: 
 Pin : Name = Seg(15)
     Attributes:
         In Group/Port: True
@@ -4255,6 +5147,171 @@ Pin : Name = Seg(15)
         pa_out => Seg(15)__PA ,
         input => Net_67_15 ,
         pad => Seg(15)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=7]: 
+Pin : Name = Seg(9)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg(9)__PA ,
+        input => Net_67_9 ,
+        pad => Seg(9)_PAD );
+    Properties:
+    {
+    }
+
+Port 12 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = Seg(13)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg(13)__PA ,
+        input => Net_67_13 ,
+        pad => Seg(13)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = Seg(14)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg(14)__PA ,
+        input => Net_67_14 ,
+        pad => Seg(14)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=2]: 
+Pin : Name = Seg(6)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg(6)__PA ,
+        input => Net_67_6 ,
+        pad => Seg(6)_PAD );
     Properties:
     {
     }
@@ -4300,88 +5357,6 @@ Pin : Name = Seg(16)
     {
     }
 
-[IoId=4]: 
-Pin : Name = Seg(17)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg(17)__PA ,
-        input => Net_67_17 ,
-        pad => Seg(17)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=5]: 
-Pin : Name = Seg(18)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg(18)__PA ,
-        input => Net_67_18 ,
-        pad => Seg(18)_PAD );
-    Properties:
-    {
-    }
-
 [IoId=6]: 
 Pin : Name = Seg(19)
     Attributes:
@@ -4423,7 +5398,8 @@ Pin : Name = Seg(19)
     {
     }
 
-[IoId=7]: 
+Port 15 contains the following IO cells:
+[IoId=0]: 
 Pin : Name = Seg(21)
     Attributes:
         In Group/Port: True
@@ -4464,8 +5440,48 @@ Pin : Name = Seg(21)
     {
     }
 
-Port 12 contains the following IO cells:
-[IoId=0]: 
+[IoId=1]: 
+Pin : Name = Seg(7)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => Seg(7)__PA ,
+        input => Net_67_7 ,
+        pad => Seg(7)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=2]: 
 Pin : Name = Seg(22)
     Attributes:
         In Group/Port: True
@@ -4506,7 +5522,7 @@ Pin : Name = Seg(22)
     {
     }
 
-[IoId=1]: 
+[IoId=3]: 
 Pin : Name = Seg(23)
     Attributes:
         In Group/Port: True
@@ -4547,296 +5563,8 @@ Pin : Name = Seg(23)
     {
     }
 
-[IoId=2]: 
-Pin : Name = Seg(14)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg(14)__PA ,
-        input => Net_67_14 ,
-        pad => Seg(14)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=3]: 
-Pin : Name = Seg(13)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg(13)__PA ,
-        input => Net_67_13 ,
-        pad => Seg(13)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=6]: 
-Pin : Name = Seg(6)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg(6)__PA ,
-        input => Net_67_6 ,
-        pad => Seg(6)_PAD );
-    Properties:
-    {
-    }
-
-Port 15 contains the following IO cells:
-[IoId=0]: 
-Pin : Name = Seg_1(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg_1(0)__PA ,
-        input => Net_74_0 ,
-        pad => Seg_1(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=1]: 
-Pin : Name = Seg_1(5)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg_1(5)__PA ,
-        input => Net_74_5 ,
-        pad => Seg_1(5)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=2]: 
-Pin : Name = Seg_1(6)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg_1(6)__PA ,
-        input => Net_74_6 ,
-        pad => Seg_1(6)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=3]: 
-Pin : Name = Com_1(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Com_1(0)__PA ,
-        input => Net_75 ,
-        pad => Com_1(0)_PAD );
-    Properties:
-    {
-    }
-
 [IoId=4]: 
-Pin : Name = Seg(1)
+Pin : Name = Seg(3)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -4869,56 +5597,15 @@ Pin : Name = Seg(1)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Seg(1)__PA ,
-        input => Net_67_1 ,
-        pad => Seg(1)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=5]: 
-Pin : Name = Seg_1(1)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
-        Interrupt generated: False
-        Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: True
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilitites: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Seg_1(1)__PA ,
-        input => Net_74_1 ,
-        pad => Seg_1(1)_PAD );
+        pa_out => Seg(3)__PA ,
+        input => Net_67_3 ,
+        pad => Seg(3)_PAD );
     Properties:
     {
     }
 
 [IoId=6]: 
-Pin : Name = Seg_1(3)
+Pin : Name = Seg(20)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -4951,15 +5638,15 @@ Pin : Name = Seg_1(3)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Seg_1(3)__PA ,
-        input => Net_74_3 ,
-        pad => Seg_1(3)_PAD );
+        pa_out => Seg(20)__PA ,
+        input => Net_67_20 ,
+        pad => Seg(20)_PAD );
     Properties:
     {
     }
 
 [IoId=7]: 
-Pin : Name = Seg(0)
+Pin : Name = Seg(17)
     Attributes:
         In Group/Port: True
         In Sync Option: AUTO
@@ -4992,9 +5679,9 @@ Pin : Name = Seg(0)
         Initial Value: 0
         IO Voltage: 0
     PORT MAP (
-        pa_out => Seg(0)__PA ,
-        input => Net_67_0 ,
-        pad => Seg(0)_PAD );
+        pa_out => Seg(17)__PA ,
+        input => Net_67_17 ,
+        pad => Seg(17)_PAD );
     Properties:
     {
     }
@@ -5068,77 +5755,77 @@ Port | Pin | Fixed |      Type |       Drive Mode |     Name | Connections
      |   1 |     * |      NONE |         CMOS_OUT |  TX_1(0) | In(Net_89)
      |   2 |     * |      NONE |         CMOS_OUT | Tx_En(0) | In(Net_86)
      |   3 |       |      NONE |         CMOS_OUT |   Com(0) | In(Net_68_0)
-     |   4 |       |      NONE |         CMOS_OUT |   Com(4) | In(Net_68_4)
+     |   4 |       |      NONE |         CMOS_OUT |   Com(1) | In(Net_68_1)
      |   5 |       |      NONE |         CMOS_OUT |   Com(2) | In(Net_68_2)
      |   6 |       |      NONE |         CMOS_OUT |   Com(3) | In(Net_68_3)
-     |   7 |       |      NONE |         CMOS_OUT |   Com(1) | In(Net_68_1)
+     |   7 |       |      NONE |         CMOS_OUT |   Com(4) | In(Net_68_4)
 -----+-----+-------+-----------+------------------+----------+--------------
-   1 |   2 |       |      NONE |         CMOS_OUT | Seg_1(4) | In(Net_74_4)
-     |   4 |       |      NONE |         CMOS_OUT |   Seg(2) | In(Net_67_2)
-     |   5 |       |      NONE |         CMOS_OUT |   Seg(7) | In(Net_67_7)
-     |   6 |       |      NONE |         CMOS_OUT |   Seg(3) | In(Net_67_3)
+   1 |   2 |       |      NONE |         CMOS_OUT |   Seg(0) | In(Net_67_0)
+     |   4 |       |      NONE |         CMOS_OUT |   Seg(1) | In(Net_67_1)
+     |   5 |       |      NONE |         CMOS_OUT |   Seg(2) | In(Net_67_2)
+     |   6 |       |      NONE |         CMOS_OUT |  Seg(18) | In(Net_67_18)
      |   7 |       |      NONE |         CMOS_OUT |   Seg(4) | In(Net_67_4)
 -----+-----+-------+-----------+------------------+----------+--------------
-   2 |   0 |       |      NONE |         CMOS_OUT |   Seg(9) | In(Net_67_9)
-     |   2 |       |      NONE |         CMOS_OUT |   Seg(5) | In(Net_67_5)
+   2 |   0 |     * |      NONE |         CMOS_OUT | Com_1(0) | In(Net_75)
+     |   1 |     * |      NONE |         CMOS_OUT | Seg_1(0) | In(Net_74_0)
+     |   2 |     * |      NONE |         CMOS_OUT | Seg_1(1) | In(Net_74_1)
+     |   3 |     * |      NONE |         CMOS_OUT | Seg_1(2) | In(Net_74_2)
+     |   4 |     * |      NONE |         CMOS_OUT | Seg_1(3) | In(Net_74_3)
+     |   5 |     * |      NONE |         CMOS_OUT | Seg_1(4) | In(Net_74_4)
+     |   6 |     * |      NONE |         CMOS_OUT | Seg_1(5) | In(Net_74_5)
+     |   7 |     * |      NONE |         CMOS_OUT | Seg_1(6) | In(Net_74_6)
+-----+-----+-------+-----------+------------------+----------+--------------
+   3 |   0 |       |      NONE |         CMOS_OUT |   Seg(5) | In(Net_67_5)
+     |   2 |       |      NONE |         CMOS_OUT |  Seg(11) | In(Net_67_11)
      |   3 |       |      NONE |         CMOS_OUT |   Seg(8) | In(Net_67_8)
      |   4 |       |      NONE |         CMOS_OUT |  Seg(12) | In(Net_67_12)
      |   5 |       |      NONE |         CMOS_OUT |  Seg(10) | In(Net_67_10)
-     |   6 |       |      NONE |         CMOS_OUT |  Seg(11) | In(Net_67_11)
-     |   7 |       |      NONE |         CMOS_OUT | Seg_1(2) | In(Net_74_2)
+     |   6 |       |      NONE |         CMOS_OUT |  Seg(15) | In(Net_67_15)
+     |   7 |       |      NONE |         CMOS_OUT |   Seg(9) | In(Net_67_9)
 -----+-----+-------+-----------+------------------+----------+--------------
-   3 |   1 |       |      NONE |         CMOS_OUT |  Seg(20) | In(Net_67_20)
-     |   2 |       |      NONE |         CMOS_OUT |  Seg(15) | In(Net_67_15)
+  12 |   0 |       |      NONE |         CMOS_OUT |  Seg(13) | In(Net_67_13)
+     |   1 |       |      NONE |         CMOS_OUT |  Seg(14) | In(Net_67_14)
+     |   2 |       |      NONE |         CMOS_OUT |   Seg(6) | In(Net_67_6)
      |   3 |       |      NONE |         CMOS_OUT |  Seg(16) | In(Net_67_16)
-     |   4 |       |      NONE |         CMOS_OUT |  Seg(17) | In(Net_67_17)
-     |   5 |       |      NONE |         CMOS_OUT |  Seg(18) | In(Net_67_18)
      |   6 |       |      NONE |         CMOS_OUT |  Seg(19) | In(Net_67_19)
-     |   7 |       |      NONE |         CMOS_OUT |  Seg(21) | In(Net_67_21)
 -----+-----+-------+-----------+------------------+----------+--------------
-  12 |   0 |       |      NONE |         CMOS_OUT |  Seg(22) | In(Net_67_22)
-     |   1 |       |      NONE |         CMOS_OUT |  Seg(23) | In(Net_67_23)
-     |   2 |       |      NONE |         CMOS_OUT |  Seg(14) | In(Net_67_14)
-     |   3 |       |      NONE |         CMOS_OUT |  Seg(13) | In(Net_67_13)
-     |   6 |       |      NONE |         CMOS_OUT |   Seg(6) | In(Net_67_6)
------+-----+-------+-----------+------------------+----------+--------------
-  15 |   0 |       |      NONE |         CMOS_OUT | Seg_1(0) | In(Net_74_0)
-     |   1 |       |      NONE |         CMOS_OUT | Seg_1(5) | In(Net_74_5)
-     |   2 |       |      NONE |         CMOS_OUT | Seg_1(6) | In(Net_74_6)
-     |   3 |       |      NONE |         CMOS_OUT | Com_1(0) | In(Net_75)
-     |   4 |       |      NONE |         CMOS_OUT |   Seg(1) | In(Net_67_1)
-     |   5 |       |      NONE |         CMOS_OUT | Seg_1(1) | In(Net_74_1)
-     |   6 |       |      NONE |         CMOS_OUT | Seg_1(3) | In(Net_74_3)
-     |   7 |       |      NONE |         CMOS_OUT |   Seg(0) | In(Net_67_0)
+  15 |   0 |       |      NONE |         CMOS_OUT |  Seg(21) | In(Net_67_21)
+     |   1 |       |      NONE |         CMOS_OUT |   Seg(7) | In(Net_67_7)
+     |   2 |       |      NONE |         CMOS_OUT |  Seg(22) | In(Net_67_22)
+     |   3 |       |      NONE |         CMOS_OUT |  Seg(23) | In(Net_67_23)
+     |   4 |       |      NONE |         CMOS_OUT |   Seg(3) | In(Net_67_3)
+     |   6 |       |      NONE |         CMOS_OUT |  Seg(20) | In(Net_67_20)
+     |   7 |       |      NONE |         CMOS_OUT |  Seg(17) | In(Net_67_17)
 ----------------------------------------------------------------------------
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.000ms
-Digital Placement phase: Elapsed time ==> 1s.422ms
+Digital component placer commit/Report: Elapsed time ==> 0s.005ms
+Digital Placement phase: Elapsed time ==> 1s.768ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 2s.089ms
+Digital Routing phase: Elapsed time ==> 2s.710ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream and API generation">
-Bitstream and API generation phase: Elapsed time ==> 0s.216ms
+Bitstream and API generation phase: Elapsed time ==> 0s.276ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream verification">
-Bitstream verification phase: Elapsed time ==> 0s.046ms
+Bitstream verification phase: Elapsed time ==> 0s.038ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in VTM17c_Display_7seg_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.401ms
+Static timing analysis phase: Elapsed time ==> 0s.410ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.184ms
+Design database save phase: Elapsed time ==> 0s.206ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 5s.058ms
+cydsfit: Elapsed time ==> 6s.076ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 5s.111ms
-API generation phase: Elapsed time ==> 2s.474ms
-Dependency generation phase: Elapsed time ==> 0s.015ms
-Cleanup phase: Elapsed time ==> 0s.015ms
+Fitter phase: Elapsed time ==> 6s.124ms
+API generation phase: Elapsed time ==> 2s.528ms
+Dependency generation phase: Elapsed time ==> 0s.032ms
+Cleanup phase: Elapsed time ==> 0s.002ms

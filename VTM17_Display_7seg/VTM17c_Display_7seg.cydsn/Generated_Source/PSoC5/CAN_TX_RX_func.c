@@ -23,11 +23,21 @@
 
 #include "CAN.h"
 #include "cyapicallbacks.h"
-#include <stdio.h>
 
 /* `#START TX_RX_FUNCTION` */
-extern uint RXMessage[8];
-extern uint RXFlag;
+#include <stdio.h>
+extern uint RXMessage0[8];
+extern uint RXMessage1[8];
+extern uint RXMessage2[8];
+extern uint RXMessage3[8];
+extern uint RXMessage4[8];
+extern uint RXMessage5[8];
+extern uint RXFlag0;
+extern uint RXFlag1;
+extern uint RXFlag2;
+extern uint RXFlag3;
+extern uint RXFlag4;
+extern uint RXFlag5;
 extern uint RXDLC;
 
 uint bIndex = 0;
@@ -672,7 +682,13 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgRPM(void) 
     {
         /* `#START MESSAGE_RPM_RECEIVED` */
-
+            RXFlag0 = 1; //Set flag
+        RXDLC = CAN_GET_DLC(0);
+        for(bIndex = 0;bIndex<RXDLC;bIndex++)
+        {
+            RXMessage0[bIndex] = CAN_RX_DATA_BYTE(0,bIndex);
+        }
+        
         /* `#END` */
 
         #ifdef CAN_RECEIVE_MSG_RPM_CALLBACK
@@ -707,11 +723,11 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgECT(void) 
     {
         /* `#START MESSAGE_ECT_RECEIVED` */
-            RXFlag = 1; //Set flag
-        RXDLC = CAN_GET_DLC(0);
+            RXFlag1 = 1; //Set flag
+        RXDLC = CAN_GET_DLC(1);
         for(bIndex = 0;bIndex<RXDLC;bIndex++)
         {
-            RXMessage[bIndex] = CAN_RX_DATA_BYTE(0,bIndex);
+            RXMessage1[bIndex] = CAN_RX_DATA_BYTE(1,bIndex);
         }
         
         /* `#END` */
@@ -748,7 +764,12 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgEGT(void) 
     {
         /* `#START MESSAGE_EGT_RECEIVED` */
-
+            RXFlag2 = 1; //Set flag
+        RXDLC = CAN_GET_DLC(2);
+        for(bIndex = 0;bIndex<RXDLC;bIndex++)
+        {
+            RXMessage2[bIndex] = CAN_RX_DATA_BYTE(2,bIndex);
+        }        
         /* `#END` */
 
         #ifdef CAN_RECEIVE_MSG_EGT_CALLBACK
@@ -783,7 +804,12 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgBP(void) 
     {
         /* `#START MESSAGE_BP_RECEIVED` */
-
+            RXFlag3 = 1; //Set flag
+        RXDLC = CAN_GET_DLC(3);
+        for(bIndex = 0;bIndex<RXDLC;bIndex++)
+        {
+            RXMessage3[bIndex] = CAN_RX_DATA_BYTE(3,bIndex);
+        }     
         /* `#END` */
 
         #ifdef CAN_RECEIVE_MSG_BP_CALLBACK
@@ -818,7 +844,12 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgSPD(void) 
     {
         /* `#START MESSAGE_SPD_RECEIVED` */
-
+            RXFlag4 = 1; //Set flag
+        RXDLC = CAN_GET_DLC(4);
+        for(bIndex = 0;bIndex<RXDLC;bIndex++)
+        {
+            RXMessage4[bIndex] = CAN_RX_DATA_BYTE(4,bIndex);
+        }
         /* `#END` */
 
         #ifdef CAN_RECEIVE_MSG_SPD_CALLBACK
@@ -853,7 +884,12 @@ void CAN_ReceiveMsg(uint8 rxMailbox)
     void CAN_ReceiveMsgOT(void) 
     {
         /* `#START MESSAGE_OT_RECEIVED` */
-
+            RXFlag5 = 1; //Set flag
+        RXDLC = CAN_GET_DLC(5);
+        for(bIndex = 0;bIndex<RXDLC;bIndex++)
+        {
+            RXMessage5[bIndex] = CAN_RX_DATA_BYTE(5,bIndex);
+        }       
         /* `#END` */
 
         #ifdef CAN_RECEIVE_MSG_OT_CALLBACK

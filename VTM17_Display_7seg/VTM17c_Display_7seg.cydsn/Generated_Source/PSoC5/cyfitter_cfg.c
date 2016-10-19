@@ -124,7 +124,7 @@ static void CyClockStartupError(uint8 errorCode)
 }
 #endif
 
-#define CY_CFG_BASE_ADDR_COUNT 29u
+#define CY_CFG_BASE_ADDR_COUNT 27u
 CYPACKED typedef struct
 {
 	uint8 offset;
@@ -132,31 +132,31 @@ CYPACKED typedef struct
 } CYPACKED_ATTR cy_cfg_addrvalue_t;
 
 #define cy_cfg_addr_table ((const uint32 CYFAR *)0x48000000u)
-#define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x48000074u)
+#define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x4800006Cu)
 
 /* IOPINS0_0 Address: CYREG_PRT0_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)0x480003D4u)
+#define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)0x48000468u)
 
 /* IOPINS0_7 Address: CYREG_PRT12_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_7_VAL ((const uint8 CYFAR *)0x480003DCu)
+#define BS_IOPINS0_7_VAL ((const uint8 CYFAR *)0x48000470u)
 
 /* IOPINS0_8 Address: CYREG_PRT15_DR Size (bytes): 10 */
-#define BS_IOPINS0_8_VAL ((const uint8 CYFAR *)0x480003E4u)
+#define BS_IOPINS0_8_VAL ((const uint8 CYFAR *)0x48000478u)
 
 /* IOPINS0_1 Address: CYREG_PRT1_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x480003F0u)
+#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x48000484u)
 
 /* IOPINS0_2 Address: CYREG_PRT2_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x480003F8u)
+#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x4800048Cu)
 
 /* IOPINS0_3 Address: CYREG_PRT3_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)0x48000400u)
+#define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)0x48000494u)
 
-/* PHUB_CFGMEM1 Address: CYREG_PHUB_CFGMEM1_CFG0 Size (bytes): 4 */
-#define BS_PHUB_CFGMEM1_VAL ((const uint8 CYFAR *)0x48000408u)
+/* PHUB_CFGMEM2 Address: CYREG_PHUB_CFGMEM2_CFG0 Size (bytes): 4 */
+#define BS_PHUB_CFGMEM2_VAL ((const uint8 CYFAR *)0x4800049Cu)
 
-/* PHUB_CFGMEM4 Address: CYREG_PHUB_CFGMEM4_CFG0 Size (bytes): 4 */
-#define BS_PHUB_CFGMEM4_VAL ((const uint8 CYFAR *)0x4800040Cu)
+/* PHUB_CFGMEM5 Address: CYREG_PHUB_CFGMEM5_CFG0 Size (bytes): 4 */
+#define BS_PHUB_CFGMEM5_VAL ((const uint8 CYFAR *)0x480004A0u)
 
 
 /*******************************************************************************
@@ -218,8 +218,8 @@ static void ClockSetup(void)
 	/* Configure Digital Clocks based on settings from Clock DWR */
 	CY_SET_XTND_REG16((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0), 0x0138u);
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0 + 0x2u), 0x18u);
-	CY_SET_XTND_REG16((void CYFAR *)(CYREG_CLKDIST_DCFG1_CFG0), 0x61A7u);
-	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_DCFG1_CFG0 + 0x2u), 0x19u);
+	CY_SET_XTND_REG16((void CYFAR *)(CYREG_CLKDIST_DCFG1_CFG0), 0x061Au);
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_DCFG1_CFG0 + 0x2u), 0x18u);
 
 	/* Configure ILO based on settings from Clock DWR */
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_SLOWCLK_ILO_CR0), 0x02u);
@@ -377,10 +377,11 @@ void cyfitter_cfg(void)
 		/* Perform normal device configuration. Order is not critical for these items. */
 		CY_SET_XTND_REG8((void CYFAR *)(CYREG_USB_USBIO_CR1), 0x20u);
 		CYMEMZERO((void CYFAR *)(CYREG_PHUB_CFGMEM0_CFG0), 4u);
-		CYCONFIGCPY((void CYFAR *)(CYREG_PHUB_CFGMEM1_CFG0), (const void CYFAR *)(BS_PHUB_CFGMEM1_VAL), 4u);
-		CYMEMZERO((void CYFAR *)(CYREG_PHUB_CFGMEM2_CFG0), 4u);
+		CYMEMZERO((void CYFAR *)(CYREG_PHUB_CFGMEM1_CFG0), 4u);
+		CYCONFIGCPY((void CYFAR *)(CYREG_PHUB_CFGMEM2_CFG0), (const void CYFAR *)(BS_PHUB_CFGMEM2_VAL), 4u);
 		CYMEMZERO((void CYFAR *)(CYREG_PHUB_CFGMEM3_CFG0), 4u);
-		CYCONFIGCPY((void CYFAR *)(CYREG_PHUB_CFGMEM4_CFG0), (const void CYFAR *)(BS_PHUB_CFGMEM4_VAL), 4u);
+		CYMEMZERO((void CYFAR *)(CYREG_PHUB_CFGMEM4_CFG0), 4u);
+		CYCONFIGCPY((void CYFAR *)(CYREG_PHUB_CFGMEM5_CFG0), (const void CYFAR *)(BS_PHUB_CFGMEM5_VAL), 4u);
 
 		/* Enable digital routing */
 		CY_SET_XTND_REG8((void CYFAR *)CYREG_BCTL0_BANK_CTL, CY_GET_XTND_REG8((void CYFAR *)CYREG_BCTL0_BANK_CTL) | 0x02u);

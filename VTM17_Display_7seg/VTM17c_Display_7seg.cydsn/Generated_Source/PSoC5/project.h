@@ -38,6 +38,7 @@
 #include "LED_Driver_Gear_Com_Driver.h"
 #include "LED_Driver_Gear_DMA_Com_dma.h"
 #include "LED_Driver_Gear_DMA_Seg_dma.h"
+#include "LED_Driver_Gear_DMA_BC_dma.h"
 #include "LED_Driver_LRBWS_ClkInternal.h"
 #include "LED_Driver_LRBWS_Seg_Driver_L.h"
 #include "LED_Driver_LRBWS_Com_Driver.h"

@@ -58,6 +58,8 @@
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_Gear_DMA_Com_dma.h" value="NONE;LED_Driver_Gear_DMA_Com" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_Gear_DMA_Seg_dma.c" value="ARM_C_FILE;LED_Driver_Gear_DMA_Seg" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_Gear_DMA_Seg_dma.h" value="NONE;LED_Driver_Gear_DMA_Seg" />
+  <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_Gear_DMA_BC_dma.c" value="ARM_C_FILE;LED_Driver_Gear_DMA_BC" />
+  <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_Gear_DMA_BC_dma.h" value="NONE;LED_Driver_Gear_DMA_BC" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_LRBWS_ClkInternal.c" value="ARM_C_FILE;LED_Driver_LRBWS_ClkInternal" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_LRBWS_ClkInternal.h" value="NONE;LED_Driver_LRBWS_ClkInternal" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_LRBWS_Seg_Driver_L.h" value="NONE;LED_Driver_LRBWS_Seg_Driver_L" />

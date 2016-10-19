@@ -23,7 +23,7 @@
 /***************************************
 *   Conditional Compilation Parameters
 ***************************************/
-#define LED_Driver_Gear_BRIGHTNESS_EN                (0u)
+#define LED_Driver_Gear_BRIGHTNESS_EN                (1u)
 #define LED_Driver_Gear_COM_DRIVE                    (0u)
 #define LED_Driver_Gear_SEG_DRIVE                    (1u)
 #define LED_Driver_Gear_NUM_COM                      (1u)

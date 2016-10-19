@@ -1,6 +1,6 @@
 // ======================================================================
 // VTM17c_Display_7seg.v generated from TopDesign.cysch
-// 10/17/2016 at 16:30
+// 10/18/2016 at 22:08
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -100,6 +100,19 @@
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v"
 `endif
 
+// Component: bLED_PWM_v1_10
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v"
+`endif
+
 // Component: or_v1_0
 `ifdef CY_BLK_DIR
 `undef CY_BLK_DIR
@@ -152,7 +165,7 @@
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\xor_v1_0\xor_v1_0.v"
 `endif
 
-// LED_Driver_v1_10(BrightnessCtrl=0, ClkSource=0, CommonDrive=0, InternalClockFrequency=120, NumCom=1, NumSeg=7, RefreshRate=120, SegmentDrive=1, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=LED_Driver_v1_10, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=LED_Driver_Gear, CY_INSTANCE_SHORT_NAME=LED_Driver_Gear, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=10, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  3.3 CP3, INSTANCE_NAME=LED_Driver_Gear, )
+// LED_Driver_v1_10(BrightnessCtrl=1, ClkSource=0, CommonDrive=0, InternalClockFrequency=30720, NumCom=1, NumSeg=7, RefreshRate=120, SegmentDrive=1, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=LED_Driver_v1_10, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=LED_Driver_Gear, CY_INSTANCE_SHORT_NAME=LED_Driver_Gear, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=10, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  3.3 CP3, INSTANCE_NAME=LED_Driver_Gear, )
 module LED_Driver_v1_10_0 (
     clock,
     seg,
@@ -231,7 +244,7 @@ module LED_Driver_v1_10_0 (
 		#(.id("652b44e2-bfa5-48fd-82c6-2a0b9727be30/5b34848d-bc4e-4754-bf65-dcda7ecc1385"),
 		  .source_clock_id(""),
 		  .divisor(0),
-		  .period("8333333333333.33"),
+		  .period("32552083333.3333"),
 		  .is_direct(0),
 		  .is_digital(1))
 		ClkInternal
@@ -241,8 +254,13 @@ module LED_Driver_v1_10_0 (
 	// VirtualMux_1 (cy_virtualmux_v1_0)
 	assign Net_855 = Net_1501;
 
+    bLED_PWM_v1_10 bLED_PWM (
+        .clock(Net_855),
+        .pwm(Net_856),
+        .tc(tc));
+
 	// VirtualMux_2 (cy_virtualmux_v1_0)
-	assign trigDMA = Net_855;
+	assign trigDMA = Net_856;
 
 
     assign Net_79 = Net_1501 | Net_78;
@@ -318,14 +336,23 @@ module LED_Driver_v1_10_0 (
 		  .nrq(Net_1352));
 
 
+
+	cy_dma_v1_0
+		#(.drq_type(2'b00))
+		DMA_BC
+		 (.drq(tc),
+		  .trq(1'b0),
+		  .nrq(Net_123));
+
+
 	// VirtualMux_4 (cy_virtualmux_v1_0)
-	assign Net_1416 = trigDMA;
+	assign Net_1416 = tc;
 
 
     assign Net_1332 = Net_1352 ^ Net_1416;
 
 	// VirtualMux_5 (cy_virtualmux_v1_0)
-	assign Net_1418 = Net_1405;
+	assign Net_1418 = trigDMA;
 
 
     assign Net_127 = Net_48 | Net_124;
@@ -352,19 +379,6 @@ module LED_Driver_v1_10_0 (
 
 
 endmodule
-
-// Component: bLED_PWM_v1_10
-`ifdef CY_BLK_DIR
-`undef CY_BLK_DIR
-`endif
-
-`ifdef WARP
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v"
-`else
-`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10"
-`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\bLED_PWM_v1_10\bLED_PWM_v1_10.v"
-`endif
 
 // LED_Driver_v1_10(BrightnessCtrl=1, ClkSource=0, CommonDrive=0, InternalClockFrequency=153600, NumCom=5, NumSeg=24, RefreshRate=120, SegmentDrive=1, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMPONENT_NAME=LED_Driver_v1_10, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=LED_Driver_LRBWS, CY_INSTANCE_SHORT_NAME=LED_Driver_LRBWS, CY_MAJOR_VERSION=1, CY_MINOR_VERSION=10, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  3.3 CP3, INSTANCE_NAME=LED_Driver_LRBWS, )
 module LED_Driver_v1_10_1 (

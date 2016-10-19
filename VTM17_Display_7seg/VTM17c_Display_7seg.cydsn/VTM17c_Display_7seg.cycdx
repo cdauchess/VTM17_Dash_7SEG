@@ -6,7 +6,7 @@
     <block name="DMA_BC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="LED_Driver_LRBWS_Seg_Driver_H" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="LED_Driver_LRBWS_Seg_Driver_H_CONTROL_REG" address="0x40006575" bitWidth="8" desc="" hidden="false" />
+      <register name="LED_Driver_LRBWS_Seg_Driver_H_CONTROL_REG" address="0x40006578" bitWidth="8" desc="" hidden="false" />
     </block>
     <block name="DMA_Seg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="xor_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -15,7 +15,7 @@
     <block name="VirtualMux_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="or_bus" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="LED_Driver_LRBWS_Seg_Driver_M" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="LED_Driver_LRBWS_Seg_Driver_M_CONTROL_REG" address="0x40006474" bitWidth="8" desc="" hidden="false" />
+      <register name="LED_Driver_LRBWS_Seg_Driver_M_CONTROL_REG" address="0x40006575" bitWidth="8" desc="" hidden="false" />
     </block>
     <block name="bLED_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -23,7 +23,7 @@
     <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="or_internal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="LED_Driver_LRBWS_Com_Driver" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="LED_Driver_LRBWS_Com_Driver_CONTROL_REG" address="0x40006475" bitWidth="8" desc="" hidden="false" />
+      <register name="LED_Driver_LRBWS_Com_Driver_CONTROL_REG" address="0x40006476" bitWidth="8" desc="" hidden="false" />
     </block>
     <block name="DMA_Com" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -319,24 +319,26 @@
   </block>
   <block name="Tx_En" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED_Driver_Gear" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-    <block name="xor_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="xor_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="DMA_Seg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VirtualMux_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="BUS_CLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="DMA_BC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_3" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="BUS_CLK" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="VirtualMux_5" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="or_bus" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="DMA_Com" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+    <block name="bLED_PWM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ClkInternal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="or_internal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-    <block name="LED_Driver_Gear_Com_Driver" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="LED_Driver_Gear_Com_Driver_CONTROL_REG" address="0x40006576" bitWidth="8" desc="" hidden="false" />
-    </block>
+    <block name="VirtualMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="LED_Driver_Gear_Seg_Driver_L" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
-      <register name="LED_Driver_Gear_Seg_Driver_L_CONTROL_REG" address="0x40006578" bitWidth="8" desc="" hidden="false" />
+      <register name="LED_Driver_Gear_Seg_Driver_L_CONTROL_REG" address="0x4000647A" bitWidth="8" desc="" hidden="false" />
     </block>
+    <block name="LED_Driver_Gear_Com_Driver" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
+      <register name="LED_Driver_Gear_Com_Driver_CONTROL_REG" address="0x4000647B" bitWidth="8" desc="" hidden="false" />
+    </block>
+    <block name="or_internal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   </block>
   <block name="RX_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
