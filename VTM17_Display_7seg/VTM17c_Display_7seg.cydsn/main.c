@@ -73,6 +73,14 @@ uint RXFlag3 = 0;
 uint RXFlag4 = 0;
 uint RXFlag5 = 0;
 uint RXDLC = 0;
+uint DispUpdate = 0;
+
+typedef enum{
+    Drive, Diag
+
+}STATE;
+
+STATE state;
 
 /* Global variable used to store receive message mailbox number */
 volatile uint8 receiveMailboxNumber = 0xFFu;
@@ -108,16 +116,26 @@ int ParseCAN()
     fuel = (RXMessage4[6] << 8| RXMessage4[7]);
     //Message ID 0x6F5
     oilTemp = (RXMessage5[0] << 8 | RXMessage5[1]);
+    DispUpdate = 1;
     
     return 0;
+}
+
+int DriveUpdate()
+{
+    
+return 0;
 }
 
 int main()
 {
     int count = 0;
     int wait = 0;
-    int brightness = 0;
-    int dummy;
+    int brightness = 180;
+    int brightness1 = 255;
+    batV = 13.00;
+    tp = 15;
+    int dummy = 8888;
     char8 disp = 'A';
     CyGlobalIntEnable;
     //Start CAN
@@ -127,28 +145,47 @@ int main()
     //Start LED Drivers
     LED_Driver_LRBWS_Start();
     LED_Driver_Gear_Start();
+    state = Drive;
+    LED_Driver_LRBWS_SetBrightness(brightness1,0);
+    LED_Driver_LRBWS_SetBrightness(brightness1,1);
+    LED_Driver_LRBWS_SetBrightness(brightness1,2);
+    LED_Driver_LRBWS_SetBrightness(brightness1,3);
+    
+    LED_Driver_LRBWS_SetBrightness(brightness1,5);
+    LED_Driver_LRBWS_SetBrightness(brightness1,6);
+    LED_Driver_LRBWS_SetBrightness(brightness1,7);
+    LED_Driver_LRBWS_SetBrightness(brightness1,8);
+    
+    LED_Driver_LRBWS_SetBrightness(brightness1,10);
+    LED_Driver_LRBWS_SetBrightness(brightness1,11);
+    LED_Driver_LRBWS_SetBrightness(brightness1,12);
+    LED_Driver_LRBWS_SetBrightness(brightness1,13);
     
 	for(;;)
     {   
-        if(wait == 5000000)
+        if(wait == 500000)
         {
             //LED_Driver_Gear_WriteString7Seg(&disp,0);
             LED_Driver_Gear_Write7SegNumberDec(count,0,1,LED_Driver_Gear_RIGHT_ALIGN);
-            //LED_Driver_Gear_SetBrightness(brightness,0);
+            LED_Driver_Gear_SetBrightness(brightness,0);
+//            LED_Driver_LRBWS_Write7SegNumberDec(dummy,0,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+//            LED_Driver_LRBWS_Write7SegNumberDec(dummy,5,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+//            LED_Driver_LRBWS_Write7SegNumberDec(dummy,10,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+            
             count++;
-            brightness = brightness+20;
+            //brightness = brightness+20;
+           batV = batV+0.01;
             wait = 0;
             //disp++;
         }
         wait++;
-        
         if(count == 10)
         {
             count = 0;
         }
-        if (brightness > 255)
+        if(brightness > 255)
         {
-            brightness = 0;
+        brightness = 10;
         }
         if(RXFlag0 && RXFlag1 && RXFlag2 && RXFlag3 && RXFlag4 && RXFlag5)
         {
@@ -161,8 +198,23 @@ int main()
             RXFlag3 =0;
             RXFlag4 =0;
             RXFlag5 =0;
-        }        
+            LED_Driver_LRBWS_Write7SegNumberDec(tp,0,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+            LED_Driver_LRBWS_Write7SegNumberDec(100*batV,5,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+            LED_Driver_LRBWS_Write7SegNumberDec(et,10,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+            
+        }
+        switch(state)
+        {
+        case Drive: //Display items needed for driving: BatV, ECT, TBD, Gear, Shift Lights
+            
+            break;
+        case Diag: //Display values wanted for diagnostic work: RPM?, TPS?, ECT?: all TBD maybe not even need this
+            
+            break;
+        }
     }
+    
+return 0;
 }
 
 

@@ -1,5 +1,5 @@
 -- Project:   VTM17c_Display_7seg
--- Generated: 10/18/2016 22:08:43
+-- Generated: 10/21/2016 17:10:30
 -- PSoC Creator  3.3 CP3
 
 ENTITY VTM17c_Display_7seg IS
@@ -238,6 +238,62 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     ATTRIBUTE Location OF Seg_1(6) : LABEL IS "P2[7]";
     ATTRIBUTE lib_model OF Tx_En(0) : LABEL IS "iocell11";
     ATTRIBUTE Location OF Tx_En(0) : LABEL IS "P0[2]";
+    ATTRIBUTE lib_model OF Seg(0) : LABEL IS "iocell12";
+    ATTRIBUTE Location OF Seg(0) : LABEL IS "P1[2]";
+    ATTRIBUTE lib_model OF Seg(1) : LABEL IS "iocell13";
+    ATTRIBUTE Location OF Seg(1) : LABEL IS "P1[4]";
+    ATTRIBUTE lib_model OF Seg(2) : LABEL IS "iocell14";
+    ATTRIBUTE Location OF Seg(2) : LABEL IS "P1[5]";
+    ATTRIBUTE lib_model OF Seg(3) : LABEL IS "iocell15";
+    ATTRIBUTE Location OF Seg(3) : LABEL IS "P15[4]";
+    ATTRIBUTE lib_model OF Seg(4) : LABEL IS "iocell16";
+    ATTRIBUTE Location OF Seg(4) : LABEL IS "P1[7]";
+    ATTRIBUTE lib_model OF Seg(5) : LABEL IS "iocell17";
+    ATTRIBUTE Location OF Seg(5) : LABEL IS "P3[0]";
+    ATTRIBUTE lib_model OF Seg(6) : LABEL IS "iocell18";
+    ATTRIBUTE Location OF Seg(6) : LABEL IS "P12[2]";
+    ATTRIBUTE lib_model OF Seg(7) : LABEL IS "iocell19";
+    ATTRIBUTE Location OF Seg(7) : LABEL IS "P3[3]";
+    ATTRIBUTE lib_model OF Seg(8) : LABEL IS "iocell20";
+    ATTRIBUTE Location OF Seg(8) : LABEL IS "P12[6]";
+    ATTRIBUTE lib_model OF Seg(9) : LABEL IS "iocell21";
+    ATTRIBUTE Location OF Seg(9) : LABEL IS "P3[4]";
+    ATTRIBUTE lib_model OF Seg(10) : LABEL IS "iocell22";
+    ATTRIBUTE Location OF Seg(10) : LABEL IS "P3[2]";
+    ATTRIBUTE lib_model OF Seg(11) : LABEL IS "iocell23";
+    ATTRIBUTE Location OF Seg(11) : LABEL IS "P3[1]";
+    ATTRIBUTE lib_model OF Seg(12) : LABEL IS "iocell24";
+    ATTRIBUTE Location OF Seg(12) : LABEL IS "P3[5]";
+    ATTRIBUTE lib_model OF Seg(13) : LABEL IS "iocell25";
+    ATTRIBUTE Location OF Seg(13) : LABEL IS "P3[6]";
+    ATTRIBUTE lib_model OF Seg(14) : LABEL IS "iocell26";
+    ATTRIBUTE Location OF Seg(14) : LABEL IS "P3[7]";
+    ATTRIBUTE lib_model OF Seg(15) : LABEL IS "iocell27";
+    ATTRIBUTE Location OF Seg(15) : LABEL IS "P12[0]";
+    ATTRIBUTE lib_model OF Seg(16) : LABEL IS "iocell28";
+    ATTRIBUTE Location OF Seg(16) : LABEL IS "P1[6]";
+    ATTRIBUTE lib_model OF Seg(17) : LABEL IS "iocell29";
+    ATTRIBUTE Location OF Seg(17) : LABEL IS "P15[2]";
+    ATTRIBUTE lib_model OF Seg(18) : LABEL IS "iocell30";
+    ATTRIBUTE Location OF Seg(18) : LABEL IS "P15[0]";
+    ATTRIBUTE lib_model OF Seg(19) : LABEL IS "iocell31";
+    ATTRIBUTE Location OF Seg(19) : LABEL IS "P12[7]";
+    ATTRIBUTE lib_model OF Seg(20) : LABEL IS "iocell32";
+    ATTRIBUTE Location OF Seg(20) : LABEL IS "P12[3]";
+    ATTRIBUTE lib_model OF Seg(21) : LABEL IS "iocell33";
+    ATTRIBUTE Location OF Seg(21) : LABEL IS "P15[5]";
+    ATTRIBUTE lib_model OF Seg(22) : LABEL IS "iocell34";
+    ATTRIBUTE Location OF Seg(22) : LABEL IS "P15[3]";
+    ATTRIBUTE lib_model OF Seg(23) : LABEL IS "iocell35";
+    ATTRIBUTE Location OF Seg(23) : LABEL IS "P15[1]";
+    ATTRIBUTE lib_model OF Com(0) : LABEL IS "iocell36";
+    ATTRIBUTE Location OF Com(0) : LABEL IS "P0[3]";
+    ATTRIBUTE lib_model OF Com(1) : LABEL IS "iocell37";
+    ATTRIBUTE Location OF Com(1) : LABEL IS "P0[4]";
+    ATTRIBUTE lib_model OF Com(2) : LABEL IS "iocell38";
+    ATTRIBUTE Location OF Com(2) : LABEL IS "P0[5]";
+    ATTRIBUTE lib_model OF Com(3) : LABEL IS "iocell39";
+    ATTRIBUTE Location OF Com(3) : LABEL IS "P0[6]";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:Net_1332\ : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:Net_1332\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:bLED_PWM:CtlReg\ : LABEL IS "controlcell1";

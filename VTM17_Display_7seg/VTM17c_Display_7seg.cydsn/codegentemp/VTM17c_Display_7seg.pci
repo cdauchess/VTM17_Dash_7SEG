@@ -1,5 +1,5 @@
 # VTM17c_Display_7seg
-# 2016-10-19 02:08:43Z
+# 2016-10-21 21:10:30Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -18,3 +18,31 @@ set_io "Seg_1(4)" iocell 2 5
 set_io "Seg_1(5)" iocell 2 6
 set_io "Seg_1(6)" iocell 2 7
 set_io "Tx_En(0)" iocell 0 2
+set_io "Seg(0)" iocell 1 2
+set_io "Seg(1)" iocell 1 4
+set_io "Seg(2)" iocell 1 5
+set_io "Seg(3)" iocell 15 4
+set_io "Seg(4)" iocell 1 7
+set_io "Seg(5)" iocell 3 0
+set_io "Seg(6)" iocell 12 2
+set_io "Seg(7)" iocell 3 3
+set_io "Seg(8)" iocell 12 6
+set_io "Seg(9)" iocell 3 4
+set_io "Seg(10)" iocell 3 2
+set_io "Seg(11)" iocell 3 1
+set_io "Seg(12)" iocell 3 5
+set_io "Seg(13)" iocell 3 6
+set_io "Seg(14)" iocell 3 7
+set_io "Seg(15)" iocell 12 0
+set_io "Seg(16)" iocell 1 6
+set_io "Seg(17)" iocell 15 2
+set_io "Seg(18)" iocell 15 0
+set_io "Seg(19)" iocell 12 7
+set_io "Seg(20)" iocell 12 3
+set_io "Seg(21)" iocell 15 5
+set_io "Seg(22)" iocell 15 3
+set_io "Seg(23)" iocell 15 1
+set_io "Com(0)" iocell 0 3
+set_io "Com(1)" iocell 0 4
+set_io "Com(2)" iocell 0 5
+set_io "Com(3)" iocell 0 6

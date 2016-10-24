@@ -6,7 +6,7 @@
 
 #Build Date:         Apr 25 2016 12:55:34
 
-#File Generated:     Oct 18 2016 22:08:44
+#File Generated:     Oct 21 2016 17:10:31
 
 #Purpose:            
 
@@ -112,7 +112,7 @@ Clock: LED_Driver_LRBWS_ClkInternal | Frequency:   3.2 MHz | Target:   0.2 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.1 (sec)
+D2088: Phase 7, elapsed time : 11.8 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	2
@@ -202,7 +202,7 @@ Clock: LED_Driver_LRBWS_ClkInternal | Frequency:   3.2 MHz | Target:   0.2 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.3 (sec)
+D2088: Phase 7, elapsed time : 0.1 (sec)
 
 Final Design Statistics
     Number of Combinational MCs 	:	2
@@ -251,5 +251,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.2 sec.
+I2076: Total run-time: 12.6 sec.
 

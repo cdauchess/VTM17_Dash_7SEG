@@ -9,7 +9,7 @@
     <peripheral>
       <name>LED_Driver_LRBWS_Seg_Driver_H</name>
       <description>No description available</description>
-      <baseAddress>0x40006578</baseAddress>
+      <baseAddress>0x40006576</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -72,7 +72,7 @@
     <peripheral>
       <name>LED_Driver_LRBWS_Seg_Driver_L</name>
       <description>No description available</description>
-      <baseAddress>0x40006579</baseAddress>
+      <baseAddress>0x40006577</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
