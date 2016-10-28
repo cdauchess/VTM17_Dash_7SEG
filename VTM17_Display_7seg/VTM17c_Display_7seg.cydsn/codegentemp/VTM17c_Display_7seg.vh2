@@ -2,7 +2,7 @@
 --	Conversion of VTM17c_Display_7seg.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Oct 21 17:10:30 2016
+--	Mon Oct 24 16:44:46 2016
 --
 
 USE cypress.cypress.all;
@@ -1039,6 +1039,14 @@ SIGNAL \CAN:Net_25\ : bit;
 SIGNAL Net_99 : bit;
 SIGNAL \CAN:Net_31\ : bit;
 SIGNAL \CAN:Net_30\ : bit;
+TERMINAL Net_109 : bit;
+TERMINAL Net_110 : bit;
+SIGNAL tmpOE__PageSwitch_net_0 : bit;
+SIGNAL Net_115 : bit;
+SIGNAL tmpIO_0__PageSwitch_net_0 : bit;
+TERMINAL tmpSIOVREF__PageSwitch_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__PageSwitch_net_0 : bit;
+TERMINAL Net_114 : bit;
 SIGNAL \LED_Driver_Gear:Net_856\\D\ : bit;
 SIGNAL \LED_Driver_Gear:bLED_PWM:initialization\\D\ : bit;
 SIGNAL \LED_Driver_Gear:tc\\D\ : bit;
@@ -2007,6 +2015,96 @@ Com:cy_psoc3_pins_v1_10
 \CAN:isr\:cy_isr_v1_0
 	GENERIC MAP(int_type=>"10")
 	PORT MAP(int_signal=>Net_99);
+Page_Switch:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"SwitchSPST_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_109, Net_110));
+PageSwitch:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"dfbd21c0-b0f4-4d01-aedb-5c09ef257ef9",
+		drive_mode=>"001",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__RX_1_net_0),
+		y=>(zero),
+		fb=>Net_115,
+		analog=>(open),
+		io=>(tmpIO_0__PageSwitch_net_0),
+		siovref=>(tmpSIOVREF__PageSwitch_net_0),
+		annotation=>(open),
+		in_clock=>zero,
+		in_clock_en=>tmpOE__RX_1_net_0,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__RX_1_net_0,
+		out_reset=>zero,
+		interrupt=>tmpINTERRUPT_0__PageSwitch_net_0);
+PWR:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Power_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_110);
+R_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_109, Net_114));
+GND_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_114);
 \LED_Driver_Gear:Net_856\:cy_dff
 	PORT MAP(d=>\LED_Driver_Gear:Net_856\\D\,
 		clk=>\LED_Driver_Gear:bLED_PWM:op_clock\,

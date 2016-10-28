@@ -33,6 +33,8 @@
 #include "Com_aliases.h"
 #include "LED_Driver_LRBWS.h"
 #include "CAN.h"
+#include "PageSwitch_aliases.h"
+#include "PageSwitch.h"
 #include "LED_Driver_Gear_ClkInternal.h"
 #include "LED_Driver_Gear_Seg_Driver_L.h"
 #include "LED_Driver_Gear_Com_Driver.h"

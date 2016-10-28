@@ -46,6 +46,9 @@
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\CAN_INT.c" value="ARM_C_FILE;CAN" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\CAN_PM.c" value="ARM_C_FILE;CAN" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\CAN_TX_RX_func.c" value="ARM_C_FILE;CAN" />
+  <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\PageSwitch_aliases.h" value="NONE;PageSwitch" />
+  <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\PageSwitch.c" value="ARM_C_FILE;PageSwitch" />
+  <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\PageSwitch.h" value="NONE;PageSwitch" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_Gear_ClkInternal.c" value="ARM_C_FILE;LED_Driver_Gear_ClkInternal" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_Gear_ClkInternal.h" value="NONE;LED_Driver_Gear_ClkInternal" />
   <file name="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\codegentemp\LED_Driver_Gear_Seg_Driver_L.h" value="NONE;LED_Driver_Gear_Seg_Driver_L" />

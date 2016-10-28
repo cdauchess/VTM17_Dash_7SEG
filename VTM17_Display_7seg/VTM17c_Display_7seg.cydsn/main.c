@@ -29,6 +29,9 @@
 #define DATA_SIZE                   (6u)
 #define ONE_BYTE_OFFSET             (8u)
 
+#define LeftDisp  0
+#define RightDisp  5
+#define BottomDisp  10
 
 
 /* Global variables used to store configuration and data for BASIC CAN mailbox */
@@ -129,6 +132,7 @@ return 0;
 
 int main()
 {
+    int ReadyToDisplay = 0;
     int count = 0;
     int wait = 0;
     int brightness = 180;
@@ -191,6 +195,7 @@ int main()
         {
             //Parse Data
             dummy = ParseCAN();
+
             //Reset flags, ready for next round of data    
             RXFlag0 =0;
             RXFlag1 =0;
@@ -198,18 +203,35 @@ int main()
             RXFlag3 =0;
             RXFlag4 =0;
             RXFlag5 =0;
-            LED_Driver_LRBWS_Write7SegNumberDec(tp,0,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-            LED_Driver_LRBWS_Write7SegNumberDec(100*batV,5,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-            LED_Driver_LRBWS_Write7SegNumberDec(et,10,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-            
+            ReadyToDisplay = 1; 
         }
         switch(state)
         {
         case Drive: //Display items needed for driving: BatV, ECT, TBD, Gear, Shift Lights
             
+            if(ReadyToDisplay == 1)
+            {
+            //Display the selected values
+            if(rpm < 1500){ //Display Throttle Postion while cranking
+            LED_Driver_LRBWS_Write7SegNumberDec(tp,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+            }
+            else{ //Display RPM while running
+            LED_Driver_LRBWS_Write7SegNumberDec(rpm,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);            
+            }
+            LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); //FIXME - need to set static decimal point
+            LED_Driver_LRBWS_Write7SegNumberDec(et,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); 
+            ReadyToDisplay = 0;
+            }
             break;
         case Diag: //Display values wanted for diagnostic work: RPM?, TPS?, ECT?: all TBD maybe not even need this
-            
+            if(ReadyToDisplay == 1)
+            {
+            //Display the selected values
+            LED_Driver_LRBWS_Write7SegNumberDec(rpm,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+            LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); //FIXME - need to set static decimal point
+            LED_Driver_LRBWS_Write7SegNumberDec(et,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); 
+            ReadyToDisplay = 0;
+            }
             break;
         }
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
-  <block name="Com" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Seg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Page_Switch" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="PageSwitch" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED_Driver_LRBWS" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="DMA_BC" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="VirtualMux_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -31,7 +31,6 @@
       <register name="LED_Driver_LRBWS_Seg_Driver_L_CONTROL_REG" address="0x40006577" bitWidth="8" desc="" hidden="false" />
     </block>
   </block>
-  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="CAN" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="CanIP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="Clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -317,7 +316,13 @@
       <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" />
     </register>
   </block>
-  <block name="Tx_En" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="PWR" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="R_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="TX_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Com_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="RX_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="LED_Driver_Gear" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="VirtualMux_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="xor_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -341,8 +346,8 @@
     <block name="or_internal" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   </block>
-  <block name="RX_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="TX_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Seg" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Com" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Seg_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Com_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Tx_En" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>
