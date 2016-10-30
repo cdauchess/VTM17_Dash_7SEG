@@ -2,7 +2,7 @@
 --	Conversion of VTM17c_Display_7seg.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Oct 24 16:44:46 2016
+--	Fri Oct 28 13:06:13 2016
 --
 
 USE cypress.cypress.all;

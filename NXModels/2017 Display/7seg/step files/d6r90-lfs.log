@@ -1,0 +1,168 @@
+﻿STEP to UG
+! INFO-     NX STEP AP214 - V10.0
+! INFO-      
+! INFO-     Start of Translation: 28-OCT-2016  3:10:09 PM
+! INFO-      
+! STATUS-   Converting Part: Z:\2017\2017 Electrical\NX Models\2017 Display\7seg\d6r90-lfs.STP
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      Unknown
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        KS01_BL_J96JZM
+! SUMMARY-  Date             2011-08-10T
+! SUMMARY-  Author           eric.riffaud
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      PRO/ENGINEER BY PARAMETRIC TECHNOLOGY CORPORATION, 2010160
+! SUMMARY-  Orig_System      PRO/ENGINEER BY PARAMETRIC TECHNOLOGY CORPORATION, 2010160
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        ap203_configuration_controlled_3d_design_of_mechanical_parts_and_assemblies_mim_lf
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  application_context ........................................:      1
+! SUMMARY-  application_protocol_definition ............................:      1
+! SUMMARY-  approval ...................................................:      1
+! SUMMARY-  approval_status ............................................:      1
+! SUMMARY-  axis2_placement_3d .........................................:      1
+! SUMMARY-  calendar_date ..............................................:      1
+! SUMMARY-  cartesian_point ............................................:      1
+! SUMMARY-  conversion_based_unit_and_plane_angle_unit .................:      1
+! SUMMARY-  coordinated_universal_time_offset ..........................:      1
+! SUMMARY-  date_and_time ..............................................:      1
+! SUMMARY-  design_context .............................................:      1
+! SUMMARY-  dimensional_exponents ......................................:      1
+! SUMMARY-  direction ..................................................:      2
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:      1
+! SUMMARY-  length_unit_and_si_unit ....................................:      1
+! SUMMARY-  local_time .................................................:      1
+! SUMMARY-  mechanical_context .........................................:      1
+! SUMMARY-  organization ...............................................:      1
+! SUMMARY-  person .....................................................:      1
+! SUMMARY-  person_and_organization ....................................:      1
+! SUMMARY-  plane_angle_measure_with_unit ..............................:      1
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:      1
+! SUMMARY-  product ....................................................:      1
+! SUMMARY-  product_category ...........................................:      1
+! SUMMARY-  product_definition .........................................:      1
+! SUMMARY-  product_definition_formation_with_specified_source .........:      1
+! SUMMARY-  product_definition_shape ...................................:      1
+! SUMMARY-  product_related_product_category ...........................:      1
+! SUMMARY-  shape_definition_representation ............................:      1
+! SUMMARY-  shape_representation .......................................:      1
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:      1
+! SUMMARY-  uncertainty_measure_with_unit ..............................:      1
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                             33
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 28-OCT-2016 3:10:09 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 28-OCT-2016  3:10:09 PM
+! INFO-     Filing Part ..: Z:\2017\2017 Electrical\NX Models\2017 Display\7seg\d6r90-lfs.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! INFO-      
+! INFO-     Total number of solids input for this translation       :         0
+! INFO-      
+! INFO-     Number of solids created without body validation faults :         0
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         0
+! INFO-      
+! INFO-     End of Translation: 28-OCT-2016  3:10:11 PM
+! INFO-      
+STEP to UG
+! INFO-     NX STEP AP214 - V10.0
+! INFO-      
+! INFO-     Start of Translation: 28-OCT-2016  3:13:09 PM
+! INFO-      
+! STATUS-   Converting Part: Z:\2017\2017 Electrical\NX Models\2017 Display\7seg\d6r90-lfs.STP
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      Unknown
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        KS01_BL_J96JZM
+! SUMMARY-  Date             2011-08-10T
+! SUMMARY-  Author           eric.riffaud
+! SUMMARY-  Organization     Unknown
+! SUMMARY-  Pre_Version      PRO/ENGINEER BY PARAMETRIC TECHNOLOGY CORPORATION, 2010160
+! SUMMARY-  Orig_System      PRO/ENGINEER BY PARAMETRIC TECHNOLOGY CORPORATION, 2010160
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        ap203_configuration_controlled_3d_design_of_mechanical_parts_and_assemblies_mim_lf
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  application_context ........................................:      1
+! SUMMARY-  application_protocol_definition ............................:      1
+! SUMMARY-  approval ...................................................:      1
+! SUMMARY-  approval_status ............................................:      1
+! SUMMARY-  axis2_placement_3d .........................................:      1
+! SUMMARY-  calendar_date ..............................................:      1
+! SUMMARY-  cartesian_point ............................................:      1
+! SUMMARY-  conversion_based_unit_and_plane_angle_unit .................:      1
+! SUMMARY-  coordinated_universal_time_offset ..........................:      1
+! SUMMARY-  date_and_time ..............................................:      1
+! SUMMARY-  design_context .............................................:      1
+! SUMMARY-  dimensional_exponents ......................................:      1
+! SUMMARY-  direction ..................................................:      2
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:      1
+! SUMMARY-  length_unit_and_si_unit ....................................:      1
+! SUMMARY-  local_time .................................................:      1
+! SUMMARY-  mechanical_context .........................................:      1
+! SUMMARY-  organization ...............................................:      1
+! SUMMARY-  person .....................................................:      1
+! SUMMARY-  person_and_organization ....................................:      1
+! SUMMARY-  plane_angle_measure_with_unit ..............................:      1
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:      1
+! SUMMARY-  product ....................................................:      1
+! SUMMARY-  product_category ...........................................:      1
+! SUMMARY-  product_definition .........................................:      1
+! SUMMARY-  product_definition_formation_with_specified_source .........:      1
+! SUMMARY-  product_definition_shape ...................................:      1
+! SUMMARY-  product_related_product_category ...........................:      1
+! SUMMARY-  shape_definition_representation ............................:      1
+! SUMMARY-  shape_representation .......................................:      1
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:      1
+! SUMMARY-  uncertainty_measure_with_unit ..............................:      1
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                             33
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 28-OCT-2016 3:13:09 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 28-OCT-2016  3:13:09 PM
+! INFO-     Filing Part ..: Z:\2017\2017 Electrical\NX Models\2017 Display\7seg\d6r90-lfs.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! INFO-      
+! INFO-     Total number of solids input for this translation       :         0
+! INFO-      
+! INFO-     Number of solids created without body validation faults :         0
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :         0
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :         0
+! INFO-      
+! INFO-     End of Translation: 28-OCT-2016  3:13:11 PM
+! INFO-      

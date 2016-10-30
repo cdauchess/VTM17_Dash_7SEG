@@ -1,0 +1,2595 @@
+﻿STEP to UG
+! INFO-     NX STEP AP214 - V10.0
+! INFO-      
+! INFO-     Start of Translation: 29-OCT-2016  10:11:14 PM
+! INFO-      
+! STATUS-   Converting Part: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\7segDisplayV1.STEP
+! SUMMARY-   
+! SUMMARY-    STEP Header Information
+! SUMMARY-   
+! SUMMARY-  Description      Open CASCADE Model
+! SUMMARY-  Imp_Level        2;1
+! SUMMARY-  File_Name        Open CASCADE Shape Model
+! SUMMARY-  Date             2016-10-30T02:01:48
+! SUMMARY-  Author           Author
+! SUMMARY-  Organization     Open CASCADE
+! SUMMARY-  Pre_Version      Open CASCADE STEP processor 6.7
+! SUMMARY-  Orig_System      Open CASCADE 6.7
+! SUMMARY-  Authorization    Unknown
+! SUMMARY-  Schema_ID        automotive_design
+! SUMMARY-   
+! SUMMARY-    Summary of STEP Entities
+! SUMMARY-   
+! SUMMARY-  Entity Type                                                   Count
+! SUMMARY-  -----------                                                   ------
+! SUMMARY-  advanced_brep_shape_representation .........................:      9
+! SUMMARY-  advanced_face ..............................................:  13141
+! SUMMARY-  application_context ........................................:      1
+! SUMMARY-  application_protocol_definition ............................:      1
+! SUMMARY-  axis2_placement_2d .........................................:     62
+! SUMMARY-  axis2_placement_3d .........................................:  14202
+! SUMMARY-  b_spline_curve_with_knots_and_rational_b_spline_curve ......:    982
+! SUMMARY-  cartesian_point ............................................: 157987
+! SUMMARY-  circle .....................................................:   1106
+! SUMMARY-  closed_shell ...............................................:    247
+! SUMMARY-  context_dependent_shape_representation .....................:     16
+! SUMMARY-  cylindrical_surface ........................................:    522
+! SUMMARY-  definitional_representation ................................:  75810
+! SUMMARY-  direction ..................................................: 140093
+! SUMMARY-  edge_curve .................................................:  37905
+! SUMMARY-  edge_loop ..................................................:  14185
+! SUMMARY-  face_bound .................................................:  14185
+! SUMMARY-  geometric_representation_context_and_global_uncertainty_a ..:     14
+! SUMMARY-  item_defined_transformation ................................:     16
+! SUMMARY-  length_unit_and_si_unit ....................................:     14
+! SUMMARY-  line .......................................................: 111627
+! SUMMARY-  manifold_solid_brep ........................................:    247
+! SUMMARY-  mechanical_context .........................................:     14
+! SUMMARY-  next_assembly_usage_occurrence .............................:     16
+! SUMMARY-  oriented_edge ..............................................:  75882
+! SUMMARY-  pcurve .....................................................:  75810
+! SUMMARY-  plane ......................................................:  12619
+! SUMMARY-  plane_angle_unit_and_si_unit ...............................:     14
+! SUMMARY-  product ....................................................:     14
+! SUMMARY-  product_definition .........................................:     14
+! SUMMARY-  product_definition_context .................................:     14
+! SUMMARY-  product_definition_formation ...............................:     14
+! SUMMARY-  product_definition_shape ...................................:     30
+! SUMMARY-  product_type ...............................................:     14
+! SUMMARY-  representation_relationship_with_transformation_and_shape ..:     16
+! SUMMARY-  seam_curve .................................................:    522
+! SUMMARY-  shape_definition_representation ............................:     14
+! SUMMARY-  shape_representation .......................................:      5
+! SUMMARY-  si_unit_and_solid_angle_unit ...............................:     14
+! SUMMARY-  surface_curve ..............................................:  37383
+! SUMMARY-  uncertainty_measure_with_unit ..............................:     14
+! SUMMARY-  vector .....................................................: 111627
+! SUMMARY-  vertex_point ...............................................:  25222
+! SUMMARY-                                                               -------
+! SUMMARY-  Total                                                         921644
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 29-OCT-2016 10:11:21 PM
+! STATUS-    
+! STATUS-    
+! STATUS-   Generating UG geometry and placing them in parts
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:23 PM
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\trace997448
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:24 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 517877
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 523071
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 528733
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 534239
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 536137
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 539161
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 539230
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 543013
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 545063
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 549003
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 554197
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 559547
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 560813
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 562079
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 563345
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 564611
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 564761
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1043
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 999
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 568715
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 574221
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 579727
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 585077
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 593795
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 599301
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 601959
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 999
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1043
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 604667
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 607273
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 607695
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 616413
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 622621
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 634239
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 639823
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 645563
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 651225
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 653831
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 672355
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 674961
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 680389
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 682995
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 685601
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 688207
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 690813
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 693419
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 696025
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 696433
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 699039
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 699369
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 699899
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1043
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 999
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 705653
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 713747
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 714311
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 716057
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 999
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1043
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 719425
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 722031
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 724637
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 727243
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 733295
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 735901
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 736323
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 738929
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 741535
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 748679
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 751285
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 751707
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 757057
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 758803
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 999
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1043
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 760551
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 765745
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 771407
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 775181
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 780609
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 787191
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 789797
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 792403
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 797753
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 800359
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 802965
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 805571
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 808177
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 810783
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 813389
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 819239
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 819963
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 822569
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 825175
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 827781
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 830387
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 835893
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 838499
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 841105
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 843711
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 846317
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 848923
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 849345
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 854851
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 857457
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 860063
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 865569
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 871075
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 873681
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 879031
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 884225
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 889419
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 894613
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 900041
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 906561
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 911833
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 917105
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 922611
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 925217
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 930879
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 936541
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 936963
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 942391
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 944997
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 945679
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 954135
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 954557
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 957163
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 959769
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 962375
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 964981
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 967587
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 970193
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 972799
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 975405
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 978011
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 980617
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 983223
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 985829
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 988435
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 991041
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 993647
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 993977
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 994046
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 994829
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\trace517876
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Line ........................:   624
+! SUMMARY-  Arc/Circle ..................:     8
+! SUMMARY-  Group .......................:    11
+! SUMMARY-  Infinite Plane...............:    10
+! SUMMARY-  Solid .......................:   113
+! SUMMARY-                                 -----
+! SUMMARY-  Total                            766
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:40 PM
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\trace517862
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              0
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:41 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 20013
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 27219
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 43411
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 47109
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 54097
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 59425
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 62499
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 66275
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 69341
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 72337
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 78701
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 85455
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 88529
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 93723
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 93729
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1043
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1043
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 98379
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 99645
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 100911
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 102177
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 102183
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 999
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1043
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 107637
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 108903
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 114721
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 118419
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 124377
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 136229
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 158603
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15111 - Too many parents. : 158672
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1043
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 999
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 167627
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 171495
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 177469
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 180075
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 182681
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 185287
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 187893
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 190499
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 193105
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 196639
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 203003
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 205609
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 211349
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 218025
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 223453
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 229505
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 232111
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 241219
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 246803
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 249409
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 252015
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 258783
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 261389
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 265079
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 271443
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 274049
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 279867
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 285373
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 287979
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 294873
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 297479
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 300085
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 307307
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 311799
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 316993
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 322187
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 327381
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 332575
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 340825
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 346019
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 351135
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 353741
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 356347
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 358953
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 361559
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 364165
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 366771
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 369377
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 372995
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 375601
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 378207
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 380813
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 383419
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 386025
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 388631
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 391237
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 396977
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 399583
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 402189
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 407539
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 412811
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 418005
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 423199
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 428549
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 434133
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 437207
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 442853
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 448047
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 453865
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 459293
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 461899
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 464505
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 467111
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 472383
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 477811
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 483005
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 485611
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 488217
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 490823
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 493429
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 496035
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 498641
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 501247
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 503853
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 506459
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 509065
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 511671
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 514277
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 514699
+! STATUS-    
+! STATUS-   fixing inconsistent loop faults
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body contains fault: 13826 - RTSTLC: Loops inconsistent.
+! WARNING-  solid body (Unnamed) contains faults that could not be corrected
+! WARNING-   
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\trace
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Line ........................:   490
+! SUMMARY-  Arc/Circle ..................:     4
+! SUMMARY-  Group .......................:     3
+! SUMMARY-  Infinite Plane...............:     6
+! SUMMARY-  Solid .......................:   111
+! SUMMARY-                                 -----
+! SUMMARY-  Total                            614
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:52 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 19657
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\B3F-102219656
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:53 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 19308
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\34792-0041
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:53 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 18934
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\0805
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:53 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 18585
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\CY8CKIT-059
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:54 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 18236
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\SOIC127P600X172-8N
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:54 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 17887
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\78XXL
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:54 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 17538
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\LDS-C816RI
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:55 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 17179
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\LDQ-N516RI
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:55 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 86
+! STATUS-    
+! STATUS-   simplifying Bsplines to analytics
+! STATUS-    
+! STATUS-   converting tolerant edges into exact edges
+! STATUS-    
+! STATUS-   doing final check of body to report any faults
+! STATUS-    
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\PCB
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Solid .......................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                              1
+! STATUS-   Creating the UG part (Phase 3 of 3): 29-OCT-2016  10:11:56 PM
+! INFO-     Filing Part ..: Y:\2017\2017 Electrical\NX Models\2017 Display\7seg\7segDisplay_6354.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Part Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Component ...................:    16
+! SUMMARY-                                 -----
+! SUMMARY-  Total                             16
+! INFO-      
+! INFO-     Total number of solids input for this translation       :       247
+! INFO-      
+! INFO-     Number of solids created without body validation faults :       220
+! INFO-      
+! INFO-     Number of solids created with body validation fault(s)  :        13
+! INFO-      
+! INFO-     Number of solids ending up as sheet bodies              :        14
+! INFO-      
+! INFO-     End of Translation: 29-OCT-2016  10:11:58 PM
+! INFO-      

@@ -1,0 +1,133 @@
+﻿IGES to UG
+! INFO-     NX V10.0 / IGES Specification 5.3
+! INFO-      
+! INFO-     Start of Translation: 26-AUG-2016  2:00:20 PM
+! INFO-      
+! STATUS-   Converting Part: Z:\2017\2017 Electrical\NX Models\2017 Display\Summer Work\Molex mx120g.igs
+! INFO-     PTC IGES file: 367831201.igs                                           
+! SUMMARY-   
+! SUMMARY-  Summary of Supported IGES Entities in file
+! SUMMARY-   
+! SUMMARY-  Entity Type                    Count
+! SUMMARY-  -----------                    -----
+! SUMMARY-  Line (110/0).................:  3165
+! SUMMARY-  Circular Arc (100/0).........:   474
+! SUMMARY-  Conic Arc (104/0-3)..........:     8
+! SUMMARY-  B-Spline Curve (126/0-4).....:   100
+! SUMMARY-  Composite Curve (102/0)......:    14
+! SUMMARY-  Surface of Rev (120/0).......:   222
+! SUMMARY-  B-Spline Surface (128/0-9)...:   909
+! SUMMARY-  Trans Matrix (124/0,1,10,12).:   482
+! SUMMARY-  Color Definition (314/0,1)...:    13
+! SUMMARY-  Manifold Solid B-Rep (186/0).:     1
+! SUMMARY-  Shell (514/*)................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                           5389
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 26-AUG-2016 2:00:21 PM
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 26-AUG-2016  2:00:21 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 15301
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15103 - Duplicate id. : 15446
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 999
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! INFO-     Filing Part ..: Z:\2017\2017 Electrical\NX Models\2017 Display\Summer Work\Molex mx120g_igs.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Line ........................:    31
+! SUMMARY-  Arc/Circle ..................:    29
+! SUMMARY-  Conic .......................:    15
+! SUMMARY-  B-Curve .....................:     4
+! SUMMARY-  Part Attribute ..............:     9
+! SUMMARY-  Group .......................:    15
+! SUMMARY-  Matrix ......................:    36
+! SUMMARY-  Solid .......................:     9
+! SUMMARY-                                 -----
+! SUMMARY-  Total                            148
+! INFO-      
+! INFO-     End of Translation: 26-AUG-2016  2:00:35 PM
+! INFO-      

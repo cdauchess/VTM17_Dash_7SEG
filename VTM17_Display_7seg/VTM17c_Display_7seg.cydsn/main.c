@@ -124,6 +124,17 @@ int ParseCAN()
     return 0;
 }
 
+int Brightness(int TargBrightness, int GearBrightness)
+{
+    int i = 0;
+    for(i = 0;i < 13; i++)
+    {
+    LED_Driver_LRBWS_SetBrightness(TargBrightness,i);
+    }
+    LED_Driver_Gear_SetBrightness(GearBrightness,0);
+    return 0;
+}
+
 int DriveUpdate()
 {
     
@@ -132,14 +143,17 @@ return 0;
 
 int main()
 {
+    int test = 1;
     int ReadyToDisplay = 0;
     int count = 0;
     int wait = 0;
-    int brightness = 180;
-    int brightness1 = 255;
+    int BrightGear = 180;
+    int Bright4Dig = 255;
     batV = 13.00;
     tp = 15;
     int dummy = 8888;
+    int i = 0;
+    int PrevState = 1;
     char8 disp = 'A';
     CyGlobalIntEnable;
     //Start CAN
@@ -150,20 +164,25 @@ int main()
     LED_Driver_LRBWS_Start();
     LED_Driver_Gear_Start();
     state = Drive;
-    LED_Driver_LRBWS_SetBrightness(brightness1,0);
-    LED_Driver_LRBWS_SetBrightness(brightness1,1);
-    LED_Driver_LRBWS_SetBrightness(brightness1,2);
-    LED_Driver_LRBWS_SetBrightness(brightness1,3);
     
-    LED_Driver_LRBWS_SetBrightness(brightness1,5);
-    LED_Driver_LRBWS_SetBrightness(brightness1,6);
-    LED_Driver_LRBWS_SetBrightness(brightness1,7);
-    LED_Driver_LRBWS_SetBrightness(brightness1,8);
-    
-    LED_Driver_LRBWS_SetBrightness(brightness1,10);
-    LED_Driver_LRBWS_SetBrightness(brightness1,11);
-    LED_Driver_LRBWS_SetBrightness(brightness1,12);
-    LED_Driver_LRBWS_SetBrightness(brightness1,13);
+    Brightness(Bright4Dig, BrightGear);
+//    for(i = 0;i < 13; i++)
+//    {
+//    LED_Driver_LRBWS_SetBrightness(brightness1,0);
+//    LED_Driver_LRBWS_SetBrightness(brightness1,1);
+//    LED_Driver_LRBWS_SetBrightness(brightness1,2);
+//    LED_Driver_LRBWS_SetBrightness(brightness1,3);
+//    
+//    LED_Driver_LRBWS_SetBrightness(brightness1,5);
+//    LED_Driver_LRBWS_SetBrightness(brightness1,6);
+//    LED_Driver_LRBWS_SetBrightness(brightness1,7);
+//    LED_Driver_LRBWS_SetBrightness(brightness1,8);
+//    
+//    LED_Driver_LRBWS_SetBrightness(brightness1,10);
+//    LED_Driver_LRBWS_SetBrightness(brightness1,11);
+//    LED_Driver_LRBWS_SetBrightness(brightness1,12);
+//    LED_Driver_LRBWS_SetBrightness(brightness1,13);
+//    }
     
 	for(;;)
     {   
@@ -171,13 +190,26 @@ int main()
         {
             //LED_Driver_Gear_WriteString7Seg(&disp,0);
             LED_Driver_Gear_Write7SegNumberDec(count,0,1,LED_Driver_Gear_RIGHT_ALIGN);
-            LED_Driver_Gear_SetBrightness(brightness,0);
-//            LED_Driver_LRBWS_Write7SegNumberDec(dummy,0,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-//            LED_Driver_LRBWS_Write7SegNumberDec(dummy,5,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-//            LED_Driver_LRBWS_Write7SegNumberDec(dummy,10,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-            
+           // LED_Driver_Gear_SetBrightness(brightness,0);
+            LED_Driver_LRBWS_Write7SegNumberDec(et+20,0,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+            LED_Driver_LRBWS_Write7SegNumberDec(et-10,5,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+            LED_Driver_LRBWS_Write7SegNumberDec(et,10,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+            et++;
             count++;
-            //brightness = brightness+20;
+            if(et > 200)
+            {
+                if(PrevState == 1)
+                {
+                Brightness(0,0);
+                PrevState = 0;
+                }
+                else if(PrevState == 0)
+                {
+                Brightness(Bright4Dig,BrightGear);
+                PrevState = 1;
+                }
+            }
+            
            batV = batV+0.01;
             wait = 0;
             //disp++;
@@ -186,10 +218,6 @@ int main()
         if(count == 10)
         {
             count = 0;
-        }
-        if(brightness > 255)
-        {
-        brightness = 10;
         }
         if(RXFlag0 && RXFlag1 && RXFlag2 && RXFlag3 && RXFlag4 && RXFlag5)
         {
@@ -205,6 +233,8 @@ int main()
             RXFlag5 =0;
             ReadyToDisplay = 1; 
         }
+        if (test == 0)
+        {
         switch(state)
         {
         case Drive: //Display items needed for driving: BatV, ECT, TBD, Gear, Shift Lights
@@ -234,12 +264,9 @@ int main()
             }
             break;
         }
+        }
     }
     
 return 0;
 }
-
-
-
-
 /* [] END OF FILE */

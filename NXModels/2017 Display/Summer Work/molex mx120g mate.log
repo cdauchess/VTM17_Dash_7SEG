@@ -1,0 +1,1415 @@
+﻿IGES to UG
+! INFO-     NX V10.0 / IGES Specification 5.3
+! INFO-      
+! INFO-     Start of Translation: 26-AUG-2016  2:18:15 PM
+! INFO-      
+! STATUS-   Converting Part: Z:\2017\2017 Electrical\NX Models\2017 Display\Summer Work\molex mx120g mate.igs
+! INFO-     PTC IGES file: 367921201.igs                                           
+! SUMMARY-   
+! SUMMARY-  Summary of Supported IGES Entities in file
+! SUMMARY-   
+! SUMMARY-  Entity Type                    Count
+! SUMMARY-  -----------                    -----
+! SUMMARY-  Line (110/0).................:  3617
+! SUMMARY-  Circular Arc (100/0).........:   336
+! SUMMARY-  Conic Arc (104/0-3)..........:   113
+! SUMMARY-  B-Spline Curve (126/0-4).....:    85
+! SUMMARY-  Surface of Rev (120/0).......:   242
+! SUMMARY-  B-Spline Surface (128/0-9)...:  1004
+! SUMMARY-  Trans Matrix (124/0,1,10,12).:   449
+! SUMMARY-  Color Definition (314/0,1)...:    10
+! SUMMARY-  Manifold Solid B-Rep (186/0).:     1
+! SUMMARY-  Shell (514/*)................:     1
+! SUMMARY-                                 -----
+! SUMMARY-  Total                           5858
+! STATUS-    
+! STATUS-   Converting to Output Form (Phase 2 of 3): 26-AUG-2016 2:18:16 PM
+! STATUS-    
+! STATUS-   Creating the UG part (Phase 3 of 3): 26-AUG-2016  2:18:16 PM
+! STATUS-    
+! STATUS-   Creating UG solid body from Input Ent Id 16783
+! STATUS-    
+! ERROR-    CRTOBY Failure - Error code : 15103 - Duplicate id. : 16788
+! ERROR-     
+! INFO-     Could not create solid body because of topology creation, geometry
+! INFO-     creation, or failure to attach geometry to topology.  Will attempt
+! INFO-     to convert as many solid body faces to individual single-faced sheet
+! INFO-     bodies as possible.
+! INFO-      
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create SP CURVE FROM 3D CURVE. Error code : 1
+! ERROR-     
+! ERROR-    SHEET_BODY geometry failure. Unable to create trimmed sheet body. Error code : 1
+! ERROR-     
+! INFO-     Untrimmed sheet body (Unnamed) will be created 
+! INFO-     Filing Part ..: Z:\2017\2017 Electrical\NX Models\2017 Display\Summer Work\molex mx120g mate_igs.prt
+! SUMMARY-   
+! SUMMARY-  Summary of Unigraphics Input Entities
+! SUMMARY-   
+! SUMMARY-  Entities Processed             Count
+! SUMMARY-  ------------------             -----
+! SUMMARY-  Line ........................:   933
+! SUMMARY-  Arc/Circle ..................:   131
+! SUMMARY-  Conic .......................:   224
+! SUMMARY-  B-Curve .....................:    52
+! SUMMARY-  Part Attribute ..............:     9
+! SUMMARY-  Group .......................:     1
+! SUMMARY-  Matrix ......................:   112
+! SUMMARY-  Solid .......................:   154
+! SUMMARY-                                 -----
+! SUMMARY-  Total                           1616
+! INFO-      
+! INFO-     End of Translation: 26-AUG-2016  2:18:28 PM
+! INFO-      

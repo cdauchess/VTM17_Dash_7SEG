@@ -1,5 +1,5 @@
 -- Project:   C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\VTM17c_Display_7seg.cyprj
--- Generated: 10/24/2016 16:44:57
+-- Generated: 10/28/2016 13:06:25
 -- PSoC Creator  3.3 CP3
 
 ENTITY VTM17c_Display_7seg IS
