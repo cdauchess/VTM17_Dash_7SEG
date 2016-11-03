@@ -3,10 +3,8 @@
 * Version 1.0
 *
 * Description:
-*  Prints "- PSoC -" on an external x8 7-segment active high common and 
-*  active high segment display at a refresh rate of 250 Hz per common.
-*  The brightness of the "-" symbols are varied such that they gradually 
-*  increase in brightness and then fades at a rate of approximately 2 Hz.
+*  REFER TO "PSOC PIN INFO.xlsx" in 2017\Electrical\VTM17Display for info on row/column assignments
+*   
 *
 *******************************************************************************
 * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
@@ -33,11 +31,11 @@
 #define RightDisp  5
 #define BottomDisp  10
 
+//Global Variables
 
 /* Global variables used to store configuration and data for BASIC CAN mailbox */
 CAN_DATA_BYTES_MSG dataPWM;
 CAN_TX_MSG messagePWM;
-
 
 //Global Variables for storage of data
 unsigned short rpm;
@@ -84,12 +82,12 @@ typedef enum{
 }STATE;
 
 STATE state;
+STATE PrevState;
 
 /* Global variable used to store receive message mailbox number */
 volatile uint8 receiveMailboxNumber = 0xFFu;
 
-//Global Variables 
-
+//This function parses the CAN data from Motec into usable and displayable values
 int ParseCAN()
 {
     //Message ID 0x6F0
@@ -124,6 +122,10 @@ int ParseCAN()
     return 0;
 }
 
+//I'd like to change this function to not include the shift lights so that they don't flash, or make a separate function to flash
+//This function changes the brightness of the display
+//int TargBrightness -> This is the value for the brightness of the shift lights, 4 digit displays
+//int GearBrightness -> This is the value for the brightness of the gear indicator
 int Brightness(int TargBrightness, int GearBrightness)
 {
     int i = 0;
@@ -135,26 +137,76 @@ int Brightness(int TargBrightness, int GearBrightness)
     return 0;
 }
 
+//This function updates the display in the driving state
 int DriveUpdate()
 {
-    
+    //Display the selected values
+    if(rpm < 1500){ //Display Throttle Postion while engine off
+    LED_Driver_LRBWS_Write7SegNumberDec(tp,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+    }
+    else{ //Display RPM while running
+    LED_Driver_LRBWS_Write7SegNumberDec(rpm,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);            
+    }
+    LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+    LED_Driver_LRBWS_SetRC(15,1);//Set DP on position 6 of display
+    LED_Driver_LRBWS_Write7SegNumberDec(et,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); 
+               
 return 0;
 }
 
+//This function updates the display in the diagnostic state.
+int DiagUpdate()
+{
+     //Display the selected values
+    LED_Driver_LRBWS_Write7SegNumberDec(rpm,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+    LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+    LED_Driver_LRBWS_SetRC(15,1);//Set DP on position 6 of display
+    LED_Driver_LRBWS_Write7SegNumberDec(8888,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);    
+return 0;
+}
+
+
+//This function performs that state switch, called when an external button is pressed
+int SwitchButtonCheck(int StillPressed)
+{
+    int ButtonVal = 0;
+    ButtonVal = Page_Button_Read();
+//Switch State to the other state
+if(StillPressed == 0 && ButtonVal == 1) //Only switch state first time through the loop, prevent continuous oscillation if you hold the button down
+{
+    if(PrevState == Drive)
+    {
+        state = Diag;
+    }
+    else if(PrevState == Diag)
+    {
+        state = Drive;
+    }
+    PrevState = state; //Set the "prevstate" variable to the current state now that it has changed
+    StillPressed = 1;
+}
+else if(StillPressed == 1 && ButtonVal == 0)
+    StillPressed = 0;
+return StillPressed;
+}
+
+
 int main()
 {
-    int test = 1;
-    int ReadyToDisplay = 0;
-    int count = 0;
-    int wait = 0;
+    //Parameters
     int BrightGear = 180;
     int Bright4Dig = 255;
+    
+    int PageButton = 0;
+    int ReadyToDisplay = 1;
+    int count = 0;
+    int wait = 0;
+    int StillPressed = 0;
+    
     batV = 13.00;
     tp = 15;
-    int dummy = 8888;
-    int i = 0;
     int PrevState = 1;
-    char8 disp = 'A';
+    
     CyGlobalIntEnable;
     //Start CAN
     CAN_Init();
@@ -164,55 +216,20 @@ int main()
     LED_Driver_LRBWS_Start();
     LED_Driver_Gear_Start();
     state = Drive;
+    PrevState = state;
     
-    Brightness(Bright4Dig, BrightGear);
-//    for(i = 0;i < 13; i++)
-//    {
-//    LED_Driver_LRBWS_SetBrightness(brightness1,0);
-//    LED_Driver_LRBWS_SetBrightness(brightness1,1);
-//    LED_Driver_LRBWS_SetBrightness(brightness1,2);
-//    LED_Driver_LRBWS_SetBrightness(brightness1,3);
-//    
-//    LED_Driver_LRBWS_SetBrightness(brightness1,5);
-//    LED_Driver_LRBWS_SetBrightness(brightness1,6);
-//    LED_Driver_LRBWS_SetBrightness(brightness1,7);
-//    LED_Driver_LRBWS_SetBrightness(brightness1,8);
-//    
-//    LED_Driver_LRBWS_SetBrightness(brightness1,10);
-//    LED_Driver_LRBWS_SetBrightness(brightness1,11);
-//    LED_Driver_LRBWS_SetBrightness(brightness1,12);
-//    LED_Driver_LRBWS_SetBrightness(brightness1,13);
-//    }
+    Brightness(Bright4Dig, BrightGear); //Set initial Brightness
     
 	for(;;)
     {   
-        if(wait == 500000)
+        //The following if statement items are for testing only, remove when display is on vehicle.
+        //FIXME
+        if(wait == 100000)
         {
-            //LED_Driver_Gear_WriteString7Seg(&disp,0);
-            LED_Driver_Gear_Write7SegNumberDec(count,0,1,LED_Driver_Gear_RIGHT_ALIGN);
-           // LED_Driver_Gear_SetBrightness(brightness,0);
-            LED_Driver_LRBWS_Write7SegNumberDec(et+20,0,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-            LED_Driver_LRBWS_Write7SegNumberDec(et-10,5,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-            LED_Driver_LRBWS_Write7SegNumberDec(et,10,4,LED_Driver_LRBWS_RIGHT_ALIGN);
             et++;
-            count++;
-            if(et > 200)
-            {
-                if(PrevState == 1)
-                {
-                Brightness(0,0);
-                PrevState = 0;
-                }
-                else if(PrevState == 0)
-                {
-                Brightness(Bright4Dig,BrightGear);
-                PrevState = 1;
-                }
-            }
-            
+            count++;    
            batV = batV+0.01;
             wait = 0;
-            //disp++;
         }
         wait++;
         if(count == 10)
@@ -222,8 +239,7 @@ int main()
         if(RXFlag0 && RXFlag1 && RXFlag2 && RXFlag3 && RXFlag4 && RXFlag5)
         {
             //Parse Data
-            dummy = ParseCAN();
-
+            ParseCAN();
             //Reset flags, ready for next round of data    
             RXFlag0 =0;
             RXFlag1 =0;
@@ -233,40 +249,25 @@ int main()
             RXFlag5 =0;
             ReadyToDisplay = 1; 
         }
-        if (test == 0)
-        {
         switch(state)
         {
         case Drive: //Display items needed for driving: BatV, ECT, TBD, Gear, Shift Lights
-            
             if(ReadyToDisplay == 1)
             {
-            //Display the selected values
-            if(rpm < 1500){ //Display Throttle Postion while cranking
-            LED_Driver_LRBWS_Write7SegNumberDec(tp,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-            }
-            else{ //Display RPM while running
-            LED_Driver_LRBWS_Write7SegNumberDec(rpm,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);            
-            }
-            LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); //FIXME - need to set static decimal point
-            LED_Driver_LRBWS_Write7SegNumberDec(et,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); 
-            ReadyToDisplay = 0;
+                DriveUpdate();
+                ReadyToDisplay = 1; 
             }
             break;
         case Diag: //Display values wanted for diagnostic work: RPM?, TPS?, ECT?: all TBD maybe not even need this
             if(ReadyToDisplay == 1)
             {
-            //Display the selected values
-            LED_Driver_LRBWS_Write7SegNumberDec(rpm,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-            LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); //FIXME - need to set static decimal point
-            LED_Driver_LRBWS_Write7SegNumberDec(et,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); 
-            ReadyToDisplay = 0;
+                DiagUpdate();
+                ReadyToDisplay = 1;
             }
             break;
         }
-        }
-    }
-    
+        StillPressed = SwitchButtonCheck(StillPressed);
+    }  
 return 0;
 }
 /* [] END OF FILE */

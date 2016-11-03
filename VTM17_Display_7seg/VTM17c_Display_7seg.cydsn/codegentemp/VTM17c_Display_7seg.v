@@ -1,6 +1,6 @@
 // ======================================================================
 // VTM17c_Display_7seg.v generated from TopDesign.cysch
-// 10/28/2016 at 13:06
+// 11/03/2016 at 10:15
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -698,16 +698,40 @@ module CAN_v3_0_2 (
 
 endmodule
 
+// Component: CyStatusReg_v1_90
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_90"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_90\CyStatusReg_v1_90.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_90"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyStatusReg_v1_90\CyStatusReg_v1_90.v"
+`endif
+
 // top
 module top ;
 
-          wire  Net_115;
+          wire [7:0] Net_200;
+          wire  Net_199;
+          wire  Net_198;
+          wire  Net_197;
+          wire  Net_196;
+          wire  Net_195;
+          wire  Net_194;
+          wire  Net_193;
+          wire  Net_192;
+          wire  Net_205;
           wire  Net_99;
           wire  Net_83;
           wire [4:0] Net_68;
           wire  Net_75;
           wire [6:0] Net_74;
           wire  Net_84;
+          wire  Net_167;
+          wire  Net_123;
     electrical  Net_114;
     electrical  Net_109;
     electrical  Net_110;
@@ -1273,7 +1297,7 @@ module top ;
 
 	cy_psoc3_pins_v1_10
 		#(.id("dfbd21c0-b0f4-4d01-aedb-5c09ef257ef9"),
-		  .drive_mode(3'b001),
+		  .drive_mode(3'b011),
 		  .ibuf_enabled(1'b1),
 		  .init_dr_st(1'b0),
 		  .input_clk_en(0),
@@ -1327,7 +1351,7 @@ module top ;
 		PageSwitch
 		 (.oe(tmpOE__PageSwitch_net),
 		  .y({1'b0}),
-		  .fb({Net_115}),
+		  .fb({Net_167}),
 		  .io({tmpIO_0__PageSwitch_net[0:0]}),
 		  .siovref(tmpSIOVREF__PageSwitch_net),
 		  .interrupt({tmpINTERRUPT_0__PageSwitch_net[0:0]}),
@@ -1367,6 +1391,43 @@ module top ;
     defparam GND_1.comp_name = "Gnd_v1_0";
     defparam GND_1.port_names = "T1";
     defparam GND_1.width = 1;
+
+
+	cy_clock_v1_0
+		#(.id("2c152552-ccab-4101-8e95-2c684ca69eae"),
+		  .source_clock_id(""),
+		  .divisor(0),
+		  .period("10000000000000"),
+		  .is_direct(0),
+		  .is_digital(1))
+		Clock_1
+		 (.clock_out(Net_123));
+
+
+    CyStatusReg_v1_90 Page_Button (
+        .status_0(Net_167),
+        .status_1(1'b0),
+        .status_2(1'b0),
+        .status_3(1'b0),
+        .clock(Net_123),
+        .status_4(1'b0),
+        .status_5(1'b0),
+        .status_6(1'b0),
+        .status_7(1'b0),
+        .intr(Net_199),
+        .status_bus(8'b0));
+    defparam Page_Button.Bit0Mode = 0;
+    defparam Page_Button.Bit1Mode = 0;
+    defparam Page_Button.Bit2Mode = 0;
+    defparam Page_Button.Bit3Mode = 0;
+    defparam Page_Button.Bit4Mode = 0;
+    defparam Page_Button.Bit5Mode = 0;
+    defparam Page_Button.Bit6Mode = 0;
+    defparam Page_Button.Bit7Mode = 0;
+    defparam Page_Button.BusDisplay = 0;
+    defparam Page_Button.Interrupt = 0;
+    defparam Page_Button.MaskValue = 0;
+    defparam Page_Button.NumInputs = 1;
 
 
 

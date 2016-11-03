@@ -1,5 +1,5 @@
 # VTM17c_Display_7seg
-# 2016-10-28 17:06:14Z
+# 2016-11-03 14:15:35Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -46,3 +46,5 @@ set_io "Com(0)" iocell 0 3
 set_io "Com(1)" iocell 0 4
 set_io "Com(2)" iocell 0 5
 set_io "Com(3)" iocell 0 6
+set_io "Com(4)" iocell 0 7
+set_io "PageSwitch(0)" iocell 12 1

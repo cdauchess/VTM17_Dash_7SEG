@@ -35,6 +35,8 @@
 #include "CAN.h"
 #include "PageSwitch_aliases.h"
 #include "PageSwitch.h"
+#include "Clock_1.h"
+#include "Page_Button.h"
 #include "LED_Driver_Gear_ClkInternal.h"
 #include "LED_Driver_Gear_Seg_Driver_L.h"
 #include "LED_Driver_Gear_Com_Driver.h"

@@ -1,5 +1,5 @@
 # VTM17c_Display_7seg
-# 2016-10-28 17:06:22Z
+# 2016-11-03 14:15:36Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -49,17 +49,17 @@ set_io "Com(2)" iocell 0 5
 set_io "Com(3)" iocell 0 6
 set_io "Com(4)" iocell 0 7
 set_io "PageSwitch(0)" iocell 12 1
-set_location "\LED_Driver_Gear:Net_1332\" 2 0 1 0
-set_location "\LED_Driver_LRBWS:Net_1332\" 2 2 1 2
-set_location "\LED_Driver_Gear:bLED_PWM:CtlReg\" 2 0 6
-set_location "\LED_Driver_Gear:bLED_PWM:PwmDP:u0\" 2 0 2
+set_location "\LED_Driver_Gear:Net_1332\" 2 2 1 2
+set_location "\LED_Driver_LRBWS:Net_1332\" 3 2 1 3
+set_location "\LED_Driver_Gear:bLED_PWM:CtlReg\" 2 2 6
+set_location "\LED_Driver_Gear:bLED_PWM:PwmDP:u0\" 2 2 2
 set_location "\LED_Driver_Gear:Seg_Driver_L:Sync:ctrl_reg\" 0 3 6
 set_location "\LED_Driver_Gear:Com_Driver:Sync:ctrl_reg\" 1 3 6
 set_location "\LED_Driver_Gear:DMA_Com\" drqcell -1 -1 1
 set_location "\LED_Driver_Gear:DMA_Seg\" drqcell -1 -1 2
 set_location "\LED_Driver_Gear:DMA_BC\" drqcell -1 -1 0
-set_location "\LED_Driver_LRBWS:bLED_PWM:CtlReg\" 2 2 6
-set_location "\LED_Driver_LRBWS:bLED_PWM:PwmDP:u0\" 2 2 2
+set_location "\LED_Driver_LRBWS:bLED_PWM:CtlReg\" 2 0 6
+set_location "\LED_Driver_LRBWS:bLED_PWM:PwmDP:u0\" 3 0 2
 set_location "\LED_Driver_LRBWS:Seg_Driver_L:Sync:ctrl_reg\" 2 1 6
 set_location "\LED_Driver_LRBWS:Com_Driver:Sync:ctrl_reg\" 3 2 6
 set_location "\LED_Driver_LRBWS:DMA_Com\" drqcell -1 -1 4
@@ -69,15 +69,16 @@ set_location "\LED_Driver_LRBWS:DMA_Seg\" drqcell -1 -1 5
 set_location "\LED_Driver_LRBWS:DMA_BC\" drqcell -1 -1 3
 set_location "\CAN:CanIP\" cancell -1 -1 0
 set_location "\CAN:isr\" interrupt -1 -1 16
-set_location "\LED_Driver_Gear:Net_856\" 3 0 0 0
-set_location "\LED_Driver_Gear:bLED_PWM:initialization\" 3 0 1 2
-set_location "\LED_Driver_Gear:tc\" 2 0 1 1
-set_location "\LED_Driver_Gear:bLED_PWM:init_cnt_1\" 2 1 1 3
-set_location "\LED_Driver_Gear:bLED_PWM:init_cnt_0\" 2 1 0 1
-set_location "\LED_Driver_Gear:bLED_PWM:cnt_state_0\" 2 0 0 0
-set_location "\LED_Driver_LRBWS:Net_856\" 3 2 0 3
-set_location "\LED_Driver_LRBWS:bLED_PWM:initialization\" 3 2 1 1
-set_location "\LED_Driver_LRBWS:tc\" 2 2 0 1
-set_location "\LED_Driver_LRBWS:bLED_PWM:init_cnt_1\" 3 1 1 3
-set_location "\LED_Driver_LRBWS:bLED_PWM:init_cnt_0\" 3 1 0 1
-set_location "\LED_Driver_LRBWS:bLED_PWM:cnt_state_0\" 2 2 1 0
+set_location "\Page_Button:sts:sts_reg\" 3 0 3
+set_location "\LED_Driver_Gear:Net_856\" 3 2 0 3
+set_location "\LED_Driver_Gear:bLED_PWM:initialization\" 3 2 1 1
+set_location "\LED_Driver_Gear:tc\" 2 2 0 1
+set_location "\LED_Driver_Gear:bLED_PWM:init_cnt_1\" 2 0 0 1
+set_location "\LED_Driver_Gear:bLED_PWM:init_cnt_0\" 2 0 1 0
+set_location "\LED_Driver_Gear:bLED_PWM:cnt_state_0\" 2 2 1 1
+set_location "\LED_Driver_LRBWS:Net_856\" 3 0 1 3
+set_location "\LED_Driver_LRBWS:bLED_PWM:initialization\" 3 1 0 2
+set_location "\LED_Driver_LRBWS:tc\" 3 1 1 3
+set_location "\LED_Driver_LRBWS:bLED_PWM:init_cnt_1\" 2 1 1 3
+set_location "\LED_Driver_LRBWS:bLED_PWM:init_cnt_0\" 2 1 0 1
+set_location "\LED_Driver_LRBWS:bLED_PWM:cnt_state_0\" 3 0 0 3

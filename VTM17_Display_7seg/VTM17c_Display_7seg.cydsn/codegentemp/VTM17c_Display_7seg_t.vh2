@@ -1,5 +1,5 @@
 -- Project:   C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\VTM17c_Display_7seg.cyprj
--- Generated: 10/28/2016 13:06:25
+-- Generated: 11/03/2016 10:15:38
 -- PSoC Creator  3.3 CP3
 
 ENTITY VTM17c_Display_7seg IS
@@ -74,6 +74,10 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     SIGNAL Com(3)__PA : bit;
     SIGNAL Com(4)__PA : bit;
     SIGNAL Com_1(0)__PA : bit;
+    SIGNAL Net_123 : bit;
+    ATTRIBUTE global_signal OF Net_123 : SIGNAL IS true;
+    SIGNAL Net_123_local : bit;
+    SIGNAL Net_167 : bit;
     SIGNAL Net_67_0 : bit;
     SIGNAL Net_67_1 : bit;
     SIGNAL Net_67_10 : bit;
@@ -159,7 +163,7 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     SIGNAL \LED_Driver_Gear:Com_Driver:control_7\ : bit;
     SIGNAL \LED_Driver_Gear:Net_123\ : bit;
     SIGNAL \LED_Driver_Gear:Net_1332\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_Gear:Net_1332\ : SIGNAL IS "U(2,0,B)0";
+    ATTRIBUTE placement_force OF \LED_Driver_Gear:Net_1332\ : SIGNAL IS "U(2,2,B)2";
     SIGNAL \LED_Driver_Gear:Net_1352\ : bit;
     SIGNAL \LED_Driver_Gear:Net_1405\ : bit;
     SIGNAL \LED_Driver_Gear:Net_1501\ : bit;
@@ -167,10 +171,10 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     ATTRIBUTE global_signal OF \LED_Driver_Gear:Net_1501\ : SIGNAL IS true;
     SIGNAL \LED_Driver_Gear:Net_1501_local\ : bit;
     SIGNAL \LED_Driver_Gear:Net_856\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_Gear:Net_856\ : SIGNAL IS "U(3,0,A)0";
+    ATTRIBUTE placement_force OF \LED_Driver_Gear:Net_856\ : SIGNAL IS "U(3,2,A)3";
     SIGNAL \LED_Driver_Gear:Seg_Driver_L:control_7\ : bit;
     SIGNAL \LED_Driver_Gear:bLED_PWM:cnt_state_0\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_Gear:bLED_PWM:cnt_state_0\ : SIGNAL IS "U(2,0,A)0";
+    ATTRIBUTE placement_force OF \LED_Driver_Gear:bLED_PWM:cnt_state_0\ : SIGNAL IS "U(2,2,B)1";
     SIGNAL \LED_Driver_Gear:bLED_PWM:ctrl_0\ : bit;
     SIGNAL \LED_Driver_Gear:bLED_PWM:ctrl_1\ : bit;
     SIGNAL \LED_Driver_Gear:bLED_PWM:ctrl_2\ : bit;
@@ -181,20 +185,20 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     SIGNAL \LED_Driver_Gear:bLED_PWM:ctrl_7\ : bit;
     SIGNAL \LED_Driver_Gear:bLED_PWM:drive_pwm\ : bit;
     SIGNAL \LED_Driver_Gear:bLED_PWM:init_cnt_0\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_Gear:bLED_PWM:init_cnt_0\ : SIGNAL IS "U(2,1,A)1";
+    ATTRIBUTE placement_force OF \LED_Driver_Gear:bLED_PWM:init_cnt_0\ : SIGNAL IS "U(2,0,B)0";
     SIGNAL \LED_Driver_Gear:bLED_PWM:init_cnt_1\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_Gear:bLED_PWM:init_cnt_1\ : SIGNAL IS "U(2,1,B)3";
+    ATTRIBUTE placement_force OF \LED_Driver_Gear:bLED_PWM:init_cnt_1\ : SIGNAL IS "U(2,0,A)1";
     SIGNAL \LED_Driver_Gear:bLED_PWM:initialization\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_Gear:bLED_PWM:initialization\ : SIGNAL IS "U(3,0,B)2";
+    ATTRIBUTE placement_force OF \LED_Driver_Gear:bLED_PWM:initialization\ : SIGNAL IS "U(3,2,B)1";
     SIGNAL \LED_Driver_Gear:bLED_PWM:load_compare\ : bit;
     SIGNAL \LED_Driver_Gear:tc\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_Gear:tc\ : SIGNAL IS "U(2,0,B)1";
+    ATTRIBUTE placement_force OF \LED_Driver_Gear:tc\ : SIGNAL IS "U(2,2,A)1";
     SIGNAL \LED_Driver_LRBWS:Com_Driver:control_5\ : bit;
     SIGNAL \LED_Driver_LRBWS:Com_Driver:control_6\ : bit;
     SIGNAL \LED_Driver_LRBWS:Com_Driver:control_7\ : bit;
     SIGNAL \LED_Driver_LRBWS:Net_123\ : bit;
     SIGNAL \LED_Driver_LRBWS:Net_1332\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:Net_1332\ : SIGNAL IS "U(2,2,B)2";
+    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:Net_1332\ : SIGNAL IS "U(3,2,B)3";
     SIGNAL \LED_Driver_LRBWS:Net_1352\ : bit;
     SIGNAL \LED_Driver_LRBWS:Net_1405\ : bit;
     SIGNAL \LED_Driver_LRBWS:Net_1501\ : bit;
@@ -202,9 +206,9 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     ATTRIBUTE global_signal OF \LED_Driver_LRBWS:Net_1501\ : SIGNAL IS true;
     SIGNAL \LED_Driver_LRBWS:Net_1501_local\ : bit;
     SIGNAL \LED_Driver_LRBWS:Net_856\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:Net_856\ : SIGNAL IS "U(3,2,A)3";
+    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:Net_856\ : SIGNAL IS "U(3,0,B)3";
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:cnt_state_0\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:bLED_PWM:cnt_state_0\ : SIGNAL IS "U(2,2,B)0";
+    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:bLED_PWM:cnt_state_0\ : SIGNAL IS "U(3,0,A)3";
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:ctrl_0\ : bit;
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:ctrl_1\ : bit;
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:ctrl_2\ : bit;
@@ -215,14 +219,14 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:ctrl_7\ : bit;
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:drive_pwm\ : bit;
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\ : SIGNAL IS "U(3,1,A)1";
+    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\ : SIGNAL IS "U(2,1,A)1";
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\ : SIGNAL IS "U(3,1,B)3";
+    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\ : SIGNAL IS "U(2,1,B)3";
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:initialization\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:bLED_PWM:initialization\ : SIGNAL IS "U(3,2,B)1";
+    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:bLED_PWM:initialization\ : SIGNAL IS "U(3,1,A)2";
     SIGNAL \LED_Driver_LRBWS:bLED_PWM:load_compare\ : bit;
     SIGNAL \LED_Driver_LRBWS:tc\ : bit;
-    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:tc\ : SIGNAL IS "U(2,2,A)1";
+    ATTRIBUTE placement_force OF \LED_Driver_LRBWS:tc\ : SIGNAL IS "U(3,1,B)3";
     SIGNAL __ONE__ : bit;
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
@@ -316,13 +320,13 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     ATTRIBUTE lib_model OF PageSwitch(0) : LABEL IS "iocell41";
     ATTRIBUTE Location OF PageSwitch(0) : LABEL IS "P12[1]";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:Net_1332\ : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF \LED_Driver_Gear:Net_1332\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \LED_Driver_Gear:Net_1332\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:Net_1332\ : LABEL IS "macrocell2";
-    ATTRIBUTE Location OF \LED_Driver_LRBWS:Net_1332\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LED_Driver_LRBWS:Net_1332\ : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:bLED_PWM:CtlReg\ : LABEL IS "controlcell1";
-    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:CtlReg\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:CtlReg\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:bLED_PWM:PwmDP:u0\ : LABEL IS "datapathcell1";
-    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:PwmDP:u0\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:PwmDP:u0\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:Seg_Driver_L:Sync:ctrl_reg\ : LABEL IS "controlcell2";
     ATTRIBUTE Location OF \LED_Driver_Gear:Seg_Driver_L:Sync:ctrl_reg\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:Com_Driver:Sync:ctrl_reg\ : LABEL IS "controlcell3";
@@ -334,9 +338,9 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     ATTRIBUTE lib_model OF \LED_Driver_Gear:DMA_BC\ : LABEL IS "drqcell3";
     ATTRIBUTE Location OF \LED_Driver_Gear:DMA_BC\ : LABEL IS "[DrqContainer=(0)][DrqId=(0)]";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:bLED_PWM:CtlReg\ : LABEL IS "controlcell4";
-    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:CtlReg\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:CtlReg\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:bLED_PWM:PwmDP:u0\ : LABEL IS "datapathcell2";
-    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:PwmDP:u0\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:PwmDP:u0\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:Seg_Driver_L:Sync:ctrl_reg\ : LABEL IS "controlcell5";
     ATTRIBUTE Location OF \LED_Driver_LRBWS:Seg_Driver_L:Sync:ctrl_reg\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:Com_Driver:Sync:ctrl_reg\ : LABEL IS "controlcell6";
@@ -353,30 +357,32 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
     ATTRIBUTE Location OF \LED_Driver_LRBWS:DMA_BC\ : LABEL IS "[DrqContainer=(0)][DrqId=(3)]";
     ATTRIBUTE Location OF \CAN:CanIP\ : LABEL IS "F(CAN,0)";
     ATTRIBUTE Location OF \CAN:isr\ : LABEL IS "[IntrContainer=(0)][IntrId=(16)]";
+    ATTRIBUTE lib_model OF \Page_Button:sts:sts_reg\ : LABEL IS "statuscell1";
+    ATTRIBUTE Location OF \Page_Button:sts:sts_reg\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:Net_856\ : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF \LED_Driver_Gear:Net_856\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \LED_Driver_Gear:Net_856\ : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:bLED_PWM:initialization\ : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:initialization\ : LABEL IS "U(3,0)";
+    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:initialization\ : LABEL IS "U(3,2)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:tc\ : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF \LED_Driver_Gear:tc\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \LED_Driver_Gear:tc\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:bLED_PWM:init_cnt_1\ : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:init_cnt_1\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:init_cnt_1\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:bLED_PWM:init_cnt_0\ : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:init_cnt_0\ : LABEL IS "U(2,1)";
+    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:init_cnt_0\ : LABEL IS "U(2,0)";
     ATTRIBUTE lib_model OF \LED_Driver_Gear:bLED_PWM:cnt_state_0\ : LABEL IS "macrocell8";
-    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:cnt_state_0\ : LABEL IS "U(2,0)";
+    ATTRIBUTE Location OF \LED_Driver_Gear:bLED_PWM:cnt_state_0\ : LABEL IS "U(2,2)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:Net_856\ : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF \LED_Driver_LRBWS:Net_856\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \LED_Driver_LRBWS:Net_856\ : LABEL IS "U(3,0)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:bLED_PWM:initialization\ : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:initialization\ : LABEL IS "U(3,2)";
+    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:initialization\ : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:tc\ : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF \LED_Driver_LRBWS:tc\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LED_Driver_LRBWS:tc\ : LABEL IS "U(3,1)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\ : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\ : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_1\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\ : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\ : LABEL IS "U(3,1)";
+    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:init_cnt_0\ : LABEL IS "U(2,1)";
     ATTRIBUTE lib_model OF \LED_Driver_LRBWS:bLED_PWM:cnt_state_0\ : LABEL IS "macrocell14";
-    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:cnt_state_0\ : LABEL IS "U(2,2)";
+    ATTRIBUTE Location OF \LED_Driver_LRBWS:bLED_PWM:cnt_state_0\ : LABEL IS "U(3,0)";
     COMPONENT cancell
         PORT (
             clock : IN std_ulogic;
@@ -661,6 +667,20 @@ ARCHITECTURE __DEFAULT__ OF VTM17c_Display_7seg IS
             q : OUT std_ulogic;
             q_fixed : OUT std_ulogic);
     END COMPONENT;
+    COMPONENT statuscell
+        PORT (
+            status_0 : IN std_ulogic;
+            status_1 : IN std_ulogic;
+            status_2 : IN std_ulogic;
+            status_3 : IN std_ulogic;
+            status_4 : IN std_ulogic;
+            status_5 : IN std_ulogic;
+            status_6 : IN std_ulogic;
+            status_7 : IN std_ulogic;
+            clock : IN std_ulogic;
+            reset : IN std_ulogic;
+            clk_en : IN std_ulogic);
+    END COMPONENT;
 BEGIN
 
     ClockBlock:clockblockcell
@@ -682,6 +702,8 @@ BEGIN
             dclk_0 => \LED_Driver_LRBWS:Net_1501_local\,
             dclk_glb_1 => \LED_Driver_Gear:Net_1501\,
             dclk_1 => \LED_Driver_Gear:Net_1501_local\,
+            dclk_glb_2 => Net_123,
+            dclk_2 => Net_123_local,
             clk_bus_glb_ff => \ClockBlock.clk_bus_glb_ff__sig\);
 
     RX_1:logicalport
@@ -2022,7 +2044,7 @@ BEGIN
 
     PageSwitch:logicalport
         GENERIC MAP(
-            drive_mode => "001",
+            drive_mode => "011",
             ibuf_enabled => "1",
             id => "dfbd21c0-b0f4-4d01-aedb-5c09ef257ef9",
             init_dr_st => "0",
@@ -2098,10 +2120,11 @@ BEGIN
             oe_sync_mode => 0,
             logicalport => "PageSwitch",
             logicalport_pin_id => 0,
-            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000001")
+            io_capabilities => "0000000000000000000000000000000000000000000000000000000000000101")
         PORT MAP(
             pa_out => PageSwitch(0)__PA,
             oe => open,
+            fb => Net_167,
             pad_in => PageSwitch(0)_PAD,
             in_clock => open,
             in_clock_en => '1',
@@ -2430,6 +2453,22 @@ BEGIN
         PORT MAP(
             interrupt => Net_99,
             clock => ClockBlock_BUS_CLK);
+
+    \Page_Button:sts:sts_reg\:statuscell
+        GENERIC MAP(
+            cy_force_order => 1,
+            cy_md_select => "00000000",
+            clken_mode => 1)
+        PORT MAP(
+            clock => open,
+            status_7 => open,
+            status_6 => open,
+            status_5 => open,
+            status_4 => open,
+            status_3 => open,
+            status_2 => open,
+            status_1 => open,
+            status_0 => Net_167);
 
     \LED_Driver_Gear:Net_856\:macrocell
         GENERIC MAP(
