@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
   26:.\main.c      **** #define CAN_RX_MAILBOX_1_SHIFT      (2u)
   27:.\main.c      **** #define DATA_SIZE                   (6u)
   28:.\main.c      **** #define ONE_BYTE_OFFSET             (8u)
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 2
 
 
   29:.\main.c      **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
   83:.\main.c      **** 
   84:.\main.c      **** STATE state;
   85:.\main.c      **** STATE PrevState;
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 3
 
 
   86:.\main.c      **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
   97:.\main.c      ****     at = (RXMessage0[6] << 8 | RXMessage0[7])*0.1;
   73              		.loc 1 97 0
   74 004c A069     		ldr	r0, [r4, #24]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 4
 
 
   75 004e E369     		ldr	r3, [r4, #28]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  125              	.LVL16:
  126 00be FFF7FEFF 		bl	__aeabi_d2uiz
  127              	.LVL17:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 5
 
 
  128 00c2 4F4B     		ldr	r3, .L3+56
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  174 0120 3F4A     		ldr	r2, .L3+88
  175 0122 1380     		strh	r3, [r2]	@ movhi
  110:.\main.c      ****     batV = (double)(RXMessage3[2] << 8 | RXMessage3[3])*0.01;
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 6
 
 
  176              		.loc 1 110 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  225 018c DA68     		ldr	r2, [r3, #12]
  226 018e 42EA0122 		orr	r2, r2, r1, lsl #8
  227 0192 2949     		ldr	r1, .L3+112
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 7
 
 
  228 0194 0A80     		strh	r2, [r1]	@ movhi
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  274 0208 00000000 		.word	RXMessage2
  275 020c 00000000 		.word	egt1
  276 0210 00000000 		.word	launch
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 8
 
 
  277 0214 00000000 		.word	ntrl
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  133:.\main.c      ****     {
  134:.\main.c      ****     LED_Driver_LRBWS_SetBrightness(TargBrightness,i);
  322              		.loc 1 134 0 discriminator 3
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 9
 
 
  323 000a E8B2     		uxtb	r0, r5
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  365 0006 40F2DB53 		movw	r3, #1499
  366 000a 9842     		cmp	r0, r3
  367 000c 07D8     		bhi	.L10
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 10
 
 
  145:.\main.c      ****     LED_Driver_LRBWS_Write7SegNumberDec(tp,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  155:.\main.c      **** }
  412              		.loc 1 155 0
  413 005a 0020     		movs	r0, #0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 11
 
 
  414 005c 08BD     		pop	{r3, pc}
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  461 0026 0023     		movs	r3, #0
  462 0028 FFF7FEFF 		bl	LED_Driver_LRBWS_Write7SegNumberDec
  463              	.LVL45:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 12
 
 
  163:.\main.c      ****     LED_Driver_LRBWS_SetRC(15,1);//Set DP on position 6 of display
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  507              		.loc 1 173 0
  508 0004 FFF7FEFF 		bl	Page_Button_Read
  509              	.LVL50:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 13
 
 
  174:.\main.c      **** //Switch State to the other state
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  189:.\main.c      ****     StillPressed = 0;
  549              		.loc 1 189 0 is_stmt 1
  550 0038 0024     		movs	r4, #0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 14
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 14
 
 
  551              	.LVL53:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  588 0004 3049     		ldr	r1, .L38+8
  589 0006 314B     		ldr	r3, .L38+12
  590 0008 C3E90001 		strd	r0, [r3]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 15
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 15
 
 
  207:.\main.c      ****     tp = 15;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  628              	.L35:
  222:.\main.c      ****     
  223:.\main.c      **** 	for(;;)
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 16
 
 
  224:.\main.c      ****     {   
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  667 0066 5B68     		ldr	r3, [r3, #4]
  668 0068 C3B1     		cbz	r3, .L31
  669              		.loc 1 239 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 17
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 17
 
 
  670 006a 1D4B     		ldr	r3, .L38+32
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  711 009e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  712 00a0 13B1     		cbz	r3, .L33
  713 00a2 012B     		cmp	r3, #1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 18
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 18
 
 
  714 00a4 03D0     		beq	.L34
@@ -1056,15 +1056,8 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  729              	.LVL77:
  730 00b8 0546     		mov	r5, r0
  731              	.LVL78:
- 270:.\main.c      **** //        if(PageButton == 1)
- 271:.\main.c      **** //        {
- 272:.\main.c      **** //            SwitchButton();
- 273:.\main.c      **** //            StillPressed = 1;
- 274:.\main.c      **** //        }
- 275:.\main.c      **** //        else if(PageButton == 0)
- 276:.\main.c      **** //            StillPressed = 0;
- 277:.\main.c      ****     }  
- 732              		.loc 1 277 0
+ 270:.\main.c      ****     }  
+ 732              		.loc 1 270 0
  733 00ba BCE7     		b	.L35
  734              	.L39:
  735 00bc AFF30080 		.align	3
@@ -1078,9 +1071,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  743 00d8 A0860100 		.word	100000
  744 00dc 00000000 		.word	et
  745 00e0 00000000 		.word	.LANCHOR0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 19
-
-
  746              		.cfi_endproc
  747              	.LFE68:
  748              		.size	main, .-main
@@ -1088,6 +1078,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  750              		.comm	PrevState,1,1
  751              		.comm	state,1,1
  752              		.global	DispUpdate
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 19
+
+
  753              		.global	RXDLC
  754              		.global	RXFlag5
  755              		.global	RXFlag4
@@ -1138,9 +1131,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  800 0000 00000000 		.space	4
  801              		.type	RXFlag0, %object
  802              		.size	RXFlag0, 4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 20
-
-
  803              	RXFlag0:
  804 0004 00000000 		.space	4
  805              		.type	RXFlag1, %object
@@ -1148,6 +1138,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  807              	RXFlag1:
  808 0008 00000000 		.space	4
  809              		.type	RXFlag2, %object
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 20
+
+
  810              		.size	RXFlag2, 4
  811              	RXFlag2:
  812 000c 00000000 		.space	4
@@ -1198,9 +1191,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  857 0028 58000000 		.4byte	.LASF0
  858 002c 02       		.uleb128 0x2
  859 002d 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 21
-
-
  860 002e 08       		.byte	0x8
  861 002f 57020000 		.4byte	.LASF1
  862 0033 02       		.uleb128 0x2
@@ -1208,6 +1198,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  864 0035 05       		.byte	0x5
  865 0036 87000000 		.4byte	.LASF2
  866 003a 02       		.uleb128 0x2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 21
+
+
  867 003b 02       		.byte	0x2
  868 003c 07       		.byte	0x7
  869 003d FB020000 		.4byte	.LASF3
@@ -1258,9 +1251,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  914 0099 05       		.uleb128 0x5
  915 009a 97010000 		.4byte	.LASF13
  916 009e 04       		.byte	0x4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 22
-
-
  917 009f 9701     		.2byte	0x197
  918 00a1 4C000000 		.4byte	0x4c
  919 00a5 02       		.uleb128 0x2
@@ -1268,6 +1258,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  921 00a7 04       		.byte	0x4
  922 00a8 62010000 		.4byte	.LASF14
  923 00ac 02       		.uleb128 0x2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 22
+
+
  924 00ad 08       		.byte	0x8
  925 00ae 04       		.byte	0x4
  926 00af 07040000 		.4byte	.LASF15
@@ -1318,9 +1311,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  971 0108 00       		.byte	0
  972 0109 0B       		.uleb128 0xb
  973 010a 72747200 		.ascii	"rtr\000"
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 23
-
-
  974 010e 05       		.byte	0x5
  975 010f 84       		.byte	0x84
  976 0110 81000000 		.4byte	0x81
@@ -1328,6 +1318,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  978 0115 0B       		.uleb128 0xb
  979 0116 69646500 		.ascii	"ide\000"
  980 011a 05       		.byte	0x5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 23
+
+
  981 011b 85       		.byte	0x85
  982 011c 81000000 		.4byte	0x81
  983 0120 05       		.byte	0x5
@@ -1378,9 +1371,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1028 0177 03       		.uleb128 0x3
  1029 0178 81000000 		.4byte	.LASF24
  1030 017c 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 24
-
-
  1031 017d 52       		.byte	0x52
  1032 017e 62010000 		.4byte	0x162
  1033 0182 0F       		.uleb128 0xf
@@ -1388,6 +1378,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1035 0187 01       		.byte	0x1
  1036 0188 5B       		.byte	0x5b
  1037 0189 68000000 		.4byte	0x68
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 24
+
+
  1038 018d 00000000 		.4byte	.LFB63
  1039 0191 50020000 		.4byte	.LFE63-.LFB63
  1040 0195 01       		.uleb128 0x1
@@ -1438,9 +1431,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1085 01f3 00       		.sleb128 0
  1086 01f4 00       		.byte	0
  1087 01f5 15       		.uleb128 0x15
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 25
-
-
  1088 01f6 20000000 		.4byte	.LVL34
  1089 01fa 42070000 		.4byte	0x742
  1090 01fe 14       		.uleb128 0x14
@@ -1448,6 +1438,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1092 0200 51       		.byte	0x51
  1093 0201 01       		.uleb128 0x1
  1094 0202 30       		.byte	0x30
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 25
+
+
  1095 0203 14       		.uleb128 0x14
  1096 0204 01       		.uleb128 0x1
  1097 0205 50       		.byte	0x50
@@ -1498,9 +1491,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1142 0253 14       		.uleb128 0x14
  1143 0254 01       		.uleb128 0x1
  1144 0255 52       		.byte	0x52
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 26
-
-
  1145 0256 01       		.uleb128 0x1
  1146 0257 34       		.byte	0x34
  1147 0258 14       		.uleb128 0x14
@@ -1508,6 +1498,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1149 025a 51       		.byte	0x51
  1150 025b 01       		.uleb128 0x1
  1151 025c 30       		.byte	0x30
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 26
+
+
  1152 025d 00       		.byte	0
  1153 025e 13       		.uleb128 0x13
  1154 025f 44000000 		.4byte	.LVL39
@@ -1558,9 +1551,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1199 02a4 01       		.uleb128 0x1
  1200 02a5 34       		.byte	0x34
  1201 02a6 14       		.uleb128 0x14
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 27
-
-
  1202 02a7 01       		.uleb128 0x1
  1203 02a8 51       		.byte	0x51
  1204 02a9 01       		.uleb128 0x1
@@ -1568,6 +1558,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1206 02ab 00       		.byte	0
  1207 02ac 00       		.byte	0
  1208 02ad 16       		.uleb128 0x16
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 27
+
+
  1209 02ae 0E040000 		.4byte	.LASF28
  1210 02b2 01       		.byte	0x1
  1211 02b3 9E       		.byte	0x9e
@@ -1618,9 +1611,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1256 02fe 35       		.byte	0x35
  1257 02ff 00       		.byte	0
  1258 0300 13       		.uleb128 0x13
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 28
-
-
  1259 0301 34000000 		.4byte	.LVL46
  1260 0305 78070000 		.4byte	0x778
  1261 0309 18030000 		.4byte	0x318
@@ -1628,6 +1618,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1263 030e 01       		.uleb128 0x1
  1264 030f 51       		.byte	0x51
  1265 0310 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 28
+
+
  1266 0311 31       		.byte	0x31
  1267 0312 14       		.uleb128 0x14
  1268 0313 01       		.uleb128 0x1
@@ -1678,9 +1671,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1313 0359 68000000 		.4byte	0x68
  1314 035d 5B000000 		.4byte	.LLST3
  1315 0361 17       		.uleb128 0x17
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 29
-
-
  1316 0362 18030000 		.4byte	.LASF32
  1317 0366 01       		.byte	0x1
  1318 0367 AC       		.byte	0xac
@@ -1688,6 +1678,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1320 036c 9B000000 		.4byte	.LLST4
  1321 0370 18       		.uleb128 0x18
  1322 0371 08000000 		.4byte	.LVL50
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 29
+
+
  1323 0375 8E070000 		.4byte	0x78e
  1324 0379 00       		.byte	0
  1325 037a 16       		.uleb128 0x16
@@ -1738,9 +1731,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1370 03dd D9000000 		.4byte	.LLST6
  1371 03e1 17       		.uleb128 0x17
  1372 03e2 65020000 		.4byte	.LASF31
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 30
-
-
  1373 03e6 01       		.byte	0x1
  1374 03e7 CC       		.byte	0xcc
  1375 03e8 68000000 		.4byte	0x68
@@ -1748,6 +1738,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1377 03f0 17       		.uleb128 0x17
  1378 03f1 82040000 		.4byte	.LASF40
  1379 03f5 01       		.byte	0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 30
+
+
  1380 03f6 D0       		.byte	0xd0
  1381 03f7 68000000 		.4byte	0x68
  1382 03fb 39010000 		.4byte	.LLST8
@@ -1798,9 +1791,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1427 0464 02       		.uleb128 0x2
  1428 0465 75       		.byte	0x75
  1429 0466 00       		.sleb128 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 31
-
-
  1430 0467 00       		.byte	0
  1431 0468 00       		.byte	0
  1432 0469 1A       		.uleb128 0x1a
@@ -1808,6 +1798,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1434 046e 07       		.byte	0x7
  1435 046f 9606     		.2byte	0x696
  1436 0471 75040000 		.4byte	0x475
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 31
+
+
  1437 0475 06       		.uleb128 0x6
  1438 0476 76000000 		.4byte	0x76
  1439 047a 1B       		.uleb128 0x1b
@@ -1858,9 +1851,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1484 04d8 05       		.uleb128 0x5
  1485 04d9 03       		.byte	0x3
  1486 04da 00000000 		.4byte	at
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 32
-
-
  1487 04de 1C       		.uleb128 0x1c
  1488 04df 657400   		.ascii	"et\000"
  1489 04e2 01       		.byte	0x1
@@ -1868,6 +1858,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1491 04e4 3A000000 		.4byte	0x3a
  1492 04e8 05       		.uleb128 0x5
  1493 04e9 03       		.byte	0x3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 32
+
+
  1494 04ea 00000000 		.4byte	et
  1495 04ee 1C       		.uleb128 0x1c
  1496 04ef 6C613100 		.ascii	"la1\000"
@@ -1918,9 +1911,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1541 054d 03       		.byte	0x3
  1542 054e 00000000 		.4byte	ntrl
  1543 0552 1C       		.uleb128 0x1c
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 33
-
-
  1544 0553 627000   		.ascii	"bp\000"
  1545 0556 01       		.byte	0x1
  1546 0557 34       		.byte	0x34
@@ -1928,6 +1918,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1548 055c 05       		.uleb128 0x5
  1549 055d 03       		.byte	0x3
  1550 055e 00000000 		.4byte	bp
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 33
+
+
  1551 0562 1B       		.uleb128 0x1b
  1552 0563 B8030000 		.4byte	.LASF47
  1553 0567 01       		.byte	0x1
@@ -1978,9 +1971,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1598 05c4 00000000 		.4byte	rgSpd
  1599 05c8 1B       		.uleb128 0x1b
  1600 05c9 49010000 		.4byte	.LASF53
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 34
-
-
  1601 05cd 01       		.byte	0x1
  1602 05ce 3B       		.byte	0x3b
  1603 05cf 3A000000 		.4byte	0x3a
@@ -1988,6 +1978,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1605 05d4 03       		.byte	0x3
  1606 05d5 00000000 		.4byte	runTime
  1607 05d9 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 34
+
+
  1608 05da 7D040000 		.4byte	.LASF54
  1609 05de 01       		.byte	0x1
  1610 05df 3C       		.byte	0x3c
@@ -2038,9 +2031,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1655 063f 37000000 		.4byte	.LASF59
  1656 0643 01       		.byte	0x1
  1657 0644 43       		.byte	0x43
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 35
-
-
  1658 0645 FB050000 		.4byte	0x5fb
  1659 0649 05       		.uleb128 0x5
  1660 064a 03       		.byte	0x3
@@ -2048,6 +2038,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1662 064f 1B       		.uleb128 0x1b
  1663 0650 42000000 		.4byte	.LASF60
  1664 0654 01       		.byte	0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 35
+
+
  1665 0655 44       		.byte	0x44
  1666 0656 FB050000 		.4byte	0x5fb
  1667 065a 05       		.uleb128 0x5
@@ -2098,9 +2091,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1712 06ba 01       		.byte	0x1
  1713 06bb 4A       		.byte	0x4a
  1714 06bc 57010000 		.4byte	0x157
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 36
-
-
  1715 06c0 05       		.uleb128 0x5
  1716 06c1 03       		.byte	0x3
  1717 06c2 00000000 		.4byte	RXFlag4
@@ -2108,6 +2098,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1719 06c7 1B020000 		.4byte	.LASF67
  1720 06cb 01       		.byte	0x1
  1721 06cc 4B       		.byte	0x4b
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 36
+
+
  1722 06cd 57010000 		.4byte	0x157
  1723 06d1 05       		.uleb128 0x5
  1724 06d2 03       		.byte	0x3
@@ -2158,9 +2151,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1769 0732 8E       		.byte	0x8e
  1770 0733 42070000 		.4byte	0x742
  1771 0737 1E       		.uleb128 0x1e
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 37
-
-
  1772 0738 81000000 		.4byte	0x81
  1773 073c 1E       		.uleb128 0x1e
  1774 073d 81000000 		.4byte	0x81
@@ -2168,6 +2158,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1776 0742 1D       		.uleb128 0x1d
  1777 0743 32040000 		.4byte	.LASF73
  1778 0747 09       		.byte	0x9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 37
+
+
  1779 0748 8E       		.byte	0x8e
  1780 0749 58070000 		.4byte	0x758
  1781 074d 1E       		.uleb128 0x1e
@@ -2218,9 +2211,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1826 07b0 D5010000 		.4byte	.LASF79
  1827 07b4 08       		.byte	0x8
  1828 07b5 57       		.byte	0x57
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 38
-
-
  1829 07b6 20       		.uleb128 0x20
  1830 07b7 00000000 		.4byte	.LASF80
  1831 07bb 09       		.byte	0x9
@@ -2228,6 +2218,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1833 07bd 00       		.byte	0
  1834              		.section	.debug_abbrev,"",%progbits
  1835              	.Ldebug_abbrev0:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 38
+
+
  1836 0000 01       		.uleb128 0x1
  1837 0001 11       		.uleb128 0x11
  1838 0002 01       		.byte	0x1
@@ -2278,9 +2271,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1883 002f 0B       		.uleb128 0xb
  1884 0030 3E       		.uleb128 0x3e
  1885 0031 0B       		.uleb128 0xb
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 39
-
-
  1886 0032 03       		.uleb128 0x3
  1887 0033 08       		.uleb128 0x8
  1888 0034 00       		.byte	0
@@ -2288,6 +2278,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1890 0036 05       		.uleb128 0x5
  1891 0037 16       		.uleb128 0x16
  1892 0038 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 39
+
+
  1893 0039 03       		.uleb128 0x3
  1894 003a 0E       		.uleb128 0xe
  1895 003b 3A       		.uleb128 0x3a
@@ -2338,9 +2331,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1940 0068 01       		.byte	0x1
  1941 0069 49       		.uleb128 0x49
  1942 006a 13       		.uleb128 0x13
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 40
-
-
  1943 006b 01       		.uleb128 0x1
  1944 006c 13       		.uleb128 0x13
  1945 006d 00       		.byte	0
@@ -2348,6 +2338,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1947 006f 0A       		.uleb128 0xa
  1948 0070 21       		.uleb128 0x21
  1949 0071 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 40
+
+
  1950 0072 49       		.uleb128 0x49
  1951 0073 13       		.uleb128 0x13
  1952 0074 2F       		.uleb128 0x2f
@@ -2398,9 +2391,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  1997 00a1 0E       		.uleb128 0xe
  1998 00a2 1C       		.uleb128 0x1c
  1999 00a3 0D       		.uleb128 0xd
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 41
-
-
  2000 00a4 00       		.byte	0
  2001 00a5 00       		.byte	0
  2002 00a6 0F       		.uleb128 0xf
@@ -2408,6 +2398,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2004 00a8 00       		.byte	0
  2005 00a9 3F       		.uleb128 0x3f
  2006 00aa 19       		.uleb128 0x19
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 41
+
+
  2007 00ab 03       		.uleb128 0x3
  2008 00ac 0E       		.uleb128 0xe
  2009 00ad 3A       		.uleb128 0x3a
@@ -2458,9 +2451,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2054 00dc 00       		.byte	0
  2055 00dd 03       		.uleb128 0x3
  2056 00de 0E       		.uleb128 0xe
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 42
-
-
  2057 00df 3A       		.uleb128 0x3a
  2058 00e0 0B       		.uleb128 0xb
  2059 00e1 3B       		.uleb128 0x3b
@@ -2468,6 +2458,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2061 00e3 49       		.uleb128 0x49
  2062 00e4 13       		.uleb128 0x13
  2063 00e5 02       		.uleb128 0x2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 42
+
+
  2064 00e6 17       		.uleb128 0x17
  2065 00e7 00       		.byte	0
  2066 00e8 00       		.byte	0
@@ -2518,9 +2511,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2111 011c 16       		.uleb128 0x16
  2112 011d 2E       		.uleb128 0x2e
  2113 011e 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 43
-
-
  2114 011f 3F       		.uleb128 0x3f
  2115 0120 19       		.uleb128 0x19
  2116 0121 03       		.uleb128 0x3
@@ -2528,6 +2518,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2118 0123 3A       		.uleb128 0x3a
  2119 0124 0B       		.uleb128 0xb
  2120 0125 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 43
+
+
  2121 0126 0B       		.uleb128 0xb
  2122 0127 49       		.uleb128 0x49
  2123 0128 13       		.uleb128 0x13
@@ -2578,9 +2571,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2168 0158 0B       		.uleb128 0xb
  2169 0159 49       		.uleb128 0x49
  2170 015a 13       		.uleb128 0x13
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 44
-
-
  2171 015b 1C       		.uleb128 0x1c
  2172 015c 0B       		.uleb128 0xb
  2173 015d 00       		.byte	0
@@ -2588,6 +2578,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2175 015f 1A       		.uleb128 0x1a
  2176 0160 34       		.uleb128 0x34
  2177 0161 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 44
+
+
  2178 0162 03       		.uleb128 0x3
  2179 0163 0E       		.uleb128 0xe
  2180 0164 3A       		.uleb128 0x3a
@@ -2638,9 +2631,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2225 0191 00       		.byte	0
  2226 0192 1D       		.uleb128 0x1d
  2227 0193 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 45
-
-
  2228 0194 01       		.byte	0x1
  2229 0195 3F       		.uleb128 0x3f
  2230 0196 19       		.uleb128 0x19
@@ -2648,6 +2638,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2232 0198 0E       		.uleb128 0xe
  2233 0199 3A       		.uleb128 0x3a
  2234 019a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 45
+
+
  2235 019b 3B       		.uleb128 0x3b
  2236 019c 0B       		.uleb128 0xb
  2237 019d 27       		.uleb128 0x27
@@ -2698,9 +2691,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2282 01ca 27       		.uleb128 0x27
  2283 01cb 19       		.uleb128 0x19
  2284 01cc 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 46
-
-
  2285 01cd 19       		.uleb128 0x19
  2286 01ce 00       		.byte	0
  2287 01cf 00       		.byte	0
@@ -2708,6 +2698,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2289              		.section	.debug_loc,"",%progbits
  2290              	.Ldebug_loc0:
  2291              	.LLST0:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 46
+
+
  2292 0000 00000000 		.4byte	.LVL29
  2293 0004 0A000000 		.4byte	.LVL31
  2294 0008 0100     		.2byte	0x1
@@ -2758,9 +2751,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2339 007d 32000000 		.4byte	.LVL52
  2340 0081 3E000000 		.4byte	.LVL55
  2341 0085 0100     		.2byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 47
-
-
  2342 0087 54       		.byte	0x54
  2343 0088 3E000000 		.4byte	.LVL55
  2344 008c 48000000 		.4byte	.LFE67
@@ -2768,6 +2758,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2346 0092 50       		.byte	0x50
  2347 0093 00000000 		.4byte	0
  2348 0097 00000000 		.4byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 47
+
+
  2349              	.LLST4:
  2350 009b 04000000 		.4byte	.LVL49
  2351 009f 08000000 		.4byte	.LVL50
@@ -2818,9 +2811,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2396 0113 36000000 		.4byte	.LVL64
  2397 0117 0200     		.2byte	0x2
  2398 0119 30       		.byte	0x30
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 48
-
-
  2399 011a 9F       		.byte	0x9f
  2400 011b 36000000 		.4byte	.LVL64
  2401 011f BA000000 		.4byte	.LVL78
@@ -2828,6 +2818,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2403 0125 55       		.byte	0x55
  2404 0126 BA000000 		.4byte	.LVL78
  2405 012a E4000000 		.4byte	.LFE68
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 48
+
+
  2406 012e 0100     		.2byte	0x1
  2407 0130 50       		.byte	0x50
  2408 0131 00000000 		.4byte	0
@@ -2878,9 +2871,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2453 000e 0000     		.2byte	0
  2454 0010 00000000 		.4byte	.LFB63
  2455 0014 50020000 		.4byte	.LFE63-.LFB63
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 49
-
-
  2456 0018 00000000 		.4byte	.LFB64
  2457 001c 24000000 		.4byte	.LFE64-.LFB64
  2458 0020 00000000 		.4byte	.LFB65
@@ -2888,6 +2878,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2460 0028 00000000 		.4byte	.LFB66
  2461 002c 54000000 		.4byte	.LFE66-.LFB66
  2462 0030 00000000 		.4byte	.LFB67
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 49
+
+
  2463 0034 48000000 		.4byte	.LFE67-.LFB67
  2464 0038 00000000 		.4byte	.LFB68
  2465 003c E4000000 		.4byte	.LFE68-.LFB68
@@ -2938,9 +2931,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2496 0037 52584D65 		.ascii	"RXMessage3\000"
  2496      73736167 
  2496      653300
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 50
-
-
  2497              	.LASF60:
  2498 0042 52584D65 		.ascii	"RXMessage4\000"
  2498      73736167 
@@ -2948,6 +2938,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2499              	.LASF61:
  2500 004d 52584D65 		.ascii	"RXMessage5\000"
  2500      73736167 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 50
+
+
  2500      653500
  2501              	.LASF0:
  2502 0058 7369676E 		.ascii	"signed char\000"
@@ -2998,9 +2991,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2527              	.LASF83:
  2528 00bf 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\GitHub\\VTM17_Dash_7se"
  2528      73657273 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 51
-
-
  2528      5C636861 
  2528      726C5C44 
  2528      6F63756D 
@@ -3008,6 +2998,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2529      4D31375F 
  2529      44617368 
  2529      5F375345 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 51
+
+
  2529      475C5654 
  2530 011d 6C61795F 		.ascii	"lay_7seg.cydsn\000"
  2530      37736567 
@@ -3058,9 +3051,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2554      6720696E 
  2554      7400
  2555              	.LASF36:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 52
-
-
  2556 01ab 50616765 		.ascii	"PageButton\000"
  2556      42757474 
  2556      6F6E00
@@ -3068,6 +3058,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2558 01b6 42726967 		.ascii	"BrightGear\000"
  2558      68744765 
  2558      617200
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 52
+
+
  2559              	.LASF69:
  2560 01c1 44697370 		.ascii	"DispUpdate\000"
  2560      55706461 
@@ -3118,9 +3111,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2585              	.LASF43:
  2586 024c 6D657373 		.ascii	"messagePWM\000"
  2586      61676550 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 53
-
-
  2586      574D00
  2587              	.LASF1:
  2588 0257 756E7369 		.ascii	"unsigned char\000"
@@ -3128,6 +3118,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2588      20636861 
  2588      7200
  2589              	.LASF31:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 53
+
+
  2590 0265 5374696C 		.ascii	"StillPressed\000"
  2590      6C507265 
  2590      73736564 
@@ -3178,9 +3171,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2608      6D626572 
  2609              	.LASF3:
  2610 02fb 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 54
-
-
  2610      7420756E 
  2610      7369676E 
  2610      65642069 
@@ -3188,6 +3178,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2611              	.LASF46:
  2612 030e 6E74726C 		.ascii	"ntrl\000"
  2612      00
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 54
+
+
  2613              	.LASF16:
  2614 0313 63686172 		.ascii	"char\000"
  2614      00
@@ -3238,9 +3231,6 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2634      20756E73 
  2634      69676E65 
  2634      6420696E 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 55
-
-
  2634      7400
  2635              	.LASF20:
  2636 03fc 43414E5F 		.ascii	"CAN_TX_MSG\000"
@@ -3248,6 +3238,9 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cchZJXZd.s 			page 1
  2636      534700
  2637              	.LASF15:
  2638 0407 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc1q8E1K.s 			page 55
+
+
  2638      6C6500
  2639              	.LASF28:
  2640 040e 44696167 		.ascii	"DiagUpdate\000"

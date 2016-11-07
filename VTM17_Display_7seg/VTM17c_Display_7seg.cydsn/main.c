@@ -138,7 +138,7 @@ int Brightness(int TargBrightness, int GearBrightness)
 }
 
 //This function updates the display in the driving state
-int DriveUpdate()
+int DriveUpdate(int Gear)
 {
     //Display the selected values
     if(rpm < 1500){ //Display Throttle Postion while engine off
@@ -150,18 +150,20 @@ int DriveUpdate()
     LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
     LED_Driver_LRBWS_SetRC(15,1);//Set DP on position 6 of display
     LED_Driver_LRBWS_Write7SegNumberDec(et,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); 
+    LED_Driver_Gear_Write7SegDigitDec(Gear,0);
                
 return 0;
 }
 
 //This function updates the display in the diagnostic state.
-int DiagUpdate()
+int DiagUpdate(int Gear)
 {
      //Display the selected values
     LED_Driver_LRBWS_Write7SegNumberDec(rpm,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
     LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
     LED_Driver_LRBWS_SetRC(15,1);//Set DP on position 6 of display
-    LED_Driver_LRBWS_Write7SegNumberDec(8888,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);    
+    LED_Driver_LRBWS_Write7SegNumberDec(8888,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);  
+    LED_Driver_Gear_Write7SegDigitDec(Gear,0);
 return 0;
 }
 
@@ -190,6 +192,47 @@ else if(StillPressed == 1 && ButtonVal == 0)
 return StillPressed;
 }
 
+int GearCalculation()
+{
+//Gear Calculation
+//Convert Wheel speed to wheel RPM
+int Gear = 0;
+float Red1 = 18.6955;
+float Red2 = 13.4048;
+float Red3 = 10.1561;
+float Red4 = 8.1218;
+float Red5 = 6.4974;
+
+float ToleranceHighGear =  1;
+float ToleranceLowGear = 2.25;
+ 
+float TireD = 18;
+float TireC = TireD*3.14159;
+float TireMPR = TireC/(5280*12);
+
+float AvgRWhlSpd = (ldSpd + rdSpd)/2;
+
+float wheelRPM = AvgRWhlSpd/(60*TireMPR);
+float CalcRed = 0;
+
+CalcRed = rpm/wheelRPM;
+
+//Calculate the Gear
+if(Red1-ToleranceLowGear < CalcRed && Red1+ToleranceLowGear > CalcRed)
+    Gear = 1;
+else if(Red2-ToleranceLowGear < CalcRed && Red2+ToleranceLowGear > CalcRed)
+    Gear = 2;
+else if(Red3-ToleranceHighGear < CalcRed && Red3+ToleranceHighGear > CalcRed)
+    Gear = 3;
+else if(Red4-ToleranceHighGear < CalcRed && Red4+ToleranceHighGear > CalcRed)
+    Gear = 4;
+else if(Red5-ToleranceHighGear < CalcRed && Red5+ToleranceHighGear > CalcRed)
+    Gear = 5;
+else
+    Gear = 0;
+    
+return Gear;
+}
 
 int main()
 {
@@ -197,6 +240,8 @@ int main()
     int BrightGear = 180;
     int Bright4Dig = 255;
     
+    //Variables
+    int Gear = 0;
     int PageButton = 0;
     int ReadyToDisplay = 1;
     int count = 0;
@@ -240,6 +285,7 @@ int main()
         {
             //Parse Data
             ParseCAN();
+            Gear = GearCalculation();
             //Reset flags, ready for next round of data    
             RXFlag0 =0;
             RXFlag1 =0;
@@ -254,14 +300,14 @@ int main()
         case Drive: //Display items needed for driving: BatV, ECT, TBD, Gear, Shift Lights
             if(ReadyToDisplay == 1)
             {
-                DriveUpdate();
+                DriveUpdate(Gear);
                 ReadyToDisplay = 1; 
             }
             break;
         case Diag: //Display values wanted for diagnostic work: RPM?, TPS?, ECT?: all TBD maybe not even need this
             if(ReadyToDisplay == 1)
             {
-                DiagUpdate();
+                DiagUpdate(Gear);
                 ReadyToDisplay = 1;
             }
             break;
