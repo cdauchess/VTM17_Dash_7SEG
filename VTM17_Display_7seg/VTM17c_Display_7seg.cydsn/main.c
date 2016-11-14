@@ -36,6 +36,7 @@
 #define Shift3 8000
 #define Shift4 8500
 #define Shift5 9000
+#define Overrev 500
 
 //Global Variables
 
@@ -255,50 +256,76 @@ int ShiftLights()
     
     if(rpm>= Shift1 && rpm < Shift2)
     {
-        for(i = Light1; i <= Light1; i++)
-        {
-        LED_Driver_LRBWS_SetRC(i,Column);
-        }
-        for(i = Light2; i<=Light5; i++)
-        {
-        LED_Driver_LRBWS_ClearRC(i,Column);
-        }
+        LED_Driver_LRBWS_SetRC(8,Column);
+        LED_Driver_LRBWS_SetRC(9,Column);
+        
+        LED_Driver_LRBWS_ClearRC(10,Column);
+        LED_Driver_LRBWS_ClearRC(11,Column);
+        LED_Driver_LRBWS_ClearRC(12,Column);
+        LED_Driver_LRBWS_ClearRC(13,Column);
+        LED_Driver_LRBWS_ClearRC(14,Column);
+        LED_Driver_LRBWS_ClearRC(15,Column);
+        LED_Driver_LRBWS_ClearRC(16,Column);
+        LED_Driver_LRBWS_ClearRC(17,Column);
     }
     else if(rpm>= Shift2 && rpm < Shift3)
     {
-        for(i = Light1; i <= Light2; i++)
-        {
-        LED_Driver_LRBWS_SetRC(i,Column);
-        }
-        for(i = Light3; i<=Light5; i++)
-        {
-        LED_Driver_LRBWS_ClearRC(i,Column);
-        }
+        LED_Driver_LRBWS_SetRC(8,Column);
+        LED_Driver_LRBWS_SetRC(9,Column);
+        LED_Driver_LRBWS_SetRC(10,Column);
+        LED_Driver_LRBWS_SetRC(11,Column);
+        
+        LED_Driver_LRBWS_ClearRC(12,Column);
+        LED_Driver_LRBWS_ClearRC(13,Column);
+        LED_Driver_LRBWS_ClearRC(14,Column);
+        LED_Driver_LRBWS_ClearRC(15,Column);
+        LED_Driver_LRBWS_ClearRC(16,Column);
+        LED_Driver_LRBWS_ClearRC(17,Column);        
     }
     else if(rpm>= Shift3 && rpm < Shift4)
     {
-        for(i = Light1; i <= Light3; i++)
-        {
-        LED_Driver_LRBWS_SetRC(i,Column);
-        }
-        for(i = Light4; i<=Light5; i++)
-        {
-        LED_Driver_LRBWS_ClearRC(i,Column);
-        }
+        LED_Driver_LRBWS_SetRC(8,Column);
+        LED_Driver_LRBWS_SetRC(9,Column);
+        LED_Driver_LRBWS_SetRC(10,Column);
+        LED_Driver_LRBWS_SetRC(11,Column);
+        LED_Driver_LRBWS_SetRC(12,Column);
+        LED_Driver_LRBWS_SetRC(13,Column);
+        
+        LED_Driver_LRBWS_ClearRC(14,Column);
+        LED_Driver_LRBWS_ClearRC(15,Column);
+        LED_Driver_LRBWS_ClearRC(16,Column);
+        LED_Driver_LRBWS_ClearRC(17,Column);        
     }
     else if(rpm>= Shift4 && rpm < Shift5)
     {
-        for(i = Light1; i <= Light4; i++)
-        {
-        LED_Driver_LRBWS_SetRC(i,Column);
-        }       
+        LED_Driver_LRBWS_SetRC(8,Column);
+        LED_Driver_LRBWS_SetRC(9,Column);
+        LED_Driver_LRBWS_SetRC(10,Column);
+        LED_Driver_LRBWS_SetRC(11,Column);
+        LED_Driver_LRBWS_SetRC(12,Column);
+        LED_Driver_LRBWS_SetRC(13,Column);
+        LED_Driver_LRBWS_SetRC(14,Column);
+        LED_Driver_LRBWS_SetRC(15,Column);
+        
+        LED_Driver_LRBWS_ClearRC(16,Column);
+        LED_Driver_LRBWS_ClearRC(17,Column);  
     }
-//    else if(rpm >= Shift5 && rpm < Shift5+500)
-//    {
-//
-//    }
-    else if(rpm >= Shift5 && FlashCounter > FlashFreq)
+    else if(rpm >= Shift5 && rpm < Shift5+Overrev)
     {
+        LED_Driver_LRBWS_SetRC(8,Column);
+        LED_Driver_LRBWS_SetRC(9,Column);
+        LED_Driver_LRBWS_SetRC(10,Column);
+        LED_Driver_LRBWS_SetRC(11,Column);
+        LED_Driver_LRBWS_SetRC(12,Column);
+        LED_Driver_LRBWS_SetRC(13,Column);
+        LED_Driver_LRBWS_SetRC(14,Column);
+        LED_Driver_LRBWS_SetRC(15,Column);
+        LED_Driver_LRBWS_SetRC(16,Column);
+        LED_Driver_LRBWS_SetRC(17,Column);
+    }
+    else if(rpm >= Shift5+Overrev && FlashCounter > FlashFreq)
+    {
+        
         //Flash all Lights
         for(i = Light1; i<=Light5; i++)
         {
@@ -336,7 +363,7 @@ int main()
     
     batV = 13.00;
     tp = 15;
-    rpm = 6300;
+    rpm = 6400;
     int PrevState = 1;
     
     //Test Variables
@@ -366,7 +393,7 @@ int main()
     {   
         //The following if statement items are for testing only, remove when display is on vehicle.
         //FIXME
-        if(wait == 1)
+        if(wait == 500)
         {
             et++;
             count++;    
@@ -375,42 +402,14 @@ int main()
             //TEST ITEMS
             //Toggle Shift LEDS
             if(Direction == 1)
-                rpm= rpm+500;
+                rpm= rpm+10;
             else if(Direction == 0)
-                rpm = rpm -500;
+                rpm = rpm -10;
             
             if(rpm > 10000)
                 Direction = 0;
             else if(rpm <7000)
-                Direction = 1;
-            
-//            if(Direction == 1)
-//            {
-//            LED_Driver_LRBWS_ToggleRC(Left,4);
-//            LED_Driver_LRBWS_ToggleRC(Right,4);
-//            Left = Left+2;
-//            Right = Right+2;
-//            }
-//            else if(Direction == 0)
-//            {
-//            LED_Driver_LRBWS_ToggleRC(Left,4);
-//            LED_Driver_LRBWS_ToggleRC(Right,4);
-//            Left = Left-2;
-//            Right = Right-2;                
-//            }
-//                        if(Left == 8)
-//            {//increment up
-//            Direction = 1;
-//            LED_Driver_LRBWS_ToggleRC(Left,4);
-//            LED_Driver_LRBWS_ToggleRC(Right,4);
-//            }
-//            else if(Left == 16)
-//            {
-//                Direction = 0;
-//            LED_Driver_LRBWS_ToggleRC(Left,4);
-//            LED_Driver_LRBWS_ToggleRC(Right,4);
-//            }
-            
+                Direction = 1;           
         }
         wait++;
         if(count == 10)

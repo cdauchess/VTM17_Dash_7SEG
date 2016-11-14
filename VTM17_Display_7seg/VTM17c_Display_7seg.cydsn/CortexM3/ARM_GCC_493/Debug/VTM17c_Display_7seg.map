@@ -737,7 +737,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 0x00000000                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x2d16
+.text           0x00000000     0x2e36
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -774,299 +774,300 @@ END GROUP
                 0x0000041c       0xe0 .\CortexM3\ARM_GCC_493\Debug\main.o
                 0x0000041c                GearCalculation
  .text.ShiftLights
-                0x000004fc      0x13c .\CortexM3\ARM_GCC_493\Debug\main.o
+                0x000004fc      0x258 .\CortexM3\ARM_GCC_493\Debug\main.o
                 0x000004fc                ShiftLights
- .text.main     0x00000638      0x150 .\CortexM3\ARM_GCC_493\Debug\main.o
-                0x00000638                main
+ *fill*         0x00000754        0x4 
+ .text.main     0x00000758      0x150 .\CortexM3\ARM_GCC_493\Debug\main.o
+                0x00000758                main
  .text.IntDefaultHandler
-                0x00000788        0x4 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000788                IntDefaultHandler
- .text.Start_c  0x0000078c       0x4c .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x0000078c                Start_c
+                0x000008a8        0x4 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x000008a8                IntDefaultHandler
+ .text.Start_c  0x000008ac       0x4c .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x000008ac                Start_c
  .text.initialize_psoc
-                0x000007d8       0x78 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x000007d8                initialize_psoc
+                0x000008f8       0x78 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x000008f8                initialize_psoc
  .text.CyClockStartupError
-                0x00000850        0x4 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+                0x00000970        0x4 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x00000854       0x34 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+                0x00000974       0x34 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x00000888       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+                0x000009a8       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
  .text.CYMEMZERO
-                0x000008b0        0xc .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+                0x000009d0        0xc .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x000008bc       0xdc .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+                0x000009dc       0xdc .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
  .text.CYCONFIGCPY
-                0x00000998        0x8 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+                0x00000ab8        0x8 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
  .text.cyfitter_cfg
-                0x000009a0      0x178 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
-                0x000009a0                cyfitter_cfg
+                0x00000ac0      0x178 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+                0x00000ac0                cyfitter_cfg
  .text.LED_Driver_Gear_DmaInit
-                0x00000b18      0x13c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+                0x00000c38      0x13c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
  .text.LED_Driver_Gear_DmaEnable
-                0x00000c54       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+                0x00000d74       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
  .text.LED_Driver_Gear_Enable
-                0x00000c90       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
-                0x00000c90                LED_Driver_Gear_Enable
+                0x00000db0       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+                0x00000db0                LED_Driver_Gear_Enable
  .text.LED_Driver_Gear_ClearDisplayAll
-                0x00000cb4       0x18 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
-                0x00000cb4                LED_Driver_Gear_ClearDisplayAll
+                0x00000dd4       0x18 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+                0x00000dd4                LED_Driver_Gear_ClearDisplayAll
  .text.LED_Driver_Gear_Init
-                0x00000ccc       0x30 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
-                0x00000ccc                LED_Driver_Gear_Init
+                0x00000dec       0x30 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+                0x00000dec                LED_Driver_Gear_Init
  .text.LED_Driver_Gear_Start
-                0x00000cfc       0x1c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
-                0x00000cfc                LED_Driver_Gear_Start
+                0x00000e1c       0x1c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+                0x00000e1c                LED_Driver_Gear_Start
  .text.LED_Driver_Gear_EncodeNumber7Seg
-                0x00000d18       0x10 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
-                0x00000d18                LED_Driver_Gear_EncodeNumber7Seg
+                0x00000e38       0x10 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+                0x00000e38                LED_Driver_Gear_EncodeNumber7Seg
  .text.LED_Driver_Gear_Write7SegDigitDec
-                0x00000d28       0x1c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
-                0x00000d28                LED_Driver_Gear_Write7SegDigitDec
+                0x00000e48       0x1c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+                0x00000e48                LED_Driver_Gear_Write7SegDigitDec
  .text.LED_Driver_Gear_SetBrightness
-                0x00000d44       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
-                0x00000d44                LED_Driver_Gear_SetBrightness
+                0x00000e64       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+                0x00000e64                LED_Driver_Gear_SetBrightness
  .text.LED_Driver_LRBWS_DmaInit
-                0x00000d80      0x1d0 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x00000ea0      0x1d0 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
  .text.LED_Driver_LRBWS_DmaEnable
-                0x00000f50       0x40 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x00001070       0x40 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
  .text.LED_Driver_LRBWS_Enable
-                0x00000f90       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x00000f90                LED_Driver_LRBWS_Enable
+                0x000010b0       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x000010b0                LED_Driver_LRBWS_Enable
  .text.LED_Driver_LRBWS_SetRC
-                0x00000fb8       0x4c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x00000fb8                LED_Driver_LRBWS_SetRC
+                0x000010d8       0x4c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x000010d8                LED_Driver_LRBWS_SetRC
  .text.LED_Driver_LRBWS_ClearRC
-                0x00001004       0x50 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x00001004                LED_Driver_LRBWS_ClearRC
+                0x00001124       0x50 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x00001124                LED_Driver_LRBWS_ClearRC
  .text.LED_Driver_LRBWS_ToggleRC
-                0x00001054       0x4c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x00001054                LED_Driver_LRBWS_ToggleRC
+                0x00001174       0x4c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x00001174                LED_Driver_LRBWS_ToggleRC
  .text.LED_Driver_LRBWS_ClearDisplayAll
-                0x000010a0       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x000010a0                LED_Driver_LRBWS_ClearDisplayAll
+                0x000011c0       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x000011c0                LED_Driver_LRBWS_ClearDisplayAll
  .text.LED_Driver_LRBWS_Init
-                0x000010c8       0x38 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x000010c8                LED_Driver_LRBWS_Init
+                0x000011e8       0x38 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x000011e8                LED_Driver_LRBWS_Init
  .text.LED_Driver_LRBWS_Start
-                0x00001100       0x20 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x00001100                LED_Driver_LRBWS_Start
+                0x00001220       0x20 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x00001220                LED_Driver_LRBWS_Start
  .text.LED_Driver_LRBWS_EncodeNumber7Seg
-                0x00001120       0x10 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x00001120                LED_Driver_LRBWS_EncodeNumber7Seg
+                0x00001240       0x10 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x00001240                LED_Driver_LRBWS_EncodeNumber7Seg
  .text.LED_Driver_LRBWS_EncodeChar7Seg
-                0x00001130       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x00001130                LED_Driver_LRBWS_EncodeChar7Seg
+                0x00001250       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x00001250                LED_Driver_LRBWS_EncodeChar7Seg
  .text.LED_Driver_LRBWS_Write7SegNumberDec
-                0x00001154      0x1c8 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x00001154                LED_Driver_LRBWS_Write7SegNumberDec
+                0x00001274      0x1c8 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x00001274                LED_Driver_LRBWS_Write7SegNumberDec
  .text.LED_Driver_LRBWS_SetBrightness
-                0x0000131c       0x40 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
-                0x0000131c                LED_Driver_LRBWS_SetBrightness
+                0x0000143c       0x40 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+                0x0000143c                LED_Driver_LRBWS_SetBrightness
  .text.LED_Driver_Gear_DMA_Com_DmaInitialize
-                0x0000135c       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Com_dma.o)
-                0x0000135c                LED_Driver_Gear_DMA_Com_DmaInitialize
+                0x0000147c       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Com_dma.o)
+                0x0000147c                LED_Driver_Gear_DMA_Com_DmaInitialize
  .text.LED_Driver_Gear_DMA_Seg_DmaInitialize
-                0x00001398       0x40 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Seg_dma.o)
-                0x00001398                LED_Driver_Gear_DMA_Seg_DmaInitialize
+                0x000014b8       0x40 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Seg_dma.o)
+                0x000014b8                LED_Driver_Gear_DMA_Seg_DmaInitialize
  .text.LED_Driver_LRBWS_DMA_Com_DmaInitialize
-                0x000013d8       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Com_dma.o)
-                0x000013d8                LED_Driver_LRBWS_DMA_Com_DmaInitialize
+                0x000014f8       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Com_dma.o)
+                0x000014f8                LED_Driver_LRBWS_DMA_Com_DmaInitialize
  .text.LED_Driver_LRBWS_DMA_Seg_DmaInitialize
-                0x00001414       0x40 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Seg_dma.o)
-                0x00001414                LED_Driver_LRBWS_DMA_Seg_DmaInitialize
- *fill*         0x00001454        0x4 
- .text          0x00001458       0x20 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyBootAsmGnu.o)
-                0x00001458                CyDelayCycles
-                0x00001468                CyEnterCriticalSection
-                0x00001470                CyExitCriticalSection
+                0x00001534       0x40 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Seg_dma.o)
+                0x00001534                LED_Driver_LRBWS_DMA_Seg_DmaInitialize
+ *fill*         0x00001574        0x4 
+ .text          0x00001578       0x20 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyBootAsmGnu.o)
+                0x00001578                CyDelayCycles
+                0x00001588                CyEnterCriticalSection
+                0x00001590                CyExitCriticalSection
  .text.CyDmacConfigure
-                0x00001478       0x34 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
-                0x00001478                CyDmacConfigure
+                0x00001598       0x34 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+                0x00001598                CyDmacConfigure
  .text.CyDmaChEnable
-                0x000014ac       0x38 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
-                0x000014ac                CyDmaChEnable
+                0x000015cc       0x38 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+                0x000015cc                CyDmaChEnable
  .text.CyDmaChPriority
-                0x000014e4       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
-                0x000014e4                CyDmaChPriority
+                0x00001604       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+                0x00001604                CyDmaChPriority
  .text.CyDmaChSetExtendedAddress
-                0x00001508       0x34 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
-                0x00001508                CyDmaChSetExtendedAddress
+                0x00001628       0x34 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+                0x00001628                CyDmaChSetExtendedAddress
  .text.CyDmaChSetInitialTd
-                0x0000153c       0x18 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
-                0x0000153c                CyDmaChSetInitialTd
+                0x0000165c       0x18 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+                0x0000165c                CyDmaChSetInitialTd
  .text.CyDmaChSetConfiguration
-                0x00001554       0x48 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
-                0x00001554                CyDmaChSetConfiguration
+                0x00001674       0x48 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+                0x00001674                CyDmaChSetConfiguration
  .text.CyDmaTdAllocate
-                0x0000159c       0x34 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
-                0x0000159c                CyDmaTdAllocate
+                0x000016bc       0x34 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+                0x000016bc                CyDmaTdAllocate
  .text.CyDmaTdSetConfiguration
-                0x000015d0       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
-                0x000015d0                CyDmaTdSetConfiguration
+                0x000016f0       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+                0x000016f0                CyDmaTdSetConfiguration
  .text.CyDmaTdSetAddress
-                0x000015f8       0x1c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
-                0x000015f8                CyDmaTdSetAddress
- .text.CyHalt   0x00001614        0x4 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
-                0x00001614                CyHalt
+                0x00001718       0x1c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+                0x00001718                CyDmaTdSetAddress
+ .text.CyHalt   0x00001734        0x4 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
+                0x00001734                CyHalt
  .text.CyIntSetVector
-                0x00001618       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
-                0x00001618                CyIntSetVector
+                0x00001738       0x28 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
+                0x00001738                CyIntSetVector
  .text.CyIntSetPriority
-                0x00001640       0x30 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
-                0x00001640                CyIntSetPriority
+                0x00001760       0x30 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
+                0x00001760                CyIntSetPriority
  .text.LED_Driver_LRBWS_DMA_BC_DmaInitialize
-                0x00001670       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_BC_dma.o)
-                0x00001670                LED_Driver_LRBWS_DMA_BC_DmaInitialize
+                0x00001790       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_BC_dma.o)
+                0x00001790                LED_Driver_LRBWS_DMA_BC_DmaInitialize
  .text.CAN_Stop
-                0x000016ac       0x5c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x000016ac                CAN_Stop
+                0x000017cc       0x5c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x000017cc                CAN_Stop
  .text.CAN_GlobalIntEnable
-                0x00001708       0x20 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001708                CAN_GlobalIntEnable
+                0x00001828       0x20 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00001828                CAN_GlobalIntEnable
  .text.CAN_Enable
-                0x00001728       0x6c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001728                CAN_Enable
+                0x00001848       0x6c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00001848                CAN_Enable
  .text.CAN_GlobalIntDisable
-                0x00001794       0x20 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001794                CAN_GlobalIntDisable
+                0x000018b4       0x20 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x000018b4                CAN_GlobalIntDisable
  .text.CAN_SetPreScaler
-                0x000017b4       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x000017b4                CAN_SetPreScaler
+                0x000018d4       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x000018d4                CAN_SetPreScaler
  .text.CAN_SetArbiter
-                0x000017d8       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x000017d8                CAN_SetArbiter
+                0x000018f8       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x000018f8                CAN_SetArbiter
  .text.CAN_SetTsegSample
-                0x00001814       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001814                CAN_SetTsegSample
+                0x00001934       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00001934                CAN_SetTsegSample
  .text.CAN_SetRestartType
-                0x00001898       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001898                CAN_SetRestartType
+                0x000019b8       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x000019b8                CAN_SetRestartType
  .text.CAN_SetEdgeMode
-                0x000018d4       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x000018d4                CAN_SetEdgeMode
+                0x000019f4       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x000019f4                CAN_SetEdgeMode
  .text.CAN_SetIrqMask
-                0x00001910       0x18 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001910                CAN_SetIrqMask
+                0x00001a30       0x18 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00001a30                CAN_SetIrqMask
  .text.CAN_RxBufConfig
-                0x00001928       0x90 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001928                CAN_RxBufConfig
+                0x00001a48       0x90 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00001a48                CAN_RxBufConfig
  .text.CAN_TxBufConfig
-                0x000019b8       0x54 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x000019b8                CAN_TxBufConfig
+                0x00001ad8       0x54 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00001ad8                CAN_TxBufConfig
  .text.CAN_RxTxBuffersConfig
-                0x00001a0c       0x50 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001a0c                CAN_RxTxBuffersConfig
+                0x00001b2c       0x50 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00001b2c                CAN_RxTxBuffersConfig
  .text.CAN_Init
-                0x00001a5c       0xe0 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001a5c                CAN_Init
+                0x00001b7c       0xe0 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00001b7c                CAN_Init
  .text.CAN_Start
-                0x00001b3c       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00001b3c                CAN_Start
+                0x00001c5c       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00001c5c                CAN_Start
  .text.CAN_BusOffIsr
-                0x00001b60       0x18 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
-                0x00001b60                CAN_BusOffIsr
+                0x00001c80       0x18 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
+                0x00001c80                CAN_BusOffIsr
  .text.CAN_MsgRXIsr
-                0x00001b78       0x7c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
-                0x00001b78                CAN_MsgRXIsr
- .text.CAN_ISR  0x00001bf4       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
-                0x00001bf4                CAN_ISR
+                0x00001c98       0x7c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
+                0x00001c98                CAN_MsgRXIsr
+ .text.CAN_ISR  0x00001d14       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
+                0x00001d14                CAN_ISR
  .text.CAN_ReceiveMsg
-                0x00001c18       0x1c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
-                0x00001c18                CAN_ReceiveMsg
+                0x00001d38       0x1c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+                0x00001d38                CAN_ReceiveMsg
  .text.CAN_ReceiveMsgRPM
-                0x00001c34       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
-                0x00001c34                CAN_ReceiveMsgRPM
+                0x00001d54       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+                0x00001d54                CAN_ReceiveMsgRPM
  .text.CAN_ReceiveMsgECT
-                0x00001c98       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
-                0x00001c98                CAN_ReceiveMsgECT
+                0x00001db8       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+                0x00001db8                CAN_ReceiveMsgECT
  .text.CAN_ReceiveMsgEGT
-                0x00001cfc       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
-                0x00001cfc                CAN_ReceiveMsgEGT
+                0x00001e1c       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+                0x00001e1c                CAN_ReceiveMsgEGT
  .text.CAN_ReceiveMsgBP
-                0x00001d60       0x68 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
-                0x00001d60                CAN_ReceiveMsgBP
+                0x00001e80       0x68 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+                0x00001e80                CAN_ReceiveMsgBP
  .text.CAN_ReceiveMsgSPD
-                0x00001dc8       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
-                0x00001dc8                CAN_ReceiveMsgSPD
+                0x00001ee8       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+                0x00001ee8                CAN_ReceiveMsgSPD
  .text.CAN_ReceiveMsgOT
-                0x00001e2c       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
-                0x00001e2c                CAN_ReceiveMsgOT
+                0x00001f4c       0x64 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+                0x00001f4c                CAN_ReceiveMsgOT
  .text.LED_Driver_Gear_DMA_BC_DmaInitialize
-                0x00001e90       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_BC_dma.o)
-                0x00001e90                LED_Driver_Gear_DMA_BC_DmaInitialize
+                0x00001fb0       0x3c .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_BC_dma.o)
+                0x00001fb0                LED_Driver_Gear_DMA_BC_DmaInitialize
  .text.Page_Button_Read
-                0x00001ecc        0xc .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(Page_Button.o)
-                0x00001ecc                Page_Button_Read
- .text          0x00001ed8      0x370 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
-                0x00001ed8                __aeabi_drsub
-                0x00001ee0                __aeabi_dsub
-                0x00001ee0                __subdf3
-                0x00001ee4                __aeabi_dadd
-                0x00001ee4                __adddf3
-                0x0000215c                __floatunsidf
-                0x0000215c                __aeabi_ui2d
-                0x0000217c                __floatsidf
-                0x0000217c                __aeabi_i2d
-                0x000021a0                __aeabi_f2d
-                0x000021a0                __extendsfdf2
-                0x000021dc                __floatundidf
-                0x000021dc                __aeabi_ul2d
-                0x000021ec                __floatdidf
-                0x000021ec                __aeabi_l2d
- .text          0x00002248      0x424 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
-                0x00002248                __aeabi_dmul
-                0x00002248                __muldf3
-                0x0000249c                __divdf3
-                0x0000249c                __aeabi_ddiv
- .text          0x0000266c       0x50 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixdfsi.o)
-                0x0000266c                __aeabi_d2iz
-                0x0000266c                __fixdfsi
- .text          0x000026bc       0x40 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixunsdfsi.o)
-                0x000026bc                __aeabi_d2uiz
-                0x000026bc                __fixunsdfsi
- .text          0x000026fc      0x21c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
-                0x000026fc                __aeabi_frsub
-                0x00002704                __subsf3
-                0x00002704                __aeabi_fsub
-                0x00002708                __aeabi_fadd
-                0x00002708                __addsf3
-                0x00002868                __aeabi_ui2f
-                0x00002868                __floatunsisf
-                0x00002870                __aeabi_i2f
-                0x00002870                __floatsisf
-                0x0000288c                __aeabi_ul2f
-                0x0000288c                __floatundisf
-                0x0000289c                __aeabi_l2f
-                0x0000289c                __floatdisf
- .text          0x00002918      0x2a0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
-                0x00002918                __mulsf3
-                0x00002918                __aeabi_fmul
-                0x00002a80                __aeabi_fdiv
-                0x00002a80                __divsf3
- .text          0x00002bb8       0xec c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_cmpsf2.o)
-                0x00002bb8                __gesf2
-                0x00002bb8                __gtsf2
-                0x00002bc0                __lesf2
-                0x00002bc0                __ltsf2
-                0x00002bc8                __nesf2
-                0x00002bc8                __eqsf2
-                0x00002bc8                __cmpsf2
-                0x00002c28                __aeabi_cfrcmple
-                0x00002c30                __aeabi_cfcmpeq
-                0x00002c30                __aeabi_cfcmple
-                0x00002c40                __aeabi_fcmpeq
-                0x00002c54                __aeabi_fcmplt
-                0x00002c68                __aeabi_fcmple
-                0x00002c7c                __aeabi_fcmpge
-                0x00002c90                __aeabi_fcmpgt
+                0x00001fec        0xc .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(Page_Button.o)
+                0x00001fec                Page_Button_Read
+ .text          0x00001ff8      0x370 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x00001ff8                __aeabi_drsub
+                0x00002000                __aeabi_dsub
+                0x00002000                __subdf3
+                0x00002004                __aeabi_dadd
+                0x00002004                __adddf3
+                0x0000227c                __floatunsidf
+                0x0000227c                __aeabi_ui2d
+                0x0000229c                __floatsidf
+                0x0000229c                __aeabi_i2d
+                0x000022c0                __aeabi_f2d
+                0x000022c0                __extendsfdf2
+                0x000022fc                __floatundidf
+                0x000022fc                __aeabi_ul2d
+                0x0000230c                __floatdidf
+                0x0000230c                __aeabi_l2d
+ .text          0x00002368      0x424 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivdf3.o)
+                0x00002368                __aeabi_dmul
+                0x00002368                __muldf3
+                0x000025bc                __divdf3
+                0x000025bc                __aeabi_ddiv
+ .text          0x0000278c       0x50 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixdfsi.o)
+                0x0000278c                __aeabi_d2iz
+                0x0000278c                __fixdfsi
+ .text          0x000027dc       0x40 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixunsdfsi.o)
+                0x000027dc                __aeabi_d2uiz
+                0x000027dc                __fixunsdfsi
+ .text          0x0000281c      0x21c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x0000281c                __aeabi_frsub
+                0x00002824                __subsf3
+                0x00002824                __aeabi_fsub
+                0x00002828                __aeabi_fadd
+                0x00002828                __addsf3
+                0x00002988                __aeabi_ui2f
+                0x00002988                __floatunsisf
+                0x00002990                __aeabi_i2f
+                0x00002990                __floatsisf
+                0x000029ac                __aeabi_ul2f
+                0x000029ac                __floatundisf
+                0x000029bc                __aeabi_l2f
+                0x000029bc                __floatdisf
+ .text          0x00002a38      0x2a0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x00002a38                __mulsf3
+                0x00002a38                __aeabi_fmul
+                0x00002ba0                __aeabi_fdiv
+                0x00002ba0                __divsf3
+ .text          0x00002cd8       0xec c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_cmpsf2.o)
+                0x00002cd8                __gesf2
+                0x00002cd8                __gtsf2
+                0x00002ce0                __lesf2
+                0x00002ce0                __ltsf2
+                0x00002ce8                __nesf2
+                0x00002ce8                __eqsf2
+                0x00002ce8                __cmpsf2
+                0x00002d48                __aeabi_cfrcmple
+                0x00002d50                __aeabi_cfcmpeq
+                0x00002d50                __aeabi_cfcmple
+                0x00002d60                __aeabi_fcmpeq
+                0x00002d74                __aeabi_fcmplt
+                0x00002d88                __aeabi_fcmple
+                0x00002d9c                __aeabi_fcmpge
+                0x00002db0                __aeabi_fcmpgt
  .text.__libc_init_array
-                0x00002ca4       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x00002ca4                __libc_init_array
- .text.memcpy   0x00002cf0       0x16 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
-                0x00002cf0                memcpy
- .text.memset   0x00002d06       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x00002d06                memset
+                0x00002dc4       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00002dc4                __libc_init_array
+ .text.memcpy   0x00002e10       0x16 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x00002e10                memcpy
+ .text.memset   0x00002e26       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00002e26                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -1079,81 +1080,81 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00002d18        0x0
+.v4_bx          0x00002e38        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00002d18        0x0
+.iplt           0x00002e38        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00002d18        0x4
+.eh_frame       0x00002e38        0x4
  *(.eh_frame)
- .eh_frame      0x00002d18        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .eh_frame      0x00002d18        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
-                0x00002d1c                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00002e38        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .eh_frame      0x00002e38        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x00002e3c                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00002d1c                __exidx_end = .
+                0x00002e3c                __exidx_end = .
 
-.rodata         0x00002d1c      0x63c
+.rodata         0x00002e3c      0x63c
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00002d1c       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
- .rodata        0x00002d40      0x240 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
- .rodata        0x00002f80      0x240 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
- .rodata        0x000031c0      0x160 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
-                0x00003320                . = ALIGN (0x4)
+ .rodata        0x00002e3c       0x24 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+ .rodata        0x00002e60      0x240 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+ .rodata        0x000030a0      0x240 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+ .rodata        0x000032e0      0x160 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+                0x00003440                . = ALIGN (0x4)
  *(.init)
- .init          0x00003320        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00003320                _init
- .init          0x00003324        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x0000332c                . = ALIGN (0x4)
-                0x0000332c                __preinit_array_start = .
+ .init          0x00003440        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00003440                _init
+ .init          0x00003444        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x0000344c                . = ALIGN (0x4)
+                0x0000344c                __preinit_array_start = .
  *(.preinit_array)
-                0x0000332c                __preinit_array_end = .
-                0x0000332c                . = ALIGN (0x4)
-                0x0000332c                __init_array_start = .
+                0x0000344c                __preinit_array_end = .
+                0x0000344c                . = ALIGN (0x4)
+                0x0000344c                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x0000332c        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .init_array    0x00003330        0x4 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x00003334                __init_array_end = .
-                0x00003334                . = ALIGN (0x4)
+ .init_array    0x0000344c        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .init_array    0x00003450        0x4 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x00003454                __init_array_end = .
+                0x00003454                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00003334        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00003334                _fini
- .fini          0x00003338        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00003340                . = ALIGN (0x4)
-                0x00003340                __fini_array_start = .
+ .fini          0x00003454        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00003454                _fini
+ .fini          0x00003458        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00003460                . = ALIGN (0x4)
+                0x00003460                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00003340        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .fini_array    0x00003460        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00003344                __fini_array_end = .
-                0x00003344                . = ALIGN (0x4)
+                0x00003464                __fini_array_end = .
+                0x00003464                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00003344                . = ALIGN (0x4)
+                0x00003464                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00003344                . = ALIGN (0x4)
-                0x00003344                __cy_regions = .
-                0x00003344        0x4 LONG 0x3358 __cy_region_init_ram
-                0x00003348        0x4 LONG 0x1fff8108 __cy_region_start_data
-                0x0000334c        0x4 LONG 0x40 __cy_region_init_size_ram
-                0x00003350        0x4 LONG 0x1b8 __cy_region_zero_size_ram
-                0x00003354                __cy_regions_end = .
-                0x00003358                . = ALIGN (0x8)
- *fill*         0x00003354        0x4 
-                0x00003358                _etext = .
+                0x00003464                . = ALIGN (0x4)
+                0x00003464                __cy_regions = .
+                0x00003464        0x4 LONG 0x3478 __cy_region_init_ram
+                0x00003468        0x4 LONG 0x1fff8108 __cy_region_start_data
+                0x0000346c        0x4 LONG 0x40 __cy_region_init_size_ram
+                0x00003470        0x4 LONG 0x1b8 __cy_region_zero_size_ram
+                0x00003474                __cy_regions_end = .
+                0x00003478                . = ALIGN (0x8)
+ *fill*         0x00003474        0x4 
+                0x00003478                _etext = .
 
 .cy_checksum_exclude
-                0x00003358        0x0
+                0x00003478        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000      0x100
@@ -1168,7 +1169,7 @@ END GROUP
  .noinit        0x1fff8104        0x1 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
                 0x1fff8104                CyResetStatus
 
-.data           0x1fff8108       0x40 load address 0x00003358
+.data           0x1fff8108       0x40 load address 0x00003478
                 0x1fff8108                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff8108        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
@@ -1200,10 +1201,10 @@ END GROUP
  *(.ram)
                 0x1fff8148                _edata = .
 
-.igot.plt       0x1fff8148        0x0 load address 0x00003398
+.igot.plt       0x1fff8148        0x0 load address 0x000034b8
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.bss            0x1fff8148      0x1b8 load address 0x00003398
+.bss            0x1fff8148      0x1b8 load address 0x000034b8
                 0x1fff8148                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
@@ -1277,11 +1278,11 @@ END GROUP
                 0x1fff8300                __end = .
                 0x1fff8300                PROVIDE (end, .)
                 0x1fff8300                PROVIDE (__bss_end__, .)
-                0x00003358                __cy_region_init_ram = LOADADDR (.data)
+                0x00003478                __cy_region_init_ram = LOADADDR (.data)
                 0x00000040                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x000001b8                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff8300       0x80 load address 0x00003398
+.heap           0x1fff8300       0x80 load address 0x000034b8
                 0x1fff8300                . = _end
                 0x1fff8380                . = (. + 0x80)
  *fill*         0x1fff8300       0x80 
@@ -1332,7 +1333,7 @@ END GROUP
  .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00003398        0x0 load address 0x9050000c
+.rel.dyn        0x000034b8        0x0 load address 0x9050000c
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .stab
@@ -1407,32 +1408,32 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x983b
+.debug_info     0x00000000     0x9c3c
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0xb46 .\CortexM3\ARM_GCC_493\Debug\main.o
- .debug_info    0x00000b46      0x13c .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
- .debug_info    0x00000c82      0x3af .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_info    0x00001031      0x5fc .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
- .debug_info    0x0000162d     0x1752 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
- .debug_info    0x00002d7f     0x18be .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
- .debug_info    0x0000463d       0xd6 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_Com_Driver.o)
- .debug_info    0x00004713      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Com_dma.o)
- .debug_info    0x00004910      0x1fa .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Seg_dma.o)
- .debug_info    0x00004b0a       0xd6 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_Com_Driver.o)
- .debug_info    0x00004be0      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Com_dma.o)
- .debug_info    0x00004ddd      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Seg_dma.o)
- .debug_info    0x00004fda       0xbd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyBootAsmGnu.o)
- .debug_info    0x00005097      0x944 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
- .debug_info    0x000059db     0x136f .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
- .debug_info    0x00006d4a      0xa57 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyPm.o)
- .debug_info    0x000077a1      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_BC_dma.o)
- .debug_info    0x0000799e      0x923 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
- .debug_info    0x000082c1      0x2b7 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
- .debug_info    0x00008578      0x45a .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
- .debug_info    0x000089d2      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_BC_dma.o)
- .debug_info    0x00008bcf      0x17a .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(Page_Button.o)
- .debug_info    0x00008d49      0x608 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyFlash.o)
- .debug_info    0x00009351      0x4ea .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CySpc.o)
+ .debug_info    0x00000000      0xf47 .\CortexM3\ARM_GCC_493\Debug\main.o
+ .debug_info    0x00000f47      0x13c .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x00001083      0x3af .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_info    0x00001432      0x5fc .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+ .debug_info    0x00001a2e     0x1752 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+ .debug_info    0x00003180     0x18be .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+ .debug_info    0x00004a3e       0xd6 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_Com_Driver.o)
+ .debug_info    0x00004b14      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Com_dma.o)
+ .debug_info    0x00004d11      0x1fa .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Seg_dma.o)
+ .debug_info    0x00004f0b       0xd6 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_Com_Driver.o)
+ .debug_info    0x00004fe1      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Com_dma.o)
+ .debug_info    0x000051de      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Seg_dma.o)
+ .debug_info    0x000053db       0xbd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyBootAsmGnu.o)
+ .debug_info    0x00005498      0x944 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+ .debug_info    0x00005ddc     0x136f .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
+ .debug_info    0x0000714b      0xa57 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyPm.o)
+ .debug_info    0x00007ba2      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_BC_dma.o)
+ .debug_info    0x00007d9f      0x923 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+ .debug_info    0x000086c2      0x2b7 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
+ .debug_info    0x00008979      0x45a .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+ .debug_info    0x00008dd3      0x1fd .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_BC_dma.o)
+ .debug_info    0x00008fd0      0x17a .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(Page_Button.o)
+ .debug_info    0x0000914a      0x608 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyFlash.o)
+ .debug_info    0x00009752      0x4ea .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CySpc.o)
 
 .debug_abbrev   0x00000000     0x20a6
  *(.debug_abbrev)
@@ -1461,32 +1462,32 @@ END GROUP
  .debug_abbrev  0x00001cf8      0x1ed .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyFlash.o)
  .debug_abbrev  0x00001ee5      0x1c1 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CySpc.o)
 
-.debug_line     0x00000000     0x3b01
+.debug_line     0x00000000     0x3ac1
  *(.debug_line)
- .debug_line    0x00000000      0x42e .\CortexM3\ARM_GCC_493\Debug\main.o
- .debug_line    0x0000042e       0x53 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
- .debug_line    0x00000481      0x254 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_line    0x000006d5      0x1eb .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
- .debug_line    0x000008c0      0x8e2 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
- .debug_line    0x000011a2      0x9c6 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
- .debug_line    0x00001b68       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_Com_Driver.o)
- .debug_line    0x00001bec       0xad .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Com_dma.o)
- .debug_line    0x00001c99       0xad .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Seg_dma.o)
- .debug_line    0x00001d46       0x85 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_Com_Driver.o)
- .debug_line    0x00001dcb       0xae .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Com_dma.o)
- .debug_line    0x00001e79       0xae .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Seg_dma.o)
- .debug_line    0x00001f27       0x68 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyBootAsmGnu.o)
- .debug_line    0x00001f8f      0x2e5 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
- .debug_line    0x00002274      0x806 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
- .debug_line    0x00002a7a      0x366 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyPm.o)
- .debug_line    0x00002de0       0xad .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_BC_dma.o)
- .debug_line    0x00002e8d      0x380 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
- .debug_line    0x0000320d       0xc3 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
- .debug_line    0x000032d0      0x2a2 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
- .debug_line    0x00003572       0xac .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_BC_dma.o)
- .debug_line    0x0000361e       0xb9 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(Page_Button.o)
- .debug_line    0x000036d7      0x1ec .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyFlash.o)
- .debug_line    0x000038c3      0x23e .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CySpc.o)
+ .debug_line    0x00000000      0x3ee .\CortexM3\ARM_GCC_493\Debug\main.o
+ .debug_line    0x000003ee       0x53 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x00000441      0x254 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_line    0x00000695      0x1eb .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+ .debug_line    0x00000880      0x8e2 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+ .debug_line    0x00001162      0x9c6 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+ .debug_line    0x00001b28       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_Com_Driver.o)
+ .debug_line    0x00001bac       0xad .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Com_dma.o)
+ .debug_line    0x00001c59       0xad .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Seg_dma.o)
+ .debug_line    0x00001d06       0x85 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_Com_Driver.o)
+ .debug_line    0x00001d8b       0xae .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Com_dma.o)
+ .debug_line    0x00001e39       0xae .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Seg_dma.o)
+ .debug_line    0x00001ee7       0x68 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyBootAsmGnu.o)
+ .debug_line    0x00001f4f      0x2e5 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+ .debug_line    0x00002234      0x806 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
+ .debug_line    0x00002a3a      0x366 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyPm.o)
+ .debug_line    0x00002da0       0xad .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_BC_dma.o)
+ .debug_line    0x00002e4d      0x380 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+ .debug_line    0x000031cd       0xc3 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
+ .debug_line    0x00003290      0x2a2 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+ .debug_line    0x00003532       0xac .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_BC_dma.o)
+ .debug_line    0x000035de       0xb9 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(Page_Button.o)
+ .debug_line    0x00003697      0x1ec .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyFlash.o)
+ .debug_line    0x00003883      0x23e .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CySpc.o)
 
 .debug_frame    0x00000000     0x2074
  *(.debug_frame)
@@ -1568,28 +1569,28 @@ END GROUP
  .debug_str     0x000032f2       0xae .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CySpc.o)
                                 0x34b (size before relaxing)
 
-.debug_loc      0x00000000     0x6bd2
+.debug_loc      0x00000000     0x6af9
  *(.debug_loc)
- .debug_loc     0x00000000      0x475 .\CortexM3\ARM_GCC_493\Debug\main.o
- .debug_loc     0x00000475      0x144 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_loc     0x000005b9      0x1d7 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
- .debug_loc     0x00000790     0x185a .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
- .debug_loc     0x00001fea     0x1c71 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
- .debug_loc     0x00003c5b       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Com_dma.o)
- .debug_loc     0x00003cdf       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Seg_dma.o)
- .debug_loc     0x00003d63       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Com_dma.o)
- .debug_loc     0x00003de7       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Seg_dma.o)
- .debug_loc     0x00003e6b      0xb83 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
- .debug_loc     0x000049ee      0xa11 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
- .debug_loc     0x000053ff      0x1e4 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyPm.o)
- .debug_loc     0x000055e3       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_BC_dma.o)
- .debug_loc     0x00005667      0x983 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
- .debug_loc     0x00005fea       0x54 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
- .debug_loc     0x0000603e      0x17f .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
- .debug_loc     0x000061bd       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_BC_dma.o)
- .debug_loc     0x00006241       0x44 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(Page_Button.o)
- .debug_loc     0x00006285      0x300 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyFlash.o)
- .debug_loc     0x00006585      0x64d .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CySpc.o)
+ .debug_loc     0x00000000      0x39c .\CortexM3\ARM_GCC_493\Debug\main.o
+ .debug_loc     0x0000039c      0x144 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_loc     0x000004e0      0x1d7 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyfitter_cfg.o)
+ .debug_loc     0x000006b7     0x185a .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear.o)
+ .debug_loc     0x00001f11     0x1c71 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS.o)
+ .debug_loc     0x00003b82       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Com_dma.o)
+ .debug_loc     0x00003c06       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_Seg_dma.o)
+ .debug_loc     0x00003c8a       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Com_dma.o)
+ .debug_loc     0x00003d0e       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_Seg_dma.o)
+ .debug_loc     0x00003d92      0xb83 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyDmac.o)
+ .debug_loc     0x00004915      0xa11 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyLib.o)
+ .debug_loc     0x00005326      0x1e4 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(cyPm.o)
+ .debug_loc     0x0000550a       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_LRBWS_DMA_BC_dma.o)
+ .debug_loc     0x0000558e      0x983 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN.o)
+ .debug_loc     0x00005f11       0x54 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_INT.o)
+ .debug_loc     0x00005f65      0x17f .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CAN_TX_RX_func.o)
+ .debug_loc     0x000060e4       0x84 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(LED_Driver_Gear_DMA_BC_dma.o)
+ .debug_loc     0x00006168       0x44 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(Page_Button.o)
+ .debug_loc     0x000061ac      0x300 .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CyFlash.o)
+ .debug_loc     0x000064ac      0x64d .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a(CySpc.o)
 
 .debug_macinfo
  *(.debug_macinfo)
