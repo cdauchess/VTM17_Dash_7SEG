@@ -31,6 +31,12 @@
 #define RightDisp  5
 #define BottomDisp  10
 
+#define Shift1 7000
+#define Shift2 7500
+#define Shift3 8000
+#define Shift4 8500
+#define Shift5 9000
+
 //Global Variables
 
 /* Global variables used to store configuration and data for BASIC CAN mailbox */
@@ -83,6 +89,9 @@ typedef enum{
 
 STATE state;
 STATE PrevState;
+
+int FlashCounter = 0;
+int FlashFreq = 5000;
 
 /* Global variable used to store receive message mailbox number */
 volatile uint8 receiveMailboxNumber = 0xFFu;
@@ -234,10 +243,87 @@ else
 return Gear;
 }
 
+int ShiftLights()
+{
+    int Column = 4;
+    int i = 0;
+    int Light1 = 8;
+    int Light2 = 10;
+    int Light3 = 12;
+    int Light4 = 15;
+    int Light5 = 17;
+    
+    if(rpm>= Shift1 && rpm < Shift2)
+    {
+        for(i = Light1; i <= Light1; i++)
+        {
+        LED_Driver_LRBWS_SetRC(i,Column);
+        }
+        for(i = Light2; i<=Light5; i++)
+        {
+        LED_Driver_LRBWS_ClearRC(i,Column);
+        }
+    }
+    else if(rpm>= Shift2 && rpm < Shift3)
+    {
+        for(i = Light1; i <= Light2; i++)
+        {
+        LED_Driver_LRBWS_SetRC(i,Column);
+        }
+        for(i = Light3; i<=Light5; i++)
+        {
+        LED_Driver_LRBWS_ClearRC(i,Column);
+        }
+    }
+    else if(rpm>= Shift3 && rpm < Shift4)
+    {
+        for(i = Light1; i <= Light3; i++)
+        {
+        LED_Driver_LRBWS_SetRC(i,Column);
+        }
+        for(i = Light4; i<=Light5; i++)
+        {
+        LED_Driver_LRBWS_ClearRC(i,Column);
+        }
+    }
+    else if(rpm>= Shift4 && rpm < Shift5)
+    {
+        for(i = Light1; i <= Light4; i++)
+        {
+        LED_Driver_LRBWS_SetRC(i,Column);
+        }       
+    }
+//    else if(rpm >= Shift5 && rpm < Shift5+500)
+//    {
+//
+//    }
+    else if(rpm >= Shift5 && FlashCounter > FlashFreq)
+    {
+        //Flash all Lights
+        for(i = Light1; i<=Light5; i++)
+        {
+        LED_Driver_LRBWS_ToggleRC(i,Column);
+        }
+        FlashCounter = 0;
+    }
+    else if(rpm < Shift1)
+    {
+    //Turn off all lights
+        for(i = Light1; i<=Light5; i++)
+        {
+        LED_Driver_LRBWS_ClearRC(i,Column);
+        }        
+    }
+    FlashCounter++;
+    if(FlashCounter > 10000)
+        FlashCounter = 0;
+return 0;
+}
+
 int main()
 {
     //Parameters
-    int BrightGear = 180;
+    int BrightGear = 120;
     int Bright4Dig = 255;
     
     //Variables
@@ -250,7 +336,13 @@ int main()
     
     batV = 13.00;
     tp = 15;
+    rpm = 6300;
     int PrevState = 1;
+    
+    //Test Variables
+    int Left = 8;
+    int Right = 9;
+    int Direction = 1; //1 is up 0 is down
     
     CyGlobalIntEnable;
     //Start CAN
@@ -264,17 +356,61 @@ int main()
     PrevState = state;
     
     Brightness(Bright4Dig, BrightGear); //Set initial Brightness
+    int i = 0;
+        for(i = 8; i <= 17; i++)
+        {
+        LED_Driver_LRBWS_SetRC(i,4);
+        }    
     
 	for(;;)
     {   
         //The following if statement items are for testing only, remove when display is on vehicle.
         //FIXME
-        if(wait == 100000)
+        if(wait == 1)
         {
             et++;
             count++;    
            batV = batV+0.01;
             wait = 0;
+            //TEST ITEMS
+            //Toggle Shift LEDS
+            if(Direction == 1)
+                rpm= rpm+500;
+            else if(Direction == 0)
+                rpm = rpm -500;
+            
+            if(rpm > 10000)
+                Direction = 0;
+            else if(rpm <7000)
+                Direction = 1;
+            
+//            if(Direction == 1)
+//            {
+//            LED_Driver_LRBWS_ToggleRC(Left,4);
+//            LED_Driver_LRBWS_ToggleRC(Right,4);
+//            Left = Left+2;
+//            Right = Right+2;
+//            }
+//            else if(Direction == 0)
+//            {
+//            LED_Driver_LRBWS_ToggleRC(Left,4);
+//            LED_Driver_LRBWS_ToggleRC(Right,4);
+//            Left = Left-2;
+//            Right = Right-2;                
+//            }
+//                        if(Left == 8)
+//            {//increment up
+//            Direction = 1;
+//            LED_Driver_LRBWS_ToggleRC(Left,4);
+//            LED_Driver_LRBWS_ToggleRC(Right,4);
+//            }
+//            else if(Left == 16)
+//            {
+//                Direction = 0;
+//            LED_Driver_LRBWS_ToggleRC(Left,4);
+//            LED_Driver_LRBWS_ToggleRC(Right,4);
+//            }
+            
         }
         wait++;
         if(count == 10)
@@ -302,6 +438,7 @@ int main()
             {
                 DriveUpdate(Gear);
                 ReadyToDisplay = 1; 
+                ShiftLights();
             }
             break;
         case Diag: //Display values wanted for diagnostic work: RPM?, TPS?, ECT?: all TBD maybe not even need this
