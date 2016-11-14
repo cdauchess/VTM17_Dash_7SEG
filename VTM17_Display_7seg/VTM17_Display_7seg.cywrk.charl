@@ -396,33 +396,6 @@
 <VisibleNodeIds>
 <v>VTM17_Display_7seg</v>
 <v>VTM17_Display_7seg\CAN_Full_Example01</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_INT.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_PM.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_TX_RX_func.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\RX.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\TX.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\Tx_En.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\CAN_Full_Example01.elf</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\CAN_Full_Example01.hex</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>

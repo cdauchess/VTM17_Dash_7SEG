@@ -91,8 +91,10 @@ typedef enum{
 STATE state;
 STATE PrevState;
 
+//Shift Light Variables
 int FlashCounter = 0;
 int FlashFreq = 5000;
+int OffsetFlash = 0;
 
 /* Global variable used to store receive message mailbox number */
 volatile uint8 receiveMailboxNumber = 0xFFu;
@@ -267,6 +269,8 @@ int ShiftLights()
         LED_Driver_LRBWS_ClearRC(15,Column);
         LED_Driver_LRBWS_ClearRC(16,Column);
         LED_Driver_LRBWS_ClearRC(17,Column);
+        
+        OffsetFlash = 0;
     }
     else if(rpm>= Shift2 && rpm < Shift3)
     {
@@ -280,7 +284,9 @@ int ShiftLights()
         LED_Driver_LRBWS_ClearRC(14,Column);
         LED_Driver_LRBWS_ClearRC(15,Column);
         LED_Driver_LRBWS_ClearRC(16,Column);
-        LED_Driver_LRBWS_ClearRC(17,Column);        
+        LED_Driver_LRBWS_ClearRC(17,Column);
+        
+        OffsetFlash = 0;
     }
     else if(rpm>= Shift3 && rpm < Shift4)
     {
@@ -294,7 +300,9 @@ int ShiftLights()
         LED_Driver_LRBWS_ClearRC(14,Column);
         LED_Driver_LRBWS_ClearRC(15,Column);
         LED_Driver_LRBWS_ClearRC(16,Column);
-        LED_Driver_LRBWS_ClearRC(17,Column);        
+        LED_Driver_LRBWS_ClearRC(17,Column);
+        
+        OffsetFlash = 0;
     }
     else if(rpm>= Shift4 && rpm < Shift5)
     {
@@ -309,6 +317,8 @@ int ShiftLights()
         
         LED_Driver_LRBWS_ClearRC(16,Column);
         LED_Driver_LRBWS_ClearRC(17,Column);  
+        
+        OffsetFlash = 0;
     }
     else if(rpm >= Shift5 && rpm < Shift5+Overrev)
     {
@@ -322,10 +332,18 @@ int ShiftLights()
         LED_Driver_LRBWS_SetRC(15,Column);
         LED_Driver_LRBWS_SetRC(16,Column);
         LED_Driver_LRBWS_SetRC(17,Column);
+        
+        OffsetFlash = 0;
     }
     else if(rpm >= Shift5+Overrev && FlashCounter > FlashFreq)
     {
-        
+        if(OffsetFlash == 0)
+        {
+        LED_Driver_LRBWS_ToggleRC(16,Column);
+        LED_Driver_LRBWS_ToggleRC(17,Column);
+        OffsetFlash = 1;
+        }
+                
         //Flash all Lights
         for(i = Light1; i<=Light5; i++)
         {
@@ -339,7 +357,8 @@ int ShiftLights()
         for(i = Light1; i<=Light5; i++)
         {
         LED_Driver_LRBWS_ClearRC(i,Column);
-        }        
+        }
+        OffsetFlash = 0;
     }
     FlashCounter++;
     if(FlashCounter > 10000)
