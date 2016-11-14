@@ -37,8 +37,10 @@
       <Folder BuildType="BUILD" Path="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn">
         <Files Root="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Dash_Funcs.c</File>
           <File BuildType="BUILD" Toolchain="">.\device.h</File>
           <File BuildType="BUILD" Toolchain="">.\cyapicallbacks.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Dash_Funcs.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\Generated_Source\PSoC5">
