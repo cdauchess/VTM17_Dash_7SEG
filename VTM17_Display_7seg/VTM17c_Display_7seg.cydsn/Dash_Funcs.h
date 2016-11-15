@@ -100,7 +100,15 @@ int DiagUpdate(int Gear);
 //This function performs that state switch, called when an external button is pressed
 int SwitchButtonCheck(int StillPressed);
 
+//This function Calculates the current gear that the engine is in using rear wheel speeds and engine RPM
+//This function returns an integer indicating the current gear (0,1,2,3,4,5)
 int GearCalculation();
 
+//This function handles whether or not to turn the shift lights on
+//The cutoff values are in the defines above
 int ShiftLights();
+
+//This Function handles the illumination of the warning lights
+int WarningLights();
+
 /* [] END OF FILE */

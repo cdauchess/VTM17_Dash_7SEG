@@ -269,4 +269,80 @@ int ShiftLights()
     if(FlashCounter > 10000)
         FlashCounter = 0;
 return 0;
-}       
+}
+
+int WarningLights()
+{
+    //Values to be checked for warning 
+    int Left1 = et;
+    int Left2 = egt1;
+    int Left3 = oilTemp;
+    double Right1 = batV;
+    int Right2 = 0;
+    int Right3 = fp;
+    //Warning Thresholds
+    int Left1Thresh = 215; //>
+    int Left2Thresh = 1600;//>
+    int Left3Thresh = 250;//>
+    double Right1Thresh = 12.00;//<
+    int Right2Thresh = 0;
+    int Right3Thresh = 40;//<
+    
+
+        
+    //Left1
+        if(Left1 > Left1Thresh)
+        {
+        LED_Driver_LRBWS_SetRC(0,4);
+        }
+        else
+        {
+        LED_Driver_LRBWS_ClearRC(0,4);
+        }
+    //Left2
+        if(Left2 > Left2Thresh)
+        {
+        LED_Driver_LRBWS_SetRC(1,4);
+        }
+        else
+        {
+        LED_Driver_LRBWS_ClearRC(1,4);
+        }        
+    //Left3
+         if(Left3 > Left3Thresh)
+        {
+        LED_Driver_LRBWS_SetRC(2,4);
+        }
+        else
+        {
+        LED_Driver_LRBWS_ClearRC(2,4);
+        }       
+    //Right1
+        if(Right1 < Right1Thresh)
+        {
+        LED_Driver_LRBWS_SetRC(3,4);
+        }
+        else
+        {
+        LED_Driver_LRBWS_ClearRC(3,4);
+        }        
+    //Right2
+        if(Right2 > Right2Thresh)
+        {
+        LED_Driver_LRBWS_SetRC(4,4);
+        }
+        else
+        {
+        LED_Driver_LRBWS_ClearRC(4,4);
+        }        
+    //Right3
+        if(Right3 < Right3Thresh)
+        {
+        LED_Driver_LRBWS_SetRC(5,4);
+        }
+        else
+        {
+        LED_Driver_LRBWS_ClearRC(5,4);
+        }        
+    return 0;
+}

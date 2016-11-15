@@ -180,12 +180,15 @@ int main()
                 DriveUpdate(Gear);
                 ReadyToDisplay = 1; 
                 ShiftLights();
+                WarningLights();
             }
             break;
         case Diag: //Display values wanted for diagnostic work: RPM?, TPS?, ECT?: all TBD maybe not even need this
             if(ReadyToDisplay == 1)
             {
                 DiagUpdate(Gear);
+                ShiftLights();
+                WarningLights();
                 ReadyToDisplay = 1;
             }
             break;
