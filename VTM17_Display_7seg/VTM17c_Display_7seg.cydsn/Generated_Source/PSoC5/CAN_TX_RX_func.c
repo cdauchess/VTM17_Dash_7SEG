@@ -40,7 +40,7 @@ extern uint RXFlag4;
 extern uint RXFlag5;
 extern uint RXDLC;
 
-uint bIndex = 0;
+uint bIndex = 0; //Value to index through each bit of the received message
 /* `#END` */
 
 

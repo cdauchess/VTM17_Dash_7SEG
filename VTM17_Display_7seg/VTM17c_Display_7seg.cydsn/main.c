@@ -17,16 +17,16 @@
 #include <stdio.h>
 #include "Dash_Funcs.h"
 
-#define PWM_PULSE_WIDTH_STEP        (10u)
-#define SWITCH_PRESSED              (0u)
-#define PWM_MESSAGE_ID              (0x1AAu)
-#define PWM_MESSAGE_IDE             (0u)    /* Standard message */
-#define PWM_MESSAGE_IRQ             (0u)    /* No transmit IRQ */
-#define PWM_MESSAGE_RTR             (0u)    /* No RTR */
-#define CAN_RX_MAILBOX_0_SHIFT      (1u)
-#define CAN_RX_MAILBOX_1_SHIFT      (2u)
-#define DATA_SIZE                   (6u)
-#define ONE_BYTE_OFFSET             (8u)
+//#define PWM_PULSE_WIDTH_STEP        (10u)
+//#define SWITCH_PRESSED              (0u)
+//#define PWM_MESSAGE_ID              (0x1AAu)
+//#define PWM_MESSAGE_IDE             (0u)    /* Standard message */
+//#define PWM_MESSAGE_IRQ             (0u)    /* No transmit IRQ */
+//#define PWM_MESSAGE_RTR             (0u)    /* No RTR */
+//#define CAN_RX_MAILBOX_0_SHIFT      (1u)
+//#define CAN_RX_MAILBOX_1_SHIFT      (2u)
+//#define DATA_SIZE                   (6u)
+//#define ONE_BYTE_OFFSET             (8u)
 
 //Global Variables
 /* Global variables used to store configuration and data for BASIC CAN mailbox */
@@ -103,17 +103,17 @@ int main()
     int wait = 0;
     int StillPressed = 0;
     
+    //Test variable sets
     batV = 13.00;
     tp = 15;
     rpm = 6400;
-    int PrevState = 1;
-    
-    //Test Variables
     int Left = 8;
     int Right = 9;
     int Direction = 1; //1 is up 0 is down
     
-    CyGlobalIntEnable;
+   // int PrevState = 1;//is this needed?
+    
+    CyGlobalIntEnable; //Enable global interrupts
     //Start CAN
     CAN_Init();
     CAN_Start();
@@ -139,7 +139,7 @@ int main()
         {
             et++;
             count++;    
-           batV = batV+0.01;
+            batV = batV+0.01;
             wait = 0;
             //TEST ITEMS
             //Toggle Shift LEDS

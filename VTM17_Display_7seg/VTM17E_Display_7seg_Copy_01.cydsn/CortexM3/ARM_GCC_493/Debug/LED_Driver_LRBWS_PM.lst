@@ -1,0 +1,954 @@
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"LED_Driver_LRBWS_PM.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.text.LED_Driver_LRBWS_Sleep,"ax",%progbits
+  19              		.align	2
+  20              		.global	LED_Driver_LRBWS_Sleep
+  21              		.thumb
+  22              		.thumb_func
+  23              		.type	LED_Driver_LRBWS_Sleep, %function
+  24              	LED_Driver_LRBWS_Sleep:
+  25              	.LFB0:
+  26              		.file 1 ".\\Generated_Source\\PSoC5\\LED_Driver_LRBWS_PM.c"
+   1:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * File Name: LED_Driver_LRBWS_PM.c
+   3:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Version 1.10
+   4:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+   5:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Description:
+   6:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *  This file provides the power management source code to API for the
+   7:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *  LED_Driver component.
+   8:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+   9:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Note:
+  10:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *  None
+  11:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+  12:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *******************************************************************************
+  13:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Copyright 2013-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  14:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * the software package with which this file was provided.
+  17:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** ********************************************************************************/
+  18:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** 
+  19:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** #include "LED_Driver_LRBWS.h"
+  20:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** static LED_Driver_LRBWS_backupStruct LED_Driver_LRBWS_backup;
+  21:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** 
+  22:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** 
+  23:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** /*******************************************************************************
+  24:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Function Name: LED_Driver_LRBWS_Sleep
+  25:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+  27:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Summary:
+  28:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *  Stop and Save the user configuration
+  29:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+  30:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Parameters:
+  31:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *  None
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 2
+
+
+  32:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+  33:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Return:
+  34:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *  None
+  35:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+  36:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *******************************************************************************/
+  37:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** void LED_Driver_LRBWS_Sleep(void) 
+  38:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** {
+  27              		.loc 1 38 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 08B5     		push	{r3, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 3, -8
+  34              		.cfi_offset 14, -4
+  39:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     uint8 i;
+  40:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     
+  41:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     /* Store the component enable state */
+  42:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     LED_Driver_LRBWS_backup.ledEnableState = LED_Driver_LRBWS_enableVar;
+  35              		.loc 1 42 0
+  36 0002 0C4B     		ldr	r3, .L5
+  37 0004 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+  38 0006 0C4B     		ldr	r3, .L5+4
+  39 0008 1A70     		strb	r2, [r3]
+  40              	.LVL0:
+  43:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     
+  44:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     /* Save the segment buffers */
+  45:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     for(i = 0u; i < LED_Driver_LRBWS_NUM_COM; i++)
+  41              		.loc 1 45 0
+  42 000a 0023     		movs	r3, #0
+  43 000c 0CE0     		b	.L2
+  44              	.LVL1:
+  45              	.L3:
+  46:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     {
+  47:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         LED_Driver_LRBWS_backup.segLBackup[i] = LED_Driver_LRBWS_segLBuffer[i];
+  46              		.loc 1 47 0 discriminator 3
+  47 000e 0B4A     		ldr	r2, .L5+8
+  48 0010 D15C     		ldrb	r1, [r2, r3]	@ zero_extendqisi2
+  49 0012 094A     		ldr	r2, .L5+4
+  50 0014 1A44     		add	r2, r2, r3
+  51 0016 5170     		strb	r1, [r2, #1]
+  48:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         #if (LED_Driver_LRBWS_NUM_SEG > 8u) 
+  49:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****             LED_Driver_LRBWS_backup.segMBackup[i] = LED_Driver_LRBWS_segMBuffer[i];
+  52              		.loc 1 49 0 discriminator 3
+  53 0018 0949     		ldr	r1, .L5+12
+  54 001a C95C     		ldrb	r1, [r1, r3]	@ zero_extendqisi2
+  55 001c 9171     		strb	r1, [r2, #6]
+  50:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         #endif /* (LED_Driver_LRBWS_NUM_SEG > 8u) */
+  51:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         #if (LED_Driver_LRBWS_NUM_SEG > 16u) 
+  52:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****             LED_Driver_LRBWS_backup.segHBackup[i] = LED_Driver_LRBWS_segHBuffer[i];
+  56              		.loc 1 52 0 discriminator 3
+  57 001e 0949     		ldr	r1, .L5+16
+  58 0020 C95C     		ldrb	r1, [r1, r3]	@ zero_extendqisi2
+  59 0022 D172     		strb	r1, [r2, #11]
+  45:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     {
+  60              		.loc 1 45 0 discriminator 3
+  61 0024 0133     		adds	r3, r3, #1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 3
+
+
+  62              	.LVL2:
+  63 0026 DBB2     		uxtb	r3, r3
+  64              	.LVL3:
+  65              	.L2:
+  45:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     {
+  66              		.loc 1 45 0 is_stmt 0 discriminator 1
+  67 0028 042B     		cmp	r3, #4
+  68 002a F0D9     		bls	.L3
+  53:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         #endif /* (LED_Driver_LRBWS_NUM_SEG > 16u) */
+  54:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     }
+  55:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     
+  56:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     LED_Driver_LRBWS_Stop();
+  69              		.loc 1 56 0 is_stmt 1
+  70 002c FFF7FEFF 		bl	LED_Driver_LRBWS_Stop
+  71              	.LVL4:
+  72 0030 08BD     		pop	{r3, pc}
+  73              	.L6:
+  74 0032 00BF     		.align	2
+  75              	.L5:
+  76 0034 00000000 		.word	LED_Driver_LRBWS_enableVar
+  77 0038 00000000 		.word	.LANCHOR0
+  78 003c 00000000 		.word	LED_Driver_LRBWS_segLBuffer
+  79 0040 00000000 		.word	LED_Driver_LRBWS_segMBuffer
+  80 0044 00000000 		.word	LED_Driver_LRBWS_segHBuffer
+  81              		.cfi_endproc
+  82              	.LFE0:
+  83              		.size	LED_Driver_LRBWS_Sleep, .-LED_Driver_LRBWS_Sleep
+  84              		.section	.text.LED_Driver_LRBWS_Wakeup,"ax",%progbits
+  85              		.align	2
+  86              		.global	LED_Driver_LRBWS_Wakeup
+  87              		.thumb
+  88              		.thumb_func
+  89              		.type	LED_Driver_LRBWS_Wakeup, %function
+  90              	LED_Driver_LRBWS_Wakeup:
+  91              	.LFB1:
+  57:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** }
+  58:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** 
+  59:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** 
+  60:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** /*******************************************************************************
+  61:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Function Name: LED_Driver_LRBWS_Wakeup
+  62:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** ********************************************************************************
+  63:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+  64:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Summary:
+  65:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *  Restores and enables the user configuration
+  66:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+  67:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Parameters:
+  68:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *  None
+  69:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+  70:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** * Return:
+  71:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *  None
+  72:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *
+  73:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** *******************************************************************************/
+  74:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** void LED_Driver_LRBWS_Wakeup(void) 
+  75:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c **** {
+  92              		.loc 1 75 0
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 4
+
+
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
+  96 0000 08B5     		push	{r3, lr}
+  97              		.cfi_def_cfa_offset 8
+  98              		.cfi_offset 3, -8
+  99              		.cfi_offset 14, -4
+ 100              	.LVL5:
+  76:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     uint8 i;
+  77:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     
+  78:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     /* Restore the segment buffers */
+  79:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     for(i = 0u; i < LED_Driver_LRBWS_NUM_COM; i++)
+ 101              		.loc 1 79 0
+ 102 0002 0023     		movs	r3, #0
+ 103 0004 0CE0     		b	.L8
+ 104              	.LVL6:
+ 105              	.L9:
+  80:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     {
+  81:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         LED_Driver_LRBWS_segLBuffer[i] = LED_Driver_LRBWS_backup.segLBackup[i];
+ 106              		.loc 1 81 0 discriminator 3
+ 107 0006 0B4A     		ldr	r2, .L12
+ 108 0008 1A44     		add	r2, r2, r3
+ 109 000a 5078     		ldrb	r0, [r2, #1]	@ zero_extendqisi2
+ 110 000c 0A49     		ldr	r1, .L12+4
+ 111 000e C854     		strb	r0, [r1, r3]
+  82:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         #if (LED_Driver_LRBWS_NUM_SEG > 8u) 
+  83:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****             LED_Driver_LRBWS_segMBuffer[i] = LED_Driver_LRBWS_backup.segMBackup[i];
+ 112              		.loc 1 83 0 discriminator 3
+ 113 0010 9079     		ldrb	r0, [r2, #6]	@ zero_extendqisi2
+ 114 0012 0A49     		ldr	r1, .L12+8
+ 115 0014 C854     		strb	r0, [r1, r3]
+  84:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         #endif /* (LED_Driver_LRBWS_NUM_SEG > 8u) */
+  85:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         #if (LED_Driver_LRBWS_NUM_SEG > 16u) 
+  86:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****             LED_Driver_LRBWS_segHBuffer[i] = LED_Driver_LRBWS_backup.segHBackup[i];
+ 116              		.loc 1 86 0 discriminator 3
+ 117 0016 D17A     		ldrb	r1, [r2, #11]	@ zero_extendqisi2
+ 118 0018 094A     		ldr	r2, .L12+12
+ 119 001a D154     		strb	r1, [r2, r3]
+  79:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     {
+ 120              		.loc 1 79 0 discriminator 3
+ 121 001c 0133     		adds	r3, r3, #1
+ 122              	.LVL7:
+ 123 001e DBB2     		uxtb	r3, r3
+ 124              	.LVL8:
+ 125              	.L8:
+  79:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     {
+ 126              		.loc 1 79 0 is_stmt 0 discriminator 1
+ 127 0020 042B     		cmp	r3, #4
+ 128 0022 F0D9     		bls	.L9
+  87:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         #endif /* (LED_Driver_LRBWS_NUM_SEG > 16u) */
+  88:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     }
+  89:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     
+  90:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     if(LED_Driver_LRBWS_backup.ledEnableState == LED_Driver_LRBWS_ENABLED)
+ 129              		.loc 1 90 0 is_stmt 1
+ 130 0024 034B     		ldr	r3, .L12
+ 131              	.LVL9:
+ 132 0026 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 133 0028 012B     		cmp	r3, #1
+ 134 002a 01D1     		bne	.L7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 5
+
+
+  91:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****     {
+  92:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         /* Enable the component */
+  93:.\Generated_Source\PSoC5/LED_Driver_LRBWS_PM.c ****         LED_Driver_LRBWS_Enable();
+ 135              		.loc 1 93 0
+ 136 002c FFF7FEFF 		bl	LED_Driver_LRBWS_Enable
+ 137              	.LVL10:
+ 138              	.L7:
+ 139 0030 08BD     		pop	{r3, pc}
+ 140              	.L13:
+ 141 0032 00BF     		.align	2
+ 142              	.L12:
+ 143 0034 00000000 		.word	.LANCHOR0
+ 144 0038 00000000 		.word	LED_Driver_LRBWS_segLBuffer
+ 145 003c 00000000 		.word	LED_Driver_LRBWS_segMBuffer
+ 146 0040 00000000 		.word	LED_Driver_LRBWS_segHBuffer
+ 147              		.cfi_endproc
+ 148              	.LFE1:
+ 149              		.size	LED_Driver_LRBWS_Wakeup, .-LED_Driver_LRBWS_Wakeup
+ 150              		.bss
+ 151              		.align	2
+ 152              		.set	.LANCHOR0,. + 0
+ 153              		.type	LED_Driver_LRBWS_backup, %object
+ 154              		.size	LED_Driver_LRBWS_backup, 16
+ 155              	LED_Driver_LRBWS_backup:
+ 156 0000 00000000 		.space	16
+ 156      00000000 
+ 156      00000000 
+ 156      00000000 
+ 157              		.text
+ 158              	.Letext0:
+ 159              		.file 2 ".\\Generated_Source\\PSoC5\\LED_Driver_LRBWS.h"
+ 160              		.file 3 "Generated_Source\\PSoC5/cytypes.h"
+ 161              		.section	.debug_info,"",%progbits
+ 162              	.Ldebug_info0:
+ 163 0000 87010000 		.4byte	0x187
+ 164 0004 0400     		.2byte	0x4
+ 165 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 166 000a 04       		.byte	0x4
+ 167 000b 01       		.uleb128 0x1
+ 168 000c F5010000 		.4byte	.LASF28
+ 169 0010 01       		.byte	0x1
+ 170 0011 58000000 		.4byte	.LASF29
+ 171 0015 D9000000 		.4byte	.LASF30
+ 172 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 173 001d 00000000 		.4byte	0
+ 174 0021 00000000 		.4byte	.Ldebug_line0
+ 175 0025 02       		.uleb128 0x2
+ 176 0026 01       		.byte	0x1
+ 177 0027 06       		.byte	0x6
+ 178 0028 77010000 		.4byte	.LASF0
+ 179 002c 02       		.uleb128 0x2
+ 180 002d 01       		.byte	0x1
+ 181 002e 08       		.byte	0x8
+ 182 002f 69010000 		.4byte	.LASF1
+ 183 0033 02       		.uleb128 0x2
+ 184 0034 02       		.byte	0x2
+ 185 0035 05       		.byte	0x5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 6
+
+
+ 186 0036 1C000000 		.4byte	.LASF2
+ 187 003a 02       		.uleb128 0x2
+ 188 003b 02       		.byte	0x2
+ 189 003c 07       		.byte	0x7
+ 190 003d CE010000 		.4byte	.LASF3
+ 191 0041 02       		.uleb128 0x2
+ 192 0042 04       		.byte	0x4
+ 193 0043 05       		.byte	0x5
+ 194 0044 D0000000 		.4byte	.LASF4
+ 195 0048 02       		.uleb128 0x2
+ 196 0049 04       		.byte	0x4
+ 197 004a 07       		.byte	0x7
+ 198 004b A4020000 		.4byte	.LASF5
+ 199 004f 02       		.uleb128 0x2
+ 200 0050 08       		.byte	0x8
+ 201 0051 05       		.byte	0x5
+ 202 0052 8D000000 		.4byte	.LASF6
+ 203 0056 02       		.uleb128 0x2
+ 204 0057 08       		.byte	0x8
+ 205 0058 07       		.byte	0x7
+ 206 0059 83010000 		.4byte	.LASF7
+ 207 005d 03       		.uleb128 0x3
+ 208 005e 04       		.byte	0x4
+ 209 005f 05       		.byte	0x5
+ 210 0060 696E7400 		.ascii	"int\000"
+ 211 0064 02       		.uleb128 0x2
+ 212 0065 04       		.byte	0x4
+ 213 0066 07       		.byte	0x7
+ 214 0067 A5010000 		.4byte	.LASF8
+ 215 006b 04       		.uleb128 0x4
+ 216 006c 52000000 		.4byte	.LASF17
+ 217 0070 03       		.byte	0x3
+ 218 0071 9201     		.2byte	0x192
+ 219 0073 2C000000 		.4byte	0x2c
+ 220 0077 02       		.uleb128 0x2
+ 221 0078 04       		.byte	0x4
+ 222 0079 04       		.byte	0x4
+ 223 007a 87000000 		.4byte	.LASF9
+ 224 007e 02       		.uleb128 0x2
+ 225 007f 08       		.byte	0x8
+ 226 0080 04       		.byte	0x4
+ 227 0081 B6020000 		.4byte	.LASF10
+ 228 0085 02       		.uleb128 0x2
+ 229 0086 01       		.byte	0x1
+ 230 0087 08       		.byte	0x8
+ 231 0088 F0010000 		.4byte	.LASF11
+ 232 008c 05       		.uleb128 0x5
+ 233 008d 10       		.byte	0x10
+ 234 008e 02       		.byte	0x2
+ 235 008f 44       		.byte	0x44
+ 236 0090 C5000000 		.4byte	0xc5
+ 237 0094 06       		.uleb128 0x6
+ 238 0095 E1010000 		.4byte	.LASF12
+ 239 0099 02       		.byte	0x2
+ 240 009a 46       		.byte	0x46
+ 241 009b 6B000000 		.4byte	0x6b
+ 242 009f 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 7
+
+
+ 243 00a0 06       		.uleb128 0x6
+ 244 00a1 83020000 		.4byte	.LASF13
+ 245 00a5 02       		.byte	0x2
+ 246 00a6 48       		.byte	0x48
+ 247 00a7 C5000000 		.4byte	0xc5
+ 248 00ab 01       		.byte	0x1
+ 249 00ac 06       		.uleb128 0x6
+ 250 00ad 47000000 		.4byte	.LASF14
+ 251 00b1 02       		.byte	0x2
+ 252 00b2 4A       		.byte	0x4a
+ 253 00b3 C5000000 		.4byte	0xc5
+ 254 00b7 06       		.byte	0x6
+ 255 00b8 06       		.uleb128 0x6
+ 256 00b9 9A010000 		.4byte	.LASF15
+ 257 00bd 02       		.byte	0x2
+ 258 00be 4D       		.byte	0x4d
+ 259 00bf C5000000 		.4byte	0xc5
+ 260 00c3 0B       		.byte	0xb
+ 261 00c4 00       		.byte	0
+ 262 00c5 07       		.uleb128 0x7
+ 263 00c6 6B000000 		.4byte	0x6b
+ 264 00ca D5000000 		.4byte	0xd5
+ 265 00ce 08       		.uleb128 0x8
+ 266 00cf D5000000 		.4byte	0xd5
+ 267 00d3 04       		.byte	0x4
+ 268 00d4 00       		.byte	0
+ 269 00d5 02       		.uleb128 0x2
+ 270 00d6 04       		.byte	0x4
+ 271 00d7 07       		.byte	0x7
+ 272 00d8 26000000 		.4byte	.LASF16
+ 273 00dc 09       		.uleb128 0x9
+ 274 00dd 9B000000 		.4byte	.LASF18
+ 275 00e1 02       		.byte	0x2
+ 276 00e2 4F       		.byte	0x4f
+ 277 00e3 8C000000 		.4byte	0x8c
+ 278 00e7 0A       		.uleb128 0xa
+ 279 00e8 B9000000 		.4byte	.LASF19
+ 280 00ec 01       		.byte	0x1
+ 281 00ed 25       		.byte	0x25
+ 282 00ee 00000000 		.4byte	.LFB0
+ 283 00f2 48000000 		.4byte	.LFE0-.LFB0
+ 284 00f6 01       		.uleb128 0x1
+ 285 00f7 9C       		.byte	0x9c
+ 286 00f8 13010000 		.4byte	0x113
+ 287 00fc 0B       		.uleb128 0xb
+ 288 00fd 6900     		.ascii	"i\000"
+ 289 00ff 01       		.byte	0x1
+ 290 0100 27       		.byte	0x27
+ 291 0101 6B000000 		.4byte	0x6b
+ 292 0105 00000000 		.4byte	.LLST0
+ 293 0109 0C       		.uleb128 0xc
+ 294 010a 30000000 		.4byte	.LVL4
+ 295 010e 7C010000 		.4byte	0x17c
+ 296 0112 00       		.byte	0
+ 297 0113 0A       		.uleb128 0xa
+ 298 0114 BD020000 		.4byte	.LASF20
+ 299 0118 01       		.byte	0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 8
+
+
+ 300 0119 4A       		.byte	0x4a
+ 301 011a 00000000 		.4byte	.LFB1
+ 302 011e 44000000 		.4byte	.LFE1-.LFB1
+ 303 0122 01       		.uleb128 0x1
+ 304 0123 9C       		.byte	0x9c
+ 305 0124 3F010000 		.4byte	0x13f
+ 306 0128 0B       		.uleb128 0xb
+ 307 0129 6900     		.ascii	"i\000"
+ 308 012b 01       		.byte	0x1
+ 309 012c 4C       		.byte	0x4c
+ 310 012d 6B000000 		.4byte	0x6b
+ 311 0131 2A000000 		.4byte	.LLST1
+ 312 0135 0C       		.uleb128 0xc
+ 313 0136 30000000 		.4byte	.LVL10
+ 314 013a 83010000 		.4byte	0x183
+ 315 013e 00       		.byte	0
+ 316 013f 0D       		.uleb128 0xd
+ 317 0140 2F000000 		.4byte	.LASF21
+ 318 0144 01       		.byte	0x1
+ 319 0145 14       		.byte	0x14
+ 320 0146 DC000000 		.4byte	0xdc
+ 321 014a 05       		.uleb128 0x5
+ 322 014b 03       		.byte	0x3
+ 323 014c 00000000 		.4byte	LED_Driver_LRBWS_backup
+ 324 0150 0E       		.uleb128 0xe
+ 325 0151 4E010000 		.4byte	.LASF22
+ 326 0155 02       		.byte	0x2
+ 327 0156 99       		.byte	0x99
+ 328 0157 6B000000 		.4byte	0x6b
+ 329 015b 0E       		.uleb128 0xe
+ 330 015c 00000000 		.4byte	.LASF23
+ 331 0160 02       		.byte	0x2
+ 332 0161 9C       		.byte	0x9c
+ 333 0162 C5000000 		.4byte	0xc5
+ 334 0166 0E       		.uleb128 0xe
+ 335 0167 B2010000 		.4byte	.LASF24
+ 336 016b 02       		.byte	0x2
+ 337 016c 9E       		.byte	0x9e
+ 338 016d C5000000 		.4byte	0xc5
+ 339 0171 0E       		.uleb128 0xe
+ 340 0172 D5020000 		.4byte	.LASF25
+ 341 0176 02       		.byte	0x2
+ 342 0177 A1       		.byte	0xa1
+ 343 0178 C5000000 		.4byte	0xc5
+ 344 017c 0F       		.uleb128 0xf
+ 345 017d 8E020000 		.4byte	.LASF26
+ 346 0181 02       		.byte	0x2
+ 347 0182 58       		.byte	0x58
+ 348 0183 0F       		.uleb128 0xf
+ 349 0184 F1020000 		.4byte	.LASF27
+ 350 0188 02       		.byte	0x2
+ 351 0189 56       		.byte	0x56
+ 352 018a 00       		.byte	0
+ 353              		.section	.debug_abbrev,"",%progbits
+ 354              	.Ldebug_abbrev0:
+ 355 0000 01       		.uleb128 0x1
+ 356 0001 11       		.uleb128 0x11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 9
+
+
+ 357 0002 01       		.byte	0x1
+ 358 0003 25       		.uleb128 0x25
+ 359 0004 0E       		.uleb128 0xe
+ 360 0005 13       		.uleb128 0x13
+ 361 0006 0B       		.uleb128 0xb
+ 362 0007 03       		.uleb128 0x3
+ 363 0008 0E       		.uleb128 0xe
+ 364 0009 1B       		.uleb128 0x1b
+ 365 000a 0E       		.uleb128 0xe
+ 366 000b 55       		.uleb128 0x55
+ 367 000c 17       		.uleb128 0x17
+ 368 000d 11       		.uleb128 0x11
+ 369 000e 01       		.uleb128 0x1
+ 370 000f 10       		.uleb128 0x10
+ 371 0010 17       		.uleb128 0x17
+ 372 0011 00       		.byte	0
+ 373 0012 00       		.byte	0
+ 374 0013 02       		.uleb128 0x2
+ 375 0014 24       		.uleb128 0x24
+ 376 0015 00       		.byte	0
+ 377 0016 0B       		.uleb128 0xb
+ 378 0017 0B       		.uleb128 0xb
+ 379 0018 3E       		.uleb128 0x3e
+ 380 0019 0B       		.uleb128 0xb
+ 381 001a 03       		.uleb128 0x3
+ 382 001b 0E       		.uleb128 0xe
+ 383 001c 00       		.byte	0
+ 384 001d 00       		.byte	0
+ 385 001e 03       		.uleb128 0x3
+ 386 001f 24       		.uleb128 0x24
+ 387 0020 00       		.byte	0
+ 388 0021 0B       		.uleb128 0xb
+ 389 0022 0B       		.uleb128 0xb
+ 390 0023 3E       		.uleb128 0x3e
+ 391 0024 0B       		.uleb128 0xb
+ 392 0025 03       		.uleb128 0x3
+ 393 0026 08       		.uleb128 0x8
+ 394 0027 00       		.byte	0
+ 395 0028 00       		.byte	0
+ 396 0029 04       		.uleb128 0x4
+ 397 002a 16       		.uleb128 0x16
+ 398 002b 00       		.byte	0
+ 399 002c 03       		.uleb128 0x3
+ 400 002d 0E       		.uleb128 0xe
+ 401 002e 3A       		.uleb128 0x3a
+ 402 002f 0B       		.uleb128 0xb
+ 403 0030 3B       		.uleb128 0x3b
+ 404 0031 05       		.uleb128 0x5
+ 405 0032 49       		.uleb128 0x49
+ 406 0033 13       		.uleb128 0x13
+ 407 0034 00       		.byte	0
+ 408 0035 00       		.byte	0
+ 409 0036 05       		.uleb128 0x5
+ 410 0037 13       		.uleb128 0x13
+ 411 0038 01       		.byte	0x1
+ 412 0039 0B       		.uleb128 0xb
+ 413 003a 0B       		.uleb128 0xb
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 10
+
+
+ 414 003b 3A       		.uleb128 0x3a
+ 415 003c 0B       		.uleb128 0xb
+ 416 003d 3B       		.uleb128 0x3b
+ 417 003e 0B       		.uleb128 0xb
+ 418 003f 01       		.uleb128 0x1
+ 419 0040 13       		.uleb128 0x13
+ 420 0041 00       		.byte	0
+ 421 0042 00       		.byte	0
+ 422 0043 06       		.uleb128 0x6
+ 423 0044 0D       		.uleb128 0xd
+ 424 0045 00       		.byte	0
+ 425 0046 03       		.uleb128 0x3
+ 426 0047 0E       		.uleb128 0xe
+ 427 0048 3A       		.uleb128 0x3a
+ 428 0049 0B       		.uleb128 0xb
+ 429 004a 3B       		.uleb128 0x3b
+ 430 004b 0B       		.uleb128 0xb
+ 431 004c 49       		.uleb128 0x49
+ 432 004d 13       		.uleb128 0x13
+ 433 004e 38       		.uleb128 0x38
+ 434 004f 0B       		.uleb128 0xb
+ 435 0050 00       		.byte	0
+ 436 0051 00       		.byte	0
+ 437 0052 07       		.uleb128 0x7
+ 438 0053 01       		.uleb128 0x1
+ 439 0054 01       		.byte	0x1
+ 440 0055 49       		.uleb128 0x49
+ 441 0056 13       		.uleb128 0x13
+ 442 0057 01       		.uleb128 0x1
+ 443 0058 13       		.uleb128 0x13
+ 444 0059 00       		.byte	0
+ 445 005a 00       		.byte	0
+ 446 005b 08       		.uleb128 0x8
+ 447 005c 21       		.uleb128 0x21
+ 448 005d 00       		.byte	0
+ 449 005e 49       		.uleb128 0x49
+ 450 005f 13       		.uleb128 0x13
+ 451 0060 2F       		.uleb128 0x2f
+ 452 0061 0B       		.uleb128 0xb
+ 453 0062 00       		.byte	0
+ 454 0063 00       		.byte	0
+ 455 0064 09       		.uleb128 0x9
+ 456 0065 16       		.uleb128 0x16
+ 457 0066 00       		.byte	0
+ 458 0067 03       		.uleb128 0x3
+ 459 0068 0E       		.uleb128 0xe
+ 460 0069 3A       		.uleb128 0x3a
+ 461 006a 0B       		.uleb128 0xb
+ 462 006b 3B       		.uleb128 0x3b
+ 463 006c 0B       		.uleb128 0xb
+ 464 006d 49       		.uleb128 0x49
+ 465 006e 13       		.uleb128 0x13
+ 466 006f 00       		.byte	0
+ 467 0070 00       		.byte	0
+ 468 0071 0A       		.uleb128 0xa
+ 469 0072 2E       		.uleb128 0x2e
+ 470 0073 01       		.byte	0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 11
+
+
+ 471 0074 3F       		.uleb128 0x3f
+ 472 0075 19       		.uleb128 0x19
+ 473 0076 03       		.uleb128 0x3
+ 474 0077 0E       		.uleb128 0xe
+ 475 0078 3A       		.uleb128 0x3a
+ 476 0079 0B       		.uleb128 0xb
+ 477 007a 3B       		.uleb128 0x3b
+ 478 007b 0B       		.uleb128 0xb
+ 479 007c 27       		.uleb128 0x27
+ 480 007d 19       		.uleb128 0x19
+ 481 007e 11       		.uleb128 0x11
+ 482 007f 01       		.uleb128 0x1
+ 483 0080 12       		.uleb128 0x12
+ 484 0081 06       		.uleb128 0x6
+ 485 0082 40       		.uleb128 0x40
+ 486 0083 18       		.uleb128 0x18
+ 487 0084 9742     		.uleb128 0x2117
+ 488 0086 19       		.uleb128 0x19
+ 489 0087 01       		.uleb128 0x1
+ 490 0088 13       		.uleb128 0x13
+ 491 0089 00       		.byte	0
+ 492 008a 00       		.byte	0
+ 493 008b 0B       		.uleb128 0xb
+ 494 008c 34       		.uleb128 0x34
+ 495 008d 00       		.byte	0
+ 496 008e 03       		.uleb128 0x3
+ 497 008f 08       		.uleb128 0x8
+ 498 0090 3A       		.uleb128 0x3a
+ 499 0091 0B       		.uleb128 0xb
+ 500 0092 3B       		.uleb128 0x3b
+ 501 0093 0B       		.uleb128 0xb
+ 502 0094 49       		.uleb128 0x49
+ 503 0095 13       		.uleb128 0x13
+ 504 0096 02       		.uleb128 0x2
+ 505 0097 17       		.uleb128 0x17
+ 506 0098 00       		.byte	0
+ 507 0099 00       		.byte	0
+ 508 009a 0C       		.uleb128 0xc
+ 509 009b 898201   		.uleb128 0x4109
+ 510 009e 00       		.byte	0
+ 511 009f 11       		.uleb128 0x11
+ 512 00a0 01       		.uleb128 0x1
+ 513 00a1 31       		.uleb128 0x31
+ 514 00a2 13       		.uleb128 0x13
+ 515 00a3 00       		.byte	0
+ 516 00a4 00       		.byte	0
+ 517 00a5 0D       		.uleb128 0xd
+ 518 00a6 34       		.uleb128 0x34
+ 519 00a7 00       		.byte	0
+ 520 00a8 03       		.uleb128 0x3
+ 521 00a9 0E       		.uleb128 0xe
+ 522 00aa 3A       		.uleb128 0x3a
+ 523 00ab 0B       		.uleb128 0xb
+ 524 00ac 3B       		.uleb128 0x3b
+ 525 00ad 0B       		.uleb128 0xb
+ 526 00ae 49       		.uleb128 0x49
+ 527 00af 13       		.uleb128 0x13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 12
+
+
+ 528 00b0 02       		.uleb128 0x2
+ 529 00b1 18       		.uleb128 0x18
+ 530 00b2 00       		.byte	0
+ 531 00b3 00       		.byte	0
+ 532 00b4 0E       		.uleb128 0xe
+ 533 00b5 34       		.uleb128 0x34
+ 534 00b6 00       		.byte	0
+ 535 00b7 03       		.uleb128 0x3
+ 536 00b8 0E       		.uleb128 0xe
+ 537 00b9 3A       		.uleb128 0x3a
+ 538 00ba 0B       		.uleb128 0xb
+ 539 00bb 3B       		.uleb128 0x3b
+ 540 00bc 0B       		.uleb128 0xb
+ 541 00bd 49       		.uleb128 0x49
+ 542 00be 13       		.uleb128 0x13
+ 543 00bf 3F       		.uleb128 0x3f
+ 544 00c0 19       		.uleb128 0x19
+ 545 00c1 3C       		.uleb128 0x3c
+ 546 00c2 19       		.uleb128 0x19
+ 547 00c3 00       		.byte	0
+ 548 00c4 00       		.byte	0
+ 549 00c5 0F       		.uleb128 0xf
+ 550 00c6 2E       		.uleb128 0x2e
+ 551 00c7 00       		.byte	0
+ 552 00c8 3F       		.uleb128 0x3f
+ 553 00c9 19       		.uleb128 0x19
+ 554 00ca 03       		.uleb128 0x3
+ 555 00cb 0E       		.uleb128 0xe
+ 556 00cc 3A       		.uleb128 0x3a
+ 557 00cd 0B       		.uleb128 0xb
+ 558 00ce 3B       		.uleb128 0x3b
+ 559 00cf 0B       		.uleb128 0xb
+ 560 00d0 27       		.uleb128 0x27
+ 561 00d1 19       		.uleb128 0x19
+ 562 00d2 3C       		.uleb128 0x3c
+ 563 00d3 19       		.uleb128 0x19
+ 564 00d4 00       		.byte	0
+ 565 00d5 00       		.byte	0
+ 566 00d6 00       		.byte	0
+ 567              		.section	.debug_loc,"",%progbits
+ 568              	.Ldebug_loc0:
+ 569              	.LLST0:
+ 570 0000 0A000000 		.4byte	.LVL0
+ 571 0004 0E000000 		.4byte	.LVL1
+ 572 0008 0200     		.2byte	0x2
+ 573 000a 30       		.byte	0x30
+ 574 000b 9F       		.byte	0x9f
+ 575 000c 0E000000 		.4byte	.LVL1
+ 576 0010 26000000 		.4byte	.LVL2
+ 577 0014 0100     		.2byte	0x1
+ 578 0016 53       		.byte	0x53
+ 579 0017 28000000 		.4byte	.LVL3
+ 580 001b 2F000000 		.4byte	.LVL4-1
+ 581 001f 0100     		.2byte	0x1
+ 582 0021 53       		.byte	0x53
+ 583 0022 00000000 		.4byte	0
+ 584 0026 00000000 		.4byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 13
+
+
+ 585              	.LLST1:
+ 586 002a 02000000 		.4byte	.LVL5
+ 587 002e 06000000 		.4byte	.LVL6
+ 588 0032 0200     		.2byte	0x2
+ 589 0034 30       		.byte	0x30
+ 590 0035 9F       		.byte	0x9f
+ 591 0036 06000000 		.4byte	.LVL6
+ 592 003a 1E000000 		.4byte	.LVL7
+ 593 003e 0100     		.2byte	0x1
+ 594 0040 53       		.byte	0x53
+ 595 0041 20000000 		.4byte	.LVL8
+ 596 0045 26000000 		.4byte	.LVL9
+ 597 0049 0100     		.2byte	0x1
+ 598 004b 53       		.byte	0x53
+ 599 004c 00000000 		.4byte	0
+ 600 0050 00000000 		.4byte	0
+ 601              		.section	.debug_aranges,"",%progbits
+ 602 0000 24000000 		.4byte	0x24
+ 603 0004 0200     		.2byte	0x2
+ 604 0006 00000000 		.4byte	.Ldebug_info0
+ 605 000a 04       		.byte	0x4
+ 606 000b 00       		.byte	0
+ 607 000c 0000     		.2byte	0
+ 608 000e 0000     		.2byte	0
+ 609 0010 00000000 		.4byte	.LFB0
+ 610 0014 48000000 		.4byte	.LFE0-.LFB0
+ 611 0018 00000000 		.4byte	.LFB1
+ 612 001c 44000000 		.4byte	.LFE1-.LFB1
+ 613 0020 00000000 		.4byte	0
+ 614 0024 00000000 		.4byte	0
+ 615              		.section	.debug_ranges,"",%progbits
+ 616              	.Ldebug_ranges0:
+ 617 0000 00000000 		.4byte	.LFB0
+ 618 0004 48000000 		.4byte	.LFE0
+ 619 0008 00000000 		.4byte	.LFB1
+ 620 000c 44000000 		.4byte	.LFE1
+ 621 0010 00000000 		.4byte	0
+ 622 0014 00000000 		.4byte	0
+ 623              		.section	.debug_line,"",%progbits
+ 624              	.Ldebug_line0:
+ 625 0000 E8000000 		.section	.debug_str,"MS",%progbits,1
+ 625      02007F00 
+ 625      00000201 
+ 625      FB0E0D00 
+ 625      01010101 
+ 626              	.LASF23:
+ 627 0000 4C45445F 		.ascii	"LED_Driver_LRBWS_segLBuffer\000"
+ 627      44726976 
+ 627      65725F4C 
+ 627      52425753 
+ 627      5F736567 
+ 628              	.LASF2:
+ 629 001c 73686F72 		.ascii	"short int\000"
+ 629      7420696E 
+ 629      7400
+ 630              	.LASF16:
+ 631 0026 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 14
+
+
+ 631      74797065 
+ 631      00
+ 632              	.LASF21:
+ 633 002f 4C45445F 		.ascii	"LED_Driver_LRBWS_backup\000"
+ 633      44726976 
+ 633      65725F4C 
+ 633      52425753 
+ 633      5F626163 
+ 634              	.LASF14:
+ 635 0047 7365674D 		.ascii	"segMBackup\000"
+ 635      4261636B 
+ 635      757000
+ 636              	.LASF17:
+ 637 0052 75696E74 		.ascii	"uint8\000"
+ 637      3800
+ 638              	.LASF29:
+ 639 0058 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\LED_Driver_LRBWS_PM.c\000"
+ 639      6E657261 
+ 639      7465645F 
+ 639      536F7572 
+ 639      63655C50 
+ 640              	.LASF9:
+ 641 0087 666C6F61 		.ascii	"float\000"
+ 641      7400
+ 642              	.LASF6:
+ 643 008d 6C6F6E67 		.ascii	"long long int\000"
+ 643      206C6F6E 
+ 643      6720696E 
+ 643      7400
+ 644              	.LASF18:
+ 645 009b 4C45445F 		.ascii	"LED_Driver_LRBWS_backupStruct\000"
+ 645      44726976 
+ 645      65725F4C 
+ 645      52425753 
+ 645      5F626163 
+ 646              	.LASF19:
+ 647 00b9 4C45445F 		.ascii	"LED_Driver_LRBWS_Sleep\000"
+ 647      44726976 
+ 647      65725F4C 
+ 647      52425753 
+ 647      5F536C65 
+ 648              	.LASF4:
+ 649 00d0 6C6F6E67 		.ascii	"long int\000"
+ 649      20696E74 
+ 649      00
+ 650              	.LASF30:
+ 651 00d9 433A5C55 		.ascii	"C:\\Users\\charl\\Documents\\GitHub\\VTM17_Dash_7se"
+ 651      73657273 
+ 651      5C636861 
+ 651      726C5C44 
+ 651      6F63756D 
+ 652 0107 675C5654 		.ascii	"g\\VTM17_Dash_7SEG\\VTM17_Display_7seg\\VTM17E_Disp"
+ 652      4D31375F 
+ 652      44617368 
+ 652      5F375345 
+ 652      475C5654 
+ 653 0137 6C61795F 		.ascii	"lay_7seg_Copy_01.cydsn\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 15
+
+
+ 653      37736567 
+ 653      5F436F70 
+ 653      795F3031 
+ 653      2E637964 
+ 654              	.LASF22:
+ 655 014e 4C45445F 		.ascii	"LED_Driver_LRBWS_enableVar\000"
+ 655      44726976 
+ 655      65725F4C 
+ 655      52425753 
+ 655      5F656E61 
+ 656              	.LASF1:
+ 657 0169 756E7369 		.ascii	"unsigned char\000"
+ 657      676E6564 
+ 657      20636861 
+ 657      7200
+ 658              	.LASF0:
+ 659 0177 7369676E 		.ascii	"signed char\000"
+ 659      65642063 
+ 659      68617200 
+ 660              	.LASF7:
+ 661 0183 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 661      206C6F6E 
+ 661      6720756E 
+ 661      7369676E 
+ 661      65642069 
+ 662              	.LASF15:
+ 663 019a 73656748 		.ascii	"segHBackup\000"
+ 663      4261636B 
+ 663      757000
+ 664              	.LASF8:
+ 665 01a5 756E7369 		.ascii	"unsigned int\000"
+ 665      676E6564 
+ 665      20696E74 
+ 665      00
+ 666              	.LASF24:
+ 667 01b2 4C45445F 		.ascii	"LED_Driver_LRBWS_segMBuffer\000"
+ 667      44726976 
+ 667      65725F4C 
+ 667      52425753 
+ 667      5F736567 
+ 668              	.LASF3:
+ 669 01ce 73686F72 		.ascii	"short unsigned int\000"
+ 669      7420756E 
+ 669      7369676E 
+ 669      65642069 
+ 669      6E7400
+ 670              	.LASF12:
+ 671 01e1 6C656445 		.ascii	"ledEnableState\000"
+ 671      6E61626C 
+ 671      65537461 
+ 671      746500
+ 672              	.LASF11:
+ 673 01f0 63686172 		.ascii	"char\000"
+ 673      00
+ 674              	.LASF28:
+ 675 01f5 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 675      4320342E 
+ARM GAS  C:\Users\charl\AppData\Local\Temp\cc5qKrUD.s 			page 16
+
+
+ 675      392E3320 
+ 675      32303135 
+ 675      30333033 
+ 676 0228 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 676      20726576 
+ 676      6973696F 
+ 676      6E203232 
+ 676      31323230 
+ 677 025b 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 677      66756E63 
+ 677      74696F6E 
+ 677      2D736563 
+ 677      74696F6E 
+ 678              	.LASF13:
+ 679 0283 7365674C 		.ascii	"segLBackup\000"
+ 679      4261636B 
+ 679      757000
+ 680              	.LASF26:
+ 681 028e 4C45445F 		.ascii	"LED_Driver_LRBWS_Stop\000"
+ 681      44726976 
+ 681      65725F4C 
+ 681      52425753 
+ 681      5F53746F 
+ 682              	.LASF5:
+ 683 02a4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 683      20756E73 
+ 683      69676E65 
+ 683      6420696E 
+ 683      7400
+ 684              	.LASF10:
+ 685 02b6 646F7562 		.ascii	"double\000"
+ 685      6C6500
+ 686              	.LASF20:
+ 687 02bd 4C45445F 		.ascii	"LED_Driver_LRBWS_Wakeup\000"
+ 687      44726976 
+ 687      65725F4C 
+ 687      52425753 
+ 687      5F57616B 
+ 688              	.LASF25:
+ 689 02d5 4C45445F 		.ascii	"LED_Driver_LRBWS_segHBuffer\000"
+ 689      44726976 
+ 689      65725F4C 
+ 689      52425753 
+ 689      5F736567 
+ 690              	.LASF27:
+ 691 02f1 4C45445F 		.ascii	"LED_Driver_LRBWS_Enable\000"
+ 691      44726976 
+ 691      65725F4C 
+ 691      52425753 
+ 691      5F456E61 
+ 692              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -114,6 +114,7 @@ int GearCalculation()
 //Gear Calculation
 //Convert Wheel speed to wheel RPM
 int Gear = 0;
+//Gear Reduction values for each gear.    
 float Red1 = 18.6955;
 float Red2 = 13.4048;
 float Red3 = 10.1561;
@@ -287,8 +288,6 @@ int WarningLights()
     double Right1Thresh = 12.00;//<
     int Right2Thresh = 0;
     int Right3Thresh = 40;//<
-    
-
         
     //Left1
         if(Left1 > Left1Thresh)

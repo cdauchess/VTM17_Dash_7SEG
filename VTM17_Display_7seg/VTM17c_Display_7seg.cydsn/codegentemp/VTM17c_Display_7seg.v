@@ -1,6 +1,6 @@
 // ======================================================================
 // VTM17c_Display_7seg.v generated from TopDesign.cysch
-// 11/14/2016 at 18:44
+// 11/15/2016 at 16:32
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -724,6 +724,7 @@ module top ;
           wire  Net_193;
           wire  Net_192;
           wire  Net_205;
+    electrical  Net_109;
           wire  Net_99;
           wire  Net_83;
           wire [4:0] Net_68;
@@ -732,8 +733,6 @@ module top ;
           wire  Net_84;
           wire  Net_167;
           wire  Net_123;
-    electrical  Net_114;
-    electrical  Net_109;
     electrical  Net_110;
           wire [23:0] Net_67;
           wire  Net_86;
@@ -1372,25 +1371,6 @@ module top ;
     defparam PWR.comp_name = "Power_v1_0";
     defparam PWR.port_names = "T1";
     defparam PWR.width = 1;
-
-    cy_annotation_universal_v1_0 R_1 (
-        .connect({
-            Net_109,
-            Net_114
-        })
-    );
-    defparam R_1.comp_name = "Resistor_v1_0";
-    defparam R_1.port_names = "T1, T2";
-    defparam R_1.width = 2;
-
-    cy_annotation_universal_v1_0 GND_1 (
-        .connect({
-            Net_114
-        })
-    );
-    defparam GND_1.comp_name = "Gnd_v1_0";
-    defparam GND_1.port_names = "T1";
-    defparam GND_1.width = 1;
 
 
 	cy_clock_v1_0

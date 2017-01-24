@@ -2,7 +2,7 @@
 --	Conversion of VTM17c_Display_7seg.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Nov 14 18:44:13 2016
+--	Tue Nov 15 16:32:41 2016
 --
 
 USE cypress.cypress.all;
@@ -1046,7 +1046,6 @@ SIGNAL Net_167 : bit;
 SIGNAL tmpIO_0__PageSwitch_net_0 : bit;
 TERMINAL tmpSIOVREF__PageSwitch_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__PageSwitch_net_0 : bit;
-TERMINAL Net_114 : bit;
 SIGNAL Net_123 : bit;
 SIGNAL \Page_Button:status_0\ : bit;
 SIGNAL \Page_Button:status_1\ : bit;
@@ -2104,16 +2103,6 @@ PWR:cy_annotation_universal_v1_0
 		port_names=>"T1",
 		width=>1)
 	PORT MAP(connect=>Net_110);
-R_1:cy_annotation_universal_v1_0
-	GENERIC MAP(comp_name=>"Resistor_v1_0",
-		port_names=>"T1, T2",
-		width=>2)
-	PORT MAP(connect=>(Net_109, Net_114));
-GND_1:cy_annotation_universal_v1_0
-	GENERIC MAP(comp_name=>"Gnd_v1_0",
-		port_names=>"T1",
-		width=>1)
-	PORT MAP(connect=>Net_114);
 Clock_1:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"2c152552-ccab-4101-8e95-2c684ca69eae",

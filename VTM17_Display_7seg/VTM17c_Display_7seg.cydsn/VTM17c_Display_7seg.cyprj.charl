@@ -11,120 +11,6 @@
 <CyGuid_f44455c5-3770-4452-b988-0a7a7ff46256 type_name="CyDesigner.Common.ProjMgmt.Model.CyConfigDependencies" version="1">
 <dependency_info name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM3" xml_contents_version="2">
 <CyGuid_1173175f-1b9b-4ad4-a065-754a48a27021 type_name="CyDesigner.Common.Base.CyFileDeps" version="1">
-<file name=".\CortexM3\ARM_GCC_493\Debug\Dash_Funcs.o">
-<dep name=".\Generated_Source\PSoC5\CAN.h" />
-<dep name=".\Generated_Source\PSoC5\CYDMAC.H" />
-<dep name=".\Generated_Source\PSoC5\CYFITTER.H" />
-<dep name=".\Generated_Source\PSoC5\Clock_1.h" />
-<dep name=".\Generated_Source\PSoC5\Com_1.h" />
-<dep name=".\Generated_Source\PSoC5\Com_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Com_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\CyDmac.h" />
-<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
-<dep name=".\Generated_Source\PSoC5\CyLib.h" />
-<dep name=".\Generated_Source\PSoC5\CySpc.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_ClkInternal.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_Com_Driver.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_BC_dma.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Com_dma.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Seg_dma.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_Seg_Driver_L.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_ClkInternal.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Com_Driver.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_BC_dma.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_Com_dma.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_Seg_dma.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_H.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_L.h" />
-<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_M.h" />
-<dep name=".\Generated_Source\PSoC5\PageSwitch.h" />
-<dep name=".\Generated_Source\PSoC5\PageSwitch_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Page_Button.h" />
-<dep name=".\Generated_Source\PSoC5\RX_1.h" />
-<dep name=".\Generated_Source\PSoC5\RX_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Seg_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Seg_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\TX_1.h" />
-<dep name=".\Generated_Source\PSoC5\TX_1_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\Tx_En.h" />
-<dep name=".\Generated_Source\PSoC5\Tx_En_aliases.h" />
-<dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
-<dep name=".\Generated_Source\PSoC5\cmsis_gcc.h" />
-<dep name=".\Generated_Source\PSoC5\core_cm3.h" />
-<dep name=".\Generated_Source\PSoC5\core_cm3_psoc5.h" />
-<dep name=".\Generated_Source\PSoC5\core_cmFunc.h" />
-<dep name=".\Generated_Source\PSoC5\core_cmInstr.h" />
-<dep name=".\Generated_Source\PSoC5\cyPm.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice.h" />
-<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC5\cydisabledsheets.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
-<dep name=".\Generated_Source\PSoC5\cypins.h" />
-<dep name=".\Generated_Source\PSoC5\cytypes.h" />
-<dep name=".\Generated_Source\PSoC5\project.h" />
-<dep name=".\Dash_Funcs.c" />
-<dep name=".\Dash_Funcs.h" />
-<dep name=".\cyapicallbacks.h" />
-<dep name=".\device.h" />
-</file>
-<file name=".\Generated_Source\PSoC5\CAN.h" />
-<file name=".\Generated_Source\PSoC5\CYDMAC.H" />
-<file name=".\Generated_Source\PSoC5\CYFITTER.H" />
-<file name=".\Generated_Source\PSoC5\Clock_1.h" />
-<file name=".\Generated_Source\PSoC5\Com_1.h" />
-<file name=".\Generated_Source\PSoC5\Com_1_aliases.h" />
-<file name=".\Generated_Source\PSoC5\Com_aliases.h" />
-<file name=".\Generated_Source\PSoC5\CyFlash.h" />
-<file name=".\Generated_Source\PSoC5\CyLib.h" />
-<file name=".\Generated_Source\PSoC5\CySpc.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_Gear.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_ClkInternal.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_Com_Driver.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_BC_dma.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Com_dma.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Seg_dma.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_Seg_Driver_L.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_ClkInternal.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Com_Driver.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_BC_dma.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_Com_dma.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_Seg_dma.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_H.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_L.h" />
-<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_M.h" />
-<file name=".\Generated_Source\PSoC5\PageSwitch.h" />
-<file name=".\Generated_Source\PSoC5\PageSwitch_aliases.h" />
-<file name=".\Generated_Source\PSoC5\Page_Button.h" />
-<file name=".\Generated_Source\PSoC5\RX_1.h" />
-<file name=".\Generated_Source\PSoC5\RX_1_aliases.h" />
-<file name=".\Generated_Source\PSoC5\Seg_1_aliases.h" />
-<file name=".\Generated_Source\PSoC5\Seg_aliases.h" />
-<file name=".\Generated_Source\PSoC5\TX_1.h" />
-<file name=".\Generated_Source\PSoC5\TX_1_aliases.h" />
-<file name=".\Generated_Source\PSoC5\Tx_En.h" />
-<file name=".\Generated_Source\PSoC5\Tx_En_aliases.h" />
-<file name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
-<file name=".\Generated_Source\PSoC5\cmsis_gcc.h" />
-<file name=".\Generated_Source\PSoC5\core_cm3.h" />
-<file name=".\Generated_Source\PSoC5\core_cm3_psoc5.h" />
-<file name=".\Generated_Source\PSoC5\core_cmFunc.h" />
-<file name=".\Generated_Source\PSoC5\core_cmInstr.h" />
-<file name=".\Generated_Source\PSoC5\cyPm.h" />
-<file name=".\Generated_Source\PSoC5\cydevice.h" />
-<file name=".\Generated_Source\PSoC5\cydevice_trm.h" />
-<file name=".\Generated_Source\PSoC5\cydisabledsheets.h" />
-<file name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
-<file name=".\Generated_Source\PSoC5\cypins.h" />
-<file name=".\Generated_Source\PSoC5\cytypes.h" />
-<file name=".\Generated_Source\PSoC5\project.h" />
-<file name=".\Dash_Funcs.c" />
-<file name=".\Dash_Funcs.h" />
-<file name=".\cyapicallbacks.h" />
-<file name=".\device.h" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\main.o">
 <dep name=".\Generated_Source\PSoC5\CAN.h" />
 <dep name=".\Generated_Source\PSoC5\CYDMAC.H" />
@@ -184,7 +70,121 @@
 <dep name=".\device.h" />
 <dep name=".\main.c" />
 </file>
+<file name=".\Generated_Source\PSoC5\CAN.h" />
+<file name=".\Generated_Source\PSoC5\CYDMAC.H" />
+<file name=".\Generated_Source\PSoC5\CYFITTER.H" />
+<file name=".\Generated_Source\PSoC5\Clock_1.h" />
+<file name=".\Generated_Source\PSoC5\Com_1.h" />
+<file name=".\Generated_Source\PSoC5\Com_1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Com_aliases.h" />
+<file name=".\Generated_Source\PSoC5\CyFlash.h" />
+<file name=".\Generated_Source\PSoC5\CyLib.h" />
+<file name=".\Generated_Source\PSoC5\CySpc.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_Gear.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_ClkInternal.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_Com_Driver.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_BC_dma.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Com_dma.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Seg_dma.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_Gear_Seg_Driver_L.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_ClkInternal.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Com_Driver.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_BC_dma.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_Com_dma.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_Seg_dma.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_H.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_L.h" />
+<file name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_M.h" />
+<file name=".\Generated_Source\PSoC5\PageSwitch.h" />
+<file name=".\Generated_Source\PSoC5\PageSwitch_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Page_Button.h" />
+<file name=".\Generated_Source\PSoC5\RX_1.h" />
+<file name=".\Generated_Source\PSoC5\RX_1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Seg_1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Seg_aliases.h" />
+<file name=".\Generated_Source\PSoC5\TX_1.h" />
+<file name=".\Generated_Source\PSoC5\TX_1_aliases.h" />
+<file name=".\Generated_Source\PSoC5\Tx_En.h" />
+<file name=".\Generated_Source\PSoC5\Tx_En_aliases.h" />
+<file name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
+<file name=".\Generated_Source\PSoC5\cmsis_gcc.h" />
+<file name=".\Generated_Source\PSoC5\core_cm3.h" />
+<file name=".\Generated_Source\PSoC5\core_cm3_psoc5.h" />
+<file name=".\Generated_Source\PSoC5\core_cmFunc.h" />
+<file name=".\Generated_Source\PSoC5\core_cmInstr.h" />
+<file name=".\Generated_Source\PSoC5\cyPm.h" />
+<file name=".\Generated_Source\PSoC5\cydevice.h" />
+<file name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<file name=".\Generated_Source\PSoC5\cydisabledsheets.h" />
+<file name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
+<file name=".\Generated_Source\PSoC5\cypins.h" />
+<file name=".\Generated_Source\PSoC5\cytypes.h" />
+<file name=".\Generated_Source\PSoC5\project.h" />
+<file name=".\Dash_Funcs.h" />
+<file name=".\cyapicallbacks.h" />
+<file name=".\device.h" />
 <file name=".\main.c" />
+<file name=".\CortexM3\ARM_GCC_493\Debug\Dash_Funcs.o">
+<dep name=".\Generated_Source\PSoC5\CAN.h" />
+<dep name=".\Generated_Source\PSoC5\CYDMAC.H" />
+<dep name=".\Generated_Source\PSoC5\CYFITTER.H" />
+<dep name=".\Generated_Source\PSoC5\Clock_1.h" />
+<dep name=".\Generated_Source\PSoC5\Com_1.h" />
+<dep name=".\Generated_Source\PSoC5\Com_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Com_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\CyDmac.h" />
+<dep name=".\Generated_Source\PSoC5\CyFlash.h" />
+<dep name=".\Generated_Source\PSoC5\CyLib.h" />
+<dep name=".\Generated_Source\PSoC5\CySpc.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_ClkInternal.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_Com_Driver.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_BC_dma.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Com_dma.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Seg_dma.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_Gear_Seg_Driver_L.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_ClkInternal.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Com_Driver.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_BC_dma.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_Com_dma.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_DMA_Seg_dma.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_H.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_L.h" />
+<dep name=".\Generated_Source\PSoC5\LED_Driver_LRBWS_Seg_Driver_M.h" />
+<dep name=".\Generated_Source\PSoC5\PageSwitch.h" />
+<dep name=".\Generated_Source\PSoC5\PageSwitch_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Page_Button.h" />
+<dep name=".\Generated_Source\PSoC5\RX_1.h" />
+<dep name=".\Generated_Source\PSoC5\RX_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Seg_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Seg_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\TX_1.h" />
+<dep name=".\Generated_Source\PSoC5\TX_1_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\Tx_En.h" />
+<dep name=".\Generated_Source\PSoC5\Tx_En_aliases.h" />
+<dep name=".\Generated_Source\PSoC5\cmsis_armcc.h" />
+<dep name=".\Generated_Source\PSoC5\cmsis_gcc.h" />
+<dep name=".\Generated_Source\PSoC5\core_cm3.h" />
+<dep name=".\Generated_Source\PSoC5\core_cm3_psoc5.h" />
+<dep name=".\Generated_Source\PSoC5\core_cmFunc.h" />
+<dep name=".\Generated_Source\PSoC5\core_cmInstr.h" />
+<dep name=".\Generated_Source\PSoC5\cyPm.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice.h" />
+<dep name=".\Generated_Source\PSoC5\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC5\cydisabledsheets.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC5\cyfitter_cfg.h" />
+<dep name=".\Generated_Source\PSoC5\cypins.h" />
+<dep name=".\Generated_Source\PSoC5\cytypes.h" />
+<dep name=".\Generated_Source\PSoC5\project.h" />
+<dep name=".\Dash_Funcs.c" />
+<dep name=".\Dash_Funcs.h" />
+<dep name=".\cyapicallbacks.h" />
+<dep name=".\device.h" />
+</file>
+<file name=".\Dash_Funcs.c" />
 <file name=".\CortexM3\ARM_GCC_493\Debug\CAN.o">
 <dep name=".\Generated_Source\PSoC5\CAN.c" />
 <dep name=".\Generated_Source\PSoC5\CAN.h" />
@@ -936,15 +936,13 @@
 <v>Off-Chip</v>
 </tree_states_tab_names>
 <tree_states>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Analog\DAC">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Digital\Registers\Control Register [v1.80]">
 <ExpandedNodeIds>
 <v>Cypress Component Catalog</v>
 <v>Cypress Component Catalog\Analog</v>
 <v>Cypress Component Catalog\Analog\ADC</v>
 <v>Cypress Component Catalog\Analog\Amplifiers</v>
 <v>Cypress Component Catalog\Digital</v>
-<v>Cypress Component Catalog\Digital\Functions</v>
-<v>Cypress Component Catalog\Digital\Logic</v>
 <v>Cypress Component Catalog\Digital\Registers</v>
 <v>Cypress Component Catalog\Digital\Utility</v>
 <v>Cypress Component Catalog\System</v>
@@ -952,25 +950,25 @@
 <v>Cypress Component Catalog\Thermal Management</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>Cypress Component Catalog\Digital\Functions\Counter [v3.0]</v>
-<v>Cypress Component Catalog\Digital\Functions\CRC [v2.40]</v>
-<v>Cypress Component Catalog\Digital\Functions\PrISM [v2.20]</v>
-<v>Cypress Component Catalog\Digital\Functions\PRS [v2.40]</v>
-<v>Cypress Component Catalog\Digital\Functions\PWM [v3.30]</v>
-<v>Cypress Component Catalog\Digital\Functions\Quadrature Decoder [v3.0]</v>
-<v>Cypress Component Catalog\Digital\Functions\Shift Register [v2.30]</v>
-<v>Cypress Component Catalog\Digital\Functions\Timer [v2.70]</v>
+<v>Cypress Component Catalog\CapSense</v>
+<v>Cypress Component Catalog\Communications</v>
+<v>Cypress Component Catalog\Digital</v>
+<v>Cypress Component Catalog\Digital\Functions</v>
 <v>Cypress Component Catalog\Digital\Logic</v>
-<v>Cypress Component Catalog\Digital\Logic\And [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\Bufoe [v1.10]</v>
-<v>Cypress Component Catalog\Digital\Logic\D Flip Flop [v1.30]</v>
-<v>Cypress Component Catalog\Digital\Logic\D Flip Flop w/ Enable [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\De-Multiplexer [v1.10]</v>
-<v>Cypress Component Catalog\Digital\Logic\Digital Constant [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\Logic High '1' [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\Logic Low '0' [v1.0]</v>
-<v>Cypress Component Catalog\Digital\Logic\Lookup Table [v1.50]</v>
-<v>Cypress Component Catalog\Digital\Logic\Multiplexer [v1.10]</v>
+<v>Cypress Component Catalog\Digital\Registers</v>
+<v>Cypress Component Catalog\Digital\Registers\Control Register [v1.80]</v>
+<v>Cypress Component Catalog\Digital\Registers\Status Register [v1.90]</v>
+<v>Cypress Component Catalog\Digital\Utility</v>
+<v>Cypress Component Catalog\Digital\Utility\Basic Counter [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Utility\Debouncer [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Utility\Digital Comparator [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Utility\Down Counter (7-bit) [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Utility\Edge Detector [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Utility\Frequency Divider [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Utility\Glitch Filter [v2.0]</v>
+<v>Cypress Component Catalog\Digital\Utility\Pulse Converter [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Utility\Sync [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Utility\UDB Clock Enable [v1.0]</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Off-Chip Component Catalog\Passive">
@@ -1000,7 +998,6 @@
 <v>Off-Chip Component Catalog\Passive\Inductor [v1.0]</v>
 <v>Off-Chip Component Catalog\Passive\Potentiometer [v1.0]</v>
 <v>Off-Chip Component Catalog\Passive\Resistor [v1.0]</v>
-<v>Off-Chip Component Catalog\Passive\Transformer [v1.0]</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </tree_states>
@@ -1654,10 +1651,6 @@
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\PSoC5\API\pins.h</v>
 <v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Power_v1_0\Power_v1_0.cysym</v>
 <v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Power_v1_0\Power_v1_0.pdf</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Resistor_v1_0\Resistor_v1_0.cysym</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Resistor_v1_0\Resistor_v1_0.pdf</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Gnd_v1_0\Gnd_v1_0.cysym</v>
-<v>${CyRoot}\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\Gnd_v1_0\Gnd_v1_0.pdf</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cyprimitive</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.cysym</v>
 <v>${CyRoot}\psoc\content\cyprimitives\CyPrimitives.cylib\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
@@ -1841,14 +1834,14 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="131236406620031787" />
+<deps_time v="131237191697254213" />
 <top_block v="TopDesign" />
 <last_generation v="1" />
 </CyGuid_925cc1e1-309e-4e08-b0a1-09a83c35b157>
 </dataGuid>
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
-<deps_time v="131236436892283952" />
+<deps_time v="131237191709301729" />
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>
 <dataGuid v="504337dd-7d07-4bc7-9057-90e60cf6c469">
