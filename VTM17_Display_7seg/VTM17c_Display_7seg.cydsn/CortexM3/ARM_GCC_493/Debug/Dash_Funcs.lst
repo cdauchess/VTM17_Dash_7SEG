@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
   44 000e 1380     		strh	r3, [r2]	@ movhi
   12:.\Dash_Funcs.c ****     tp = (RXMessage0[2] << 8 | RXMessage0[3])*0.1;
   45              		.loc 1 12 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 2
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 2
 
 
   46 0010 A068     		ldr	r0, [r4, #8]
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
   96 007e FFF7FEFF 		bl	__aeabi_dmul
   97              	.LVL10:
   98 0082 FFF7FEFF 		bl	__aeabi_d2uiz
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 3
 
 
   99              	.LVL11:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  148 00ea 42EA0122 		orr	r2, r2, r1, lsl #8
  149 00ee 4749     		ldr	r1, .L3+68
  150 00f0 0A80     		strh	r2, [r1]	@ movhi
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 4
 
 
   22:.\Dash_Funcs.c ****     launch = RXMessage2[2] << 8 | RXMessage2[3];
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  198 0156 FFF7FEFF 		bl	__aeabi_d2uiz
  199              	.LVL25:
  200 015a 334B     		ldr	r3, .L3+96
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 5
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 5
 
 
  201 015c 1880     		strh	r0, [r3]	@ movhi
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  247 01ba 1380     		strh	r3, [r2]	@ movhi
   37:.\Dash_Funcs.c ****     DispUpdate = 1;
  248              		.loc 1 37 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 6
 
 
  249 01bc 0122     		movs	r2, #1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  300              		.type	Brightness, %function
  301              	Brightness:
  302              	.LFB64:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 7
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 7
 
 
   41:.\Dash_Funcs.c **** 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  340 0020 0020     		movs	r0, #0
  341 0022 70BD     		pop	{r4, r5, r6, pc}
  342              		.cfi_endproc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 8
 
 
  343              	.LFE64:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  387              	.L11:
   66:.\Dash_Funcs.c ****     }
   67:.\Dash_Funcs.c ****     LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 9
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 9
 
 
  388              		.loc 1 67 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  436              		.align	2
  437              		.global	DiagUpdate
  438              		.thumb
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 10
 
 
  439              		.thumb_func
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  484 003c 0422     		movs	r2, #4
  485 003e 0023     		movs	r3, #0
  486 0040 FFF7FEFF 		bl	LED_Driver_LRBWS_Write7SegNumberDec
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 11
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 11
 
 
  487              	.LVL53:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  529 0008 9CB9     		cbnz	r4, .L20
  530              		.loc 1 94 0 is_stmt 0 discriminator 1
  531 000a 0128     		cmp	r0, #1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 12
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 12
 
 
  532 000c 11D1     		bne	.L20
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  110:.\Dash_Funcs.c **** }
  571              		.loc 1 110 0
  572 003a 2046     		mov	r0, r4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 13
 
 
  573              	.LVL62:
@@ -759,44 +759,45 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  114:.\Dash_Funcs.c **** //Gear Calculation
  115:.\Dash_Funcs.c **** //Convert Wheel speed to wheel RPM
  116:.\Dash_Funcs.c **** int Gear = 0;
- 117:.\Dash_Funcs.c **** float Red1 = 18.6955;
- 118:.\Dash_Funcs.c **** float Red2 = 13.4048;
- 119:.\Dash_Funcs.c **** float Red3 = 10.1561;
- 120:.\Dash_Funcs.c **** float Red4 = 8.1218;
- 121:.\Dash_Funcs.c **** float Red5 = 6.4974;
- 122:.\Dash_Funcs.c **** 
- 123:.\Dash_Funcs.c **** float ToleranceHighGear =  1;
- 124:.\Dash_Funcs.c **** float ToleranceLowGear = 2.25;
- 125:.\Dash_Funcs.c ****  
- 126:.\Dash_Funcs.c **** float TireD = 18;
- 127:.\Dash_Funcs.c **** float TireC = TireD*3.14159;
- 128:.\Dash_Funcs.c **** float TireMPR = TireC/(5280*12);
- 129:.\Dash_Funcs.c **** 
- 130:.\Dash_Funcs.c **** float AvgRWhlSpd = (ldSpd + rdSpd)/2;
- 605              		.loc 1 130 0
+ 117:.\Dash_Funcs.c **** //Gear Reduction values for each gear.    
+ 118:.\Dash_Funcs.c **** float Red1 = 18.6955;
+ 119:.\Dash_Funcs.c **** float Red2 = 13.4048;
+ 120:.\Dash_Funcs.c **** float Red3 = 10.1561;
+ 121:.\Dash_Funcs.c **** float Red4 = 8.1218;
+ 122:.\Dash_Funcs.c **** float Red5 = 6.4974;
+ 123:.\Dash_Funcs.c **** 
+ 124:.\Dash_Funcs.c **** float ToleranceHighGear =  1;
+ 125:.\Dash_Funcs.c **** float ToleranceLowGear = 2.25;
+ 126:.\Dash_Funcs.c ****  
+ 127:.\Dash_Funcs.c **** float TireD = 18;
+ 128:.\Dash_Funcs.c **** float TireC = TireD*3.14159;
+ 129:.\Dash_Funcs.c **** float TireMPR = TireC/(5280*12);
+ 130:.\Dash_Funcs.c **** 
+ 131:.\Dash_Funcs.c **** float AvgRWhlSpd = (ldSpd + rdSpd)/2;
+ 605              		.loc 1 131 0
  606 0002 294B     		ldr	r3, .L52
  607 0004 1888     		ldrh	r0, [r3]
  608 0006 294B     		ldr	r3, .L52+4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 14
+
+
  609 0008 1B88     		ldrh	r3, [r3]
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 14
-
-
  610 000a 1844     		add	r0, r0, r3
  611 000c 4010     		asrs	r0, r0, #1
  612 000e FFF7FEFF 		bl	__aeabi_i2f
  613              	.LVL65:
- 131:.\Dash_Funcs.c **** 
- 132:.\Dash_Funcs.c **** float wheelRPM = AvgRWhlSpd/(60*TireMPR);
- 614              		.loc 1 132 0
+ 132:.\Dash_Funcs.c **** 
+ 133:.\Dash_Funcs.c **** float wheelRPM = AvgRWhlSpd/(60*TireMPR);
+ 614              		.loc 1 133 0
  615 0012 2749     		ldr	r1, .L52+8
  616 0014 FFF7FEFF 		bl	__aeabi_fdiv
  617              	.LVL66:
  618 0018 0446     		mov	r4, r0
  619              	.LVL67:
- 133:.\Dash_Funcs.c **** float CalcRed = 0;
- 134:.\Dash_Funcs.c **** 
- 135:.\Dash_Funcs.c **** CalcRed = rpm/wheelRPM;
- 620              		.loc 1 135 0
+ 134:.\Dash_Funcs.c **** float CalcRed = 0;
+ 135:.\Dash_Funcs.c **** 
+ 136:.\Dash_Funcs.c **** CalcRed = rpm/wheelRPM;
+ 620              		.loc 1 136 0
  621 001a 264B     		ldr	r3, .L52+12
  622 001c 1888     		ldrh	r0, [r3]
  623              	.LVL68:
@@ -807,78 +808,78 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  628              	.LVL70:
  629 0028 0446     		mov	r4, r0
  630              	.LVL71:
- 136:.\Dash_Funcs.c **** 
- 137:.\Dash_Funcs.c **** //Calculate the Gear
- 138:.\Dash_Funcs.c **** if(Red1-ToleranceLowGear < CalcRed && Red1+ToleranceLowGear > CalcRed)
- 631              		.loc 1 138 0
+ 137:.\Dash_Funcs.c **** 
+ 138:.\Dash_Funcs.c **** //Calculate the Gear
+ 139:.\Dash_Funcs.c **** if(Red1-ToleranceLowGear < CalcRed && Red1+ToleranceLowGear > CalcRed)
+ 631              		.loc 1 139 0
  632 002a 2349     		ldr	r1, .L52+16
  633 002c FFF7FEFF 		bl	__aeabi_fcmpgt
  634              	.LVL72:
  635 0030 20B1     		cbz	r0, .L29
- 636              		.loc 1 138 0 is_stmt 0 discriminator 1
+ 636              		.loc 1 139 0 is_stmt 0 discriminator 1
  637 0032 2046     		mov	r0, r4
  638 0034 2149     		ldr	r1, .L52+20
  639 0036 FFF7FEFF 		bl	__aeabi_fcmplt
  640              	.LVL73:
  641 003a 40BB     		cbnz	r0, .L39
  642              	.L29:
- 139:.\Dash_Funcs.c ****     Gear = 1;
- 140:.\Dash_Funcs.c **** else if(Red2-ToleranceLowGear < CalcRed && Red2+ToleranceLowGear > CalcRed)
- 643              		.loc 1 140 0 is_stmt 1
+ 140:.\Dash_Funcs.c ****     Gear = 1;
+ 141:.\Dash_Funcs.c **** else if(Red2-ToleranceLowGear < CalcRed && Red2+ToleranceLowGear > CalcRed)
+ 643              		.loc 1 141 0 is_stmt 1
  644 003c 2046     		mov	r0, r4
  645 003e 2049     		ldr	r1, .L52+24
  646 0040 FFF7FEFF 		bl	__aeabi_fcmpgt
  647              	.LVL74:
  648 0044 20B1     		cbz	r0, .L32
- 649              		.loc 1 140 0 is_stmt 0 discriminator 1
+ 649              		.loc 1 141 0 is_stmt 0 discriminator 1
  650 0046 2046     		mov	r0, r4
  651 0048 1E49     		ldr	r1, .L52+28
  652 004a FFF7FEFF 		bl	__aeabi_fcmplt
  653              	.LVL75:
  654 004e 00BB     		cbnz	r0, .L40
  655              	.L32:
- 141:.\Dash_Funcs.c ****     Gear = 2;
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 15
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 15
 
 
- 142:.\Dash_Funcs.c **** else if(Red3-ToleranceHighGear < CalcRed && Red3+ToleranceHighGear > CalcRed)
- 656              		.loc 1 142 0 is_stmt 1
+ 142:.\Dash_Funcs.c ****     Gear = 2;
+ 143:.\Dash_Funcs.c **** else if(Red3-ToleranceHighGear < CalcRed && Red3+ToleranceHighGear > CalcRed)
+ 656              		.loc 1 143 0 is_stmt 1
  657 0050 2046     		mov	r0, r4
  658 0052 1D49     		ldr	r1, .L52+32
  659 0054 FFF7FEFF 		bl	__aeabi_fcmpgt
  660              	.LVL76:
  661 0058 20B1     		cbz	r0, .L34
- 662              		.loc 1 142 0 is_stmt 0 discriminator 1
+ 662              		.loc 1 143 0 is_stmt 0 discriminator 1
  663 005a 2046     		mov	r0, r4
  664 005c 1B49     		ldr	r1, .L52+36
  665 005e FFF7FEFF 		bl	__aeabi_fcmplt
  666              	.LVL77:
  667 0062 C0B9     		cbnz	r0, .L41
  668              	.L34:
- 143:.\Dash_Funcs.c ****     Gear = 3;
- 144:.\Dash_Funcs.c **** else if(Red4-ToleranceHighGear < CalcRed && Red4+ToleranceHighGear > CalcRed)
- 669              		.loc 1 144 0 is_stmt 1
+ 144:.\Dash_Funcs.c ****     Gear = 3;
+ 145:.\Dash_Funcs.c **** else if(Red4-ToleranceHighGear < CalcRed && Red4+ToleranceHighGear > CalcRed)
+ 669              		.loc 1 145 0 is_stmt 1
  670 0064 2046     		mov	r0, r4
  671 0066 1A49     		ldr	r1, .L52+40
  672 0068 FFF7FEFF 		bl	__aeabi_fcmpgt
  673              	.LVL78:
  674 006c 20B1     		cbz	r0, .L36
- 675              		.loc 1 144 0 is_stmt 0 discriminator 1
+ 675              		.loc 1 145 0 is_stmt 0 discriminator 1
  676 006e 2046     		mov	r0, r4
  677 0070 1849     		ldr	r1, .L52+44
  678 0072 FFF7FEFF 		bl	__aeabi_fcmplt
  679              	.LVL79:
  680 0076 80B9     		cbnz	r0, .L42
  681              	.L36:
- 145:.\Dash_Funcs.c ****     Gear = 4;
- 146:.\Dash_Funcs.c **** else if(Red5-ToleranceHighGear < CalcRed && Red5+ToleranceHighGear > CalcRed)
- 682              		.loc 1 146 0 is_stmt 1
+ 146:.\Dash_Funcs.c ****     Gear = 4;
+ 147:.\Dash_Funcs.c **** else if(Red5-ToleranceHighGear < CalcRed && Red5+ToleranceHighGear > CalcRed)
+ 682              		.loc 1 147 0 is_stmt 1
  683 0078 2046     		mov	r0, r4
  684 007a 1749     		ldr	r1, .L52+48
  685 007c FFF7FEFF 		bl	__aeabi_fcmpgt
  686              	.LVL80:
  687 0080 68B1     		cbz	r0, .L50
- 688              		.loc 1 146 0 is_stmt 0 discriminator 1
+ 688              		.loc 1 147 0 is_stmt 0 discriminator 1
  689 0082 2046     		mov	r0, r4
  690 0084 1549     		ldr	r1, .L52+52
  691 0086 FFF7FEFF 		bl	__aeabi_fcmplt
@@ -887,49 +888,49 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  694 008c 10BD     		pop	{r4, pc}
  695              	.LVL82:
  696              	.L39:
- 139:.\Dash_Funcs.c **** else if(Red2-ToleranceLowGear < CalcRed && Red2+ToleranceLowGear > CalcRed)
- 697              		.loc 1 139 0 is_stmt 1
+ 140:.\Dash_Funcs.c **** else if(Red2-ToleranceLowGear < CalcRed && Red2+ToleranceLowGear > CalcRed)
+ 697              		.loc 1 140 0 is_stmt 1
  698 008e 0120     		movs	r0, #1
  699 0090 10BD     		pop	{r4, pc}
  700              	.LVL83:
  701              	.L40:
- 141:.\Dash_Funcs.c **** else if(Red3-ToleranceHighGear < CalcRed && Red3+ToleranceHighGear > CalcRed)
- 702              		.loc 1 141 0
+ 142:.\Dash_Funcs.c **** else if(Red3-ToleranceHighGear < CalcRed && Red3+ToleranceHighGear > CalcRed)
+ 702              		.loc 1 142 0
  703 0092 0220     		movs	r0, #2
  704 0094 10BD     		pop	{r4, pc}
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 16
+
+
  705              	.LVL84:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 16
-
-
  706              	.L41:
- 143:.\Dash_Funcs.c **** else if(Red4-ToleranceHighGear < CalcRed && Red4+ToleranceHighGear > CalcRed)
- 707              		.loc 1 143 0
+ 144:.\Dash_Funcs.c **** else if(Red4-ToleranceHighGear < CalcRed && Red4+ToleranceHighGear > CalcRed)
+ 707              		.loc 1 144 0
  708 0096 0320     		movs	r0, #3
  709 0098 10BD     		pop	{r4, pc}
  710              	.LVL85:
  711              	.L42:
- 145:.\Dash_Funcs.c **** else if(Red5-ToleranceHighGear < CalcRed && Red5+ToleranceHighGear > CalcRed)
- 712              		.loc 1 145 0
+ 146:.\Dash_Funcs.c **** else if(Red5-ToleranceHighGear < CalcRed && Red5+ToleranceHighGear > CalcRed)
+ 712              		.loc 1 146 0
  713 009a 0420     		movs	r0, #4
  714 009c 10BD     		pop	{r4, pc}
  715              	.LVL86:
  716              	.L50:
- 147:.\Dash_Funcs.c ****     Gear = 5;
- 148:.\Dash_Funcs.c **** else
- 149:.\Dash_Funcs.c ****     Gear = 0;
- 717              		.loc 1 149 0
+ 148:.\Dash_Funcs.c ****     Gear = 5;
+ 149:.\Dash_Funcs.c **** else
+ 150:.\Dash_Funcs.c ****     Gear = 0;
+ 717              		.loc 1 150 0
  718 009e 0020     		movs	r0, #0
  719 00a0 10BD     		pop	{r4, pc}
  720              	.LVL87:
  721              	.L44:
- 147:.\Dash_Funcs.c ****     Gear = 5;
- 722              		.loc 1 147 0
+ 148:.\Dash_Funcs.c ****     Gear = 5;
+ 722              		.loc 1 148 0
  723 00a2 0520     		movs	r0, #5
  724              	.LVL88:
- 150:.\Dash_Funcs.c ****     
- 151:.\Dash_Funcs.c **** return Gear;
- 152:.\Dash_Funcs.c **** }
- 725              		.loc 1 152 0
+ 151:.\Dash_Funcs.c ****     
+ 152:.\Dash_Funcs.c **** return Gear;
+ 153:.\Dash_Funcs.c **** }
+ 725              		.loc 1 153 0
  726 00a4 10BD     		pop	{r4, pc}
  727              	.LVL89:
  728              	.L53:
@@ -957,16 +958,16 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  750              		.global	ShiftLights
  751              		.thumb
  752              		.thumb_func
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 17
+
+
  753              		.type	ShiftLights, %function
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 17
-
-
  754              	ShiftLights:
  755              	.LFB69:
- 153:.\Dash_Funcs.c **** 
- 154:.\Dash_Funcs.c **** int ShiftLights()
- 155:.\Dash_Funcs.c **** {
- 756              		.loc 1 155 0
+ 154:.\Dash_Funcs.c **** 
+ 155:.\Dash_Funcs.c **** int ShiftLights()
+ 156:.\Dash_Funcs.c **** {
+ 756              		.loc 1 156 0
  757              		.cfi_startproc
  758              		@ args = 0, pretend = 0, frame = 0
  759              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -975,16 +976,16 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  762              		.cfi_offset 4, -8
  763              		.cfi_offset 14, -4
  764              	.LVL90:
- 156:.\Dash_Funcs.c ****     int Column = 4;
- 157:.\Dash_Funcs.c ****     int i = 0;
- 158:.\Dash_Funcs.c ****     int Light1 = 8;
- 159:.\Dash_Funcs.c ****     int Light2 = 10;
- 160:.\Dash_Funcs.c ****     int Light3 = 12;
- 161:.\Dash_Funcs.c ****     int Light4 = 15;
- 162:.\Dash_Funcs.c ****     int Light5 = 17;
- 163:.\Dash_Funcs.c ****     
- 164:.\Dash_Funcs.c ****     if(rpm>= Shift1 && rpm < Shift2)
- 765              		.loc 1 164 0
+ 157:.\Dash_Funcs.c ****     int Column = 4;
+ 158:.\Dash_Funcs.c ****     int i = 0;
+ 159:.\Dash_Funcs.c ****     int Light1 = 8;
+ 160:.\Dash_Funcs.c ****     int Light2 = 10;
+ 161:.\Dash_Funcs.c ****     int Light3 = 12;
+ 162:.\Dash_Funcs.c ****     int Light4 = 15;
+ 163:.\Dash_Funcs.c ****     int Light5 = 17;
+ 164:.\Dash_Funcs.c ****     
+ 165:.\Dash_Funcs.c ****     if(rpm>= Shift1 && rpm < Shift2)
+ 765              		.loc 1 165 0
  766 0002 A14B     		ldr	r3, .L70
  767 0004 1A88     		ldrh	r2, [r3]
  768 0006 A2F5DA53 		sub	r3, r2, #6976
@@ -992,504 +993,504 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  770 000c 9BB2     		uxth	r3, r3
  771 000e B3F5FA7F 		cmp	r3, #500
  772 0012 2BD2     		bcs	.L55
- 165:.\Dash_Funcs.c ****     {
- 166:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
- 773              		.loc 1 166 0
+ 166:.\Dash_Funcs.c ****     {
+ 167:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
+ 773              		.loc 1 167 0
  774 0014 0820     		movs	r0, #8
  775 0016 0421     		movs	r1, #4
  776 0018 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  777              	.LVL91:
- 167:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
- 778              		.loc 1 167 0
+ 168:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
+ 778              		.loc 1 168 0
  779 001c 0920     		movs	r0, #9
  780 001e 0421     		movs	r1, #4
  781 0020 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  782              	.LVL92:
- 168:.\Dash_Funcs.c ****         
- 169:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(10,Column);
- 783              		.loc 1 169 0
+ 169:.\Dash_Funcs.c ****         
+ 170:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(10,Column);
+ 783              		.loc 1 170 0
  784 0024 0A20     		movs	r0, #10
  785 0026 0421     		movs	r1, #4
  786 0028 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  787              	.LVL93:
- 170:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(11,Column);
- 788              		.loc 1 170 0
+ 171:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(11,Column);
+ 788              		.loc 1 171 0
  789 002c 0B20     		movs	r0, #11
  790 002e 0421     		movs	r1, #4
  791 0030 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 18
+
+
  792              	.LVL94:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 18
-
-
- 171:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(12,Column);
- 793              		.loc 1 171 0
+ 172:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(12,Column);
+ 793              		.loc 1 172 0
  794 0034 0C20     		movs	r0, #12
  795 0036 0421     		movs	r1, #4
  796 0038 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  797              	.LVL95:
- 172:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(13,Column);
- 798              		.loc 1 172 0
+ 173:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(13,Column);
+ 798              		.loc 1 173 0
  799 003c 0D20     		movs	r0, #13
  800 003e 0421     		movs	r1, #4
  801 0040 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  802              	.LVL96:
- 173:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(14,Column);
- 803              		.loc 1 173 0
+ 174:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(14,Column);
+ 803              		.loc 1 174 0
  804 0044 0E20     		movs	r0, #14
  805 0046 0421     		movs	r1, #4
  806 0048 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  807              	.LVL97:
- 174:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(15,Column);
- 808              		.loc 1 174 0
+ 175:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(15,Column);
+ 808              		.loc 1 175 0
  809 004c 0F20     		movs	r0, #15
  810 004e 0421     		movs	r1, #4
  811 0050 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  812              	.LVL98:
- 175:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(16,Column);
- 813              		.loc 1 175 0
+ 176:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(16,Column);
+ 813              		.loc 1 176 0
  814 0054 1020     		movs	r0, #16
  815 0056 0421     		movs	r1, #4
  816 0058 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  817              	.LVL99:
- 176:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(17,Column);
- 818              		.loc 1 176 0
+ 177:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(17,Column);
+ 818              		.loc 1 177 0
  819 005c 1120     		movs	r0, #17
  820 005e 0421     		movs	r1, #4
  821 0060 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  822              	.LVL100:
- 177:.\Dash_Funcs.c ****         
- 178:.\Dash_Funcs.c ****         OffsetFlash = 0;
- 823              		.loc 1 178 0
+ 178:.\Dash_Funcs.c ****         
+ 179:.\Dash_Funcs.c ****         OffsetFlash = 0;
+ 823              		.loc 1 179 0
  824 0064 0022     		movs	r2, #0
  825 0066 894B     		ldr	r3, .L70+4
  826 0068 1A60     		str	r2, [r3]
  827 006a 00E1     		b	.L56
  828              	.L55:
- 179:.\Dash_Funcs.c ****     }
- 180:.\Dash_Funcs.c ****     else if(rpm>= Shift2 && rpm < Shift3)
- 829              		.loc 1 180 0
+ 180:.\Dash_Funcs.c ****     }
+ 181:.\Dash_Funcs.c ****     else if(rpm>= Shift2 && rpm < Shift3)
+ 829              		.loc 1 181 0
  830 006c A2F5EA53 		sub	r3, r2, #7488
  831 0070 0C3B     		subs	r3, r3, #12
  832 0072 9BB2     		uxth	r3, r3
  833 0074 B3F5FA7F 		cmp	r3, #500
  834 0078 2BD2     		bcs	.L57
- 181:.\Dash_Funcs.c ****     {
- 182:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
- 835              		.loc 1 182 0
+ 182:.\Dash_Funcs.c ****     {
+ 183:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
+ 835              		.loc 1 183 0
  836 007a 0820     		movs	r0, #8
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 19
+
+
  837 007c 0421     		movs	r1, #4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 19
-
-
  838 007e FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  839              	.LVL101:
- 183:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
- 840              		.loc 1 183 0
+ 184:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
+ 840              		.loc 1 184 0
  841 0082 0920     		movs	r0, #9
  842 0084 0421     		movs	r1, #4
  843 0086 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  844              	.LVL102:
- 184:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(10,Column);
- 845              		.loc 1 184 0
+ 185:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(10,Column);
+ 845              		.loc 1 185 0
  846 008a 0A20     		movs	r0, #10
  847 008c 0421     		movs	r1, #4
  848 008e FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  849              	.LVL103:
- 185:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(11,Column);
- 850              		.loc 1 185 0
+ 186:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(11,Column);
+ 850              		.loc 1 186 0
  851 0092 0B20     		movs	r0, #11
  852 0094 0421     		movs	r1, #4
  853 0096 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  854              	.LVL104:
- 186:.\Dash_Funcs.c ****         
- 187:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(12,Column);
- 855              		.loc 1 187 0
+ 187:.\Dash_Funcs.c ****         
+ 188:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(12,Column);
+ 855              		.loc 1 188 0
  856 009a 0C20     		movs	r0, #12
  857 009c 0421     		movs	r1, #4
  858 009e FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  859              	.LVL105:
- 188:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(13,Column);
- 860              		.loc 1 188 0
+ 189:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(13,Column);
+ 860              		.loc 1 189 0
  861 00a2 0D20     		movs	r0, #13
  862 00a4 0421     		movs	r1, #4
  863 00a6 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  864              	.LVL106:
- 189:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(14,Column);
- 865              		.loc 1 189 0
+ 190:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(14,Column);
+ 865              		.loc 1 190 0
  866 00aa 0E20     		movs	r0, #14
  867 00ac 0421     		movs	r1, #4
  868 00ae FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  869              	.LVL107:
- 190:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(15,Column);
- 870              		.loc 1 190 0
+ 191:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(15,Column);
+ 870              		.loc 1 191 0
  871 00b2 0F20     		movs	r0, #15
  872 00b4 0421     		movs	r1, #4
  873 00b6 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  874              	.LVL108:
- 191:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(16,Column);
- 875              		.loc 1 191 0
+ 192:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(16,Column);
+ 875              		.loc 1 192 0
  876 00ba 1020     		movs	r0, #16
  877 00bc 0421     		movs	r1, #4
  878 00be FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  879              	.LVL109:
- 192:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(17,Column);
- 880              		.loc 1 192 0
+ 193:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(17,Column);
+ 880              		.loc 1 193 0
  881 00c2 1120     		movs	r0, #17
  882 00c4 0421     		movs	r1, #4
  883 00c6 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 20
+
+
  884              	.LVL110:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 20
-
-
- 193:.\Dash_Funcs.c ****         
- 194:.\Dash_Funcs.c ****         OffsetFlash = 0;
- 885              		.loc 1 194 0
+ 194:.\Dash_Funcs.c ****         
+ 195:.\Dash_Funcs.c ****         OffsetFlash = 0;
+ 885              		.loc 1 195 0
  886 00ca 0022     		movs	r2, #0
  887 00cc 6F4B     		ldr	r3, .L70+4
  888 00ce 1A60     		str	r2, [r3]
  889 00d0 CDE0     		b	.L56
  890              	.L57:
- 195:.\Dash_Funcs.c ****     }
- 196:.\Dash_Funcs.c ****     else if(rpm>= Shift3 && rpm < Shift4)
- 891              		.loc 1 196 0
+ 196:.\Dash_Funcs.c ****     }
+ 197:.\Dash_Funcs.c ****     else if(rpm>= Shift3 && rpm < Shift4)
+ 891              		.loc 1 197 0
  892 00d2 A2F5FA53 		sub	r3, r2, #8000
  893 00d6 9BB2     		uxth	r3, r3
  894 00d8 B3F5FA7F 		cmp	r3, #500
  895 00dc 2BD2     		bcs	.L58
- 197:.\Dash_Funcs.c ****     {
- 198:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
- 896              		.loc 1 198 0
+ 198:.\Dash_Funcs.c ****     {
+ 199:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
+ 896              		.loc 1 199 0
  897 00de 0820     		movs	r0, #8
  898 00e0 0421     		movs	r1, #4
  899 00e2 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  900              	.LVL111:
- 199:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
- 901              		.loc 1 199 0
+ 200:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
+ 901              		.loc 1 200 0
  902 00e6 0920     		movs	r0, #9
  903 00e8 0421     		movs	r1, #4
  904 00ea FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  905              	.LVL112:
- 200:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(10,Column);
- 906              		.loc 1 200 0
+ 201:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(10,Column);
+ 906              		.loc 1 201 0
  907 00ee 0A20     		movs	r0, #10
  908 00f0 0421     		movs	r1, #4
  909 00f2 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  910              	.LVL113:
- 201:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(11,Column);
- 911              		.loc 1 201 0
+ 202:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(11,Column);
+ 911              		.loc 1 202 0
  912 00f6 0B20     		movs	r0, #11
  913 00f8 0421     		movs	r1, #4
  914 00fa FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  915              	.LVL114:
- 202:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(12,Column);
- 916              		.loc 1 202 0
+ 203:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(12,Column);
+ 916              		.loc 1 203 0
  917 00fe 0C20     		movs	r0, #12
  918 0100 0421     		movs	r1, #4
  919 0102 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  920              	.LVL115:
- 203:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(13,Column);
- 921              		.loc 1 203 0
+ 204:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(13,Column);
+ 921              		.loc 1 204 0
  922 0106 0D20     		movs	r0, #13
  923 0108 0421     		movs	r1, #4
  924 010a FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  925              	.LVL116:
- 204:.\Dash_Funcs.c ****         
- 205:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(14,Column);
- 926              		.loc 1 205 0
+ 205:.\Dash_Funcs.c ****         
+ 206:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(14,Column);
+ 926              		.loc 1 206 0
  927 010e 0E20     		movs	r0, #14
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 21
+
+
  928 0110 0421     		movs	r1, #4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 21
-
-
  929 0112 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  930              	.LVL117:
- 206:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(15,Column);
- 931              		.loc 1 206 0
+ 207:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(15,Column);
+ 931              		.loc 1 207 0
  932 0116 0F20     		movs	r0, #15
  933 0118 0421     		movs	r1, #4
  934 011a FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  935              	.LVL118:
- 207:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(16,Column);
- 936              		.loc 1 207 0
+ 208:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(16,Column);
+ 936              		.loc 1 208 0
  937 011e 1020     		movs	r0, #16
  938 0120 0421     		movs	r1, #4
  939 0122 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  940              	.LVL119:
- 208:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(17,Column);
- 941              		.loc 1 208 0
+ 209:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(17,Column);
+ 941              		.loc 1 209 0
  942 0126 1120     		movs	r0, #17
  943 0128 0421     		movs	r1, #4
  944 012a FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  945              	.LVL120:
- 209:.\Dash_Funcs.c ****         
- 210:.\Dash_Funcs.c ****         OffsetFlash = 0;
- 946              		.loc 1 210 0
+ 210:.\Dash_Funcs.c ****         
+ 211:.\Dash_Funcs.c ****         OffsetFlash = 0;
+ 946              		.loc 1 211 0
  947 012e 0022     		movs	r2, #0
  948 0130 564B     		ldr	r3, .L70+4
  949 0132 1A60     		str	r2, [r3]
  950 0134 9BE0     		b	.L56
  951              	.L58:
- 211:.\Dash_Funcs.c ****     }
- 212:.\Dash_Funcs.c ****     else if(rpm>= Shift4 && rpm < Shift5)
- 952              		.loc 1 212 0
+ 212:.\Dash_Funcs.c ****     }
+ 213:.\Dash_Funcs.c ****     else if(rpm>= Shift4 && rpm < Shift5)
+ 952              		.loc 1 213 0
  953 0136 A2F50453 		sub	r3, r2, #8448
  954 013a 343B     		subs	r3, r3, #52
  955 013c 9BB2     		uxth	r3, r3
  956 013e B3F5FA7F 		cmp	r3, #500
  957 0142 2BD2     		bcs	.L59
- 213:.\Dash_Funcs.c ****     {
- 214:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
- 958              		.loc 1 214 0
+ 214:.\Dash_Funcs.c ****     {
+ 215:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
+ 958              		.loc 1 215 0
  959 0144 0820     		movs	r0, #8
  960 0146 0421     		movs	r1, #4
  961 0148 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  962              	.LVL121:
- 215:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
- 963              		.loc 1 215 0
+ 216:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
+ 963              		.loc 1 216 0
  964 014c 0920     		movs	r0, #9
  965 014e 0421     		movs	r1, #4
  966 0150 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  967              	.LVL122:
- 216:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(10,Column);
- 968              		.loc 1 216 0
+ 217:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(10,Column);
+ 968              		.loc 1 217 0
  969 0154 0A20     		movs	r0, #10
  970 0156 0421     		movs	r1, #4
  971 0158 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  972              	.LVL123:
- 217:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(11,Column);
- 973              		.loc 1 217 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 22
+ 218:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(11,Column);
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 22
 
 
+ 973              		.loc 1 218 0
  974 015c 0B20     		movs	r0, #11
  975 015e 0421     		movs	r1, #4
  976 0160 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  977              	.LVL124:
- 218:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(12,Column);
- 978              		.loc 1 218 0
+ 219:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(12,Column);
+ 978              		.loc 1 219 0
  979 0164 0C20     		movs	r0, #12
  980 0166 0421     		movs	r1, #4
  981 0168 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  982              	.LVL125:
- 219:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(13,Column);
- 983              		.loc 1 219 0
+ 220:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(13,Column);
+ 983              		.loc 1 220 0
  984 016c 0D20     		movs	r0, #13
  985 016e 0421     		movs	r1, #4
  986 0170 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  987              	.LVL126:
- 220:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(14,Column);
- 988              		.loc 1 220 0
+ 221:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(14,Column);
+ 988              		.loc 1 221 0
  989 0174 0E20     		movs	r0, #14
  990 0176 0421     		movs	r1, #4
  991 0178 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  992              	.LVL127:
- 221:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(15,Column);
- 993              		.loc 1 221 0
+ 222:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(15,Column);
+ 993              		.loc 1 222 0
  994 017c 0F20     		movs	r0, #15
  995 017e 0421     		movs	r1, #4
  996 0180 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  997              	.LVL128:
- 222:.\Dash_Funcs.c ****         
- 223:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(16,Column);
- 998              		.loc 1 223 0
+ 223:.\Dash_Funcs.c ****         
+ 224:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(16,Column);
+ 998              		.loc 1 224 0
  999 0184 1020     		movs	r0, #16
  1000 0186 0421     		movs	r1, #4
  1001 0188 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  1002              	.LVL129:
- 224:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(17,Column);  
- 1003              		.loc 1 224 0
+ 225:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(17,Column);  
+ 1003              		.loc 1 225 0
  1004 018c 1120     		movs	r0, #17
  1005 018e 0421     		movs	r1, #4
  1006 0190 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  1007              	.LVL130:
- 225:.\Dash_Funcs.c ****         
- 226:.\Dash_Funcs.c ****         OffsetFlash = 0;
- 1008              		.loc 1 226 0
+ 226:.\Dash_Funcs.c ****         
+ 227:.\Dash_Funcs.c ****         OffsetFlash = 0;
+ 1008              		.loc 1 227 0
  1009 0194 0022     		movs	r2, #0
  1010 0196 3D4B     		ldr	r3, .L70+4
  1011 0198 1A60     		str	r2, [r3]
  1012 019a 68E0     		b	.L56
  1013              	.L59:
- 227:.\Dash_Funcs.c ****     }
- 228:.\Dash_Funcs.c ****     else if(rpm >= Shift5 && rpm < Shift5+Overrev)
- 1014              		.loc 1 228 0
+ 228:.\Dash_Funcs.c ****     }
+ 229:.\Dash_Funcs.c ****     else if(rpm >= Shift5 && rpm < Shift5+Overrev)
+ 1014              		.loc 1 229 0
  1015 019c A2F50C53 		sub	r3, r2, #8960
  1016 01a0 283B     		subs	r3, r3, #40
  1017 01a2 9BB2     		uxth	r3, r3
  1018 01a4 B3F5FA7F 		cmp	r3, #500
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 23
+
+
  1019 01a8 2BD2     		bcs	.L60
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 23
-
-
- 229:.\Dash_Funcs.c ****     {
- 230:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
- 1020              		.loc 1 230 0
+ 230:.\Dash_Funcs.c ****     {
+ 231:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(8,Column);
+ 1020              		.loc 1 231 0
  1021 01aa 0820     		movs	r0, #8
  1022 01ac 0421     		movs	r1, #4
  1023 01ae FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1024              	.LVL131:
- 231:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
- 1025              		.loc 1 231 0
+ 232:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(9,Column);
+ 1025              		.loc 1 232 0
  1026 01b2 0920     		movs	r0, #9
  1027 01b4 0421     		movs	r1, #4
  1028 01b6 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1029              	.LVL132:
- 232:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(10,Column);
- 1030              		.loc 1 232 0
+ 233:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(10,Column);
+ 1030              		.loc 1 233 0
  1031 01ba 0A20     		movs	r0, #10
  1032 01bc 0421     		movs	r1, #4
  1033 01be FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1034              	.LVL133:
- 233:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(11,Column);
- 1035              		.loc 1 233 0
+ 234:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(11,Column);
+ 1035              		.loc 1 234 0
  1036 01c2 0B20     		movs	r0, #11
  1037 01c4 0421     		movs	r1, #4
  1038 01c6 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1039              	.LVL134:
- 234:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(12,Column);
- 1040              		.loc 1 234 0
+ 235:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(12,Column);
+ 1040              		.loc 1 235 0
  1041 01ca 0C20     		movs	r0, #12
  1042 01cc 0421     		movs	r1, #4
  1043 01ce FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1044              	.LVL135:
- 235:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(13,Column);
- 1045              		.loc 1 235 0
+ 236:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(13,Column);
+ 1045              		.loc 1 236 0
  1046 01d2 0D20     		movs	r0, #13
  1047 01d4 0421     		movs	r1, #4
  1048 01d6 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1049              	.LVL136:
- 236:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(14,Column);
- 1050              		.loc 1 236 0
+ 237:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(14,Column);
+ 1050              		.loc 1 237 0
  1051 01da 0E20     		movs	r0, #14
  1052 01dc 0421     		movs	r1, #4
  1053 01de FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1054              	.LVL137:
- 237:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(15,Column);
- 1055              		.loc 1 237 0
+ 238:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(15,Column);
+ 1055              		.loc 1 238 0
  1056 01e2 0F20     		movs	r0, #15
  1057 01e4 0421     		movs	r1, #4
  1058 01e6 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1059              	.LVL138:
- 238:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(16,Column);
- 1060              		.loc 1 238 0
+ 239:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(16,Column);
+ 1060              		.loc 1 239 0
  1061 01ea 1020     		movs	r0, #16
  1062 01ec 0421     		movs	r1, #4
  1063 01ee FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1064              	.LVL139:
- 239:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(17,Column);
- 1065              		.loc 1 239 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 24
+ 240:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(17,Column);
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 24
 
 
+ 1065              		.loc 1 240 0
  1066 01f2 1120     		movs	r0, #17
  1067 01f4 0421     		movs	r1, #4
  1068 01f6 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1069              	.LVL140:
- 240:.\Dash_Funcs.c ****         
- 241:.\Dash_Funcs.c ****         OffsetFlash = 0;
- 1070              		.loc 1 241 0
+ 241:.\Dash_Funcs.c ****         
+ 242:.\Dash_Funcs.c ****         OffsetFlash = 0;
+ 1070              		.loc 1 242 0
  1071 01fa 0022     		movs	r2, #0
  1072 01fc 234B     		ldr	r3, .L70+4
  1073 01fe 1A60     		str	r2, [r3]
  1074 0200 35E0     		b	.L56
  1075              	.L60:
- 242:.\Dash_Funcs.c ****     }
- 243:.\Dash_Funcs.c ****     else if(rpm >= Shift5+Overrev && FlashCounter > FlashFreq)
- 1076              		.loc 1 243 0
+ 243:.\Dash_Funcs.c ****     }
+ 244:.\Dash_Funcs.c ****     else if(rpm >= Shift5+Overrev && FlashCounter > FlashFreq)
+ 1076              		.loc 1 244 0
  1077 0202 42F21B53 		movw	r3, #9499
  1078 0206 9A42     		cmp	r2, r3
  1079 0208 20D9     		bls	.L61
- 1080              		.loc 1 243 0 is_stmt 0 discriminator 1
+ 1080              		.loc 1 244 0 is_stmt 0 discriminator 1
  1081 020a 214B     		ldr	r3, .L70+8
  1082 020c 1968     		ldr	r1, [r3]
  1083 020e 214B     		ldr	r3, .L70+12
  1084 0210 1B68     		ldr	r3, [r3]
  1085 0212 9942     		cmp	r1, r3
  1086 0214 1ADD     		ble	.L61
- 244:.\Dash_Funcs.c ****     {
- 245:.\Dash_Funcs.c ****         if(OffsetFlash == 0)
- 1087              		.loc 1 245 0 is_stmt 1
+ 245:.\Dash_Funcs.c ****     {
+ 246:.\Dash_Funcs.c ****         if(OffsetFlash == 0)
+ 1087              		.loc 1 246 0 is_stmt 1
  1088 0216 1D4B     		ldr	r3, .L70+4
  1089 0218 1B68     		ldr	r3, [r3]
  1090 021a 53B9     		cbnz	r3, .L62
- 246:.\Dash_Funcs.c ****         {
- 247:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ToggleRC(16,Column);
- 1091              		.loc 1 247 0
+ 247:.\Dash_Funcs.c ****         {
+ 248:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ToggleRC(16,Column);
+ 1091              		.loc 1 248 0
  1092 021c 1020     		movs	r0, #16
  1093 021e 0421     		movs	r1, #4
  1094 0220 FFF7FEFF 		bl	LED_Driver_LRBWS_ToggleRC
  1095              	.LVL141:
- 248:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ToggleRC(17,Column);
- 1096              		.loc 1 248 0
+ 249:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ToggleRC(17,Column);
+ 1096              		.loc 1 249 0
  1097 0224 1120     		movs	r0, #17
  1098 0226 0421     		movs	r1, #4
  1099 0228 FFF7FEFF 		bl	LED_Driver_LRBWS_ToggleRC
  1100              	.LVL142:
- 249:.\Dash_Funcs.c ****         OffsetFlash = 1;
- 1101              		.loc 1 249 0
+ 250:.\Dash_Funcs.c ****         OffsetFlash = 1;
+ 1101              		.loc 1 250 0
  1102 022c 0122     		movs	r2, #1
  1103 022e 174B     		ldr	r3, .L70+4
  1104 0230 1A60     		str	r2, [r3]
  1105              	.L62:
- 155:.\Dash_Funcs.c ****     int Column = 4;
- 1106              		.loc 1 155 0 discriminator 1
+ 156:.\Dash_Funcs.c ****     int Column = 4;
+ 1106              		.loc 1 156 0 discriminator 1
  1107 0232 0824     		movs	r4, #8
  1108 0234 04E0     		b	.L63
  1109              	.LVL143:
  1110              	.L64:
- 250:.\Dash_Funcs.c ****         }
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 25
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 25
 
 
- 251:.\Dash_Funcs.c ****                 
- 252:.\Dash_Funcs.c ****         //Flash all Lights
- 253:.\Dash_Funcs.c ****         for(i = Light1; i<=Light5; i++)
- 254:.\Dash_Funcs.c ****         {
- 255:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ToggleRC(i,Column);
- 1111              		.loc 1 255 0 discriminator 3
+ 251:.\Dash_Funcs.c ****         }
+ 252:.\Dash_Funcs.c ****                 
+ 253:.\Dash_Funcs.c ****         //Flash all Lights
+ 254:.\Dash_Funcs.c ****         for(i = Light1; i<=Light5; i++)
+ 255:.\Dash_Funcs.c ****         {
+ 256:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ToggleRC(i,Column);
+ 1111              		.loc 1 256 0 discriminator 3
  1112 0236 E0B2     		uxtb	r0, r4
  1113 0238 0421     		movs	r1, #4
  1114 023a FFF7FEFF 		bl	LED_Driver_LRBWS_ToggleRC
  1115              	.LVL144:
- 253:.\Dash_Funcs.c ****         {
- 1116              		.loc 1 253 0 discriminator 3
+ 254:.\Dash_Funcs.c ****         {
+ 1116              		.loc 1 254 0 discriminator 3
  1117 023e 0134     		adds	r4, r4, #1
  1118              	.LVL145:
  1119              	.L63:
- 253:.\Dash_Funcs.c ****         {
- 1120              		.loc 1 253 0 is_stmt 0 discriminator 1
+ 254:.\Dash_Funcs.c ****         {
+ 1120              		.loc 1 254 0 is_stmt 0 discriminator 1
  1121 0240 112C     		cmp	r4, #17
  1122 0242 F8DD     		ble	.L64
- 256:.\Dash_Funcs.c ****         }
- 257:.\Dash_Funcs.c ****         FlashCounter = 0;
- 1123              		.loc 1 257 0 is_stmt 1
+ 257:.\Dash_Funcs.c ****         }
+ 258:.\Dash_Funcs.c ****         FlashCounter = 0;
+ 1123              		.loc 1 258 0 is_stmt 1
  1124 0244 0022     		movs	r2, #0
  1125 0246 124B     		ldr	r3, .L70+8
  1126 0248 1A60     		str	r2, [r3]
  1127 024a 10E0     		b	.L56
  1128              	.LVL146:
  1129              	.L61:
- 258:.\Dash_Funcs.c ****     }
- 259:.\Dash_Funcs.c ****     else if(rpm < Shift1)
- 1130              		.loc 1 259 0
+ 259:.\Dash_Funcs.c ****     }
+ 260:.\Dash_Funcs.c ****     else if(rpm < Shift1)
+ 1130              		.loc 1 260 0
  1131 024c 41F65733 		movw	r3, #6999
  1132 0250 9A42     		cmp	r2, r3
  1133 0252 06D9     		bls	.L68
  1134 0254 0BE0     		b	.L56
  1135              	.LVL147:
  1136              	.L66:
- 260:.\Dash_Funcs.c ****     {
- 261:.\Dash_Funcs.c ****     //Turn off all lights
- 262:.\Dash_Funcs.c ****         for(i = Light1; i<=Light5; i++)
- 263:.\Dash_Funcs.c ****         {
- 264:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(i,Column);
- 1137              		.loc 1 264 0 discriminator 3
+ 261:.\Dash_Funcs.c ****     {
+ 262:.\Dash_Funcs.c ****     //Turn off all lights
+ 263:.\Dash_Funcs.c ****         for(i = Light1; i<=Light5; i++)
+ 264:.\Dash_Funcs.c ****         {
+ 265:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(i,Column);
+ 1137              		.loc 1 265 0 discriminator 3
  1138 0256 E0B2     		uxtb	r0, r4
  1139 0258 0421     		movs	r1, #4
  1140 025a FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  1141              	.LVL148:
- 262:.\Dash_Funcs.c ****         {
- 1142              		.loc 1 262 0 discriminator 3
+ 263:.\Dash_Funcs.c ****         {
+ 1142              		.loc 1 263 0 discriminator 3
  1143 025e 0134     		adds	r4, r4, #1
  1144              	.LVL149:
  1145 0260 00E0     		b	.L65
@@ -1497,43 +1498,43 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1147              	.L68:
  1148 0262 0824     		movs	r4, #8
  1149              	.LVL151:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 26
+
+
  1150              	.L65:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 26
-
-
- 262:.\Dash_Funcs.c ****         {
- 1151              		.loc 1 262 0 is_stmt 0 discriminator 1
+ 263:.\Dash_Funcs.c ****         {
+ 1151              		.loc 1 263 0 is_stmt 0 discriminator 1
  1152 0264 112C     		cmp	r4, #17
  1153 0266 F6DD     		ble	.L66
- 265:.\Dash_Funcs.c ****         }
- 266:.\Dash_Funcs.c ****         OffsetFlash = 0;
- 1154              		.loc 1 266 0 is_stmt 1
+ 266:.\Dash_Funcs.c ****         }
+ 267:.\Dash_Funcs.c ****         OffsetFlash = 0;
+ 1154              		.loc 1 267 0 is_stmt 1
  1155 0268 0022     		movs	r2, #0
  1156 026a 084B     		ldr	r3, .L70+4
  1157 026c 1A60     		str	r2, [r3]
  1158              	.LVL152:
  1159              	.L56:
- 267:.\Dash_Funcs.c ****     }
- 268:.\Dash_Funcs.c ****     FlashCounter++;
- 1160              		.loc 1 268 0
+ 268:.\Dash_Funcs.c ****     }
+ 269:.\Dash_Funcs.c ****     FlashCounter++;
+ 1160              		.loc 1 269 0
  1161 026e 084A     		ldr	r2, .L70+8
  1162 0270 1368     		ldr	r3, [r2]
  1163 0272 0133     		adds	r3, r3, #1
  1164 0274 1360     		str	r3, [r2]
- 269:.\Dash_Funcs.c ****     if(FlashCounter > 10000)
- 1165              		.loc 1 269 0
+ 270:.\Dash_Funcs.c ****     if(FlashCounter > 10000)
+ 1165              		.loc 1 270 0
  1166 0276 42F21072 		movw	r2, #10000
  1167 027a 9342     		cmp	r3, r2
  1168 027c 02DD     		ble	.L67
- 270:.\Dash_Funcs.c ****         FlashCounter = 0;
- 1169              		.loc 1 270 0
+ 271:.\Dash_Funcs.c ****         FlashCounter = 0;
+ 1169              		.loc 1 271 0
  1170 027e 0022     		movs	r2, #0
  1171 0280 034B     		ldr	r3, .L70+8
  1172 0282 1A60     		str	r2, [r3]
  1173              	.L67:
- 271:.\Dash_Funcs.c **** return 0;
- 272:.\Dash_Funcs.c **** }
- 1174              		.loc 1 272 0
+ 272:.\Dash_Funcs.c **** return 0;
+ 273:.\Dash_Funcs.c **** }
+ 1174              		.loc 1 273 0
  1175 0284 0020     		movs	r0, #0
  1176 0286 10BD     		pop	{r4, pc}
  1177              	.L71:
@@ -1555,13 +1556,13 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1193              		.type	WarningLights, %function
  1194              	WarningLights:
  1195              	.LFB70:
- 273:.\Dash_Funcs.c **** 
- 274:.\Dash_Funcs.c **** int WarningLights()
- 275:.\Dash_Funcs.c **** {
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 27
+ 274:.\Dash_Funcs.c **** 
+ 275:.\Dash_Funcs.c **** int WarningLights()
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 27
 
 
- 1196              		.loc 1 275 0
+ 276:.\Dash_Funcs.c **** {
+ 1196              		.loc 1 276 0
  1197              		.cfi_startproc
  1198              		@ args = 0, pretend = 0, frame = 0
  1199              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1573,128 +1574,126 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1205              		.cfi_offset 7, -12
  1206              		.cfi_offset 8, -8
  1207              		.cfi_offset 14, -4
- 276:.\Dash_Funcs.c ****     //Values to be checked for warning 
- 277:.\Dash_Funcs.c ****     int Left1 = et;
- 1208              		.loc 1 277 0
+ 277:.\Dash_Funcs.c ****     //Values to be checked for warning 
+ 278:.\Dash_Funcs.c ****     int Left1 = et;
+ 1208              		.loc 1 278 0
  1209 0004 274B     		ldr	r3, .L87
  1210 0006 1B88     		ldrh	r3, [r3]
  1211              	.LVL153:
- 278:.\Dash_Funcs.c ****     int Left2 = egt1;
- 1212              		.loc 1 278 0
+ 279:.\Dash_Funcs.c ****     int Left2 = egt1;
+ 1212              		.loc 1 279 0
  1213 0008 274A     		ldr	r2, .L87+4
  1214 000a B2F80080 		ldrh	r8, [r2]
  1215              	.LVL154:
- 279:.\Dash_Funcs.c ****     int Left3 = oilTemp;
- 1216              		.loc 1 279 0
+ 280:.\Dash_Funcs.c ****     int Left3 = oilTemp;
+ 1216              		.loc 1 280 0
  1217 000e 274A     		ldr	r2, .L87+8
  1218 0010 1588     		ldrh	r5, [r2]
  1219              	.LVL155:
- 280:.\Dash_Funcs.c ****     double Right1 = batV;
- 1220              		.loc 1 280 0
+ 281:.\Dash_Funcs.c ****     double Right1 = batV;
+ 1220              		.loc 1 281 0
  1221 0012 274A     		ldr	r2, .L87+12
  1222 0014 D2E90067 		ldrd	r6, [r2]
  1223              	.LVL156:
- 281:.\Dash_Funcs.c ****     int Right2 = 0;
- 282:.\Dash_Funcs.c ****     int Right3 = fp;
- 1224              		.loc 1 282 0
+ 282:.\Dash_Funcs.c ****     int Right2 = 0;
+ 283:.\Dash_Funcs.c ****     int Right3 = fp;
+ 1224              		.loc 1 283 0
  1225 0018 264A     		ldr	r2, .L87+16
  1226 001a 1488     		ldrh	r4, [r2]
  1227              	.LVL157:
- 283:.\Dash_Funcs.c ****     //Warning Thresholds
- 284:.\Dash_Funcs.c ****     int Left1Thresh = 215; //>
- 285:.\Dash_Funcs.c ****     int Left2Thresh = 1600;//>
- 286:.\Dash_Funcs.c ****     int Left3Thresh = 250;//>
- 287:.\Dash_Funcs.c ****     double Right1Thresh = 12.00;//<
- 288:.\Dash_Funcs.c ****     int Right2Thresh = 0;
- 289:.\Dash_Funcs.c ****     int Right3Thresh = 40;//<
- 290:.\Dash_Funcs.c ****     
- 291:.\Dash_Funcs.c **** 
- 292:.\Dash_Funcs.c ****         
- 293:.\Dash_Funcs.c ****     //Left1
- 294:.\Dash_Funcs.c ****         if(Left1 > Left1Thresh)
- 1228              		.loc 1 294 0
+ 284:.\Dash_Funcs.c ****     //Warning Thresholds
+ 285:.\Dash_Funcs.c ****     int Left1Thresh = 215; //>
+ 286:.\Dash_Funcs.c ****     int Left2Thresh = 1600;//>
+ 287:.\Dash_Funcs.c ****     int Left3Thresh = 250;//>
+ 288:.\Dash_Funcs.c ****     double Right1Thresh = 12.00;//<
+ 289:.\Dash_Funcs.c ****     int Right2Thresh = 0;
+ 290:.\Dash_Funcs.c ****     int Right3Thresh = 40;//<
+ 291:.\Dash_Funcs.c ****         
+ 292:.\Dash_Funcs.c ****     //Left1
+ 293:.\Dash_Funcs.c ****         if(Left1 > Left1Thresh)
+ 1228              		.loc 1 293 0
  1229 001c D72B     		cmp	r3, #215
  1230 001e 04DD     		ble	.L73
- 295:.\Dash_Funcs.c ****         {
- 296:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(0,4);
- 1231              		.loc 1 296 0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 28
-
-
+ 294:.\Dash_Funcs.c ****         {
+ 295:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(0,4);
+ 1231              		.loc 1 295 0
  1232 0020 0020     		movs	r0, #0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 28
+
+
  1233 0022 0421     		movs	r1, #4
  1234 0024 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1235              	.LVL158:
  1236 0028 03E0     		b	.L74
  1237              	.LVL159:
  1238              	.L73:
- 297:.\Dash_Funcs.c ****         }
- 298:.\Dash_Funcs.c ****         else
- 299:.\Dash_Funcs.c ****         {
- 300:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(0,4);
- 1239              		.loc 1 300 0
+ 296:.\Dash_Funcs.c ****         }
+ 297:.\Dash_Funcs.c ****         else
+ 298:.\Dash_Funcs.c ****         {
+ 299:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(0,4);
+ 1239              		.loc 1 299 0
  1240 002a 0020     		movs	r0, #0
  1241 002c 0421     		movs	r1, #4
  1242 002e FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  1243              	.LVL160:
  1244              	.L74:
- 301:.\Dash_Funcs.c ****         }
- 302:.\Dash_Funcs.c ****     //Left2
- 303:.\Dash_Funcs.c ****         if(Left2 > Left2Thresh)
- 1245              		.loc 1 303 0
+ 300:.\Dash_Funcs.c ****         }
+ 301:.\Dash_Funcs.c ****     //Left2
+ 302:.\Dash_Funcs.c ****         if(Left2 > Left2Thresh)
+ 1245              		.loc 1 302 0
  1246 0032 B8F5C86F 		cmp	r8, #1600
  1247 0036 04DD     		ble	.L75
- 304:.\Dash_Funcs.c ****         {
- 305:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(1,4);
- 1248              		.loc 1 305 0
+ 303:.\Dash_Funcs.c ****         {
+ 304:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(1,4);
+ 1248              		.loc 1 304 0
  1249 0038 0120     		movs	r0, #1
  1250 003a 0421     		movs	r1, #4
  1251 003c FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1252              	.LVL161:
  1253 0040 03E0     		b	.L76
  1254              	.L75:
- 306:.\Dash_Funcs.c ****         }
- 307:.\Dash_Funcs.c ****         else
- 308:.\Dash_Funcs.c ****         {
- 309:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(1,4);
- 1255              		.loc 1 309 0
+ 305:.\Dash_Funcs.c ****         }
+ 306:.\Dash_Funcs.c ****         else
+ 307:.\Dash_Funcs.c ****         {
+ 308:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(1,4);
+ 1255              		.loc 1 308 0
  1256 0042 0120     		movs	r0, #1
  1257 0044 0421     		movs	r1, #4
  1258 0046 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  1259              	.LVL162:
  1260              	.L76:
- 310:.\Dash_Funcs.c ****         }        
- 311:.\Dash_Funcs.c ****     //Left3
- 312:.\Dash_Funcs.c ****          if(Left3 > Left3Thresh)
- 1261              		.loc 1 312 0
+ 309:.\Dash_Funcs.c ****         }        
+ 310:.\Dash_Funcs.c ****     //Left3
+ 311:.\Dash_Funcs.c ****          if(Left3 > Left3Thresh)
+ 1261              		.loc 1 311 0
  1262 004a FA2D     		cmp	r5, #250
  1263 004c 04DD     		ble	.L77
- 313:.\Dash_Funcs.c ****         {
- 314:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(2,4);
- 1264              		.loc 1 314 0
+ 312:.\Dash_Funcs.c ****         {
+ 313:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(2,4);
+ 1264              		.loc 1 313 0
  1265 004e 0220     		movs	r0, #2
  1266 0050 0421     		movs	r1, #4
  1267 0052 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1268              	.LVL163:
  1269 0056 03E0     		b	.L78
  1270              	.L77:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 29
+ 314:.\Dash_Funcs.c ****         }
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 29
 
 
- 315:.\Dash_Funcs.c ****         }
- 316:.\Dash_Funcs.c ****         else
- 317:.\Dash_Funcs.c ****         {
- 318:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(2,4);
- 1271              		.loc 1 318 0
+ 315:.\Dash_Funcs.c ****         else
+ 316:.\Dash_Funcs.c ****         {
+ 317:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(2,4);
+ 1271              		.loc 1 317 0
  1272 0058 0220     		movs	r0, #2
  1273 005a 0421     		movs	r1, #4
  1274 005c FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  1275              	.LVL164:
  1276              	.L78:
- 319:.\Dash_Funcs.c ****         }       
- 320:.\Dash_Funcs.c ****     //Right1
- 321:.\Dash_Funcs.c ****         if(Right1 < Right1Thresh)
- 1277              		.loc 1 321 0
+ 318:.\Dash_Funcs.c ****         }       
+ 319:.\Dash_Funcs.c ****     //Right1
+ 320:.\Dash_Funcs.c ****         if(Right1 < Right1Thresh)
+ 1277              		.loc 1 320 0
  1278 0060 3046     		mov	r0, r6
  1279 0062 3946     		mov	r1, r7
  1280 0064 0022     		movs	r2, #0
@@ -1702,71 +1701,71 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1282 0068 FFF7FEFF 		bl	__aeabi_dcmplt
  1283              	.LVL165:
  1284 006c 20B1     		cbz	r0, .L85
- 322:.\Dash_Funcs.c ****         {
- 323:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(3,4);
- 1285              		.loc 1 323 0
+ 321:.\Dash_Funcs.c ****         {
+ 322:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(3,4);
+ 1285              		.loc 1 322 0
  1286 006e 0320     		movs	r0, #3
  1287 0070 0421     		movs	r1, #4
  1288 0072 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1289              	.LVL166:
  1290 0076 03E0     		b	.L81
  1291              	.L85:
- 324:.\Dash_Funcs.c ****         }
- 325:.\Dash_Funcs.c ****         else
- 326:.\Dash_Funcs.c ****         {
- 327:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(3,4);
- 1292              		.loc 1 327 0
+ 323:.\Dash_Funcs.c ****         }
+ 324:.\Dash_Funcs.c ****         else
+ 325:.\Dash_Funcs.c ****         {
+ 326:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(3,4);
+ 1292              		.loc 1 326 0
  1293 0078 0320     		movs	r0, #3
  1294 007a 0421     		movs	r1, #4
  1295 007c FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  1296              	.LVL167:
  1297              	.L81:
- 328:.\Dash_Funcs.c ****         }        
- 329:.\Dash_Funcs.c ****     //Right2
- 330:.\Dash_Funcs.c ****         if(Right2 > Right2Thresh)
- 331:.\Dash_Funcs.c ****         {
- 332:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(4,4);
- 333:.\Dash_Funcs.c ****         }
- 334:.\Dash_Funcs.c ****         else
- 335:.\Dash_Funcs.c ****         {
- 336:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(4,4);
- 1298              		.loc 1 336 0
+ 327:.\Dash_Funcs.c ****         }        
+ 328:.\Dash_Funcs.c ****     //Right2
+ 329:.\Dash_Funcs.c ****         if(Right2 > Right2Thresh)
+ 330:.\Dash_Funcs.c ****         {
+ 331:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(4,4);
+ 332:.\Dash_Funcs.c ****         }
+ 333:.\Dash_Funcs.c ****         else
+ 334:.\Dash_Funcs.c ****         {
+ 335:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(4,4);
+ 1298              		.loc 1 335 0
  1299 0080 0420     		movs	r0, #4
  1300 0082 0146     		mov	r1, r0
  1301 0084 FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  1302              	.LVL168:
- 337:.\Dash_Funcs.c ****         }        
- 338:.\Dash_Funcs.c ****     //Right3
- 339:.\Dash_Funcs.c ****         if(Right3 < Right3Thresh)
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 30
+ 336:.\Dash_Funcs.c ****         }        
+ 337:.\Dash_Funcs.c ****     //Right3
+ 338:.\Dash_Funcs.c ****         if(Right3 < Right3Thresh)
+ 1303              		.loc 1 338 0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 30
 
 
- 1303              		.loc 1 339 0
  1304 0088 272C     		cmp	r4, #39
  1305 008a 04DC     		bgt	.L82
- 340:.\Dash_Funcs.c ****         {
- 341:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(5,4);
- 1306              		.loc 1 341 0
+ 339:.\Dash_Funcs.c ****         {
+ 340:.\Dash_Funcs.c ****         LED_Driver_LRBWS_SetRC(5,4);
+ 1306              		.loc 1 340 0
  1307 008c 0520     		movs	r0, #5
  1308 008e 0421     		movs	r1, #4
  1309 0090 FFF7FEFF 		bl	LED_Driver_LRBWS_SetRC
  1310              	.LVL169:
  1311 0094 03E0     		b	.L83
  1312              	.L82:
- 342:.\Dash_Funcs.c ****         }
- 343:.\Dash_Funcs.c ****         else
- 344:.\Dash_Funcs.c ****         {
- 345:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(5,4);
- 1313              		.loc 1 345 0
+ 341:.\Dash_Funcs.c ****         }
+ 342:.\Dash_Funcs.c ****         else
+ 343:.\Dash_Funcs.c ****         {
+ 344:.\Dash_Funcs.c ****         LED_Driver_LRBWS_ClearRC(5,4);
+ 1313              		.loc 1 344 0
  1314 0096 0520     		movs	r0, #5
  1315 0098 0421     		movs	r1, #4
  1316 009a FFF7FEFF 		bl	LED_Driver_LRBWS_ClearRC
  1317              	.LVL170:
  1318              	.L83:
- 346:.\Dash_Funcs.c ****         }        
- 347:.\Dash_Funcs.c ****     return 0;
- 348:.\Dash_Funcs.c **** }...
- 1319              		.loc 1 348 0
+ 345:.\Dash_Funcs.c ****         }        
+ 346:.\Dash_Funcs.c ****     return 0;
+ 347:.\Dash_Funcs.c **** }...
+ 1319              		.loc 1 347 0
  1320 009e 0020     		movs	r0, #0
  1321 00a0 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
  1322              	.LVL171:
@@ -1798,10 +1797,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1348              		.section	.debug_info,"",%progbits
  1349              	.Ldebug_info0:
  1350 0000 A80D0000 		.4byte	0xda8
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 31
-
-
  1351 0004 0400     		.2byte	0x4
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 31
+
+
  1352 0006 00000000 		.4byte	.Ldebug_abbrev0
  1353 000a 04       		.byte	0x4
  1354 000b 01       		.uleb128 0x1
@@ -1858,10 +1857,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1405 0071 07       		.byte	0x7
  1406 0072 DC020000 		.4byte	.LASF8
  1407 0076 03       		.uleb128 0x3
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 32
-
-
  1408 0077 D8030000 		.4byte	.LASF10
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 32
+
+
  1409 007b 03       		.byte	0x3
  1410 007c 2C       		.byte	0x2c
  1411 007d 41000000 		.4byte	0x41
@@ -1918,10 +1917,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1462 00e5 01       		.byte	0x1
  1463 00e6 08       		.byte	0x8
  1464 00e7 68000000 		.4byte	0x68
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 33
-
-
  1465 00eb 00000000 		.4byte	.LFB63
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 33
+
+
  1466 00ef 50020000 		.4byte	.LFE63-.LFB63
  1467 00f3 01       		.uleb128 0x1
  1468 00f4 9C       		.byte	0x9c
@@ -1978,10 +1977,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1519 015e 51       		.byte	0x51
  1520 015f 01       		.uleb128 0x1
  1521 0160 30       		.byte	0x30
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 34
-
-
  1522 0161 0D       		.uleb128 0xd
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 34
+
+
  1523 0162 01       		.uleb128 0x1
  1524 0163 50       		.byte	0x50
  1525 0164 02       		.uleb128 0x2
@@ -2038,10 +2037,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1576 01c1 01       		.uleb128 0x1
  1577 01c2 52       		.byte	0x52
  1578 01c3 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 35
-
-
  1579 01c4 34       		.byte	0x34
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 35
+
+
  1580 01c5 0D       		.uleb128 0xd
  1581 01c6 01       		.uleb128 0x1
  1582 01c7 51       		.byte	0x51
@@ -2098,10 +2097,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1633 0215 01       		.uleb128 0x1
  1634 0216 34       		.byte	0x34
  1635 0217 0D       		.uleb128 0xd
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 36
-
-
  1636 0218 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 36
+
+
  1637 0219 51       		.byte	0x51
  1638 021a 01       		.uleb128 0x1
  1639 021b 3A       		.byte	0x3a
@@ -2158,10 +2157,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1690 0275 01       		.uleb128 0x1
  1691 0276 30       		.byte	0x30
  1692 0277 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 37
-
-
  1693 0278 0C       		.uleb128 0xc
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 37
+
+
  1694 0279 2E000000 		.4byte	.LVL51
  1695 027d 2C0D0000 		.4byte	0xd2c
  1696 0281 95020000 		.4byte	0x295
@@ -2218,10 +2217,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1747 02c9 0D       		.uleb128 0xd
  1748 02ca 01       		.uleb128 0x1
  1749 02cb 50       		.byte	0x50
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 38
-
-
  1750 02cc 03       		.uleb128 0x3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 38
+
+
  1751 02cd 0A       		.byte	0xa
  1752 02ce B822     		.2byte	0x22b8
  1753 02d0 00       		.byte	0
@@ -2278,10 +2277,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1804 033c 9C       		.byte	0x9c
  1805 033d 1E040000 		.4byte	0x41e
  1806 0341 10       		.uleb128 0x10
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 39
-
-
  1807 0342 16040000 		.4byte	.LASF25
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 39
+
+
  1808 0346 01       		.byte	0x1
  1809 0347 74       		.byte	0x74
  1810 0348 68000000 		.4byte	0x68
@@ -2289,99 +2288,99 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1812 0350 13       		.uleb128 0x13
  1813 0351 C7000000 		.4byte	.LASF30
  1814 0355 01       		.byte	0x1
- 1815 0356 75       		.byte	0x75
+ 1815 0356 76       		.byte	0x76
  1816 0357 99000000 		.4byte	0x99
  1817 035b 04       		.byte	0x4
  1818 035c 62909541 		.4byte	0x41959062
  1819 0360 13       		.uleb128 0x13
  1820 0361 CC000000 		.4byte	.LASF31
  1821 0365 01       		.byte	0x1
- 1822 0366 76       		.byte	0x76
+ 1822 0366 77       		.byte	0x77
  1823 0367 99000000 		.4byte	0x99
  1824 036b 04       		.byte	0x4
  1825 036c 107A5641 		.4byte	0x41567a10
  1826 0370 13       		.uleb128 0x13
  1827 0371 D8010000 		.4byte	.LASF32
  1828 0375 01       		.byte	0x1
- 1829 0376 77       		.byte	0x77
+ 1829 0376 78       		.byte	0x78
  1830 0377 99000000 		.4byte	0x99
  1831 037b 04       		.byte	0x4
  1832 037c 637F2241 		.4byte	0x41227f63
  1833 0380 13       		.uleb128 0x13
  1834 0381 D7000000 		.4byte	.LASF33
  1835 0385 01       		.byte	0x1
- 1836 0386 78       		.byte	0x78
+ 1836 0386 79       		.byte	0x79
  1837 0387 99000000 		.4byte	0x99
  1838 038b 04       		.byte	0x4
  1839 038c E5F20141 		.4byte	0x4101f2e5
  1840 0390 13       		.uleb128 0x13
  1841 0391 DC000000 		.4byte	.LASF34
  1842 0395 01       		.byte	0x1
- 1843 0396 79       		.byte	0x79
+ 1843 0396 7A       		.byte	0x7a
  1844 0397 99000000 		.4byte	0x99
  1845 039b 04       		.byte	0x4
  1846 039c B3EACF40 		.4byte	0x40cfeab3
  1847 03a0 13       		.uleb128 0x13
  1848 03a1 00010000 		.4byte	.LASF35
  1849 03a5 01       		.byte	0x1
- 1850 03a6 7B       		.byte	0x7b
+ 1850 03a6 7C       		.byte	0x7c
  1851 03a7 99000000 		.4byte	0x99
  1852 03ab 04       		.byte	0x4
  1853 03ac 0000803F 		.4byte	0x3f800000
  1854 03b0 13       		.uleb128 0x13
  1855 03b1 49020000 		.4byte	.LASF36
  1856 03b5 01       		.byte	0x1
- 1857 03b6 7C       		.byte	0x7c
+ 1857 03b6 7D       		.byte	0x7d
  1858 03b7 99000000 		.4byte	0x99
  1859 03bb 04       		.byte	0x4
  1860 03bc 00001040 		.4byte	0x40100000
  1861 03c0 13       		.uleb128 0x13
  1862 03c1 26040000 		.4byte	.LASF37
  1863 03c5 01       		.byte	0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 40
+ 1864 03c6 7F       		.byte	0x7f
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 40
 
 
- 1864 03c6 7E       		.byte	0x7e
  1865 03c7 99000000 		.4byte	0x99
  1866 03cb 04       		.byte	0x4
  1867 03cc 00009041 		.4byte	0x41900000
  1868 03d0 13       		.uleb128 0x13
  1869 03d1 20040000 		.4byte	.LASF38
  1870 03d5 01       		.byte	0x1
- 1871 03d6 7F       		.byte	0x7f
+ 1871 03d6 80       		.byte	0x80
  1872 03d7 99000000 		.4byte	0x99
  1873 03db 04       		.byte	0x4
  1874 03dc C9316242 		.4byte	0x426231c9
  1875 03e0 13       		.uleb128 0x13
  1876 03e1 31050000 		.4byte	.LASF39
  1877 03e5 01       		.byte	0x1
- 1878 03e6 80       		.byte	0x80
+ 1878 03e6 81       		.byte	0x81
  1879 03e7 99000000 		.4byte	0x99
  1880 03eb 04       		.byte	0x4
  1881 03ec 78F6693A 		.4byte	0x3a69f678
  1882 03f0 10       		.uleb128 0x10
  1883 03f1 30030000 		.4byte	.LASF40
  1884 03f5 01       		.byte	0x1
- 1885 03f6 82       		.byte	0x82
+ 1885 03f6 83       		.byte	0x83
  1886 03f7 99000000 		.4byte	0x99
  1887 03fb 31010000 		.4byte	.LLST8
  1888 03ff 10       		.uleb128 0x10
  1889 0400 40020000 		.4byte	.LASF41
  1890 0404 01       		.byte	0x1
- 1891 0405 84       		.byte	0x84
+ 1891 0405 85       		.byte	0x85
  1892 0406 99000000 		.4byte	0x99
  1893 040a 44010000 		.4byte	.LLST9
  1894 040e 10       		.uleb128 0x10
  1895 040f B0000000 		.4byte	.LASF42
  1896 0413 01       		.byte	0x1
- 1897 0414 85       		.byte	0x85
+ 1897 0414 86       		.byte	0x86
  1898 0415 99000000 		.4byte	0x99
  1899 0419 62010000 		.4byte	.LLST10
  1900 041d 00       		.byte	0
  1901 041e 14       		.uleb128 0x14
  1902 041f 42000000 		.4byte	.LASF44
  1903 0423 01       		.byte	0x1
- 1904 0424 9A       		.byte	0x9a
+ 1904 0424 9B       		.byte	0x9b
  1905 0425 68000000 		.4byte	0x68
  1906 0429 00000000 		.4byte	.LFB69
  1907 042d 98020000 		.4byte	.LFE69-.LFB69
@@ -2391,46 +2390,46 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1911 0437 15       		.uleb128 0x15
  1912 0438 B2010000 		.4byte	.LASF45
  1913 043c 01       		.byte	0x1
- 1914 043d 9C       		.byte	0x9c
+ 1914 043d 9D       		.byte	0x9d
  1915 043e 68000000 		.4byte	0x68
  1916 0442 04       		.byte	0x4
  1917 0443 0B       		.uleb128 0xb
  1918 0444 6900     		.ascii	"i\000"
  1919 0446 01       		.byte	0x1
- 1920 0447 9D       		.byte	0x9d
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 41
-
-
+ 1920 0447 9E       		.byte	0x9e
  1921 0448 68000000 		.4byte	0x68
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 41
+
+
  1922 044c 90010000 		.4byte	.LLST11
  1923 0450 15       		.uleb128 0x15
  1924 0451 04050000 		.4byte	.LASF46
  1925 0455 01       		.byte	0x1
- 1926 0456 9E       		.byte	0x9e
+ 1926 0456 9F       		.byte	0x9f
  1927 0457 68000000 		.4byte	0x68
  1928 045b 08       		.byte	0x8
  1929 045c 15       		.uleb128 0x15
  1930 045d 0B050000 		.4byte	.LASF47
  1931 0461 01       		.byte	0x1
- 1932 0462 9F       		.byte	0x9f
+ 1932 0462 A0       		.byte	0xa0
  1933 0463 68000000 		.4byte	0x68
  1934 0467 0A       		.byte	0xa
  1935 0468 15       		.uleb128 0x15
  1936 0469 12050000 		.4byte	.LASF48
  1937 046d 01       		.byte	0x1
- 1938 046e A0       		.byte	0xa0
+ 1938 046e A1       		.byte	0xa1
  1939 046f 68000000 		.4byte	0x68
  1940 0473 0C       		.byte	0xc
  1941 0474 15       		.uleb128 0x15
  1942 0475 19050000 		.4byte	.LASF49
  1943 0479 01       		.byte	0x1
- 1944 047a A1       		.byte	0xa1
+ 1944 047a A2       		.byte	0xa2
  1945 047b 68000000 		.4byte	0x68
  1946 047f 0F       		.byte	0xf
  1947 0480 15       		.uleb128 0x15
  1948 0481 20050000 		.4byte	.LASF50
  1949 0485 01       		.byte	0x1
- 1950 0486 A2       		.byte	0xa2
+ 1950 0486 A3       		.byte	0xa3
  1951 0487 68000000 		.4byte	0x68
  1952 048b 11       		.byte	0x11
  1953 048c 0C       		.uleb128 0xc
@@ -2458,10 +2457,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  1975 04b4 01       		.uleb128 0x1
  1976 04b5 34       		.byte	0x34
  1977 04b6 0D       		.uleb128 0xd
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 42
-
-
  1978 04b7 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 42
+
+
  1979 04b8 50       		.byte	0x50
  1980 04b9 01       		.uleb128 0x1
  1981 04ba 39       		.byte	0x39
@@ -2518,10 +2517,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2032 0511 0D       		.uleb128 0xd
  2033 0512 01       		.uleb128 0x1
  2034 0513 51       		.byte	0x51
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 43
-
-
  2035 0514 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 43
+
+
  2036 0515 34       		.byte	0x34
  2037 0516 0D       		.uleb128 0xd
  2038 0517 01       		.uleb128 0x1
@@ -2578,10 +2577,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2089 0565 64000000 		.4byte	.LVL100
  2090 0569 830D0000 		.4byte	0xd83
  2091 056d 7C050000 		.4byte	0x57c
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 44
-
-
  2092 0571 0D       		.uleb128 0xd
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 44
+
+
  2093 0572 01       		.uleb128 0x1
  2094 0573 51       		.byte	0x51
  2095 0574 01       		.uleb128 0x1
@@ -2638,10 +2637,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2146 05c2 3A       		.byte	0x3a
  2147 05c3 00       		.byte	0
  2148 05c4 0C       		.uleb128 0xc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 45
-
-
  2149 05c5 9A000000 		.4byte	.LVL104
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 45
+
+
  2150 05c9 4C0D0000 		.4byte	0xd4c
  2151 05cd DC050000 		.4byte	0x5dc
  2152 05d1 0D       		.uleb128 0xd
@@ -2698,10 +2697,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2203 061f 01       		.uleb128 0x1
  2204 0620 50       		.byte	0x50
  2205 0621 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 46
-
-
  2206 0622 3E       		.byte	0x3e
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 46
+
+
  2207 0623 00       		.byte	0
  2208 0624 0C       		.uleb128 0xc
  2209 0625 BA000000 		.4byte	.LVL108
@@ -2758,10 +2757,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2260 067c 01       		.uleb128 0x1
  2261 067d 34       		.byte	0x34
  2262 067e 0D       		.uleb128 0xd
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 47
-
-
  2263 067f 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 47
+
+
  2264 0680 50       		.byte	0x50
  2265 0681 01       		.uleb128 0x1
  2266 0682 38       		.byte	0x38
@@ -2818,10 +2817,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2317 06d9 0D       		.uleb128 0xd
  2318 06da 01       		.uleb128 0x1
  2319 06db 51       		.byte	0x51
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 48
-
-
  2320 06dc 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 48
+
+
  2321 06dd 34       		.byte	0x34
  2322 06de 0D       		.uleb128 0xd
  2323 06df 01       		.uleb128 0x1
@@ -2878,10 +2877,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2374 072d 26010000 		.4byte	.LVL119
  2375 0731 830D0000 		.4byte	0xd83
  2376 0735 44070000 		.4byte	0x744
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 49
-
-
  2377 0739 0D       		.uleb128 0xd
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 49
+
+
  2378 073a 01       		.uleb128 0x1
  2379 073b 51       		.byte	0x51
  2380 073c 01       		.uleb128 0x1
@@ -2938,10 +2937,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2431 078a 39       		.byte	0x39
  2432 078b 00       		.byte	0
  2433 078c 0C       		.uleb128 0xc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 50
-
-
  2434 078d 5C010000 		.4byte	.LVL123
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 50
+
+
  2435 0791 4C0D0000 		.4byte	0xd4c
  2436 0795 A4070000 		.4byte	0x7a4
  2437 0799 0D       		.uleb128 0xd
@@ -2998,10 +2997,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2488 07e7 01       		.uleb128 0x1
  2489 07e8 50       		.byte	0x50
  2490 07e9 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 51
-
-
  2491 07ea 3D       		.byte	0x3d
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 51
+
+
  2492 07eb 00       		.byte	0
  2493 07ec 0C       		.uleb128 0xc
  2494 07ed 7C010000 		.4byte	.LVL127
@@ -3058,10 +3057,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2545 0844 01       		.uleb128 0x1
  2546 0845 34       		.byte	0x34
  2547 0846 0D       		.uleb128 0xd
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 52
-
-
  2548 0847 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 52
+
+
  2549 0848 50       		.byte	0x50
  2550 0849 01       		.uleb128 0x1
  2551 084a 41       		.byte	0x41
@@ -3118,10 +3117,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2602 08a1 0D       		.uleb128 0xd
  2603 08a2 01       		.uleb128 0x1
  2604 08a3 51       		.byte	0x51
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 53
-
-
  2605 08a4 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 53
+
+
  2606 08a5 34       		.byte	0x34
  2607 08a6 0D       		.uleb128 0xd
  2608 08a7 01       		.uleb128 0x1
@@ -3178,10 +3177,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2659 08f5 EA010000 		.4byte	.LVL138
  2660 08f9 4C0D0000 		.4byte	0xd4c
  2661 08fd 0C090000 		.4byte	0x90c
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 54
-
-
  2662 0901 0D       		.uleb128 0xd
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 54
+
+
  2663 0902 01       		.uleb128 0x1
  2664 0903 51       		.byte	0x51
  2665 0904 01       		.uleb128 0x1
@@ -3238,10 +3237,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2716 0952 40       		.byte	0x40
  2717 0953 00       		.byte	0
  2718 0954 0C       		.uleb128 0xc
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 55
-
-
  2719 0955 2C020000 		.4byte	.LVL142
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 55
+
+
  2720 0959 990D0000 		.4byte	0xd99
  2721 095d 6C090000 		.4byte	0x96c
  2722 0961 0D       		.uleb128 0xd
@@ -3290,7 +3289,7 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2765 099b 16       		.uleb128 0x16
  2766 099c F2000000 		.4byte	.LASF51
  2767 09a0 01       		.byte	0x1
- 2768 09a1 1201     		.2byte	0x112
+ 2768 09a1 1301     		.2byte	0x113
  2769 09a3 68000000 		.4byte	0x68
  2770 09a7 00000000 		.4byte	.LFB70
  2771 09ab BC000000 		.4byte	.LFE70-.LFB70
@@ -3298,83 +3297,83 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2773 09b0 9C       		.byte	0x9c
  2774 09b1 6E0B0000 		.4byte	0xb6e
  2775 09b5 17       		.uleb128 0x17
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 56
-
-
  2776 09b6 12010000 		.4byte	.LASF52
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 56
+
+
  2777 09ba 01       		.byte	0x1
- 2778 09bb 1501     		.2byte	0x115
+ 2778 09bb 1601     		.2byte	0x116
  2779 09bd 68000000 		.4byte	0x68
  2780 09c1 DD010000 		.4byte	.LLST12
  2781 09c5 17       		.uleb128 0x17
  2782 09c6 91010000 		.4byte	.LASF53
  2783 09ca 01       		.byte	0x1
- 2784 09cb 1601     		.2byte	0x116
+ 2784 09cb 1701     		.2byte	0x117
  2785 09cd 68000000 		.4byte	0x68
  2786 09d1 FB010000 		.4byte	.LLST13
  2787 09d5 17       		.uleb128 0x17
  2788 09d6 AC010000 		.4byte	.LASF54
  2789 09da 01       		.byte	0x1
- 2790 09db 1701     		.2byte	0x117
+ 2790 09db 1801     		.2byte	0x118
  2791 09dd 68000000 		.4byte	0x68
  2792 09e1 0E020000 		.4byte	.LLST14
  2793 09e5 17       		.uleb128 0x17
  2794 09e6 5B040000 		.4byte	.LASF55
  2795 09ea 01       		.byte	0x1
- 2796 09eb 1801     		.2byte	0x118
+ 2796 09eb 1901     		.2byte	0x119
  2797 09ed A0000000 		.4byte	0xa0
  2798 09f1 21020000 		.4byte	.LLST15
  2799 09f5 18       		.uleb128 0x18
  2800 09f6 BF040000 		.4byte	.LASF56
  2801 09fa 01       		.byte	0x1
- 2802 09fb 1901     		.2byte	0x119
+ 2802 09fb 1A01     		.2byte	0x11a
  2803 09fd 68000000 		.4byte	0x68
  2804 0a01 00       		.byte	0
  2805 0a02 17       		.uleb128 0x17
  2806 0a03 C6040000 		.4byte	.LASF57
  2807 0a07 01       		.byte	0x1
- 2808 0a08 1A01     		.2byte	0x11a
+ 2808 0a08 1B01     		.2byte	0x11b
  2809 0a0a 68000000 		.4byte	0x68
  2810 0a0e 39020000 		.4byte	.LLST16
  2811 0a12 18       		.uleb128 0x18
  2812 0a13 15020000 		.4byte	.LASF58
  2813 0a17 01       		.byte	0x1
- 2814 0a18 1C01     		.2byte	0x11c
+ 2814 0a18 1D01     		.2byte	0x11d
  2815 0a1a 68000000 		.4byte	0x68
  2816 0a1e D7       		.byte	0xd7
  2817 0a1f 19       		.uleb128 0x19
  2818 0a20 B3040000 		.4byte	.LASF59
  2819 0a24 01       		.byte	0x1
- 2820 0a25 1D01     		.2byte	0x11d
+ 2820 0a25 1E01     		.2byte	0x11e
  2821 0a27 68000000 		.4byte	0x68
  2822 0a2b 4006     		.2byte	0x640
  2823 0a2d 18       		.uleb128 0x18
  2824 0a2e 4E000000 		.4byte	.LASF60
  2825 0a32 01       		.byte	0x1
- 2826 0a33 1E01     		.2byte	0x11e
+ 2826 0a33 1F01     		.2byte	0x11f
  2827 0a35 68000000 		.4byte	0x68
  2828 0a39 FA       		.byte	0xfa
  2829 0a3a 1A       		.uleb128 0x1a
  2830 0a3b A6040000 		.4byte	.LASF61
  2831 0a3f 01       		.byte	0x1
- 2832 0a40 1F01     		.2byte	0x11f
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 57
-
-
+ 2832 0a40 2001     		.2byte	0x120
  2833 0a42 A0000000 		.4byte	0xa0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 57
+
+
  2834 0a46 08       		.byte	0x8
  2835 0a47 00000000 		.4byte	0
  2836 0a4b 00002840 		.4byte	0x40280000
  2837 0a4f 18       		.uleb128 0x18
  2838 0a50 DC040000 		.4byte	.LASF62
  2839 0a54 01       		.byte	0x1
- 2840 0a55 2001     		.2byte	0x120
+ 2840 0a55 2101     		.2byte	0x121
  2841 0a57 68000000 		.4byte	0x68
  2842 0a5b 00       		.byte	0
  2843 0a5c 18       		.uleb128 0x18
  2844 0a5d 7E020000 		.4byte	.LASF63
  2845 0a61 01       		.byte	0x1
- 2846 0a62 2101     		.2byte	0x121
+ 2846 0a62 2201     		.2byte	0x122
  2847 0a64 68000000 		.4byte	0x68
  2848 0a68 28       		.byte	0x28
  2849 0a69 0C       		.uleb128 0xc
@@ -3418,10 +3417,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2887 0aaa 34       		.byte	0x34
  2888 0aab 0D       		.uleb128 0xd
  2889 0aac 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 58
-
-
  2890 0aad 50       		.byte	0x50
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 58
+
+
  2891 0aae 01       		.uleb128 0x1
  2892 0aaf 31       		.byte	0x31
  2893 0ab0 00       		.byte	0
@@ -3478,10 +3477,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  2944 0b07 01       		.uleb128 0x1
  2945 0b08 51       		.byte	0x51
  2946 0b09 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 59
-
-
  2947 0b0a 34       		.byte	0x34
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 59
+
+
  2948 0b0b 0D       		.uleb128 0xd
  2949 0b0c 01       		.uleb128 0x1
  2950 0b0d 50       		.byte	0x50
@@ -3538,10 +3537,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3001 0b5e 830D0000 		.4byte	0xd83
  3002 0b62 0D       		.uleb128 0xd
  3003 0b63 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 60
-
-
  3004 0b64 51       		.byte	0x51
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 60
+
+
  3005 0b65 01       		.uleb128 0x1
  3006 0b66 34       		.byte	0x34
  3007 0b67 0D       		.uleb128 0xd
@@ -3598,10 +3597,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3058 0bcc 06       		.byte	0x6
  3059 0bcd 23       		.byte	0x23
  3060 0bce 3A000000 		.4byte	0x3a
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 61
-
-
  3061 0bd2 1E       		.uleb128 0x1e
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 61
+
+
  3062 0bd3 82000000 		.4byte	.LASF65
  3063 0bd7 06       		.byte	0x6
  3064 0bd8 24       		.byte	0x24
@@ -3658,10 +3657,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3115 0c46 3A000000 		.4byte	0x3a
  3116 0c4a 1E       		.uleb128 0x1e
  3117 0c4b 1B040000 		.4byte	.LASF75
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 62
-
-
  3118 0c4f 06       		.byte	0x6
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 62
+
+
  3119 0c50 2F       		.byte	0x2f
  3120 0c51 3A000000 		.4byte	0x3a
  3121 0c55 1E       		.uleb128 0x1e
@@ -3718,10 +3717,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3172 0cc4 D5000000 		.4byte	0xd5
  3173 0cc8 05       		.uleb128 0x5
  3174 0cc9 03       		.byte	0x3
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 63
-
-
  3175 0cca 00000000 		.4byte	state
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 63
+
+
  3176 0cce 21       		.uleb128 0x21
  3177 0ccf 27050000 		.4byte	.LASF85
  3178 0cd3 06       		.byte	0x6
@@ -3778,10 +3777,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3229 0d42 81000000 		.4byte	0x81
  3230 0d46 23       		.uleb128 0x23
  3231 0d47 81000000 		.4byte	0x81
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 64
-
-
  3232 0d4b 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 64
+
+
  3233 0d4c 22       		.uleb128 0x22
  3234 0d4d EF020000 		.4byte	.LASF92
  3235 0d51 08       		.byte	0x8
@@ -3838,10 +3837,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3286 0006 0B       		.uleb128 0xb
  3287 0007 03       		.uleb128 0x3
  3288 0008 0E       		.uleb128 0xe
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 65
-
-
  3289 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 65
+
+
  3290 000a 0E       		.uleb128 0xe
  3291 000b 55       		.uleb128 0x55
  3292 000c 17       		.uleb128 0x17
@@ -3898,10 +3897,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3343 003f 49       		.uleb128 0x49
  3344 0040 13       		.uleb128 0x13
  3345 0041 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 66
-
-
  3346 0042 00       		.byte	0
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 66
+
+
  3347 0043 06       		.uleb128 0x6
  3348 0044 04       		.uleb128 0x4
  3349 0045 01       		.byte	0x1
@@ -3958,10 +3957,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3400 0079 0B       		.uleb128 0xb
  3401 007a 3B       		.uleb128 0x3b
  3402 007b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 67
-
-
  3403 007c 27       		.uleb128 0x27
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 67
+
+
  3404 007d 19       		.uleb128 0x19
  3405 007e 49       		.uleb128 0x49
  3406 007f 13       		.uleb128 0x13
@@ -4018,10 +4017,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3457 00b5 13       		.uleb128 0x13
  3458 00b6 00       		.byte	0
  3459 00b7 00       		.byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 68
-
-
  3460 00b8 0D       		.uleb128 0xd
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 68
+
+
  3461 00b9 8A8201   		.uleb128 0x410a
  3462 00bc 00       		.byte	0
  3463 00bd 02       		.uleb128 0x2
@@ -4078,10 +4077,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3514 00f4 49       		.uleb128 0x49
  3515 00f5 13       		.uleb128 0x13
  3516 00f6 02       		.uleb128 0x2
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 69
-
-
  3517 00f7 17       		.uleb128 0x17
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 69
+
+
  3518 00f8 00       		.byte	0
  3519 00f9 00       		.byte	0
  3520 00fa 11       		.uleb128 0x11
@@ -4138,10 +4137,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3571 0130 01       		.byte	0x1
  3572 0131 3F       		.uleb128 0x3f
  3573 0132 19       		.uleb128 0x19
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 70
-
-
  3574 0133 03       		.uleb128 0x3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 70
+
+
  3575 0134 0E       		.uleb128 0xe
  3576 0135 3A       		.uleb128 0x3a
  3577 0136 0B       		.uleb128 0xb
@@ -4198,10 +4197,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3628 016a 9642     		.uleb128 0x2116
  3629 016c 19       		.uleb128 0x19
  3630 016d 01       		.uleb128 0x1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 71
-
-
  3631 016e 13       		.uleb128 0x13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 71
+
+
  3632 016f 00       		.byte	0
  3633 0170 00       		.byte	0
  3634 0171 17       		.uleb128 0x17
@@ -4258,10 +4257,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3685 01a4 0B       		.uleb128 0xb
  3686 01a5 3B       		.uleb128 0x3b
  3687 01a6 05       		.uleb128 0x5
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 72
-
-
  3688 01a7 49       		.uleb128 0x49
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 72
+
+
  3689 01a8 13       		.uleb128 0x13
  3690 01a9 1C       		.uleb128 0x1c
  3691 01aa 0A       		.uleb128 0xa
@@ -4318,10 +4317,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3742 01dd 3B       		.uleb128 0x3b
  3743 01de 0B       		.uleb128 0xb
  3744 01df 49       		.uleb128 0x49
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 73
-
-
  3745 01e0 13       		.uleb128 0x13
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 73
+
+
  3746 01e1 3F       		.uleb128 0x3f
  3747 01e2 19       		.uleb128 0x19
  3748 01e3 3C       		.uleb128 0x3c
@@ -4378,10 +4377,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3799 0216 19       		.uleb128 0x19
  3800 0217 3C       		.uleb128 0x3c
  3801 0218 19       		.uleb128 0x19
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 74
-
-
  3802 0219 01       		.uleb128 0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 74
+
+
  3803 021a 13       		.uleb128 0x13
  3804 021b 00       		.byte	0
  3805 021c 00       		.byte	0
@@ -4438,10 +4437,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3856 000a 50       		.byte	0x50
  3857 000b 0A000000 		.4byte	.LVL31
  3858 000f 24000000 		.4byte	.LFE64
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 75
-
-
  3859 0013 0100     		.2byte	0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 75
+
+
  3860 0015 55       		.byte	0x55
  3861 0016 00000000 		.4byte	0
  3862 001a 00000000 		.4byte	0
@@ -4498,10 +4497,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3913 009d 50000000 		.4byte	.LVL55
  3914 00a1 5C000000 		.4byte	.LFE66
  3915 00a5 0400     		.2byte	0x4
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 76
-
-
  3916 00a7 F3       		.byte	0xf3
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 76
+
+
  3917 00a8 01       		.uleb128 0x1
  3918 00a9 50       		.byte	0x50
  3919 00aa 9F       		.byte	0x9f
@@ -4558,10 +4557,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  3970              	.LLST8:
  3971 0131 12000000 		.4byte	.LVL65
  3972 0135 17000000 		.4byte	.LVL66-1
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 77
-
-
  3973 0139 0100     		.2byte	0x1
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 77
+
+
  3974 013b 50       		.byte	0x50
  3975 013c 00000000 		.4byte	0
  3976 0140 00000000 		.4byte	0
@@ -4618,10 +4617,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4027 01c8 30       		.byte	0x30
  4028 01c9 9F       		.byte	0x9f
  4029 01ca 64020000 		.4byte	.LVL151
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 78
-
-
  4030 01ce 6E020000 		.4byte	.LVL152
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 78
+
+
  4031 01d2 0100     		.2byte	0x1
  4032 01d4 54       		.byte	0x54
  4033 01d5 00000000 		.4byte	0
@@ -4678,10 +4677,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4084 000b 00       		.byte	0
  4085 000c 0000     		.2byte	0
  4086 000e 0000     		.2byte	0
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 79
-
-
  4087 0010 00000000 		.4byte	.LFB63
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 79
+
+
  4088 0014 50020000 		.4byte	.LFE63-.LFB63
  4089 0018 00000000 		.4byte	.LFB64
  4090 001c 24000000 		.4byte	.LFE64-.LFB64
@@ -4738,10 +4737,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4133 0016 52584D65 		.ascii	"RXMessage2\000"
  4133      73736167 
  4133      653200
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 80
-
-
  4134              	.LASF80:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 80
+
+
  4135 0021 52584D65 		.ascii	"RXMessage3\000"
  4135      73736167 
  4135      653300
@@ -4798,10 +4797,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4162              	.LASF16:
  4163 00be 73697A65 		.ascii	"sizetype\000"
  4163      74797065 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 81
-
-
  4163      00
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 81
+
+
  4164              	.LASF30:
  4165 00c7 52656431 		.ascii	"Red1\000"
  4165      00
@@ -4858,10 +4857,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4189      65557064 
  4189      61746500 
  4190              	.LASF53:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 82
-
-
  4191 0191 4C656674 		.ascii	"Left2\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 82
+
+
  4191      3200
  4192              	.LASF11:
  4193 0197 75696E74 		.ascii	"uint8\000"
@@ -4918,10 +4917,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4218              	.LASF23:
  4219 0235 42726967 		.ascii	"Brightness\000"
  4219      68746E65 
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 83
-
-
  4219      737300
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 83
+
+
  4220              	.LASF41:
  4221 0240 77686565 		.ascii	"wheelRPM\000"
  4221      6C52504D 
@@ -4978,10 +4977,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4243      676E6564 
  4243      20696E74 
  4243      00
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 84
-
-
  4244              	.LASF70:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 84
+
+
  4245 02e9 6C645370 		.ascii	"ldSpd\000"
  4245      6400
  4246              	.LASF92:
@@ -5038,10 +5037,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4266              	.LASF68:
  4267 03e0 62706631 		.ascii	"bpf1\000"
  4267      00
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 85
-
-
  4268              	.LASF17:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 85
+
+
  4269 03e5 75696E74 		.ascii	"uint\000"
  4269      00
  4270              	.LASF43:
@@ -5098,10 +5097,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4297      65642063 
  4297      68617200 
  4298              	.LASF90:
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 86
-
-
  4299 046e 4C45445F 		.ascii	"LED_Driver_Gear_SetBrightness\000"
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 86
+
+
  4299      44726976 
  4299      65725F47 
  4299      6561725F 
@@ -5158,10 +5157,10 @@ ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 1
  4324              	.LASF48:
  4325 0512 4C696768 		.ascii	"Light3\000"
  4325      743300
-ARM GAS  C:\Users\charl\AppData\Local\Temp\cc8ifPCJ.s 			page 87
-
-
  4326              	.LASF49:
+ARM GAS  C:\Users\charl\AppData\Local\Temp\ccCV3d2j.s 			page 87
+
+
  4327 0519 4C696768 		.ascii	"Light4\000"
  4327      743400
  4328              	.LASF50:

@@ -1,4 +1,4 @@
---------------- Build Started: 11/15/2016 16:32:37 Project: VTM17c_Display_7seg, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Build Started: 03/29/2017 17:23:42 Project: VTM17c_Display_7seg, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 cydsfit.exe -.appdatapath "C:\Users\charl\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\VTM17c_Display_7seg.cyprj -d CY8C5888LTI-LP097 -s C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 Elaborating Design...
 ADD: sdb.M0060: warning: Warning in component: CAN. The BUS_CLK clock accuracy should be 0.5% or better. Please, use an external XTAL or external clock source to meet the CAN accurate clocking requirements.
@@ -19,18 +19,27 @@ Dependency Generation ...
 Clean Temporary Files ...
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\main.c -o .\CortexM3\ARM_GCC_493\Debug\main.o
 .\main.c: In function 'main':
-.\main.c:113:9: warning: unused variable 'Right' [-Wunused-variable]
+.\main.c:111:9: warning: unused variable 'Right' [-Wunused-variable]
      int Right = 9;
          ^
-.\main.c:112:9: warning: unused variable 'Left' [-Wunused-variable]
+.\main.c:110:9: warning: unused variable 'Left' [-Wunused-variable]
      int Left = 8;
-         ^
-.\main.c:109:9: warning: variable 'PrevState' set but not used [-Wunused-but-set-variable]
-     int PrevState = 1;
          ^
 .\main.c:100:9: warning: unused variable 'PageButton' [-Wunused-variable]
      int PageButton = 0;
          ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/Dash_Funcs.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Dash_Funcs.c -o .\CortexM3\ARM_GCC_493\Debug\Dash_Funcs.o
+.\Dash_Funcs.c: In function 'ShiftLights':
+.\Dash_Funcs.c:162:9: warning: unused variable 'Light4' [-Wunused-variable]
+     int Light4 = 15;
+         ^
+.\Dash_Funcs.c:161:9: warning: unused variable 'Light3' [-Wunused-variable]
+     int Light3 = 12;
+         ^
+.\Dash_Funcs.c:160:9: warning: unused variable 'Light2' [-Wunused-variable]
+     int Light2 = 10;
+         ^
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/CAN_TX_RX_func.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Generated_Source\PSoC5\CAN_TX_RX_func.c -o .\CortexM3\ARM_GCC_493\Debug\CAN_TX_RX_func.o
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a .\CortexM3\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_493\Debug\RX_1.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_PM.o .\CortexM3\ARM_GCC_493\Debug\TX_1.o .\CortexM3\ARM_GCC_493\Debug\Com_1.o .\CortexM3\ARM_GCC_493\Debug\Tx_En.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_ClkInternal.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_Seg_Driver_L.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_Seg_Driver_L_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_Com_Driver.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_Com_Driver_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_DMA_Com_dma.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_DMA_Seg_dma.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_ClkInternal.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_L.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_L_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Com_Driver.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Com_Driver_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_DMA_Com_dma.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_M.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_M_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_H.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_H_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_DMA_Seg_dma.o .\CortexM3\ARM_GCC_493\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_493\Debug\CyDmac.o .\CortexM3\ARM_GCC_493\Debug\CyFlash.o .\CortexM3\ARM_GCC_493\Debug\CyLib.o .\CortexM3\ARM_GCC_493\Debug\cyPm.o .\CortexM3\ARM_GCC_493\Debug\CySpc.o .\CortexM3\ARM_GCC_493\Debug\cyutils.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_DMA_BC_dma.o .\CortexM3\ARM_GCC_493\Debug\CAN.o .\CortexM3\ARM_GCC_493\Debug\CAN_INT.o .\CortexM3\ARM_GCC_493\Debug\CAN_PM.o .\CortexM3\ARM_GCC_493\Debug\CAN_TX_RX_func.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_DMA_BC_dma.o .\CortexM3\ARM_GCC_493\Debug\PageSwitch.o .\CortexM3\ARM_GCC_493\Debug\Clock_1.o .\CortexM3\ARM_GCC_493\Debug\Page_Button.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.elf .\CortexM3\ARM_GCC_493\Debug\main.o .\CortexM3\ARM_GCC_493\Debug\Dash_Funcs.o .\CortexM3\ARM_GCC_493\Debug\cymetadata.o .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o .\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -Og -ffat-lto-objects -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_493\Debug/VTM17c_Display_7seg.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
@@ -38,4 +47,4 @@ cyelftool.exe -C C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG
 cyelftool.exe -S C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17c_Display_7seg.cydsn\CortexM3\ARM_GCC_493\Debug\VTM17c_Display_7seg.elf
 Flash used: 14080 of 262144 bytes (5.4 %).
 SRAM used: 2949 of 65536 bytes (4.5 %). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 11/15/2016 16:32:51 ---------------
+--------------- Build Succeeded: 03/29/2017 17:24:24 ---------------
