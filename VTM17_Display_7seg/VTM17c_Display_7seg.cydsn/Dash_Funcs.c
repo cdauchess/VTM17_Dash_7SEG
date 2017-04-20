@@ -275,12 +275,12 @@ return 0;
 int WarningLights()
 {
     //Values to be checked for warning 
-    int Left1 = et;
-    int Left2 = egt1;
-    int Left3 = oilTemp;
-    double Right1 = batV;
-    int Right2 = 0;
-    int Right3 = fp;
+    int Left1 = 220;
+    int Left2 = 1650;
+    int Left3 = 260;
+    double Right1 = 11.5;
+    int Right2 = 2;
+    int Right3 = 35;
     //Warning Thresholds
     int Left1Thresh = 215; //>
     int Left2Thresh = 1600;//>

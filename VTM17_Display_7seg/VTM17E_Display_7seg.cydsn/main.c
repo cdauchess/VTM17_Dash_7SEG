@@ -167,7 +167,7 @@ int main()
 //        {
 //            count = 0;
 //        }
-        if(RXFlag2 && RXFlag5)
+        if(RXFlag0 || RXFlag1 || RXFlag2 || RXFlag3 || RXFlag4 || RXFlag5 || RXFlag6) //If any data is new update the display
         {
             //Parse Data
             ParseCAN();

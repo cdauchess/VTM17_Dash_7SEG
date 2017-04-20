@@ -281,22 +281,22 @@ return 0;
 int WarningLights()
 {
     //Values to be checked for warning 
-    int Left1 = motorTemp;
+    int Left1 = nodeDCVoltage;
     int Left2 = 1;
     int Left3 = 1;
-    double Right1 = nodeDCVoltage;
+    double Right1 = motorTemp;
     int Right2 = 0;
-    int Right3 = 1;
+    int Right3 = 50;
     //Warning Thresholds
-    int Left1Thresh = 215; //>
+    int Left1Thresh = 65; //<
     int Left2Thresh = 1600;//>
     int Left3Thresh = 250;//>
-    double Right1Thresh = 12.00;//<
+    double Right1Thresh = 110;//>
     int Right2Thresh = 0;
     int Right3Thresh = 40;//<
         
     //Left1
-        if(Left1 > Left1Thresh)
+        if(Left1 < Left1Thresh)
         {
         LED_Driver_LRBWS_SetRC(0,4);
         }
@@ -323,7 +323,7 @@ int WarningLights()
         LED_Driver_LRBWS_ClearRC(2,4);
         }       
     //Right1
-        if(Right1 < Right1Thresh)
+        if(Right1 > Right1Thresh)
         {
         LED_Driver_LRBWS_SetRC(3,4);
         }

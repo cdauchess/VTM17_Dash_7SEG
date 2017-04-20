@@ -17,12 +17,12 @@
 #define RightDisp  5
 #define BottomDisp  10
 
-#define Shift1 7000
-#define Shift2 7500
-#define Shift3 8000
-#define Shift4 8500
-#define Shift5 9000
-#define Overrev 500
+#define Shift1 2000
+#define Shift2 2250
+#define Shift3 2500
+#define Shift4 2750
+#define Shift5 3000
+#define Overrev 300
 
 //Global Variables for storage of data
 extern signed short motorSpeed;
