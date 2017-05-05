@@ -45,6 +45,9 @@ int ParseCAN()
     //All messages received, update the display
     DispUpdate = 1;
     
+    if(motorSpeed < 0)
+        motorSpeed = 0;
+    
     return 0;
 }
 
@@ -71,7 +74,7 @@ int DriveUpdate(int Gear)
     LED_Driver_LRBWS_Write7SegNumberDec(100*nodeDCVoltage,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
     LED_Driver_LRBWS_SetRC(15,1);//Set DP on position 6 of display
     LED_Driver_LRBWS_Write7SegNumberDec(motorTemp,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN); 
-    LED_Driver_Gear_Write7SegDigitDec(Gear,0);
+    LED_Driver_Gear_Write7SegDigitDec(vmc30State,0);
                
 return 0;
 }
@@ -84,7 +87,7 @@ int DiagUpdate(int Gear)
     LED_Driver_LRBWS_Write7SegNumberDec(vmc30State,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
     LED_Driver_LRBWS_SetRC(15,1);//Set DP on position 6 of display
     LED_Driver_LRBWS_Write7SegNumberDec(throttlePercent,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);  
-    LED_Driver_Gear_Write7SegDigitDec(Gear,0);
+    LED_Driver_Gear_Write7SegDigitDec(1,0);
 return 0;
 }
 

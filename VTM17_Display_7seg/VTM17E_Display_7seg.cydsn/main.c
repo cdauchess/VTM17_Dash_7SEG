@@ -113,9 +113,9 @@ int main()
     int StillPressed = 0;
     
     //Test variable sets
-    nodeDCVoltage = 13.00;
-    throttleFiltered = 15;
-    motorSpeed = 6400;
+    nodeDCVoltage = 0;
+    throttleFiltered = 0;
+    motorSpeed = 0;
     int Left = 8;
     int Right = 9;
     int Direction = 1; //1 is up 0 is down

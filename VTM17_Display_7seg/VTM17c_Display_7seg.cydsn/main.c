@@ -135,29 +135,29 @@ int main()
     {   
         //The following if statement items are for testing only, remove when display is on vehicle.
         //FIXME
-        if(wait == 500)
-        {
-            et++;
-            count++;    
-            batV = batV+0.01;
-            wait = 0;
-            //TEST ITEMS
-            //Toggle Shift LEDS
-            if(Direction == 1)
-                rpm= rpm+10;
-            else if(Direction == 0)
-                rpm = rpm -10;
-            
-            if(rpm > 10000)
-                Direction = 0;
-            else if(rpm <6500)
-                Direction = 1;           
-        }
-        wait++;
-        if(count == 10)
-        {
-            count = 0;
-        }
+//        if(wait == 500)
+//        {
+//            et++;
+//            count++;    
+//            batV = batV+0.01;
+//            wait = 0;
+//            //TEST ITEMS
+//            //Toggle Shift LEDS
+//            if(Direction == 1)
+//                rpm= rpm+10;
+//            else if(Direction == 0)
+//                rpm = rpm -10;
+//            
+//            if(rpm > 10000)
+//                Direction = 0;
+//            else if(rpm <6500)
+//                Direction = 1;           
+//        }
+//        wait++;
+//        if(count == 10)
+//        {
+//            count = 0;
+//        }
         if(RXFlag0 && RXFlag1 && RXFlag2 && RXFlag3 && RXFlag4 && RXFlag5)
         {
             //Parse Data

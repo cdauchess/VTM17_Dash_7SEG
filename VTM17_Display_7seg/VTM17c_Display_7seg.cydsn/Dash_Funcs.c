@@ -25,8 +25,8 @@ int ParseCAN()
     //Message ID 0x6F3
     bpf1 = RXMessage3[0] << 8 | RXMessage3[1];
     batV = (double)(RXMessage3[2] << 8 | RXMessage3[3])*0.01;
-    ldSpd = (RXMessage3[4] << 8 | RXMessage3[5])*0.1;
-    lgSpd = (RXMessage3[6] << 8 | RXMessage3[7])*0.1;     
+    ldSpd = (RXMessage3[4] << 8 | RXMessage3[5]);
+    lgSpd = (RXMessage3[6] << 8 | RXMessage3[7]);     
     //Message ID 0x6F4
     rdSpd = (RXMessage4[0] << 8 | RXMessage4[1]);
     rgSpd = (RXMessage4[2] << 8 | RXMessage4[3]);
@@ -76,10 +76,10 @@ return 0;
 int DiagUpdate(int Gear)
 {
      //Display the selected values
-    LED_Driver_LRBWS_Write7SegNumberDec(rpm,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-    LED_Driver_LRBWS_Write7SegNumberDec(100*batV,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
-    LED_Driver_LRBWS_SetRC(15,1);//Set DP on position 6 of display
-    LED_Driver_LRBWS_Write7SegNumberDec(8888,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);  
+    LED_Driver_LRBWS_Write7SegNumberDec(fp,LeftDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+    LED_Driver_LRBWS_Write7SegNumberDec(oilTemp/10,RightDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);
+    LED_Driver_LRBWS_ClearRC(15,1);//Clear DP on position 6 of display
+    LED_Driver_LRBWS_Write7SegNumberDec(egt1,BottomDisp,4,LED_Driver_LRBWS_RIGHT_ALIGN);  
     LED_Driver_Gear_Write7SegDigitDec(Gear,0);
 return 0;
 }
@@ -128,7 +128,7 @@ float TireD = 18;
 float TireC = TireD*3.14159;
 float TireMPR = TireC/(5280*12);
 
-float AvgRWhlSpd = (ldSpd + rdSpd)/2;
+float AvgRWhlSpd = ((ldSpd*0.1) + (rdSpd*0.1))/2;
 
 float wheelRPM = AvgRWhlSpd/(60*TireMPR);
 float CalcRed = 0;
@@ -275,14 +275,14 @@ return 0;
 int WarningLights()
 {
     //Values to be checked for warning 
-    int Left1 = 220;
-    int Left2 = 1650;
-    int Left3 = 260;
-    double Right1 = 11.5;
-    int Right2 = 2;
-    int Right3 = 35;
+    int Left1 = et;
+    int Left2 = egt1;
+    int Left3 = oilTemp/10;
+    double Right1 = batV;
+    int Right2 = 0;
+    int Right3 = fp;
     //Warning Thresholds
-    int Left1Thresh = 215; //>
+    int Left1Thresh = 210; //>
     int Left2Thresh = 1600;//>
     int Left3Thresh = 250;//>
     double Right1Thresh = 12.00;//<

@@ -1,5 +1,5 @@
 -- Project:   VTM17E_Display_7seg
--- Generated: 04/04/2017 22:38:03
+-- Generated: 04/21/2017 14:17:31
 -- PSoC Creator  3.3 CP3
 
 ENTITY VTM17E_Display_7seg IS

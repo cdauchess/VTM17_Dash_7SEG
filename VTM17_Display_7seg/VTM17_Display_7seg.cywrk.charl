@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="VTM17_Display_7seg\VTM17c_Display_7seg">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="VTM17_Display_7seg\VTM17c_Display_7seg\Source Files\main.c">
 <ExpandedNodeIds>
 <v>VTM17_Display_7seg</v>
 <v>VTM17_Display_7seg\CAN_Full_Example01\TopDesign</v>
@@ -99,11 +99,11 @@
 <v>VTM17_Display_7seg\CAN_Full_Example01\Generated_Source\PSoC5\project.h</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\TopDesign</v>
+<v>VTM17_Display_7seg\VTM17c_Display_7seg\Header Files</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Source Files</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Generated_Source</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Generated_Source\PSoC5</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Generated_Source\PSoC5\CAN</v>
-<v>VTM17_Display_7seg\VTM17E_Display_7seg</v>
 <v>VTM17_Display_7seg\VTM17E_Display_7seg\TopDesign</v>
 <v>VTM17_Display_7seg\VTM17E_Display_7seg\VTM17E_Display_7seg.cydwr</v>
 <v>VTM17_Display_7seg\VTM17E_Display_7seg\Header Files</v>
@@ -265,6 +265,9 @@
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\TopDesign</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\VTM17c_Display_7seg.cydwr</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Header Files</v>
+<v>VTM17_Display_7seg\VTM17c_Display_7seg\Header Files\cyapicallbacks.h</v>
+<v>VTM17_Display_7seg\VTM17c_Display_7seg\Header Files\Dash_Funcs.h</v>
+<v>VTM17_Display_7seg\VTM17c_Display_7seg\Header Files\device.h</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Source Files</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Source Files\Dash_Funcs.c</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Source Files\main.c</v>
@@ -285,9 +288,6 @@
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Generated_Source\PSoC5\LED_Driver_Gear_Com_Driver</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Generated_Source\PSoC5\LED_Driver_Gear_DMA_BC</v>
 <v>VTM17_Display_7seg\VTM17c_Display_7seg\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Com</v>
-<v>VTM17_Display_7seg\VTM17c_Display_7seg\Generated_Source\PSoC5\LED_Driver_Gear_DMA_Seg</v>
-<v>VTM17_Display_7seg\VTM17c_Display_7seg\Generated_Source\PSoC5\LED_Driver_Gear_Seg_Driver_L</v>
-<v>VTM17_Display_7seg\VTM17c_Display_7seg\Generated_Source\PSoC5\LED_Driver_LRBWS</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="VTM17_Display_7seg">
@@ -471,33 +471,6 @@
 <VisibleNodeIds>
 <v>VTM17_Display_7seg</v>
 <v>VTM17_Display_7seg\CAN_Full_Example01</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_INT.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_PM.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_TX_RX_func.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\RX.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\TX.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\Listing Files\Tx_En.lst</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\CAN_Full_Example01.elf</v>
-<v>VTM17_Display_7seg\CAN_Full_Example01\CortexM3\ARM_GCC_493\Debug\CAN_Full_Example01.hex</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -597,6 +570,10 @@
 <name v=".\VTM17E_Display_7seg.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" />
 <name v=".\VTM17c_Display_7seg.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" />
 <name v=".\VTM17E_Display_7seg.cydsn\Generated_Source\PSoC5\LED_Driver_LRBWS.c" />
+<name v=".\VTM17c_Display_7seg.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\VTM17c_Display_7seg.cydsn\Dash_Funcs.c" />
+<name v=".\VTM17c_Display_7seg.cydsn\main.c" />
+<name v=".\VTM17c_Display_7seg.cydsn\Dash_Funcs.h" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

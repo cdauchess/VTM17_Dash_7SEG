@@ -1,24 +1,15 @@
---------------- Build Started: 04/15/2017 19:49:19 Project: VTM17E_Display_7seg, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Build Started: 04/21/2017 14:21:41 Project: VTM17E_Display_7seg, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 The code generation step is up to date.
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/main.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\main.c -o .\CortexM3\ARM_GCC_493\Debug\main.o
-.\main.c: In function 'main':
-.\main.c:121:9: warning: unused variable 'Direction' [-Wunused-variable]
-     int Direction = 1; //1 is up 0 is down
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_493\Debug/Dash_Funcs.lst -g -D DEBUG -Wall -ffunction-sections -Og -ffat-lto-objects -c .\Dash_Funcs.c -o .\CortexM3\ARM_GCC_493\Debug\Dash_Funcs.o
+.\Dash_Funcs.c: In function 'ShiftLights':
+.\Dash_Funcs.c:170:9: warning: unused variable 'Light4' [-Wunused-variable]
+     int Light4 = 15;
          ^
-.\main.c:120:9: warning: unused variable 'Right' [-Wunused-variable]
-     int Right = 9;
+.\Dash_Funcs.c:169:9: warning: unused variable 'Light3' [-Wunused-variable]
+     int Light3 = 12;
          ^
-.\main.c:119:9: warning: unused variable 'Left' [-Wunused-variable]
-     int Left = 8;
-         ^
-.\main.c:112:9: warning: unused variable 'wait' [-Wunused-variable]
-     int wait = 0;
-         ^
-.\main.c:111:9: warning: unused variable 'count' [-Wunused-variable]
-     int count = 0;
-         ^
-.\main.c:109:9: warning: unused variable 'PageButton' [-Wunused-variable]
-     int PageButton = 0;
+.\Dash_Funcs.c:168:9: warning: unused variable 'Light2' [-Wunused-variable]
+     int Light2 = 10;
          ^
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_493\Debug\VTM17E_Display_7seg.a .\CortexM3\ARM_GCC_493\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_493\Debug\RX_1.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_PM.o .\CortexM3\ARM_GCC_493\Debug\TX_1.o .\CortexM3\ARM_GCC_493\Debug\Com_1.o .\CortexM3\ARM_GCC_493\Debug\Tx_En.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_ClkInternal.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_Seg_Driver_L.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_Seg_Driver_L_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_Com_Driver.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_Com_Driver_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_DMA_Com_dma.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_DMA_Seg_dma.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_ClkInternal.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_L.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_L_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Com_Driver.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Com_Driver_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_DMA_Com_dma.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_M.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_M_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_H.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_Seg_Driver_H_PM.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_DMA_Seg_dma.o .\CortexM3\ARM_GCC_493\Debug\CyBootAsmGnu.o .\CortexM3\ARM_GCC_493\Debug\CyDmac.o .\CortexM3\ARM_GCC_493\Debug\CyFlash.o .\CortexM3\ARM_GCC_493\Debug\CyLib.o .\CortexM3\ARM_GCC_493\Debug\cyPm.o .\CortexM3\ARM_GCC_493\Debug\CySpc.o .\CortexM3\ARM_GCC_493\Debug\cyutils.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_LRBWS_DMA_BC_dma.o .\CortexM3\ARM_GCC_493\Debug\CAN.o .\CortexM3\ARM_GCC_493\Debug\CAN_INT.o .\CortexM3\ARM_GCC_493\Debug\CAN_PM.o .\CortexM3\ARM_GCC_493\Debug\CAN_TX_RX_func.o .\CortexM3\ARM_GCC_493\Debug\LED_Driver_Gear_DMA_BC_dma.o .\CortexM3\ARM_GCC_493\Debug\PageSwitch.o .\CortexM3\ARM_GCC_493\Debug\Clock_1.o .\CortexM3\ARM_GCC_493\Debug\Page_Button.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_493\Debug\VTM17E_Display_7seg.a
@@ -27,4 +18,4 @@ cyelftool.exe -C C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG
 cyelftool.exe -S C:\Users\charl\Documents\GitHub\VTM17_Dash_7seg\VTM17_Dash_7SEG\VTM17_Display_7seg\VTM17E_Display_7seg.cydsn\CortexM3\ARM_GCC_493\Debug\VTM17E_Display_7seg.elf
 Flash used: 12032 of 262144 bytes (4.6 %).
 SRAM used: 2997 of 65536 bytes (4.6 %). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 04/15/2017 19:49:22 ---------------
+--------------- Build Succeeded: 04/21/2017 14:21:43 ---------------
